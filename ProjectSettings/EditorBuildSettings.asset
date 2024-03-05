@@ -8,4 +8,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/JebScene.unity
+    guid: 33e35f05987875849ae1fa1ee48b167f
+  - enabled: 1
+    path: Assets/Scenes/KyleScene.unity
+    guid: 34cddbe077bdde041b190d07355ae3dd
+  - enabled: 1
+    path: Assets/Scenes/NikoScene.unity
+    guid: c0c4b6a2d8b6a5a46ab81480db6c6f62
+  - enabled: 1
+    path: Assets/Scenes/StewyScene.unity
+    guid: 09b3e2a0051589143ab39875603e1482
+  - enabled: 1
+    path: Assets/Scenes/hubWorld.unity
+    guid: 4aec595c912e3b842bafad5708d810fa
   m_configObjects: {}
