@@ -12,6 +12,10 @@ public class PlayerCrouchIdleState : PlayerGroundedState
     public override void Enter()
     {
         UnityEngine.Debug.Log("Entered Crouch Idle State");
+        player.rb.drag = playerData.IdleDrag;
+        player.cc.size = playerData.CrouchSize;
+        player.cc.offset = playerData.CrouchOffset;
+
         base.Enter();
     }
 
@@ -29,15 +33,30 @@ public class PlayerCrouchIdleState : PlayerGroundedState
     {
         base.Update();
 
-        if (!player.inputHandler.holdingCrouch)
+
+        // ----------------- Slope Shit ------------------- \\
+        if (Slope)
         {
-            if (player.inputHandler.moveDir.x != 0)
+            player.rb.drag = playerData.SlopeDrag;
+            player.rb.gravityScale = playerData.SlopeGravity;
+        }
+        else
+        {
+            player.rb.drag = playerData.IdleDrag;
+            player.rb.gravityScale = playerData.GroundGravity;
+        }
+
+
+        // ---------------- State Changers --------------------- \\
+        if (!crouching)
+        {
+            if (xInput != 0)
                 playerStateMachine.ChangeState(player.movingState);
             else
                 playerStateMachine.ChangeState(player.idleState);
         }
 
-        if (player.inputHandler.moveDir.x != 0)
+        if (xInput != 0)
         {
             playerStateMachine.ChangeState(player.crouchMoveState);
         }

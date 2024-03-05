@@ -9,7 +9,7 @@ public class PlayerIdleState : PlayerGroundedState
     }
 
 
-    float xInput;
+    
     public override void Checks()
     {
         base.Checks();
@@ -18,7 +18,11 @@ public class PlayerIdleState : PlayerGroundedState
     public override void Enter()
     {
         Debug.Log("Entered Idle");
-        player.rb.velocity = Vector3.zero;
+        player.rb.drag = playerData.IdleDrag;
+
+        player.cc.size = playerData.NormalSize;
+        player.cc.offset = playerData.NormalOffset;
+
         base.Enter(); 
     }
 
@@ -35,17 +39,33 @@ public class PlayerIdleState : PlayerGroundedState
     public override void Update()
     {
         base.Update();
-        xInput = player.inputHandler.moveDir.x;
-        if (xInput > 0 || xInput < 0)
+
+        // ----------------- Slope Shit ------------------- \\
+        if (Slope)
+        {
+            player.rb.drag = playerData.SlopeDrag;
+            player.rb.gravityScale = playerData.SlopeGravity;
+        }
+        else
+        {
+            player.rb.drag = playerData.IdleDrag;
+            player.rb.gravityScale = playerData.GroundGravity;
+        }
+
+
+
+
+        // ---------------- State Changers --------------------- \\
+        if (xInput != 0)
         {
             playerStateMachine.ChangeState(player.movingState);
             if (player.inputHandler.holdingSprint)
             {
-
+                playerStateMachine.ChangeState(player.sprintingState);
             }
         }
 
-        if(player.inputHandler.holdingCrouch)
+        if(crouching)
         {
             if (xInput != 0)
                 playerStateMachine.ChangeState(player.crouchMoveState);
@@ -53,6 +73,7 @@ public class PlayerIdleState : PlayerGroundedState
                 playerStateMachine.ChangeState(player.crouchIdleState);
         }
 
+        
 
 
     }

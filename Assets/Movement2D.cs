@@ -368,11 +368,8 @@ public class Movement2D : MonoBehaviour
     // ----------------- Grounding -----------------------
     private bool IsGrounded()
     {
-
         RaycastHit2D ray = Physics2D.BoxCast(_capcol.bounds.center, _capcol.bounds.size, 0, Vector2.down, 0.5f, Laymask);
-
         return ray.collider != null;
-
     }
 
     // ---------------- Slope Check ______________________

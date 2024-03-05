@@ -1,23 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.XR;
 
 public class PlayerGroundedState : PlayerState
 {
     public PlayerGroundedState(Player player, PlayerData playerData, PlayerStateMachine playerStateMachine) : base(player, playerData, playerStateMachine)
     {
     }
-    float xInput;
-    float yInput;
-    bool jumping;
-    bool crouching;
+    protected float xInput;
+    protected float yInput;
+    protected bool jumping;
+    protected bool crouching;
+    protected bool Slope;
+
+    private float cyoteTime;
+    private float cyoteTimer;
     
 
     public override void Enter()
     {
         Debug.Log("entered Grounded");
         base.Enter();
+        player.rb.gravityScale = playerData.GroundGravity;
+        cyoteTime = playerData.CyoteTime;
     }
 
 
@@ -28,19 +31,32 @@ public class PlayerGroundedState : PlayerState
         xInput = player.inputHandler.moveDir.x;
         yInput = player.inputHandler.moveDir.y;
 
-        jumping = player.inputHandler.holdingJump;
+        jumping = player.inputHandler.HoldingJump;
         crouching = player.inputHandler.holdingCrouch;
 
-        /*
-        if(xInput == 0)
+        if (playerData.TotalJumps > 0)
         {
-            playerStateMachine.ChangeState(player.idleState);
+            if (jumping)
+                playerStateMachine.ChangeState(player.jumpState);
         }
-        else
+
+        if (!player.isGrounded)
         {
-            playerStateMachine.ChangeState(player.movingState);
+            cyoteTimer++;
+            //Debug.Log(cyoteTimer);
+            if (cyoteTimer >= cyoteTime)
+                playerStateMachine.ChangeState(player.inAirState);
         }
-        */
+        else { cyoteTimer = 0; }
+
+        if (player.isOnSlope)
+        { Slope = true; }
+        else { Slope = false; }
+
+        if (player.inputHandler.pressedAbility1)
+        {
+            playerStateMachine.ChangeState(player.useAbilityState);
+        }
     }
 
     public override void FixedUpdate()
@@ -56,6 +72,9 @@ public class PlayerGroundedState : PlayerState
     public override void Checks()
     {
         base.Checks();
+
+        
+
     }
 
 }

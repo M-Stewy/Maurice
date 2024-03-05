@@ -12,8 +12,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c76d136c291a448b3d6eecc561d63c, type: 3}
   m_Name: DefaultPlayerData
   m_EditorClassIdentifier: 
-  baseMoveSpeed: 20
-  SprintSpeed: 20
-  CrouchSpeed: 5
-  JumpPower: 20
-  JumpTime: 10
+  AblityIsGrapple: 1
+  baseMoveSpeed: 30
+  SprintSpeed: 60
+  CrouchSpeed: 20
+  SlideSpeedBoost: 5
+  JumpPower: 50
+  JumpTime: 75
+  TotalJumps: 1
+  CyoteTime: 20
+  GroundDrag: 1
+  SlopeDrag: 0
+  AirDrag: 0.75
+  SlideDrag: 0.05
+  IdleDrag: 5
+  GroundGravity: 1
+  SlopeGravity: 0
+  AirGravity: 5
+  GrapplePointSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  LaymaskGrapple:
+    serializedVersion: 2
+    m_Bits: 8
+  GrappleReelSpeed: 20
+  GrappleSwingSpeed: 20
+  CrouchOffset: {x: 0, y: 0.5}
+  CrouchSize: {x: 1, y: 1}
+  NormalOffset: {x: 0, y: 0}
+  NormalSize: {x: 1, y: 2}
