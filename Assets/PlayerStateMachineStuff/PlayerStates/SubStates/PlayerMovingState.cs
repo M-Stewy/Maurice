@@ -10,6 +10,7 @@ public class PlayerMovingState : PlayerGroundedState
 
 
     float xInput;
+    float xInputRaw;
 
     public override void Checks()
     {
@@ -19,6 +20,10 @@ public class PlayerMovingState : PlayerGroundedState
     public override void Enter()
     {
         Debug.Log("Entered moving");
+        player.rb.drag = playerData.GroundDrag;
+        player.cc.size = playerData.NormalSize;
+        player.cc.offset = playerData.NormalOffset;
+
         base.Enter();
     }
 
@@ -32,14 +37,28 @@ public class PlayerMovingState : PlayerGroundedState
         base.FixedUpdate();
 
         //This will change to a AddForce later but I need to figure out how to get it to feel better first 
-        player.rb.velocity = new Vector2(xInput * player.playerData.baseMoveSpeed , player.rb.velocity.y);
+        player.rb.AddForce( new Vector2(xInputRaw * player.playerData.baseMoveSpeed ,0));
     }
 
     public override void Update()
     {
         base.Update();
         xInput = player.inputHandler.moveDir.x;
+        xInputRaw = player.inputHandler.moveDirRaw.x;
 
+        // ----------------- Slope Shit ------------------- \\
+        if (Slope)
+        {
+            player.rb.drag = playerData.SlopeDrag;
+            player.rb.gravityScale = playerData.SlopeGravity;
+        }
+        else
+        {
+            player.rb.drag = playerData.GroundDrag;
+            player.rb.gravityScale = playerData.GroundGravity;
+        }
+
+        // ---------------- State Changers --------------------- \\
         if (xInput == 0)
         {
             playerStateMachine.ChangeState(player.idleState);
@@ -47,6 +66,10 @@ public class PlayerMovingState : PlayerGroundedState
         if (player.inputHandler.holdingSprint)
         {
             playerStateMachine.ChangeState(player.sprintingState);
+        }
+        if(player.inputHandler.holdingCrouch)
+        {
+            playerStateMachine.ChangeState(player.crouchMoveState);
         }
     }
 }

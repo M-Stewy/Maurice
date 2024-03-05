@@ -5,7 +5,6 @@ public class PlayerState
     protected PlayerData playerData;
     protected PlayerStateMachine playerStateMachine;
 
-
     public PlayerState(Player player, PlayerData playerData, PlayerStateMachine playerStateMachine)
     {
         this.player = player;

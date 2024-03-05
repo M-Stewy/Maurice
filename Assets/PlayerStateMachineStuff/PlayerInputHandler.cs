@@ -28,16 +28,39 @@ public class PlayerInputHandler : MonoBehaviour
     /// what to do in said classes
     public Vector2 moveDir;
     public Vector2 moveDirRaw;
-    public bool holdingJump;
+
+
+    public Vector3 mouseScreenPos;
+    public Vector3 _mousePos;
+    private Camera _camera;
+
+
+
+    public bool HoldingJump;
     public bool holdingCrouch;
     public bool holdingSprint;
-    public bool PressedSwitchAbility;
+    public bool HoldingUp;
+
+    public bool pressedAbility1;
+    public bool pressedAbility2;
+
+    public bool SwitchAbilityUp;
+    public bool SwitchAbilityDown;
+
 
     private void Start()
     {
         _jump = KeyCode.Space;
         _crouch = KeyCode.LeftControl;
         _sprint = KeyCode.LeftShift;
+        _switchAbility = KeyCode.Mouse2;
+
+        _ability1 = KeyCode.Mouse0;
+        _ability2 = KeyCode.Mouse1;
+
+        _up = KeyCode.W;
+
+        _camera = FindObjectOfType<Camera>();
     }
 
 
@@ -48,19 +71,37 @@ public class PlayerInputHandler : MonoBehaviour
         moveDir = new Vector2(Input.GetAxis("Horizontal"),Input.GetAxis("Vertical"));
         moveDirRaw = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
-        holdingJump = checkForKeyPress(_jump);
+        _mousePos = Input.mousePosition;
+        _mousePos.z = 100;
+        mouseScreenPos = _camera.ScreenToWorldPoint(_mousePos);
+
+        HoldingJump = checkForKeyPress(_jump);
+
+        HoldingUp = checkForKeyPress(_up);
 
         holdingCrouch = checkForKeyPress(_crouch);
 
         holdingSprint = checkForKeyPress(_sprint);
 
-        checkForKeyPress(_switchAbility);
+        //checkForKeyPress(_switchAbility); Dont need this if we do mouse wheel to switch
 
-        checkForKeyPress(_ability1);
+        pressedAbility1 = checkForKeyQuickPress(_ability1);
 
-        checkForKeyPress(_ability2);
+        pressedAbility2 = checkForKeyQuickPress(_ability2);
 
-        
+        if(Input.mouseScrollDelta.y == 0)
+        {
+            SwitchAbilityUp = false;
+            SwitchAbilityDown = false;
+        }
+        else
+        {
+            if (Input.mouseScrollDelta.y > 0)
+                SwitchAbilityUp = true;
+            if(Input.mouseScrollDelta.y < 0)
+                SwitchAbilityDown = true;
+        }
+            
     }
 
     private bool checkForKeyPress(KeyCode key)
@@ -73,6 +114,19 @@ public class PlayerInputHandler : MonoBehaviour
         {
             return true;
         }
+        if (Input.GetKeyUp(key))
+        {
+            return false;
+        }
+        return false;
+    }
+    private bool checkForKeyQuickPress(KeyCode key)
+    {
+        if (Input.GetKeyDown(key))
+        {
+            return true;
+        }
+        
         if (Input.GetKeyUp(key))
         {
             return false;
