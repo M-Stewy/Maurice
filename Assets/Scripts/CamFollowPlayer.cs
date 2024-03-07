@@ -8,9 +8,9 @@ public class CamFollowPlayer : MonoBehaviour
     
 
     public Transform PlayerTrans;
-    public float YOffset;
+    public float YOffset = 5;
     [Range(0f, 1f)]
-    public float timeOffSet;
+    public float timeOffSet = 0.06f;
 
     private Vector2 velocity = Vector3.zero;
 
