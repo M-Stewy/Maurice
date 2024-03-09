@@ -4,8 +4,15 @@ using UnityEngine;
 using UnityEngine.Assertions.Must;
 using UnityEngine.UIElements;
 
+/// <summary>
+/// Made by Stewy
+/// 
+/// This is no longer being used but I am keeping it here as reference 
+/// just in case someone wants to read it
+/// </summary>
 public class Movement2D : MonoBehaviour
 {
+    #region every single variable
     private Rigidbody2D _rb;
     private CapsuleCollider2D _capcol;
     private Camera _camera;
@@ -74,6 +81,8 @@ public class Movement2D : MonoBehaviour
 
     private Vector3 _mousePos;
     private Vector3 mouseScreenPos;
+
+    #endregion
 
     void Awake()
     {

@@ -1,7 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// Made by Stewy
+/// 
+/// Gets the inputs of the player, thats about it
+/// 
+/// </summary>
 public class PlayerInputHandler : MonoBehaviour
 {
     ///<summary>
@@ -24,8 +29,8 @@ public class PlayerInputHandler : MonoBehaviour
 
    
     /// these are being called by other classes to know wether or not inputs
-    /// are being inputed and then using the values from here to figure out
-    /// what to do in said classes
+    ///   are being inputed and then using the values from here to figure out
+    ///   what to do in said classes
     public Vector2 moveDir;
     public Vector2 moveDirRaw;
 
