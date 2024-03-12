@@ -1,15 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+/// <summary>
+/// Made by Stewy
+/// 
+/// This state is active when the player is inputing one of the x-axis buttons
+/// it causes the player to move using unitys force system
+/// </summary>
 public class PlayerMovingState : PlayerGroundedState
 {
     public PlayerMovingState(Player player, PlayerData playerData, PlayerStateMachine playerStateMachine) : base(player, playerData, playerStateMachine)
     {
     }
 
-
-    float xInput;
     float xInputRaw;
 
     public override void Checks()
@@ -19,7 +19,7 @@ public class PlayerMovingState : PlayerGroundedState
 
     public override void Enter()
     {
-        Debug.Log("Entered moving");
+        UnityEngine.Debug.Log("Entered moving");
         player.rb.drag = playerData.GroundDrag;
         player.cc.size = playerData.NormalSize;
         player.cc.offset = playerData.NormalOffset;
@@ -36,8 +36,7 @@ public class PlayerMovingState : PlayerGroundedState
     {
         base.FixedUpdate();
 
-        //This will change to a AddForce later but I need to figure out how to get it to feel better first 
-        player.rb.AddForce( new Vector2(xInputRaw * player.playerData.baseMoveSpeed ,0));
+        player.rb.AddForce( new UnityEngine.Vector2(xInputRaw * player.playerData.baseMoveSpeed ,0));
     }
 
     public override void Update()
@@ -47,6 +46,8 @@ public class PlayerMovingState : PlayerGroundedState
         xInputRaw = player.inputHandler.moveDirRaw.x;
 
         // ----------------- Slope Shit ------------------- \\
+        // this doesnt work as well as Id like but I cant be bothered to fix it right now
+        // complain to me about it if it becomes a bigger issue for you at some point -Stewy
         if (Slope)
         {
             player.rb.drag = playerData.SlopeDrag;

@@ -1,5 +1,11 @@
-using System.Diagnostics;
-
+/// <summary>
+/// Made by Stewy
+/// 
+/// This state is active when the player inputs both the slide and sprint keys simultaniusly
+/// it gives the player a small boost in whatever direction they are going in
+/// and then sets their collider to be smaller so its the size of crouch state
+/// and also gives very little drag so the player can keep their velocity in whichever direction they are headed
+/// </summary>
 public class PlayerSlidingState : PlayerGroundedState
 {
     public PlayerSlidingState(Player player, PlayerData playerData, PlayerStateMachine playerStateMachine) : base(player, playerData, playerStateMachine)

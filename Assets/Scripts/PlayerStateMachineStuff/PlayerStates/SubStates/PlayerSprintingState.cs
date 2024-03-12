@@ -1,11 +1,16 @@
-
+/// <summary>
+/// Made by Stewy
+/// 
+/// This state is active when the player is
+/// inputing both the sprint button and one of the x-axis buttons
+/// it causes the player to move at an accelerated rate compared to normal
+/// </summary>
 public class PlayerSprintingState : PlayerGroundedState
 {
     public PlayerSprintingState(Player player, PlayerData playerData, PlayerStateMachine playerStateMachine) : base(player, playerData, playerStateMachine)
     {
     }
 
-    float xInput;
     float xInputRaw;
     public override void Checks()
     {

@@ -45,6 +45,7 @@ public class PlayerInputHandler : MonoBehaviour
     public bool holdingCrouch;
     public bool holdingSprint;
     public bool HoldingUp;
+    public bool HoldingDown;
 
     public bool PressedJump;
     public bool PressedAbility1;
@@ -65,6 +66,7 @@ public class PlayerInputHandler : MonoBehaviour
         _ability2 = KeyCode.Mouse1;
 
         _up = KeyCode.W;
+        _down = KeyCode.S;
 
         _camera = FindObjectOfType<Camera>();
     }
@@ -86,6 +88,8 @@ public class PlayerInputHandler : MonoBehaviour
         PressedJump = checkForKeyQuickPress(_jump);
 
         HoldingUp = checkForKeyPress(_up);
+
+        HoldingDown = checkForKeyPress(_down);
 
         holdingCrouch = checkForKeyPress(_crouch);
 

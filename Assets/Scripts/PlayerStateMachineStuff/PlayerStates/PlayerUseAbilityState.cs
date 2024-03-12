@@ -1,7 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Made by Stewy
+///     Edited by:
+/// 
+/// Very unfinshed but serves as a foundation to how our ability system will (hopefull) work
+/// we need to dicuss this further I think
+/// </summary>
 public class PlayerUseAbilityState : PlayerState
 {
     public PlayerUseAbilityState(Player player, PlayerData playerData, PlayerStateMachine playerStateMachine) : base(player, playerData, playerStateMachine)

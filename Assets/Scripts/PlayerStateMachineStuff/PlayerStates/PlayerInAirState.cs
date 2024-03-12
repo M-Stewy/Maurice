@@ -1,7 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+/// <summary>
+/// Made by Stewy
+/// 
+/// when in the air a smaller drag value is uesd to make control a little less precise
+/// </summary>
 public class PlayerInAirState : PlayerState
 {
     public PlayerInAirState(Player player, PlayerData playerData, PlayerStateMachine playerStateMachine) : base(player, playerData, playerStateMachine)
@@ -31,7 +32,7 @@ public class PlayerInAirState : PlayerState
 
     public override void Enter()
     {
-        Debug.Log("Entered Air State");
+        UnityEngine.Debug.Log("Entered Air State");
 
         player.rb.gravityScale = playerData.AirGravity;
         player.rb.drag = playerData.AirDrag;

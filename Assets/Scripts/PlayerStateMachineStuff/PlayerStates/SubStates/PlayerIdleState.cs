@@ -1,15 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+/// <summary>
+/// Made by Stewy
+/// 
+/// This is the state that is active when the player is
+/// on the ground and not giving any input
+/// it sets the drag value of the rigidbody to be high to force the player to come to a stop when no x=axis inputs are inputed
+/// </summary>
 public class PlayerIdleState : PlayerGroundedState
 {
     public PlayerIdleState(Player player, PlayerData playerData, PlayerStateMachine playerStateMachine) : base(player, playerData, playerStateMachine)
     {
     }
 
-
-    
     public override void Checks()
     {
         base.Checks();
@@ -17,7 +18,7 @@ public class PlayerIdleState : PlayerGroundedState
 
     public override void Enter()
     {
-        Debug.Log("Entered Idle");
+        UnityEngine.Debug.Log("Entered Idle");
         player.rb.drag = playerData.IdleDrag;
 
         player.cc.size = playerData.NormalSize;

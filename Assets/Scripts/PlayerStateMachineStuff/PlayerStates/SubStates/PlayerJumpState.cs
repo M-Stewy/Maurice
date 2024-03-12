@@ -1,5 +1,10 @@
-using System;
-
+/// <summary>
+/// Made by Stewy
+/// 
+/// this state gives the player an upward force 
+/// the force is applied until either the timer goes beyond its limit,
+/// or the player stops pressing the jump button
+/// </summary>
 public class PlayerJumpState : PlayerState
 {
     public PlayerJumpState(Player player, PlayerData playerData, PlayerStateMachine playerStateMachine) : base(player, playerData, playerStateMachine)
@@ -16,6 +21,8 @@ public class PlayerJumpState : PlayerState
     public override void Checks()
     {
         base.Checks();
+        //this currently does nothing, but its here incase anyone wants to add double jump
+        //some work would need to be done to get it properly implemeted but it shouldnt be too hard
         remainingJumps = playerData.TotalJumps;
 
         if (player.inputHandler.PressedAbility1)

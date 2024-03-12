@@ -115,21 +115,24 @@ public class Player : MonoBehaviour
         PSM.currentState.FixedUpdate(); // this is calling the base unity FixedUpdate method in the current state of the state machine
     }
 
-
+    [SerializeField]
     Vector3 GroundCheckFixer = new Vector3(.3f, .2f, 0f);
+    [SerializeField]
     Vector3 GroundCheckOffset = new Vector3(0,.5f,0);
 
     //using a raycast box to check for the ground below
     private bool IsGrounded()
     {
-        ray = Physics2D.BoxCast(cc.bounds.center- GroundCheckOffset, cc.bounds.size - GroundCheckFixer, 0, Vector2.down, 0.1f, Laymask);
+        GroundCheckOffset = new Vector3(GroundCheckOffset.x,cc.bounds.size.y/2,GroundCheckOffset.z);
+        GroundCheckFixer = new Vector3(GroundCheckFixer.x, cc.size.y/2 + .5f,GroundCheckFixer.z);
+        ray = Physics2D.BoxCast(cc.bounds.center - GroundCheckOffset, cc.bounds.size - GroundCheckFixer, 0, Vector2.down, 0.1f, Laymask);
         return ray.collider != null;
         
     }
 
     private bool IsOnSlope()
     {
-        SlopeRay = Physics2D.Raycast(cc.bounds.center - GroundCheckOffset, Vector2.down, 4.5f, Laymask);
+        SlopeRay = Physics2D.Raycast(cc.bounds.center  - GroundCheckOffset, Vector2.down, 4.5f, Laymask);
 
         if (SlopeRay.collider != null)
         {
@@ -150,13 +153,14 @@ public class Player : MonoBehaviour
 
         if(IsGrounded() )
         {
+            
             Gizmos.color = Color.green;
-            Gizmos.DrawWireCube(cc.bounds.center + -transform.up * ray.distance, cc.bounds.size - GroundCheckFixer);
+            Gizmos.DrawWireCube(cc.bounds.center - GroundCheckOffset + -transform.up * ray.distance, cc.bounds.size - GroundCheckFixer);
         }
         else
         {
             Gizmos.color = Color.yellow;
-            Gizmos.DrawWireCube(cc.bounds.center + -transform.up * 0.1f, cc.bounds.size - GroundCheckFixer);
+            Gizmos.DrawWireCube(cc.bounds.center  - GroundCheckOffset + -transform.up * 0.1f, cc.bounds.size - GroundCheckFixer);
         }
 
         if (isOnSlope)
