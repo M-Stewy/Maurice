@@ -17,7 +17,7 @@ MonoBehaviour:
   SprintSpeed: 60
   CrouchSpeed: 20
   SlideSpeedBoost: 5
-  JumpPower: 25
+  JumpPower: 40
   JumpTime: 75
   TotalJumps: 1
   CyoteTime: 20
@@ -33,7 +33,7 @@ MonoBehaviour:
   LaymaskGrapple:
     serializedVersion: 2
     m_Bits: 72
-  GrappleReelSpeed: 5
+  GrappleReelSpeed: 10
   GrappleSwingSpeed: 25
   CrouchOffset: {x: 0, y: 0.5}
   CrouchSize: {x: 1, y: 1}
