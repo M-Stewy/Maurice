@@ -17,7 +17,7 @@ public class PlayerCrouchMovingState : PlayerGroundedState
 
     public override void Enter()
     {
-        UnityEngine.Debug.Log("Entered Crouch Moving State");
+        //UnityEngine.Debug.Log("Entered Crouch Moving State");
         player.rb.drag = playerData.GroundDrag;
         player.cc.size = playerData.CrouchSize;
         player.cc.offset = playerData.CrouchOffset;

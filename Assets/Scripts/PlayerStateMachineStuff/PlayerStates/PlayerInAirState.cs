@@ -32,7 +32,7 @@ public class PlayerInAirState : PlayerState
 
     public override void Enter()
     {
-        UnityEngine.Debug.Log("Entered Air State");
+        //UnityEngine.Debug.Log("Entered Air State");
 
         player.rb.gravityScale = playerData.AirGravity;
         player.rb.drag = playerData.AirDrag;

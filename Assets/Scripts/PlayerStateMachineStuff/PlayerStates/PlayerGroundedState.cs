@@ -28,7 +28,7 @@ public class PlayerGroundedState : PlayerState
 
     public override void Enter()
     {
-        Debug.Log("entered Grounded");
+        //Debug.Log("entered Grounded");
         base.Enter();
         player.rb.gravityScale = playerData.GroundGravity;
         cyoteTime = playerData.CyoteTime;

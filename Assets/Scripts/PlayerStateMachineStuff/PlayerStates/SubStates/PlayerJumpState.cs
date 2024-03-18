@@ -36,7 +36,7 @@ public class PlayerJumpState : PlayerState
     {
         base.Enter();
        
-        UnityEngine.Debug.Log("Entered Jump State");
+        //UnityEngine.Debug.Log("Entered Jump State");
 
         player.rb.drag = playerData.AirDrag;
 

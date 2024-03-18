@@ -18,7 +18,7 @@ public class PlayerIdleState : PlayerGroundedState
 
     public override void Enter()
     {
-        UnityEngine.Debug.Log("Entered Idle");
+        //UnityEngine.Debug.Log("Entered Idle");
         player.rb.drag = playerData.IdleDrag;
 
         player.cc.size = playerData.NormalSize;

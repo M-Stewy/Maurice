@@ -24,6 +24,8 @@ public class PlayerState
     public virtual void Enter()
     {
         Checks();
+        if(playerData.ShowEnterStateInConsole)
+            UnityEngine.Debug.Log("Entered " + playerStateMachine.currentState);
     }
 
     public virtual void Update()

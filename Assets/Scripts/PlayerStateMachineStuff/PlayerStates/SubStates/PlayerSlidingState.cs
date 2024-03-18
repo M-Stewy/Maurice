@@ -20,7 +20,7 @@ public class PlayerSlidingState : PlayerGroundedState
     public override void Enter()
     {
         xInputRaw = player.inputHandler.moveDirRaw.x;
-        UnityEngine.Debug.Log("entered Sliding State");
+        //UnityEngine.Debug.Log("entered Sliding State");
         base.Enter();
         player.rb.drag = playerData.SlideDrag;
         player.cc.size = playerData.CrouchSize;

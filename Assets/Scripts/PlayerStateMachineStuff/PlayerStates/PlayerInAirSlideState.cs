@@ -34,7 +34,7 @@ public class PlayerInAirSlideState : PlayerState
 
     public override void Enter()
     {
-        UnityEngine.Debug.Log("Entered Air Slide State");
+        //UnityEngine.Debug.Log("Entered Air Slide State");
 
         xInputRaw = player.inputHandler.moveDirRaw.x;
         base.Enter();

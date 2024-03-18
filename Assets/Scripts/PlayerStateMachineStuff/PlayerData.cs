@@ -14,7 +14,6 @@
 [CreateAssetMenu(fileName = "newPlayerData", menuName = "Data/Player Data/Base Player Data")]
 public class PlayerData : ScriptableObject
 {
-
     [Header("Different Abilitys and Stuff")]
     [Space]
 
@@ -69,4 +68,9 @@ public class PlayerData : ScriptableObject
     public Vector2 NormalOffset = new Vector2(0, 0);
     [HideInInspector]
     public Vector2 NormalSize = new Vector2(1, 2);
+
+
+
+    [Header("Debug Stuff")]
+    public bool ShowEnterStateInConsole;
 }

@@ -19,7 +19,7 @@ public class PlayerMovingState : PlayerGroundedState
 
     public override void Enter()
     {
-        UnityEngine.Debug.Log("Entered moving");
+       // UnityEngine.Debug.Log("Entered moving");
         player.rb.drag = playerData.GroundDrag;
         player.cc.size = playerData.NormalSize;
         player.cc.offset = playerData.NormalOffset;

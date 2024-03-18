@@ -17,7 +17,7 @@ public class PlayerCrouchIdleState : PlayerGroundedState
 
     public override void Enter()
     {
-        UnityEngine.Debug.Log("Entered Crouch Idle State");
+        //UnityEngine.Debug.Log("Entered Crouch Idle State");
         player.rb.drag = playerData.IdleDrag;
         player.cc.size = playerData.CrouchSize;
         player.cc.offset = playerData.CrouchOffset;

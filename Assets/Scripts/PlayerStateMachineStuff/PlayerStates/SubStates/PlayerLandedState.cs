@@ -22,7 +22,7 @@ public class PlayerLandedState : PlayerGroundedState
 
     public override void Enter()
     {
-        UnityEngine.Debug.Log("Entered Landed State");
+        //UnityEngine.Debug.Log("Entered Landed State");
         base.Enter();
     }
 

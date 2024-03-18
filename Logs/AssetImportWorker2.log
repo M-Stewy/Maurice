@@ -15,7 +15,7 @@ E:/Unitythings/LCCC games and stuff/2D-Unity-Game
 -logFile
 Logs/AssetImportWorker2.log
 -srvPort
-60192
+62188
 Successfully changed project path to: E:/Unitythings/LCCC games and stuff/2D-Unity-Game
 E:/Unitythings/LCCC games and stuff/2D-Unity-Game
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ E:/Unitythings/LCCC games and stuff/2D-Unity-Game
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 92.21 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 92.41 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.11f1 (0a5ca18544bf)
 [Subsystems] Discovering subsystems at path E:/Unitythings/2021.3.11f1/Editor/Data/Resources/UnitySubsystems
@@ -63,14 +63,14 @@ Initialize mono
 Mono path[0] = 'E:/Unitythings/2021.3.11f1/Editor/Data/Managed'
 Mono path[1] = 'E:/Unitythings/2021.3.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'E:/Unitythings/2021.3.11f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56684
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56156
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: E:/Unitythings/2021.3.11f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: E:/Unitythings/2021.3.11f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
 Register platform support module: E:/Unitythings/2021.3.11f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: E:/Unitythings/2021.3.11f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
-Registered in 0.003564 seconds.
+Registered in 0.003610 seconds.
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
 [usbmuxd] Start listen thread
@@ -78,39 +78,39 @@ Native extension for WindowsStandalone target not found
 [usbmuxd] Send listen message
 Native extension for iOS target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 91.34 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 95.89 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.629 seconds
+- Completed reload, in  0.644 seconds
 Domain Reload Profiling:
-	ReloadAssembly (629ms)
+	ReloadAssembly (644ms)
 		BeginReloadAssembly (75ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (457ms)
-			LoadAssemblies (74ms)
+		EndReloadAssembly (465ms)
+			LoadAssemblies (75ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (98ms)
+			SetupTypeCache (102ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (26ms)
-			SetupLoadedEditorAssemblies (287ms)
+			RebuildScriptCaches (27ms)
+			SetupLoadedEditorAssemblies (290ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (25ms)
+				InitializePlatformSupportModulesInManaged (24ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (91ms)
-				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (129ms)
-				ProcessInitializeOnLoadMethodAttributes (41ms)
+				RefreshPlugins (96ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (128ms)
+				ProcessInitializeOnLoadMethodAttributes (40ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.005241 seconds.
+Registered in 0.005222 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image E:\Unitythings\LCCC games and stuff\2D-Unity-Game\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image E:\Unitythings\LCCC games and stuff\2D-Unity-Game\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
@@ -118,46 +118,46 @@ Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
 Native extension for iOS target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 97.78 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 92.85 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.074 seconds
+- Completed reload, in  1.089 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1075ms)
-		BeginReloadAssembly (111ms)
+	ReloadAssembly (1089ms)
+		BeginReloadAssembly (102ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (6ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (19ms)
-		EndReloadAssembly (849ms)
-			LoadAssemblies (90ms)
+			CreateAndSetChildDomain (18ms)
+		EndReloadAssembly (881ms)
+			LoadAssemblies (80ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (223ms)
+			SetupTypeCache (241ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (49ms)
-			SetupLoadedEditorAssemblies (457ms)
+			RebuildScriptCaches (54ms)
+			SetupLoadedEditorAssemblies (463ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (17ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (98ms)
-				BeforeProcessingInitializeOnLoad (95ms)
-				ProcessInitializeOnLoadAttributes (209ms)
-				ProcessInitializeOnLoadMethodAttributes (35ms)
-				AfterProcessingInitializeOnLoad (2ms)
+				RefreshPlugins (93ms)
+				BeforeProcessingInitializeOnLoad (87ms)
+				ProcessInitializeOnLoadAttributes (222ms)
+				ProcessInitializeOnLoadMethodAttributes (40ms)
+				AfterProcessingInitializeOnLoad (3ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 1.12 ms, found 4 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.82 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4092 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 38 unused Assets / (56.5 KB). Loaded Objects now: 4549.
-Memory consumption went from 152.0 MB to 151.9 MB.
-Total: 3.137600 ms (FindLiveObjects: 0.332300 ms CreateObjectMapping: 0.127200 ms MarkObjects: 2.611700 ms  DeleteObjects: 0.065400 ms)
+Unloading 4093 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 38 unused Assets / (56.5 KB). Loaded Objects now: 4550.
+Memory consumption went from 152.0 MB to 152.0 MB.
+Total: 3.142400 ms (FindLiveObjects: 0.402100 ms CreateObjectMapping: 0.112600 ms MarkObjects: 2.553500 ms  DeleteObjects: 0.073000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -171,203 +171,462 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 334151.803458 seconds.
-  path: Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1.png
-  artifactKey: Guid(bcc7c08d621970447bd0d0893ff20254) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1.png using Guid(bcc7c08d621970447bd0d0893ff20254) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e21a70cc47a350d5976e226be471934f') in 0.129934 seconds 
+  Time since last request: 92420.739043 seconds.
+  path: Assets/Sprites/TileMaps/RuleTileTests/New Rule Tile.asset
+  artifactKey: Guid(cf117a7609bc6454a97b52f5307747a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/TileMaps/RuleTileTests/New Rule Tile.asset using Guid(cf117a7609bc6454a97b52f5307747a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46e8cc15f196433abe0e5525d12b8467') in 0.072687 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 2.344542 seconds.
-  path: Assets/Sprites/BasicTileMapForLayouts/StewysTiles/MetalPanels_1.png
-  artifactKey: Guid(d8804ac36794ef4418f55750bc81bf58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/BasicTileMapForLayouts/StewysTiles/MetalPanels_1.png using Guid(d8804ac36794ef4418f55750bc81bf58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63bebd7b0226ee9341daffa900be815c') in 0.014969 seconds 
+  Time since last request: 14.946146 seconds.
+  path: Assets/Sprites/TileMaps/TestTileMap
+  artifactKey: Guid(8c9aa82328427bb41aeb976d3cec7211) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/TileMaps/TestTileMap using Guid(8c9aa82328427bb41aeb976d3cec7211) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75c2484708e97d8b8cf4a130e39f8b3c') in 0.011610 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 13.214076 seconds.
-  path: Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1.png
-  artifactKey: Guid(bcc7c08d621970447bd0d0893ff20254) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1.png using Guid(bcc7c08d621970447bd0d0893ff20254) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68bac32f4b80477beb020323648fe364') in 0.012453 seconds 
+  Time since last request: 24.727007 seconds.
+  path: Assets/Sprites/TileMaps/TestTileForTesting
+  artifactKey: Guid(8c9aa82328427bb41aeb976d3cec7211) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/TileMaps/TestTileForTesting using Guid(8c9aa82328427bb41aeb976d3cec7211) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c6a83a8f0612b442691782002188d45') in 0.006943 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 10.233653 seconds.
-  path: Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1.png
-  artifactKey: Guid(bcc7c08d621970447bd0d0893ff20254) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1.png using Guid(bcc7c08d621970447bd0d0893ff20254) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62065fd8392036b5794320dcb8240750') in 0.204657 seconds 
+  Time since last request: 16.316399 seconds.
+  path: Assets/Sprites/TileMaps/TestTileForTesting/TileMapTestSprites
+  artifactKey: Guid(f602aa5adce026d44a49730516dcae99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/TileMaps/TestTileForTesting/TileMapTestSprites using Guid(f602aa5adce026d44a49730516dcae99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a912f2b145192f6b88056d335be17cd6') in 0.006948 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005809 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image E:\Unitythings\LCCC games and stuff\2D-Unity-Game\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image E:\Unitythings\LCCC games and stuff\2D-Unity-Game\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.77 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.923 seconds
+Domain Reload Profiling:
+	ReloadAssembly (924ms)
+		BeginReloadAssembly (111ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (33ms)
+		EndReloadAssembly (728ms)
+			LoadAssemblies (71ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (223ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (52ms)
+			SetupLoadedEditorAssemblies (335ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (29ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (61ms)
+				ProcessInitializeOnLoadAttributes (197ms)
+				ProcessInitializeOnLoadMethodAttributes (43ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.69 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4082 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 25 unused Assets / (24.6 KB). Loaded Objects now: 4556.
+Memory consumption went from 151.4 MB to 151.4 MB.
+Total: 2.949600 ms (FindLiveObjects: 0.290700 ms CreateObjectMapping: 0.097300 ms MarkObjects: 2.534100 ms  DeleteObjects: 0.026700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 12.032989 seconds.
-  path: Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_0.asset
-  artifactKey: Guid(62b397bcb34e0d347a1681fc544296a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_0.asset using Guid(62b397bcb34e0d347a1681fc544296a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f0fa8f4cd062d28463cb90252d65607') in 0.022590 seconds 
+  Time since last request: 110.529318 seconds.
+  path: Assets/Scripts/NewCustomRuleTile.cs
+  artifactKey: Guid(015a4c35196ab2a46beb8aea865810c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/NewCustomRuleTile.cs using Guid(015a4c35196ab2a46beb8aea865810c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd92b0b889ae8e65de5e676d1273a888e') in 0.031659 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_7.asset
-  artifactKey: Guid(1eec9221707c4ba44b6cdf1bd3cf24fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_7.asset using Guid(1eec9221707c4ba44b6cdf1bd3cf24fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1dba4d1670e5efb60a40d526676c8dac') in 0.012346 seconds 
+  Time since last request: 48.209786 seconds.
+  path: Assets/Scripts/NewCustomRuleTile.cs
+  artifactKey: Guid(015a4c35196ab2a46beb8aea865810c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/NewCustomRuleTile.cs using Guid(015a4c35196ab2a46beb8aea865810c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f451e56616f411a39c944c79ccf43dec') in 0.001719 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_2.asset
-  artifactKey: Guid(1ac29fe93193a344bbc8567e59b655de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_2.asset using Guid(1ac29fe93193a344bbc8567e59b655de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e0a76380737c0b85aa9359cca1d1d05') in 0.011785 seconds 
+  Time since last request: 15.222138 seconds.
+  path: Assets/Scripts/NewCustomRuleTile.cs
+  artifactKey: Guid(015a4c35196ab2a46beb8aea865810c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/NewCustomRuleTile.cs using Guid(015a4c35196ab2a46beb8aea865810c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c7b779463c924437f423a000687e5e8') in 0.001998 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005739 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image E:\Unitythings\LCCC games and stuff\2D-Unity-Game\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image E:\Unitythings\LCCC games and stuff\2D-Unity-Game\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.66 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.917 seconds
+Domain Reload Profiling:
+	ReloadAssembly (917ms)
+		BeginReloadAssembly (126ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (40ms)
+		EndReloadAssembly (705ms)
+			LoadAssemblies (80ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (214ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (41ms)
+			SetupLoadedEditorAssemblies (327ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (27ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (66ms)
+				ProcessInitializeOnLoadAttributes (188ms)
+				ProcessInitializeOnLoadMethodAttributes (42ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.16 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4082 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 25 unused Assets / (24.7 KB). Loaded Objects now: 4559.
+Memory consumption went from 151.4 MB to 151.4 MB.
+Total: 3.444200 ms (FindLiveObjects: 0.473700 ms CreateObjectMapping: 0.125900 ms MarkObjects: 2.813700 ms  DeleteObjects: 0.030000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004835 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image E:\Unitythings\LCCC games and stuff\2D-Unity-Game\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image E:\Unitythings\LCCC games and stuff\2D-Unity-Game\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.88 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.868 seconds
+Domain Reload Profiling:
+	ReloadAssembly (868ms)
+		BeginReloadAssembly (109ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (30ms)
+		EndReloadAssembly (676ms)
+			LoadAssemblies (76ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (213ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (39ms)
+			SetupLoadedEditorAssemblies (313ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (24ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (67ms)
+				ProcessInitializeOnLoadAttributes (180ms)
+				ProcessInitializeOnLoadMethodAttributes (38ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.49 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4082 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 25 unused Assets / (24.7 KB). Loaded Objects now: 4562.
+Memory consumption went from 151.4 MB to 151.4 MB.
+Total: 2.923000 ms (FindLiveObjects: 0.306200 ms CreateObjectMapping: 0.165200 ms MarkObjects: 2.429100 ms  DeleteObjects: 0.021500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_11.asset
-  artifactKey: Guid(005f5794b68340240ae0e0fa39f683e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_11.asset using Guid(005f5794b68340240ae0e0fa39f683e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34311fe3cba201d8c8f13380dbc3e173') in 0.011775 seconds 
+  Time since last request: 153.685243 seconds.
+  path: Assets/Sprites/TileMaps/StewysTiles/Pattern thing idk.asset
+  artifactKey: Guid(98784d454f03a674abc527ee588005eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/TileMaps/StewysTiles/Pattern thing idk.asset using Guid(98784d454f03a674abc527ee588005eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '195c433bb4b567f5d7d647c352dfc907') in 0.056855 seconds 
 ========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_12.asset
-  artifactKey: Guid(35cee172e2ed736498117383abf71ae5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_12.asset using Guid(35cee172e2ed736498117383abf71ae5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91ea6a09c658b1501095fdeaea7db37b') in 0.012065 seconds 
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005052 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image E:\Unitythings\LCCC games and stuff\2D-Unity-Game\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image E:\Unitythings\LCCC games and stuff\2D-Unity-Game\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.76 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.889 seconds
+Domain Reload Profiling:
+	ReloadAssembly (889ms)
+		BeginReloadAssembly (109ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (31ms)
+		EndReloadAssembly (689ms)
+			LoadAssemblies (73ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (212ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (49ms)
+			SetupLoadedEditorAssemblies (309ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (23ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (61ms)
+				ProcessInitializeOnLoadAttributes (181ms)
+				ProcessInitializeOnLoadMethodAttributes (39ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.61 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4082 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 25 unused Assets / (24.6 KB). Loaded Objects now: 4566.
+Memory consumption went from 151.5 MB to 151.4 MB.
+Total: 3.019200 ms (FindLiveObjects: 0.375700 ms CreateObjectMapping: 0.108300 ms MarkObjects: 2.512600 ms  DeleteObjects: 0.021900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_34.asset
-  artifactKey: Guid(4820c88ae03cb7b4ebb0f86ae5ea7fdf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_34.asset using Guid(4820c88ae03cb7b4ebb0f86ae5ea7fdf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc1bbdbade6cf93ace72f0ca7908e400') in 0.021760 seconds 
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004719 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image E:\Unitythings\LCCC games and stuff\2D-Unity-Game\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image E:\Unitythings\LCCC games and stuff\2D-Unity-Game\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.67 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.898 seconds
+Domain Reload Profiling:
+	ReloadAssembly (899ms)
+		BeginReloadAssembly (111ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (31ms)
+		EndReloadAssembly (702ms)
+			LoadAssemblies (76ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (221ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (38ms)
+			SetupLoadedEditorAssemblies (328ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (25ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (59ms)
+				ProcessInitializeOnLoadAttributes (204ms)
+				ProcessInitializeOnLoadMethodAttributes (37ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.71 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4082 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 25 unused Assets / (24.7 KB). Loaded Objects now: 4569.
+Memory consumption went from 151.5 MB to 151.4 MB.
+Total: 2.955500 ms (FindLiveObjects: 0.325300 ms CreateObjectMapping: 0.098300 ms MarkObjects: 2.505700 ms  DeleteObjects: 0.025400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_16.asset
-  artifactKey: Guid(61edd079e64376d47ac2b132a3f232dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_16.asset using Guid(61edd079e64376d47ac2b132a3f232dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e98b93622b572281180df31f1f8b211') in 0.017278 seconds 
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005295 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image E:\Unitythings\LCCC games and stuff\2D-Unity-Game\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image E:\Unitythings\LCCC games and stuff\2D-Unity-Game\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.85 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.932 seconds
+Domain Reload Profiling:
+	ReloadAssembly (932ms)
+		BeginReloadAssembly (114ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (31ms)
+		EndReloadAssembly (734ms)
+			LoadAssemblies (78ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (223ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (42ms)
+			SetupLoadedEditorAssemblies (347ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (23ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (63ms)
+				ProcessInitializeOnLoadAttributes (209ms)
+				ProcessInitializeOnLoadMethodAttributes (45ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (10ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 3.03 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4082 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 25 unused Assets / (24.7 KB). Loaded Objects now: 4572.
+Memory consumption went from 151.5 MB to 151.4 MB.
+Total: 3.431000 ms (FindLiveObjects: 0.461700 ms CreateObjectMapping: 0.303200 ms MarkObjects: 2.638500 ms  DeleteObjects: 0.026400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_26.asset
-  artifactKey: Guid(d70ba5e2b2cdd624b9a5f15e27d51f57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_26.asset using Guid(d70ba5e2b2cdd624b9a5f15e27d51f57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86248863caf3ab1de2b0718309ef0679') in 0.013259 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_30.asset
-  artifactKey: Guid(73d63dd612d95bd4cb895a88f2c4a867) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_30.asset using Guid(73d63dd612d95bd4cb895a88f2c4a867) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8989a6f9508b95a1dc7c68c8782013bc') in 0.030722 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_28.asset
-  artifactKey: Guid(760dcdda577b4224e85fc5f75586f3f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_28.asset using Guid(760dcdda577b4224e85fc5f75586f3f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14037598cd7ec373be501872952b2aa5') in 0.022700 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_14.asset
-  artifactKey: Guid(1e386b9e20766c846b5273d4e3b45a07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_14.asset using Guid(1e386b9e20766c846b5273d4e3b45a07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34b4021b38833e62f563caf59f2379ee') in 0.018547 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_20.asset
-  artifactKey: Guid(d54ae0dabd605ad44850682f383ad132) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_20.asset using Guid(d54ae0dabd605ad44850682f383ad132) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7ef286c1ae63522b1d9a61f236584a8') in 0.018901 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_6.asset
-  artifactKey: Guid(40f65da964405574b89ef8f0b8e8bbbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_6.asset using Guid(40f65da964405574b89ef8f0b8e8bbbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9dc4730d6c29db109db4ad388ff6827') in 0.021316 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_9.asset
-  artifactKey: Guid(bf5f5ac0697e01f4595b4625743a59f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_9.asset using Guid(bf5f5ac0697e01f4595b4625743a59f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70396c4024014fbd67147cca4e59f82c') in 0.011828 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_18.asset
-  artifactKey: Guid(8f29bb94826cbc649b79b01ef9b228ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_18.asset using Guid(8f29bb94826cbc649b79b01ef9b228ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1589eb86825cad89157148f7ab4afcdb') in 0.013015 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_22.asset
-  artifactKey: Guid(c41e9546fdb22ab4491e7acff22c15db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_22.asset using Guid(c41e9546fdb22ab4491e7acff22c15db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f5f21c62cda7d2e414988c8f87c7cb6') in 0.012760 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_31.asset
-  artifactKey: Guid(ac42b9ca9161f974ba94feb1e160fcf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_31.asset using Guid(ac42b9ca9161f974ba94feb1e160fcf3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa080e089cab7bb94f27ea2c7b09ed08') in 0.014526 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.219806 seconds.
-  path: Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_35.asset
-  artifactKey: Guid(3bd03bcb23080154db24d18bf34ed725) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_35.asset using Guid(3bd03bcb23080154db24d18bf34ed725) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e940fafaa1a96b82b4f90ace9c2e374b') in 0.012864 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_42.asset
-  artifactKey: Guid(ac3c6bc0b571f9841aa9121e4fb2691a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_42.asset using Guid(ac3c6bc0b571f9841aa9121e4fb2691a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb36311e088392129ea0b492802c2099') in 0.010568 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_43.asset
-  artifactKey: Guid(7ad0f22c50b5dc044ba05a050c5f359c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_43.asset using Guid(7ad0f22c50b5dc044ba05a050c5f359c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '461a03550d8161f3ca03f50819e19956') in 0.011059 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_41.asset
-  artifactKey: Guid(1fd86756a57acc7469db6c1003f94bad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_41.asset using Guid(1fd86756a57acc7469db6c1003f94bad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6b20dc496f1b607e0316fc2aef5a4df') in 0.011312 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000601 seconds.
-  path: Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_44.asset
-  artifactKey: Guid(7ac8ebcde6aefcc4a9406f3c184bc6ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_44.asset using Guid(7ac8ebcde6aefcc4a9406f3c184bc6ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03791efcec2cc0920b7b5cc04d082431') in 0.009617 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_52.asset
-  artifactKey: Guid(2c1614eb3f92caa4ead6edfb9b86882a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_52.asset using Guid(2c1614eb3f92caa4ead6edfb9b86882a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '706664bea184bdc34b15525cbff89f30') in 0.010832 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_53.asset
-  artifactKey: Guid(6de6e5749eebed947aaba2437ef74931) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_53.asset using Guid(6de6e5749eebed947aaba2437ef74931) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7db00339dfc37e42541193c50e135542') in 0.010371 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_46.asset
-  artifactKey: Guid(bf9a9a68d795b46419fdbc40a47260aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_46.asset using Guid(bf9a9a68d795b46419fdbc40a47260aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd92cb7b072d39934ade1b69b6ba70c38') in 0.010435 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_55.asset
-  artifactKey: Guid(fe7b15a98de75014c9b5e800b35d6821) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_55.asset using Guid(fe7b15a98de75014c9b5e800b35d6821) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71d16404021e71f377de54da9ed0d1a9') in 0.010240 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_57.asset
-  artifactKey: Guid(e42c62ddde13863408d01e1a58921029) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_57.asset using Guid(e42c62ddde13863408d01e1a58921029) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9dd7856f61915399d46475fe705a270f') in 0.011245 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_56.asset
-  artifactKey: Guid(1ed47c4b9ee4b58439687626920cb718) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_56.asset using Guid(1ed47c4b9ee4b58439687626920cb718) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83fa03e0ae23bd09b05a5ff95f3e9d2f') in 0.011738 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_47.asset
-  artifactKey: Guid(67a3beb29b186ce4b86d802d94ce67fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/BasicTileMapForLayouts/StewysTiles/SpaceStationTileMap_1_47.asset using Guid(67a3beb29b186ce4b86d802d94ce67fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d4e0e3d7a6aba0146bc69b033b7be52') in 0.011375 seconds 
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-AssetImportWorker is now disconnected from the server
-Process exiting
-Exiting without the bug reporter. Application will terminate with return code 0
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004802 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image E:\Unitythings\LCCC games and stuff\2D-Unity-Game\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image E:\Unitythings\LCCC games and stuff\2D-Unity-Game\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for UWP target not found
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.99 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.922 seconds
+Domain Reload Profiling:
+	ReloadAssembly (923ms)
+		BeginReloadAssembly (110ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (31ms)
+		EndReloadAssembly (728ms)
+			LoadAssemblies (79ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (216ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (40ms)
+			SetupLoadedEditorAssemblies (354ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (25ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (66ms)
+				ProcessInitializeOnLoadAttributes (213ms)
+				ProcessInitializeOnLoadMethodAttributes (44ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.13 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4082 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 25 unused Assets / (24.6 KB). Loaded Objects now: 4575.
+Memory consumption went from 151.5 MB to 151.5 MB.
+Total: 3.093800 ms (FindLiveObjects: 0.379700 ms CreateObjectMapping: 0.100100 ms MarkObjects: 2.588400 ms  DeleteObjects: 0.024600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 

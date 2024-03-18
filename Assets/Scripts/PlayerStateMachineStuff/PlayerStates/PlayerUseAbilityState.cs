@@ -21,7 +21,7 @@ public class PlayerUseAbilityState : PlayerState
     public override void Enter()
     {
         base.Enter();
-        Debug.Log("Entered Ability State");
+        //Debug.Log("Entered Ability State");
 
         /*
         *  Do something to check for current ability

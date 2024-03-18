@@ -19,7 +19,7 @@ public class PlayerSprintingState : PlayerGroundedState
 
     public override void Enter()
     {
-        UnityEngine.Debug.Log("entered Spriting State");
+        //UnityEngine.Debug.Log("entered Spriting State");
         base.Enter();
         player.rb.drag = playerData.GroundDrag;
         player.cc.size = playerData.NormalSize;

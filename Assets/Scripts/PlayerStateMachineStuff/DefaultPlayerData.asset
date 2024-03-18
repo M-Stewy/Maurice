@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: DefaultPlayerData
   m_EditorClassIdentifier: 
   AblityIsGrapple: 1
-  baseMoveSpeed: 30
-  SprintSpeed: 60
-  CrouchSpeed: 20
+  baseMoveSpeed: 15
+  SprintSpeed: 30
+  CrouchSpeed: 10
   SlideSpeedBoost: 5
   JumpPower: 35
   JumpTime: 75
@@ -33,9 +33,10 @@ MonoBehaviour:
   LaymaskGrapple:
     serializedVersion: 2
     m_Bits: 64
-  GrappleReelSpeed: 20
+  GrappleReelSpeed: 50
   GrappleSwingSpeed: 20
   CrouchOffset: {x: 0, y: 0.5}
   CrouchSize: {x: 1, y: 1}
   NormalOffset: {x: 0, y: 0}
   NormalSize: {x: 1, y: 2}
+  ShowEnterStateInConsole: 0

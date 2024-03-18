@@ -30,7 +30,7 @@ public class PlayerGrapplingState : PlayerState
     {
         base.Enter();
         ShootSwingPoint();
-        Debug.Log("Entered Grapple State");
+        //Debug.Log("Entered Grapple State");
         
     }
 
