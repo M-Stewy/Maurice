@@ -76,7 +76,9 @@ public class PlayerJumpState : PlayerState
         jumpTimer++;
 
         xInput = player.inputHandler.moveDir.x;
-        player.rb.AddForce(new UnityEngine.Vector2(0, playerData.JumpPower/100),UnityEngine.ForceMode2D.Impulse);
-
+        if(player.inputHandler.holdingSprint)
+            player.rb.AddForce(new UnityEngine.Vector2((xInput * playerData.baseMoveSpeed)/500, playerData.JumpPower/100),UnityEngine.ForceMode2D.Impulse);
+        else
+            player.rb.AddForce(new UnityEngine.Vector2(0, playerData.JumpPower / 100), UnityEngine.ForceMode2D.Impulse);
     }
 }

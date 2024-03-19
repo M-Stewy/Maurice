@@ -39,4 +39,4 @@ MonoBehaviour:
   CrouchSize: {x: 1, y: 1}
   NormalOffset: {x: 0, y: 0}
   NormalSize: {x: 1, y: 2}
-  ShowEnterStateInConsole: 0
+  ShowEnterStateInConsole: 1

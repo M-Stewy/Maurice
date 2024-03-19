@@ -73,6 +73,9 @@ public class PlayerSlidingState : PlayerGroundedState
             else
                 playerStateMachine.ChangeState(player.movingState);
         }
-
+        if (!player.isGrounded)
+        {
+            playerStateMachine.ChangeState(player.airSlideState);
+        }
     }
 }

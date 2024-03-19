@@ -55,7 +55,6 @@ public class PlayerGroundedState : PlayerState
         if (!player.isGrounded)
         {
             cyoteTimer++;
-            //Debug.Log(cyoteTimer);
             if (cyoteTimer >= cyoteTime)
                 playerStateMachine.ChangeState(player.inAirState);
         }
@@ -63,7 +62,8 @@ public class PlayerGroundedState : PlayerState
 
         if (player.isOnSlope)
         { Slope = true; }
-        else { Slope = false; }
+        else
+        { Slope = false; }
 
         if (player.inputHandler.PressedAbility1)
         {
@@ -84,9 +84,6 @@ public class PlayerGroundedState : PlayerState
     public override void Checks()
     {
         base.Checks();
-
-        
-
     }
 
 }

@@ -30,6 +30,7 @@ public class PlayerInAirSlideState : PlayerState
         {
             playerStateMachine.ChangeState(player.inAirState);
         }
+
     }
 
     public override void Enter()

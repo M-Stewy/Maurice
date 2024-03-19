@@ -16,12 +16,28 @@ public class CamFollowPlayer : MonoBehaviour
     [Range(0f, 1f)]
     [Tooltip("the time it takes for the camera to reach the player, keep low")]
     public float timeOffSet = 0.06f;
+    [Tooltip("distance from player while moving in a direction")]
+    public float displacement = 5;
+
+    private float OffY;
+    private float OffX;
 
     private Vector3 velocity = Vector3.zero;
+    private void Update()
+    {
+        if (Input.GetAxisRaw("Vertical") == -1)
+            OffY = Input.GetAxis("Vertical") * displacement + YOffset;
+        else OffY = YOffset;
+
+        if (Input.GetAxis("Horizontal") == -1)
+            OffX = Input.GetAxis("Horizontal") * displacement;
+        else if (Input.GetAxis("Horizontal") == 1)
+            OffX = Input.GetAxis("Horizontal") * displacement;
+    }
     void LateUpdate()
     {
         Vector3 camPos = transform.position;
-        Vector3 playPos = new Vector3(PlayerTrans.position.x,PlayerTrans.position.y + YOffset,-10);
+        Vector3 playPos = new Vector3(PlayerTrans.position.x + OffX,PlayerTrans.position.y + OffY,-10);
 
         transform.position = Vector3.SmoothDamp(camPos,playPos,ref velocity, timeOffSet);
     }
