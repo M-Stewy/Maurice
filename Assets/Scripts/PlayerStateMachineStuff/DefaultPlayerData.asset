@@ -17,18 +17,21 @@ MonoBehaviour:
   SprintSpeed: 30
   CrouchSpeed: 10
   SlideSpeedBoost: 5
+  health: 3
   JumpPower: 35
   JumpTime: 15
   TotalJumps: 1
   CyoteTime: 20
   GroundDrag: 1
   SlopeDrag: 0.001
+  SlowFallDrag: 3
   AirDrag: 0.75
   SlideDrag: 0.5
   IdleDrag: 5
   GroundGravity: 1
   SlopeGravity: 2
   AirGravity: 5
+  SlowFallGravity: 0
   GrapplePointSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   LaymaskGrapple:
     serializedVersion: 2
