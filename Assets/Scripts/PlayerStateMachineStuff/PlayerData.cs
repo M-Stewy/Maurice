@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Unity.VisualScripting;
+using UnityEngine;
 
 [CreateAssetMenu(fileName = "newPlayerData", menuName = "Data/Player Data/Base Player Data")]
 public class PlayerData : ScriptableObject
@@ -10,7 +11,7 @@ public class PlayerData : ScriptableObject
     [Header("Ability that is currently in use")]
     [Tooltip("only one of these should be true at a time")]
     public bool AblityIsGrapple;
-    
+
 
 
 
@@ -21,6 +22,7 @@ public class PlayerData : ScriptableObject
     public float SprintSpeed;
     public float CrouchSpeed;
     public float SlideSpeedBoost;
+    public float health;
 
     [Space]
     [Header("Jump stuff")]
@@ -33,6 +35,7 @@ public class PlayerData : ScriptableObject
     [Header("Drag Values")]
     public float GroundDrag = 1;
     public float SlopeDrag = 0;
+    public float SlowFallDrag = 3;
     public float AirDrag;
     public float SlideDrag;
     public float IdleDrag;
@@ -42,6 +45,7 @@ public class PlayerData : ScriptableObject
     public float GroundGravity = 1f;
     public float SlopeGravity;
     public float AirGravity = 5f;
+    public float SlowFallGravity;
 
 
     [Space]
