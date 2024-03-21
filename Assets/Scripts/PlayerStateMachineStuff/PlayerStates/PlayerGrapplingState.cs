@@ -18,16 +18,20 @@ public class PlayerGrapplingState : PlayerState
     {
     }
     float xInput;
+    bool missedGrap;
 
     GameObject graple;
     public override void Checks()
     {
         base.Checks();
         xInput = player.inputHandler.moveDir.x;
+
+        
     }
 
     public override void Enter()
     {
+        missedGrap = false;
         base.Enter();
         ShootSwingPoint();
         //Debug.Log("Entered Grapple State");
@@ -79,6 +83,10 @@ public class PlayerGrapplingState : PlayerState
         {
             playerStateMachine.ChangeState(player.grapplingState);
         }
+        if (missedGrap)
+        {
+            playerStateMachine.ChangeState(player.inAirState);
+        }
     }
 
     
@@ -88,13 +96,14 @@ public class PlayerGrapplingState : PlayerState
         if (rayHit.collider != null)
         {
             DestoryGrapPoints();
-
+            missedGrap = false;
             // Debug.Log(rayHit.point);
             CreateGrapPoint(rayHit.point,rayHit.transform);
         }
         else
         {
             DestoryGrapPoints();
+            missedGrap = true;
         }
 
     }

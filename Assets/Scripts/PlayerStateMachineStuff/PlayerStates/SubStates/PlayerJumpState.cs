@@ -55,30 +55,32 @@ public class PlayerJumpState : PlayerState
     public override void FixedUpdate()
     {
         base.FixedUpdate();
-
         player.rb.AddForce(new UnityEngine.Vector2(xInput * playerData.baseMoveSpeed, 0));
-    }
-
-    public override void Update()
-    {
-        base.Update();
         if (!player.inputHandler.HoldingJump)
         {
             playerStateMachine.ChangeState(player.inAirState);
             return;
         }
 
-        if(jumpTimer > playerData.JumpTime)
+        jumpTimer++;
+
+        if (jumpTimer > playerData.JumpTime)
         {
             playerStateMachine.ChangeState(player.inAirState);
         }
 
-        jumpTimer++;
+        if (player.inputHandler.holdingSprint)
+            player.rb.AddForce(new UnityEngine.Vector2((xInput * playerData.baseMoveSpeed) / 100, playerData.JumpPower / 20), UnityEngine.ForceMode2D.Impulse);
+        else
+            player.rb.AddForce(new UnityEngine.Vector2(0, playerData.JumpPower / 20), UnityEngine.ForceMode2D.Impulse);
+    }
+
+    public override void Update()
+    {
+        base.Update();
+        
 
         xInput = player.inputHandler.moveDir.x;
-        if(player.inputHandler.holdingSprint)
-            player.rb.AddForce(new UnityEngine.Vector2((xInput * playerData.baseMoveSpeed)/500, playerData.JumpPower/100),UnityEngine.ForceMode2D.Impulse);
-        else
-            player.rb.AddForce(new UnityEngine.Vector2(0, playerData.JumpPower / 100), UnityEngine.ForceMode2D.Impulse);
+        
     }
 }

@@ -18,13 +18,13 @@ MonoBehaviour:
   CrouchSpeed: 10
   SlideSpeedBoost: 5
   JumpPower: 35
-  JumpTime: 75
+  JumpTime: 15
   TotalJumps: 1
   CyoteTime: 20
   GroundDrag: 1
   SlopeDrag: 0.001
   AirDrag: 0.75
-  SlideDrag: 0.05
+  SlideDrag: 0.5
   IdleDrag: 5
   GroundGravity: 1
   SlopeGravity: 2
