@@ -1,10 +1,20 @@
 ﻿using Unity.VisualScripting;
 using UnityEngine;
 
+/// <summary>
+/// Made by Stewy 
+///     Edited by: 
+///     
+///  This Sript holds all the information about the player
+///     such as their move speeds,  gravity values, current ability, health etc.
+///  Because it is a scriptableObject it can be easily modified by other scripts without needing to
+///     get refernces to the gameObject with the script and then the componet of the script itself
+///  
+/// </summary>
+
 [CreateAssetMenu(fileName = "newPlayerData", menuName = "Data/Player Data/Base Player Data")]
 public class PlayerData : ScriptableObject
 {
-
     [Header("Different Abilitys and Stuff")]
     [Space]
 
@@ -14,36 +24,35 @@ public class PlayerData : ScriptableObject
 
 
 
-
-
     [Space(5)]
     [Header("Move Speed")]
-    public float baseMoveSpeed;
-    public float SprintSpeed;
-    public float CrouchSpeed;
-    public float SlideSpeedBoost;
     public float health;
+    public float baseMoveSpeed = 30f;
+    public float SprintSpeed = 60f;
+    public float CrouchSpeed = 20f;
+    public float SlideSpeedBoost = 5f;
 
     [Space]
     [Header("Jump stuff")]
-    public float JumpPower;
-    public float JumpTime;
+    public float JumpPower = 25f;
+    public float JumpTime = 75f;
     public int TotalJumps = 1;
     public float CyoteTime = 10;
 
     [Space(5)]
     [Header("Drag Values")]
-    public float GroundDrag = 1;
-    public float SlopeDrag = 0;
+
+    public float GroundDrag = 1f;
+    public float SlopeDrag = 0.0001f;
+    public float AirDrag = 0.75f;
+    public float SlideDrag = 0.001f;
+    public float IdleDrag = 5f;
     public float SlowFallDrag = 3;
-    public float AirDrag;
-    public float SlideDrag;
-    public float IdleDrag;
 
     [Space]
     [Header("Gravity Values")]
     public float GroundGravity = 1f;
-    public float SlopeGravity;
+    public float SlopeGravity = 3f;
     public float AirGravity = 5f;
     public float SlowFallGravity;
 
@@ -53,8 +62,8 @@ public class PlayerData : ScriptableObject
     public Sprite GrapplePointSprite;
     [Tooltip("Uncheck Ground if you dont want player to be able to grapple to the ground")]
     public LayerMask LaymaskGrapple;
-    public float GrappleReelSpeed;
-    public float GrappleSwingSpeed;
+    public float GrappleReelSpeed = 5f; //This gets weird at higher values need to firgure out why
+    public float GrappleSwingSpeed = 20f;
 
     [HideInInspector]
     public Vector2 CrouchOffset = new Vector2(0,.5f);
@@ -64,4 +73,9 @@ public class PlayerData : ScriptableObject
     public Vector2 NormalOffset = new Vector2(0, 0);
     [HideInInspector]
     public Vector2 NormalSize = new Vector2(1, 2);
+
+
+
+    [Header("Debug Stuff")]
+    public bool ShowEnterStateInConsole;
 }

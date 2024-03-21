@@ -1,3 +1,12 @@
+/// <summary>
+/// Made by Stewy
+/// 
+/// gives the player a force downwards and in the direction they are facing
+/// once entered, it will not exit untill reaching the ground or when the player stops pressing crouch
+/// 
+/// currently it can be spammed to gain massive downward acceleration
+/// not sure if its should be kept or not
+/// </summary>
 public class PlayerInAirSlideState : PlayerState
 {
     public PlayerInAirSlideState(Player player, PlayerData playerData, PlayerStateMachine playerStateMachine) : base(player, playerData, playerStateMachine)
@@ -21,11 +30,12 @@ public class PlayerInAirSlideState : PlayerState
         {
             playerStateMachine.ChangeState(player.inAirState);
         }
+
     }
 
     public override void Enter()
     {
-        UnityEngine.Debug.Log("Entered Air Slide State");
+        //UnityEngine.Debug.Log("Entered Air Slide State");
 
         xInputRaw = player.inputHandler.moveDirRaw.x;
         base.Enter();

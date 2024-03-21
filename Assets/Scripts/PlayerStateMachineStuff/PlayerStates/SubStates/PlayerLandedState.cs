@@ -7,22 +7,12 @@ public class PlayerLandedState : PlayerGroundedState
     public override void Checks()
     {
         base.Checks();
-        if (player.isGrounded)
-        {
-               if(xInput == 0)
-                  playerStateMachine.ChangeState(player.idleState);
-               if(xInput != 0 && !player.inputHandler.holdingSprint)
-                   playerStateMachine.ChangeState(player.movingState);
-               if (xInput != 0 && player.inputHandler.holdingSprint)
-                  playerStateMachine.ChangeState(player.sprintingState);
-             
-        }
-
+        player.rb.AddForce(new UnityEngine.Vector2(xInput * playerData.baseMoveSpeed, 0));
     }
 
     public override void Enter()
     {
-        UnityEngine.Debug.Log("Entered Landed State");
+        //UnityEngine.Debug.Log("Entered Landed State");
         base.Enter();
     }
 
@@ -39,5 +29,15 @@ public class PlayerLandedState : PlayerGroundedState
     public override void Update()
     {
         base.Update();
+        if (player.isGrounded)
+        {
+            if (xInput == 0)
+                playerStateMachine.ChangeState(player.idleState);
+            if (xInput != 0 && !player.inputHandler.holdingSprint)
+                playerStateMachine.ChangeState(player.movingState);
+            if (xInput != 0 && player.inputHandler.holdingSprint)
+                playerStateMachine.ChangeState(player.sprintingState);
+
+        }
     }
 }

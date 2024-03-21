@@ -1,12 +1,19 @@
-
+/// <summary>
+/// Made by Stewy
+/// 
+/// This state is active when the player is
+/// inputing both the sprint button and one of the x-axis buttons
+/// it causes the player to move at an accelerated rate compared to normal
+/// </summary>
 public class PlayerSprintingState : PlayerGroundedState
 {
     public PlayerSprintingState(Player player, PlayerData playerData, PlayerStateMachine playerStateMachine) : base(player, playerData, playerStateMachine)
     {
     }
 
-    float xInput;
     float xInputRaw;
+    float dragTimer;
+    bool dragSet;
     public override void Checks()
     {
         base.Checks();
@@ -14,12 +21,12 @@ public class PlayerSprintingState : PlayerGroundedState
 
     public override void Enter()
     {
-        UnityEngine.Debug.Log("entered Spriting State");
         base.Enter();
-        player.rb.drag = playerData.GroundDrag;
         player.cc.size = playerData.NormalSize;
         player.cc.offset = playerData.NormalOffset;
 
+        dragTimer = 50;
+        dragSet = false;
     }
 
     public override void Exit()
@@ -31,27 +38,20 @@ public class PlayerSprintingState : PlayerGroundedState
     {
         base.FixedUpdate();
         player.rb.AddForce(new UnityEngine.Vector2(xInputRaw * playerData.SprintSpeed, 0));
+        dragTimer--;
     }
 
     public override void Update()
     {
+        if(dragTimer <= 0 && !dragSet)
+        {
+            SetDrag();
+            dragSet = true;
+        }
         base.Update();
 
         xInput = player.inputHandler.moveDir.x;
         xInputRaw = player.inputHandler.moveDirRaw.x;
-
-        // ----------------- Slope Shit ------------------- \\
-        if (Slope)
-        {
-            player.rb.drag = playerData.SlopeDrag;
-            player.rb.gravityScale = playerData.SlopeGravity;
-        }
-        else
-        {
-            player.rb.drag = playerData.GroundDrag;
-            player.rb.gravityScale = playerData.GroundGravity;
-        }
-
 
 
         // ---------------- State Changers --------------------- \\
@@ -66,6 +66,23 @@ public class PlayerSprintingState : PlayerGroundedState
         if(crouching)
         {
             playerStateMachine.ChangeState(player.slidingState);
+        }
+    }
+
+    private void SetDrag()
+    {
+        UnityEngine.Debug.Log("Test");
+
+        // ----------------- Slope Shit ------------------- \\
+        if (Slope)
+        {
+            player.rb.drag = playerData.SlopeDrag;
+            player.rb.gravityScale = playerData.SlopeGravity;
+        }
+        else
+        {
+            player.rb.drag = playerData.GroundDrag;
+            player.rb.gravityScale = playerData.GroundGravity;
         }
     }
 }
