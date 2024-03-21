@@ -4,9 +4,21 @@ using Unity.IO.LowLevel.Unsafe;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
-
+/// <summary>
+/// Made by Stewy
+/// 
+/// This is the main player controller script
+/// it uses a state machine to swap between the different states of movement
+/// 
+/// This script initalizes all the states to be public variables that can be accessed by all the states so they can all read each other
+/// This script also contains all the componets needed for the state scripts (ex. RigidBody, Collider etc.) as public variables
+/// Any given state is only active once at a time
+/// Every state has transitions to other states depending on the playerInputHandler script or other checks(ex. check for the ground)
+/// 
+/// </summary>
 public class Player : MonoBehaviour
 {
+    //These are all the state scripts that the player can switch between
     public PlayerStateMachine PSM { get; private set; }
     public PlayerGroundedState groundedState { get; private set; }
     public PlayerUseAbilityState useAbilityState { get; private set; }
@@ -25,14 +37,19 @@ public class Player : MonoBehaviour
     public PlayerGrapplingState grapplingState { get; private set; }
 
     public PlayerInputHandler inputHandler { get; private set; }
+    [Header("Put custom player data here")]
+    [Tooltip("holds all the data of the player like speed, health, and whatever")]
     [SerializeField] public PlayerData playerData;
 
+    //This is the ground layer Defined in the inspector
+    [Tooltip("Ground Layer(any layers you want the player to be able to jump on)")]
     public LayerMask Laymask;
 
 
     [HideInInspector]
     public Rigidbody2D rb;
     //[HideInInspector]
+    [Tooltip("This needs to be the same capsule collider as on this player object")]
     public CapsuleCollider2D cc;
     [HideInInspector]
     public DistanceJoint2D dj;
@@ -44,7 +61,7 @@ public class Player : MonoBehaviour
     public bool isOnSlope;
 
 
-    //Debug Stuff, dont worry about it
+    
     RaycastHit2D ray;
     RaycastHit2D SlopeRay;
 
@@ -80,14 +97,14 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        PSM.Initialize(idleState);
+        PSM.Initialize(idleState); // this starts the state machine by setting the player to the idle state on the start of the game
     }
 
 
 
     private void Update()
     {
-        PSM.currentState.Update();
+        PSM.currentState.Update(); // this is calling the base unity Update method in the current state of the state machine
 
         isGrounded = IsGrounded();
         isOnSlope = IsOnSlope();
@@ -95,23 +112,27 @@ public class Player : MonoBehaviour
     
     private void FixedUpdate()
     {
-        PSM.currentState.FixedUpdate();
+        PSM.currentState.FixedUpdate(); // this is calling the base unity FixedUpdate method in the current state of the state machine
     }
 
-
+    [SerializeField]
     Vector3 GroundCheckFixer = new Vector3(.3f, .2f, 0f);
+    [SerializeField]
     Vector3 GroundCheckOffset = new Vector3(0,.5f,0);
 
+    //using a raycast box to check for the ground below
     private bool IsGrounded()
     {
-        ray = Physics2D.BoxCast(cc.bounds.center- GroundCheckOffset, cc.bounds.size - GroundCheckFixer, 0, Vector2.down, 0.1f, Laymask);
+        GroundCheckOffset = new Vector3(GroundCheckOffset.x,cc.bounds.size.y/2,GroundCheckOffset.z);
+        GroundCheckFixer = new Vector3(GroundCheckFixer.x, cc.size.y/2 + .5f,GroundCheckFixer.z);
+        ray = Physics2D.BoxCast(cc.bounds.center - GroundCheckOffset, cc.bounds.size - GroundCheckFixer, 0, Vector2.down, 0.1f, Laymask);
         return ray.collider != null;
         
     }
 
     private bool IsOnSlope()
     {
-        SlopeRay = Physics2D.Raycast(cc.bounds.center - GroundCheckOffset, Vector2.down, 4.5f, Laymask);
+        SlopeRay = Physics2D.Raycast(cc.bounds.center  - GroundCheckOffset, Vector2.down, 4.5f, Laymask);
 
         if (SlopeRay.collider != null)
         {
@@ -132,13 +153,14 @@ public class Player : MonoBehaviour
 
         if(IsGrounded() )
         {
+            
             Gizmos.color = Color.green;
-            Gizmos.DrawWireCube(cc.bounds.center + -transform.up * ray.distance, cc.bounds.size - GroundCheckFixer);
+            Gizmos.DrawWireCube(cc.bounds.center - GroundCheckOffset + -transform.up * ray.distance, cc.bounds.size - GroundCheckFixer);
         }
         else
         {
             Gizmos.color = Color.yellow;
-            Gizmos.DrawWireCube(cc.bounds.center + -transform.up * 0.1f, cc.bounds.size - GroundCheckFixer);
+            Gizmos.DrawWireCube(cc.bounds.center  - GroundCheckOffset + -transform.up * 0.1f, cc.bounds.size - GroundCheckFixer);
         }
 
         if (isOnSlope)

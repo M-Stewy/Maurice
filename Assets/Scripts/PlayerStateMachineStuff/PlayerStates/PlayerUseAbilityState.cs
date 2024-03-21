@@ -1,7 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Made by Stewy
+///     Edited by:
+/// 
+/// Very unfinshed but serves as a foundation to how our ability system will (hopefull) work
+/// we need to dicuss this further I think
+/// </summary>
 public class PlayerUseAbilityState : PlayerState
 {
     public PlayerUseAbilityState(Player player, PlayerData playerData, PlayerStateMachine playerStateMachine) : base(player, playerData, playerStateMachine)
@@ -16,7 +21,7 @@ public class PlayerUseAbilityState : PlayerState
     public override void Enter()
     {
         base.Enter();
-        Debug.Log("Entered Ability State");
+        //Debug.Log("Entered Ability State");
 
         /*
         *  Do something to check for current ability
