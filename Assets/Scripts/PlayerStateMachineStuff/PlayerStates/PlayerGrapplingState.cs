@@ -14,7 +14,7 @@ using UnityEngine.Windows;
 /// </summary>
 public class PlayerGrapplingState : PlayerState
 {
-    public PlayerGrapplingState(Player player, PlayerData playerData, PlayerStateMachine playerStateMachine) : base(player, playerData, playerStateMachine)
+    public PlayerGrapplingState(Player player, PlayerData playerData, PlayerStateMachine playerStateMachine, string playerAnim) : base(player, playerData, playerStateMachine, playerAnim)
     {
     }
     float xInput;
@@ -50,6 +50,16 @@ public class PlayerGrapplingState : PlayerState
 
         player.rb.AddForce(new Vector2(xInput * player.playerData.GrappleSwingSpeed, 0));
 
+
+        if (player.inputHandler.HoldingUp)
+        {
+            player.dj.distance -= playerData.GrappleReelSpeed * Time.deltaTime;
+        }
+        if (player.inputHandler.HoldingDown)
+        {
+            player.dj.distance += playerData.GrappleReelSpeed * Time.deltaTime;
+        }
+
     }
 
     public override void Update()
@@ -61,15 +71,6 @@ public class PlayerGrapplingState : PlayerState
             player.dj.connectedAnchor = graple.transform.position;
         }
 
-
-            if (player.inputHandler.HoldingUp)
-            {
-            player.dj.distance -= playerData.GrappleReelSpeed * Time.deltaTime;
-            }
-            if(player.inputHandler.HoldingDown)
-            {
-            player.dj.distance += playerData.GrappleReelSpeed * Time.deltaTime;
-        }
 
         if (player.inputHandler.PressedJump)
         {

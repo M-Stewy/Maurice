@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: DefaultPlayerData
   m_EditorClassIdentifier: 
   AblityIsGrapple: 1
+  health: 3
   baseMoveSpeed: 15
   SprintSpeed: 30
   CrouchSpeed: 10
@@ -26,6 +27,7 @@ MonoBehaviour:
   AirDrag: 0.75
   SlideDrag: 0.5
   IdleDrag: 5
+  SlowFallDrag: 3
   GroundGravity: 1
   SlopeGravity: 2
   AirGravity: 5
@@ -33,10 +35,10 @@ MonoBehaviour:
   LaymaskGrapple:
     serializedVersion: 2
     m_Bits: 64
-  GrappleReelSpeed: 50
-  GrappleSwingSpeed: 20
-  CrouchOffset: {x: 0, y: 0.5}
-  CrouchSize: {x: 1, y: 1}
-  NormalOffset: {x: 0, y: 0}
-  NormalSize: {x: 1, y: 2}
-  ShowEnterStateInConsole: 1
+  GrappleReelSpeed: 10
+  GrappleSwingSpeed: 25
+  CrouchOffset: {x: -0.27, y: -0.6}
+  CrouchSize: {x: 0.85, y: 0.65}
+  NormalOffset: {x: -0.27, y: -0.35}
+  NormalSize: {x: 0.85, y: 1.31}
+  ShowEnterStateInConsole: 0
