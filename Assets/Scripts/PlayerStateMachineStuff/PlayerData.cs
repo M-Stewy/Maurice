@@ -65,14 +65,17 @@ public class PlayerData : ScriptableObject
     public float GrappleReelSpeed = 5f; //This gets weird at higher values need to firgure out why
     public float GrappleSwingSpeed = 20f;
 
-    [HideInInspector]
-    public Vector2 CrouchOffset = new Vector2(0,.5f);
-    [HideInInspector]
-    public Vector2 CrouchSize = new Vector2(1, 1f);
-    [HideInInspector]
-    public Vector2 NormalOffset = new Vector2(0, 0);
-    [HideInInspector]
-    public Vector2 NormalSize = new Vector2(1, 2);
+    //[HideInInspector] 
+    [Space]
+    [Header("DO NOT CHANGE THESE FROM DEFAULT, \n" +
+        "           (unless we change player size)")]
+    public Vector2 CrouchOffset = new Vector2(-0.27f, -0.32f);
+    //[HideInInspector]
+    public Vector2 CrouchSize = new Vector2(0.4f, 0.65f);
+   // [HideInInspector]
+    public Vector2 NormalOffset = new Vector2(-0.27f, -0.32f);
+    // [HideInInspector]
+    public Vector2 NormalSize = new Vector2(0.85f, 1.31f);
 
 
 

@@ -54,6 +54,9 @@ public class Player : MonoBehaviour
     [HideInInspector]
     public DistanceJoint2D dj;
 
+    [HideInInspector]
+    public Animator anim;
+
 
     [HideInInspector]
     public bool isGrounded;
@@ -69,21 +72,21 @@ public class Player : MonoBehaviour
     {
         PSM = new PlayerStateMachine();
 
-        groundedState = new PlayerGroundedState(this, playerData, PSM);
-        useAbilityState = new PlayerUseAbilityState(this,playerData,PSM);
+        groundedState = new PlayerGroundedState(this, playerData, PSM,"GroundedAnim");
+        useAbilityState = new PlayerUseAbilityState(this,playerData,PSM, "AbilityAnim");
 
-        idleState = new PlayerIdleState(this, playerData, PSM);
-        movingState = new PlayerMovingState(this, playerData, PSM);
-        jumpState = new PlayerJumpState(this, playerData, PSM);
-        crouchIdleState = new PlayerCrouchIdleState(this, playerData, PSM);
-        crouchMoveState = new PlayerCrouchMovingState(this, playerData, PSM);
-        slidingState = new PlayerSlidingState(this, playerData, PSM);
-        sprintingState = new PlayerSprintingState(this, playerData, PSM);
+        idleState = new PlayerIdleState(this, playerData, PSM, "isIdle");
+        movingState = new PlayerMovingState(this, playerData, PSM, "IsWalking");
+        jumpState = new PlayerJumpState(this, playerData, PSM, "JumpStart");
+        crouchIdleState = new PlayerCrouchIdleState(this, playerData, PSM, "IsCrouchingAnim");
+        crouchMoveState = new PlayerCrouchMovingState(this, playerData, PSM, "IsCrouchWalkingAnim");
+        slidingState = new PlayerSlidingState(this, playerData, PSM, "IsSlidingAnim");
+        sprintingState = new PlayerSprintingState(this, playerData, PSM, "IsSprinting");
         
-        inAirState = new PlayerInAirState(this, playerData, PSM);
-        landedState = new PlayerLandedState(this, playerData, PSM);
-        airSlideState = new PlayerInAirSlideState(this, playerData, PSM);
-        grapplingState = new PlayerGrapplingState(this, playerData, PSM);
+        inAirState = new PlayerInAirState(this, playerData, PSM, "InAir");
+        landedState = new PlayerLandedState(this, playerData, PSM, "Landed");
+        airSlideState = new PlayerInAirSlideState(this, playerData, PSM, "InAirSlideAnim");
+        grapplingState = new PlayerGrapplingState(this, playerData, PSM, "isGrapplingAnim");
 
 
 
@@ -91,6 +94,8 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         cc = GetComponent<CapsuleCollider2D>();
         dj = GetComponent<DistanceJoint2D>();
+
+        anim = GetComponent<Animator>();
 
     }
 
@@ -108,6 +113,14 @@ public class Player : MonoBehaviour
 
         isGrounded = IsGrounded();
         isOnSlope = IsOnSlope();
+
+        if(inputHandler.moveDir.x == -1)
+        {
+            transform.localScale = new Vector3(-1,1,1);
+        }else if(inputHandler.moveDir.x == 1)
+        {
+            transform.localScale = new Vector3(1,1,1);
+        }
     }
     
     private void FixedUpdate()

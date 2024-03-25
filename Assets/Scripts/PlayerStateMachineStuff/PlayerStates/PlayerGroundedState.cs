@@ -12,7 +12,7 @@ using UnityEngine;
 /// </summary>
 public class PlayerGroundedState : PlayerState
 {
-    public PlayerGroundedState(Player player, PlayerData playerData, PlayerStateMachine playerStateMachine) : base(player, playerData, playerStateMachine)
+    public PlayerGroundedState(Player player, PlayerData playerData, PlayerStateMachine playerStateMachine, string playerAnim) : base(player, playerData, playerStateMachine, playerAnim)
     {
     }
     protected float xInput;

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 /// <summary>
 /// Made by Stewy
@@ -17,22 +18,35 @@ public class TrackingTurretAI : MonoBehaviour
 {
     [SerializeField] LayerMask PlayerLayer;
 
-    public float turretRange = 1f;
+    [SerializeField]
+    private float turretRange = 1f;
+    [SerializeField]
+    private float shootTimer;
+    [SerializeField]
+    private float searchSpeed;
+
     [SerializeField]
     Transform Tip;
+
+    [SerializeField]
+    GameObject bullet;
+
 
     Transform playerPos;
     Vector3 targetDir;
     int inverter = 1;
+    Animator anim;
 
     bool canSeePlayer = false;
     bool seesGround = false;
     bool hasStartedSearch = false;
+    bool justShot;
 
     void Start()
     {
         playerPos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        Tip = gameObject.GetComponentInChildren<Transform>();
+        //Tip = gameObject.GetComponentInChildren<Transform>();
+        anim = GetComponent<Animator>();
     }
     private void Update()
     {
@@ -43,14 +57,27 @@ public class TrackingTurretAI : MonoBehaviour
         {
             transform.right = targetDir;
             hasStartedSearch = false;
+            anim.SetBool("CanSeePlayer", true);
+
+            if(!justShot)
+            {
+                StartCoroutine(Shoot() );
+            }
         }
         else if(!hasStartedSearch)
         {
+            anim.SetBool("CanSeePlayer", false);
             hasStartedSearch = true;
-            StartCoroutine(SearchForPlayer() );
         }
         
 
+    }
+    private void FixedUpdate()
+    {
+        if(hasStartedSearch)
+        {
+            transform.Rotate(0, 0, searchSpeed * inverter);
+        }
     }
 
     private void LateUpdate()
@@ -67,14 +94,14 @@ public class TrackingTurretAI : MonoBehaviour
         }
         if (ray.collider.CompareTag("Player"))
         {
-            StopAllCoroutines();
+            hasStartedSearch = false;
             seesGround = false;
             return true;
         }else if (ray.collider.CompareTag("Ground"))
         {
             inverter *= -1;
             transform.Rotate(0, 0, 5f * inverter);
-            StopAllCoroutines();
+            
             hasStartedSearch = false;
             seesGround = true;
             return false;
@@ -100,13 +127,35 @@ public class TrackingTurretAI : MonoBehaviour
         }
     }
 
-    IEnumerator SearchForPlayer()
+   /*
+    * IEnumerator SearchForPlayer()
+    *   {
+    *
+    *       transform.Rotate(0,0,0.1f * inverter);
+    *
+    *       yield return new WaitForSeconds(0.001f);
+    *       StartCoroutine(SearchForPlayer() );
+    *   } 
+    */
+
+    IEnumerator Shoot()
     {
+        justShot = true;
+        anim.SetBool("IsShooting", true);
 
-        transform.Rotate(0,0,0.1f * inverter);
+        GameObject firedBullet = Instantiate(bullet, Tip.position,Quaternion.identity);
+        firedBullet.GetComponent<Rigidbody2D>().AddForce(targetDir.normalized * 1000f);
 
-        yield return new WaitForSeconds(0.001f);
-        StartCoroutine(SearchForPlayer() );
+        yield return new WaitForEndOfFrame();
+        anim.SetBool("IsShooting", false);
+       
+
+
+        yield return new WaitForSeconds(shootTimer);
+        justShot = false;
+        
     }
+
+
 }
 

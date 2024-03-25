@@ -5,7 +5,7 @@
 /// </summary>
 public class PlayerInAirState : PlayerState
 {
-    public PlayerInAirState(Player player, PlayerData playerData, PlayerStateMachine playerStateMachine) : base(player, playerData, playerStateMachine)
+    public PlayerInAirState(Player player, PlayerData playerData, PlayerStateMachine playerStateMachine, string playerAnim) : base(player, playerData, playerStateMachine, playerAnim)
     {
     }
     float xInput;
