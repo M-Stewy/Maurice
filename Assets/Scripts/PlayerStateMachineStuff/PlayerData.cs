@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Unity.VisualScripting;
+using UnityEngine;
 
 /// <summary>
 /// Made by Stewy 
@@ -20,11 +21,12 @@ public class PlayerData : ScriptableObject
     [Header("Ability that is currently in use")]
     [Tooltip("only one of these should be true at a time")]
     public bool AblityIsGrapple;
-    
+
 
 
     [Space(5)]
     [Header("Move Speed")]
+    public float health;
     public float baseMoveSpeed = 30f;
     public float SprintSpeed = 60f;
     public float CrouchSpeed = 20f;
@@ -39,17 +41,20 @@ public class PlayerData : ScriptableObject
 
     [Space(5)]
     [Header("Drag Values")]
+
     public float GroundDrag = 1f;
     public float SlopeDrag = 0.0001f;
     public float AirDrag = 0.75f;
     public float SlideDrag = 0.001f;
     public float IdleDrag = 5f;
+    public float SlowFallDrag = 3;
 
     [Space]
     [Header("Gravity Values")]
     public float GroundGravity = 1f;
     public float SlopeGravity = 3f;
     public float AirGravity = 5f;
+    public float SlowFallGravity;
 
 
     [Space]
