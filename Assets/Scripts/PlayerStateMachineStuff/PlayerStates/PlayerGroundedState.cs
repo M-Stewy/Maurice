@@ -1,5 +1,15 @@
 using UnityEngine;
-
+/// <summary>
+/// Made by Stewy
+/// 
+/// This is a parent state(I dont think thats the technically name for it but yea) 
+/// for all the states that take place on the ground
+/// all of the logic in this state is also being called in any of those states
+/// the ones that have "PlayerGroundedState" after their class name are the ones inheriting from it
+/// thus this only applies to them
+/// 
+/// This state is not ever used on its own, it merely exists to make the other states simpler
+/// </summary>
 public class PlayerGroundedState : PlayerState
 {
     public PlayerGroundedState(Player player, PlayerData playerData, PlayerStateMachine playerStateMachine) : base(player, playerData, playerStateMachine)
@@ -18,7 +28,7 @@ public class PlayerGroundedState : PlayerState
 
     public override void Enter()
     {
-        Debug.Log("entered Grounded");
+        //Debug.Log("entered Grounded");
         base.Enter();
         player.rb.gravityScale = playerData.GroundGravity;
         cyoteTime = playerData.CyoteTime;
@@ -45,7 +55,6 @@ public class PlayerGroundedState : PlayerState
         if (!player.isGrounded)
         {
             cyoteTimer++;
-            //Debug.Log(cyoteTimer);
             if (cyoteTimer >= cyoteTime)
                 playerStateMachine.ChangeState(player.inAirState);
         }
@@ -53,7 +62,8 @@ public class PlayerGroundedState : PlayerState
 
         if (player.isOnSlope)
         { Slope = true; }
-        else { Slope = false; }
+        else
+        { Slope = false; }
 
         if (player.inputHandler.PressedAbility1)
         {
@@ -74,9 +84,6 @@ public class PlayerGroundedState : PlayerState
     public override void Checks()
     {
         base.Checks();
-
-        
-
     }
 
 }

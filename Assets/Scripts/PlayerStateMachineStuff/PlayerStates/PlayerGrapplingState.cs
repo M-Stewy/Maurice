@@ -1,23 +1,40 @@
+using System.Drawing;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Windows;
-
+/// <summary>
+/// Made by Stewy
+/// 
+/// This does a lot of stuff and I might change it later idk
+/// but basically it uses the distance joint componet from unity to create
+/// a link between the player and a point created on click on the nearest object(with the correct tag)
+/// in the dircetion of the players mouse
+/// it also creates the point as a child of whatever it hits incase it hits a moving platform
+/// not sure if anyone is using moving platforms but uhh, I did that anyway
+/// </summary>
 public class PlayerGrapplingState : PlayerState
 {
     public PlayerGrapplingState(Player player, PlayerData playerData, PlayerStateMachine playerStateMachine) : base(player, playerData, playerStateMachine)
     {
     }
     float xInput;
+    bool missedGrap;
+
+    GameObject graple;
     public override void Checks()
     {
         base.Checks();
         xInput = player.inputHandler.moveDir.x;
+
+        
     }
 
     public override void Enter()
     {
+        missedGrap = false;
         base.Enter();
         ShootSwingPoint();
-        Debug.Log("Entered Grapple State");
+        //Debug.Log("Entered Grapple State");
         
     }
 
@@ -39,9 +56,19 @@ public class PlayerGrapplingState : PlayerState
     {
         base.Update();
 
-        if (player.inputHandler.HoldingUp)
+        if (graple)
         {
+            player.dj.connectedAnchor = graple.transform.position;
+        }
+
+
+            if (player.inputHandler.HoldingUp)
+            {
             player.dj.distance -= playerData.GrappleReelSpeed * Time.deltaTime;
+            }
+            if(player.inputHandler.HoldingDown)
+            {
+            player.dj.distance += playerData.GrappleReelSpeed * Time.deltaTime;
         }
 
         if (player.inputHandler.PressedJump)
@@ -56,6 +83,10 @@ public class PlayerGrapplingState : PlayerState
         {
             playerStateMachine.ChangeState(player.grapplingState);
         }
+        if (missedGrap)
+        {
+            playerStateMachine.ChangeState(player.inAirState);
+        }
     }
 
     
@@ -65,24 +96,38 @@ public class PlayerGrapplingState : PlayerState
         if (rayHit.collider != null)
         {
             DestoryGrapPoints();
-
+            missedGrap = false;
             // Debug.Log(rayHit.point);
-            CreateGrapPoint(rayHit.point);
+            CreateGrapPoint(rayHit.point,rayHit.transform);
         }
         else
         {
             DestoryGrapPoints();
+            missedGrap = true;
         }
 
     }
 
-    private void CreateGrapPoint(Vector2 point)
+    private void CreateGrapPoint(Vector2 point, Transform parentOBJ)
     {
-        GameObject graple = new GameObject("GrapplePoint");
+        graple = new GameObject("GrapplePoint");
         graple.tag = "GraplePoint";
         graple.AddComponent<SpriteRenderer>();
         graple.GetComponent<SpriteRenderer>().sprite = playerData.GrapplePointSprite;
         graple.transform.position = point;
+        graple.transform.SetParent(parentOBJ);
+
+        /*
+        graple.AddComponent<CircleCollider2D>();
+        graple.AddComponent<Rigidbody2D>();
+        graple.GetComponent<Rigidbody2D>().isKinematic = true;
+
+        I found an easier way to do all this 
+        graple.GetComponent<Rigidbody2D>().interpolation = RigidbodyInterpolation2D.Interpolate;
+        graple.GetComponent<Rigidbody2D>().gravityScale = 0;
+        graple.GetComponent<Rigidbody2D>().angularDrag = 0;
+        graple.GetComponent<Rigidbody2D>().freezeRotation = true;
+        */
 
         ConnectPlayerToPoint(graple);
     }
@@ -92,7 +137,7 @@ public class PlayerGrapplingState : PlayerState
     {
         if (GameObject.FindGameObjectWithTag("GraplePoint"))
         {
-            player.dj.distance = player.transform.position.magnitude - point.transform.position.magnitude;
+            player.dj.distance = Vector2.Distance(player.transform.position, point.transform.position);
             player.dj.enabled = true;
             player.dj.connectedAnchor = point.transform.position;
         }

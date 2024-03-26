@@ -1,3 +1,9 @@
+/// <summary>
+/// Made by Stewy
+/// 
+/// This State lowers the collider of the player to be smaller so it can fit into smaller gaps
+/// also sets drag to be higher so the player stops when no input(the conditions of this state)
+/// </summary>
 public class PlayerCrouchIdleState : PlayerGroundedState
 {
     public PlayerCrouchIdleState(Player player, PlayerData playerData, PlayerStateMachine playerStateMachine) : base(player, playerData, playerStateMachine)
@@ -11,7 +17,7 @@ public class PlayerCrouchIdleState : PlayerGroundedState
 
     public override void Enter()
     {
-        UnityEngine.Debug.Log("Entered Crouch Idle State");
+        //UnityEngine.Debug.Log("Entered Crouch Idle State");
         player.rb.drag = playerData.IdleDrag;
         player.cc.size = playerData.CrouchSize;
         player.cc.offset = playerData.CrouchOffset;

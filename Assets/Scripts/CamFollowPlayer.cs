@@ -3,32 +3,42 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using UnityEngine;
 
+
+//Made by Stewy
+
 public class CamFollowPlayer : MonoBehaviour
 {
-    
 
+    [Tooltip("drag the player here")]
     public Transform PlayerTrans;
+    [Tooltip("The height offset of the camera relative to the player")]
     public float YOffset = 5;
     [Range(0f, 1f)]
+    [Tooltip("the time it takes for the camera to reach the player, keep low")]
     public float timeOffSet = 0.06f;
+    [Tooltip("distance from player while moving in a direction")]
+    public float displacement = 5;
 
-    private Vector2 velocity = Vector3.zero;
+    private float OffY;
+    private float OffX;
 
-    // Start is called before the first frame update
-    void Start()
+    private Vector3 velocity = Vector3.zero;
+    private void Update()
     {
-        
-    }
+        if (Input.GetAxisRaw("Vertical") == -1)
+            OffY = Input.GetAxis("Vertical") * displacement + YOffset;
+        else OffY = YOffset;
 
-    // Update is called once per frame
+        if (Input.GetAxis("Horizontal") == -1)
+            OffX = Input.GetAxis("Horizontal") * displacement;
+        else if (Input.GetAxis("Horizontal") == 1)
+            OffX = Input.GetAxis("Horizontal") * displacement;
+    }
     void LateUpdate()
     {
-        Vector2 camPos = transform.position;
-        Vector2 playPos = new Vector2(PlayerTrans.position.x,PlayerTrans.position.y + YOffset);
+        Vector3 camPos = transform.position;
+        Vector3 playPos = new Vector3(PlayerTrans.position.x + OffX,PlayerTrans.position.y + OffY,-10);
 
-        transform.position = Vector2.SmoothDamp(camPos,playPos,ref velocity, timeOffSet);
-
-
-        transform.position = new Vector3(transform.position.x, transform.position.y,-10f);
+        transform.position = Vector3.SmoothDamp(camPos,playPos,ref velocity, timeOffSet);
     }
 }
