@@ -13,21 +13,22 @@ MonoBehaviour:
   m_Name: DefaultPlayerData
   m_EditorClassIdentifier: 
   AblityIsGrapple: 1
+  health: 3
+  maxHealth: 3
   baseMoveSpeed: 15
   SprintSpeed: 30
   CrouchSpeed: 10
   SlideSpeedBoost: 5
-  health: 3
   JumpPower: 35
   JumpTime: 15
   TotalJumps: 1
   CyoteTime: 20
   GroundDrag: 1
   SlopeDrag: 0.001
-  SlowFallDrag: 3
   AirDrag: 0.75
   SlideDrag: 0.5
   IdleDrag: 5
+  SlowFallDrag: 3
   GroundGravity: 1
   SlopeGravity: 2
   AirGravity: 5
