@@ -27,6 +27,7 @@ public class PlayerData : ScriptableObject
     [Space(5)]
     [Header("Move Speed")]
     public float health;
+    public float maxHealth;
     public float baseMoveSpeed = 30f;
     public float SprintSpeed = 60f;
     public float CrouchSpeed = 20f;
