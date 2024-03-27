@@ -36,6 +36,7 @@ public class TrackingTurretAI : MonoBehaviour
     Vector3 targetDir;
     int inverter = 1;
     Animator anim;
+    LineRenderer lineRen;
 
     bool canSeePlayer = false;
     bool seesGround = false;
@@ -47,6 +48,8 @@ public class TrackingTurretAI : MonoBehaviour
         playerPos = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         //Tip = gameObject.GetComponentInChildren<Transform>();
         anim = GetComponent<Animator>();
+        lineRen = GetComponent<LineRenderer>();
+        lineRen.SetPosition(1,new Vector3(turretRange,0,0));
     }
     private void Update()
     {

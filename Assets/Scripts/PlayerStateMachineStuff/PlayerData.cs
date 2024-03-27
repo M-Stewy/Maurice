@@ -1,4 +1,5 @@
-﻿using Unity.VisualScripting;
+﻿using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 /// <summary>
@@ -15,15 +16,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "newPlayerData", menuName = "Data/Player Data/Base Player Data")]
 public class PlayerData : ScriptableObject
 {
-    [Header("Different Abilitys and Stuff")]
-    [Space]
-
-    [Header("Ability that is currently in use")]
-    [Tooltip("only one of these should be true at a time")]
-    public bool AblityIsGrapple;
-
-
-
+    
     [Space(5)]
     [Header("Move Speed")]
     public float health;
@@ -56,6 +49,12 @@ public class PlayerData : ScriptableObject
     public float AirGravity = 5f;
     public float SlowFallGravity;
 
+    [Space(5)]
+
+    [Header("Ability Things and Stuff Yea")]
+    [Space]
+
+    public bool AllAbilitiesUnlocked;
 
     [Space]
     [Header("Grapple Stuff")]
@@ -64,6 +63,14 @@ public class PlayerData : ScriptableObject
     public LayerMask LaymaskGrapple;
     public float GrappleReelSpeed = 5f; //This gets weird at higher values need to firgure out why
     public float GrappleSwingSpeed = 20f;
+
+
+    [Header("Gun Stuff")]
+    [Tooltip("Bullet the player shoots out of the gun")]
+    public GameObject playerBullet;
+    public float gunForce;
+    public int MaxShots = 7;
+    public int AmmoLeft;
 
     //[HideInInspector] 
     [Space]

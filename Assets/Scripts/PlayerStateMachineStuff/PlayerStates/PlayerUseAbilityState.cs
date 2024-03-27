@@ -36,15 +36,46 @@ public class PlayerUseAbilityState : PlayerState
         */
 
         //temp stuff for quick grapple implementation
-        if (playerData.AblityIsGrapple)
+        
+        switch (player.CurrentAbility.name)
+        {
+            case "NoAbility":
+                playerStateMachine.ChangeState(player.idleState);
+                break;
+            case "Grappling":
+                playerStateMachine.ChangeState(player.grapplingState);
+                break;
+            case "Gun":
+                playerStateMachine.ChangeState(player.shootGunState);
+                break;
+            default:
+                playerStateMachine.ChangeState(player.idleState);
+                break;
+        }
+        
+
+
+        /*
+        if(player.CurrentAbility.name == "Grappling")
         {
             playerStateMachine.ChangeState(player.grapplingState);
         }
         else
         {
-            playerStateMachine.ChangeState(player.inAirState);
+            playerStateMachine.ChangeState(player.idleState);
         }
+        */
 
+        /*
+            if (playerData.AblityIsGrapple)
+            {
+                playerStateMachine.ChangeState(player.grapplingState);
+            }
+            else
+            {
+                playerStateMachine.ChangeState(player.inAirState);
+            }
+        */
     }
 
     public override void Exit()
@@ -55,6 +86,8 @@ public class PlayerUseAbilityState : PlayerState
     public override void Update()
     {
         base.Update();
+
+        
     }
 
     public override void FixedUpdate()

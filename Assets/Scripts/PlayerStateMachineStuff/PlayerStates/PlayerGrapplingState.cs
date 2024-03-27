@@ -21,6 +21,7 @@ public class PlayerGrapplingState : PlayerState
     bool missedGrap;
 
     GameObject graple;
+    Vector3 direction;
     public override void Checks()
     {
         base.Checks();
@@ -33,6 +34,7 @@ public class PlayerGrapplingState : PlayerState
     {
         missedGrap = false;
         base.Enter();
+        player.CurrentAbility.DoAction(player.hand.gameObject, true);
         ShootSwingPoint();
         //Debug.Log("Entered Grapple State");
         
@@ -42,6 +44,7 @@ public class PlayerGrapplingState : PlayerState
     {
         base.Exit();
        DestoryGrapPoints();
+        player.CurrentAbility.DoAction(player.hand.gameObject, false);
     }
 
     public override void FixedUpdate()
@@ -82,7 +85,7 @@ public class PlayerGrapplingState : PlayerState
         }
         if (player.inputHandler.PressedAbility1)
         {
-            playerStateMachine.ChangeState(player.grapplingState);
+            playerStateMachine.ChangeState(player.useAbilityState);
         }
         if (missedGrap)
         {
@@ -93,7 +96,8 @@ public class PlayerGrapplingState : PlayerState
     
     private void ShootSwingPoint()
     {
-        RaycastHit2D rayHit = Physics2D.Raycast(player.transform.position, player.inputHandler.mouseScreenPos - player.transform.position, 25f, playerData.LaymaskGrapple);
+        direction = player.inputHandler.mouseScreenPos - player.transform.position;
+        RaycastHit2D rayHit = Physics2D.Raycast(player.transform.position, direction, 25f, playerData.LaymaskGrapple);
         if (rayHit.collider != null)
         {
             DestoryGrapPoints();
@@ -116,6 +120,8 @@ public class PlayerGrapplingState : PlayerState
         graple.AddComponent<SpriteRenderer>();
         graple.GetComponent<SpriteRenderer>().sprite = playerData.GrapplePointSprite;
         graple.transform.position = point;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        graple.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         graple.transform.SetParent(parentOBJ);
 
         /*
