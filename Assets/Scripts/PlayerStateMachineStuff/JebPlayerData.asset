@@ -43,8 +43,8 @@ MonoBehaviour:
   playerBullet: {fileID: 7928200351476023610, guid: 765e767cab148b64bad829cb45569f71, type: 3}
   gunForce: 3
   MaxShots: 7
-  AmmoLeft: 7
-  BulletForce: 50
+  AmmoLeft: 1
+  BulletForce: 100
   CrouchOffset: {x: 0, y: 0.5}
   CrouchSize: {x: 1, y: 1}
   NormalOffset: {x: 0, y: 0}
