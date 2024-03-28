@@ -15,7 +15,7 @@ C:/Users/jerem/OneDrive/Desktop/CIS-118-01/2D-Unity-Game
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-57666
+59206
 Successfully changed project path to: C:/Users/jerem/OneDrive/Desktop/CIS-118-01/2D-Unity-Game
 C:/Users/jerem/OneDrive/Desktop/CIS-118-01/2D-Unity-Game
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ C:/Users/jerem/OneDrive/Desktop/CIS-118-01/2D-Unity-Game
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 54.56 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 56.27 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.11f1 (0a5ca18544bf)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/Resources/UnitySubsystems
@@ -63,74 +63,74 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56172
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56428
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.005205 seconds.
+Registered in 0.003234 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 75.16 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 55.75 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.564 seconds
+- Completed reload, in  0.455 seconds
 Domain Reload Profiling:
-	ReloadAssembly (565ms)
-		BeginReloadAssembly (63ms)
+	ReloadAssembly (455ms)
+		BeginReloadAssembly (50ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (403ms)
-			LoadAssemblies (61ms)
+			CreateAndSetChildDomain (0ms)
+		EndReloadAssembly (331ms)
+			LoadAssemblies (48ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (93ms)
+			SetupTypeCache (82ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (28ms)
-			SetupLoadedEditorAssemblies (227ms)
+			RebuildScriptCaches (22ms)
+			SetupLoadedEditorAssemblies (192ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (9ms)
+				InitializePlatformSupportModulesInManaged (7ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (75ms)
+				RefreshPlugins (56ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (109ms)
-				ProcessInitializeOnLoadMethodAttributes (33ms)
+				ProcessInitializeOnLoadAttributes (98ms)
+				ProcessInitializeOnLoadMethodAttributes (30ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.005183 seconds.
+Registered in 0.004982 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\jerem\OneDrive\Desktop\CIS-118-01\2D-Unity-Game\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\jerem\OneDrive\Desktop\CIS-118-01\2D-Unity-Game\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 61.25 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 54.60 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
 - Completed reload, in  0.752 seconds
 Domain Reload Profiling:
 	ReloadAssembly (753ms)
-		BeginReloadAssembly (69ms)
+		BeginReloadAssembly (76ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (4ms)
+			DisableScriptedObjects (3ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (12ms)
-		EndReloadAssembly (609ms)
-			LoadAssemblies (53ms)
+			CreateAndSetChildDomain (13ms)
+		EndReloadAssembly (596ms)
+			LoadAssemblies (59ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (150ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (44ms)
-			SetupLoadedEditorAssemblies (326ms)
+			SetupTypeCache (154ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (36ms)
+			SetupLoadedEditorAssemblies (314ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (61ms)
-				BeforeProcessingInitializeOnLoad (62ms)
-				ProcessInitializeOnLoadAttributes (165ms)
+				RefreshPlugins (55ms)
+				BeforeProcessingInitializeOnLoad (60ms)
+				ProcessInitializeOnLoadAttributes (162ms)
 				ProcessInitializeOnLoadMethodAttributes (30ms)
 				AfterProcessingInitializeOnLoad (5ms)
 				EditorAssembliesLoaded (0ms)
@@ -139,13 +139,13 @@ Domain Reload Profiling:
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 0.48 ms, found 4 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.53 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4111 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 38 unused Assets / (56.3 KB). Loaded Objects now: 4568.
 Memory consumption went from 154.4 MB to 154.4 MB.
-Total: 2.473100 ms (FindLiveObjects: 0.172100 ms CreateObjectMapping: 0.079700 ms MarkObjects: 2.162800 ms  DeleteObjects: 0.057700 ms)
+Total: 2.759800 ms (FindLiveObjects: 0.191600 ms CreateObjectMapping: 0.084400 ms MarkObjects: 2.398900 ms  DeleteObjects: 0.084100 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -159,170 +159,50 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
-Received Import Request.
-  Time since last request: 783462.832971 seconds.
-  path: Assets/Sprites/TileMaps/JebsTiles/JebBlank/JebBlankSkyTiles_27.asset
-  artifactKey: Guid(e373e1a595580fb43b29b9e575ae68b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/TileMaps/JebsTiles/JebBlank/JebBlankSkyTiles_27.asset using Guid(e373e1a595580fb43b29b9e575ae68b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8da52233b2d8f6f9c3fa2a93a7a9ab1e') in 0.055009 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Sprites/TileMaps/JebsTiles/JebBlank/JebBlankSkyTiles_9.asset
-  artifactKey: Guid(e7c4d3e05f009d148a7e586f2ac40014) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/TileMaps/JebsTiles/JebBlank/JebBlankSkyTiles_9.asset using Guid(e7c4d3e05f009d148a7e586f2ac40014) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '338be91136c0e17428d60f3c17fab9b4') in 0.012740 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Sprites/TileMaps/JebsTiles/JebBlank/JebBlankSkyTiles_29.asset
-  artifactKey: Guid(bde43f2c911abae47a8aa981d5758acf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/TileMaps/JebsTiles/JebBlank/JebBlankSkyTiles_29.asset using Guid(bde43f2c911abae47a8aa981d5758acf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5a9d0d8efa2b68dbaca51c3f7bcae0b') in 0.013455 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/Sprites/TileMaps/JebsTiles/JebBlank/JebBlankSkyTiles_3.asset
-  artifactKey: Guid(8c668803811ecb841b20e5f19978725f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/TileMaps/JebsTiles/JebBlank/JebBlankSkyTiles_3.asset using Guid(8c668803811ecb841b20e5f19978725f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba056d22a2da87129842dccd6633a553') in 0.014293 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Sprites/TileMaps/JebsTiles/JebBlank/JebBlankSkyTiles_16.asset
-  artifactKey: Guid(77ec2a86063c0574fb86877a361b1a2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/TileMaps/JebsTiles/JebBlank/JebBlankSkyTiles_16.asset using Guid(77ec2a86063c0574fb86877a361b1a2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db829eb825530bbe24457dad5cdd5fc1') in 0.013701 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Sprites/TileMaps/JebsTiles/JebBlank/JebBlankSkyTiles.png
-  artifactKey: Guid(af35e66791e0c9a4ba33f59cc00d9be2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/TileMaps/JebsTiles/JebBlank/JebBlankSkyTiles.png using Guid(af35e66791e0c9a4ba33f59cc00d9be2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85462d710146cda32ec339707f459ad8') in 0.105610 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/Sprites/TileMaps/JebsTiles/JebBlank/JebBlankSkyTiles_21.asset
-  artifactKey: Guid(1c6438a66ae6b2c4c90a62feed24d96b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/TileMaps/JebsTiles/JebBlank/JebBlankSkyTiles_21.asset using Guid(1c6438a66ae6b2c4c90a62feed24d96b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9dafe2b33894168d0df49abbd3645b58') in 0.013485 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Sprites/TileMaps/JebsTiles/JebBlank/JebBlankSkyTiles_25.asset
-  artifactKey: Guid(e978743c801f8634c81ca0cb3cf60193) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/TileMaps/JebsTiles/JebBlank/JebBlankSkyTiles_25.asset using Guid(e978743c801f8634c81ca0cb3cf60193) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b84eba5ae08a39ecc1c29ae184ffcb85') in 0.013141 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Sprites/TileMaps/JebsTiles/JebBlank/JebBlankSkyTiles_8.asset
-  artifactKey: Guid(83ca0798427a03d4fb5ede564548746a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/TileMaps/JebsTiles/JebBlank/JebBlankSkyTiles_8.asset using Guid(83ca0798427a03d4fb5ede564548746a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e9c64917a7247841349e17296371a26') in 0.013919 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Sprites/TileMaps/JebsTiles/JebBlank/JebBlankSkyTiles_17.asset
-  artifactKey: Guid(339886545a16247479f4645a74d5bbcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/TileMaps/JebsTiles/JebBlank/JebBlankSkyTiles_17.asset using Guid(339886545a16247479f4645a74d5bbcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27fec8c0bc2130cf4a18ccb218119ca2') in 0.011803 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/Sprites/TileMaps/JebsTiles/JebBlank/JebBlankSkyTiles_20.asset
-  artifactKey: Guid(20bac15ef686e3d4d9f134fc31224baf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/TileMaps/JebsTiles/JebBlank/JebBlankSkyTiles_20.asset using Guid(20bac15ef686e3d4d9f134fc31224baf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dad1d7b0342fb225cc3ed3296c7a5b41') in 0.012615 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Sprites/TileMaps/JebsTiles/JebBlank/JebBlankSkyTiles_18.asset
-  artifactKey: Guid(9e992c4590806044e97bd52b9e698978) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/TileMaps/JebsTiles/JebBlank/JebBlankSkyTiles_18.asset using Guid(9e992c4590806044e97bd52b9e698978) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '61692ec172b17421d6f769cf1cf1503c') in 0.011747 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Sprites/TileMaps/JebsTiles/JebBlank/JebBlankSkyTiles_30.asset
-  artifactKey: Guid(412dd1fd20e83154b8b3fbfac5e6d8f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/TileMaps/JebsTiles/JebBlank/JebBlankSkyTiles_30.asset using Guid(412dd1fd20e83154b8b3fbfac5e6d8f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdbec2744187ff09b473c3f0c4c055a8') in 0.012753 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Sprites/TileMaps/JebsTiles/JebBlank/JebBlankSkyTiles_11.asset
-  artifactKey: Guid(e52bf9eb0675f1d4299ae75a2eacbd3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/TileMaps/JebsTiles/JebBlank/JebBlankSkyTiles_11.asset using Guid(e52bf9eb0675f1d4299ae75a2eacbd3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a92491c24997dda7e1691db2b40a058e') in 0.012823 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Sprites/TileMaps/JebsTiles/JebBlank/JebBlankSkyTiles_10.asset
-  artifactKey: Guid(cc3e5357d17f8c84e971ba92257d2143) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/TileMaps/JebsTiles/JebBlank/JebBlankSkyTiles_10.asset using Guid(cc3e5357d17f8c84e971ba92257d2143) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8651ab4bf116b1b6d092bf5eb364da98') in 0.013520 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Sprites/TileMaps/JebsTiles/JebBlank/JebBlankSkyTiles_4.asset
-  artifactKey: Guid(68ab407557b1ba94ba60b3605fadad64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/TileMaps/JebsTiles/JebBlank/JebBlankSkyTiles_4.asset using Guid(68ab407557b1ba94ba60b3605fadad64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e56bdb699a0767f8e7899a3895a6c18') in 0.013981 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 8.924563 seconds.
-  path: Assets/Prefabs/platform.prefab
-  artifactKey: Guid(cd38dd3650d842b4ba447cbf225fd218) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/platform.prefab using Guid(cd38dd3650d842b4ba447cbf225fd218) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be5ac493ed8dc1792888b8e3c9c85fb4') in 0.036719 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Prefabs/Player(2.0).prefab
-  artifactKey: Guid(6c5cf27c87e14fc49828e7529488f829) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Player(2.0).prefab using Guid(6c5cf27c87e14fc49828e7529488f829) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0457c92d4f5771531eb941246f3e2a33') in 0.020389 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 7.720817 seconds.
-  path: Assets/Sprites/EnemiesAndNPCs/LaserSightMat.mat
-  artifactKey: Guid(89f26ca10ca41aa41949218a0e72d668) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/EnemiesAndNPCs/LaserSightMat.mat using Guid(89f26ca10ca41aa41949218a0e72d668) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93d7427b6258f4d422a3ad9d273317c5') in 0.030401 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Sprites/EnemiesAndNPCs/Turret_1.png
-  artifactKey: Guid(da8da867b45393240bf03bbe5b3ea33a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sprites/EnemiesAndNPCs/Turret_1.png using Guid(da8da867b45393240bf03bbe5b3ea33a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c89e81b6a68ed92d93a1023a58ea2e5a') in 0.030900 seconds 
-========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.006790 seconds.
+Registered in 0.004500 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Users\jerem\OneDrive\Desktop\CIS-118-01\2D-Unity-Game\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Users\jerem\OneDrive\Desktop\CIS-118-01\2D-Unity-Game\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.55 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 0.57 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.737 seconds
+- Completed reload, in  0.741 seconds
 Domain Reload Profiling:
-	ReloadAssembly (738ms)
+	ReloadAssembly (742ms)
 		BeginReloadAssembly (94ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (26ms)
-		EndReloadAssembly (577ms)
-			LoadAssemblies (60ms)
+		EndReloadAssembly (579ms)
+			LoadAssemblies (63ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (147ms)
+			SetupTypeCache (150ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (27ms)
-			SetupLoadedEditorAssemblies (301ms)
+			RebuildScriptCaches (32ms)
+			SetupLoadedEditorAssemblies (289ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (9ms)
+				InitializePlatformSupportModulesInManaged (10ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (64ms)
-				ProcessInitializeOnLoadAttributes (182ms)
-				ProcessInitializeOnLoadMethodAttributes (39ms)
+				BeforeProcessingInitializeOnLoad (63ms)
+				ProcessInitializeOnLoadAttributes (173ms)
+				ProcessInitializeOnLoadMethodAttributes (36ms)
 				AfterProcessingInitializeOnLoad (6ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (8ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 4.40 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 2.36 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4087 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 25 unused Assets / (24.7 KB). Loaded Objects now: 4619.
-Memory consumption went from 157.1 MB to 157.1 MB.
-Total: 2.389600 ms (FindLiveObjects: 0.175200 ms CreateObjectMapping: 0.070700 ms MarkObjects: 2.115700 ms  DeleteObjects: 0.026800 ms)
+Unloading 25 unused Assets / (24.7 KB). Loaded Objects now: 4571.
+Memory consumption went from 152.4 MB to 152.4 MB.
+Total: 2.645700 ms (FindLiveObjects: 0.183300 ms CreateObjectMapping: 0.073000 ms MarkObjects: 2.362100 ms  DeleteObjects: 0.026100 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -335,7 +215,9 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-AssetImportWorker is now disconnected from the server
-Process exiting
-Exiting without the bug reporter. Application will terminate with return code 0
+========================================================================
+Received Import Request.
+  Time since last request: 788627.522743 seconds.
+  path: Assets/Scripts/PlayerStateMachineStuff/JebPlayerData.asset
+  artifactKey: Guid(2b8c1f7e78267df43a0839a8d1c25205) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/PlayerStateMachineStuff/JebPlayerData.asset using Guid(2b8c1f7e78267df43a0839a8d1c25205) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f7666331eee89e75f957cf9a2e108a0') in 0.062532 seconds 
