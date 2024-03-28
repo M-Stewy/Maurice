@@ -7,7 +7,7 @@
 /// </summary>
 public class PlayerJumpState : PlayerState
 {
-    public PlayerJumpState(Player player, PlayerData playerData, PlayerStateMachine playerStateMachine) : base(player, playerData, playerStateMachine)
+    public PlayerJumpState(Player player, PlayerData playerData, PlayerStateMachine playerStateMachine, string playerAnim) : base(player, playerData, playerStateMachine, playerAnim)
     {
     }
 
@@ -35,7 +35,7 @@ public class PlayerJumpState : PlayerState
     public override void Enter()
     {
         base.Enter();
-       
+
         //UnityEngine.Debug.Log("Entered Jump State");
 
         player.rb.drag = playerData.AirDrag;

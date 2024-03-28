@@ -1,4 +1,5 @@
-﻿using Unity.VisualScripting;
+﻿using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 /// <summary>
@@ -15,14 +16,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "newPlayerData", menuName = "Data/Player Data/Base Player Data")]
 public class PlayerData : ScriptableObject
 {
-    [Header("Different Abilitys and Stuff")]
-    [Space]
 
-    [Header("Ability that is currently in use")]
-    [Tooltip("only one of these should be true at a time")]
-    public bool AblityIsGrapple;
-
-
+    public bool isFacingRight;
 
     [Space(5)]
     [Header("Move Speed")]
@@ -57,6 +52,12 @@ public class PlayerData : ScriptableObject
     public float AirGravity = 5f;
     public float SlowFallGravity;
 
+    [Space(5)]
+
+    [Header("Ability Things and Stuff Yea")]
+    [Space]
+
+    public bool AllAbilitiesUnlocked;
 
     [Space]
     [Header("Grapple Stuff")]
@@ -66,14 +67,26 @@ public class PlayerData : ScriptableObject
     public float GrappleReelSpeed = 5f; //This gets weird at higher values need to firgure out why
     public float GrappleSwingSpeed = 20f;
 
-    [HideInInspector]
-    public Vector2 CrouchOffset = new Vector2(0,.5f);
-    [HideInInspector]
-    public Vector2 CrouchSize = new Vector2(1, 1f);
-    [HideInInspector]
-    public Vector2 NormalOffset = new Vector2(0, 0);
-    [HideInInspector]
-    public Vector2 NormalSize = new Vector2(1, 2);
+
+    [Header("Gun Stuff")]
+    [Tooltip("Bullet the player shoots out of the gun")]
+    public GameObject playerBullet;
+    public float gunForce;
+    public int MaxShots = 7;
+    public int AmmoLeft;
+    public float BulletForce = 50;
+
+    //[HideInInspector] 
+    [Space]
+    [Header("DO NOT CHANGE THESE FROM DEFAULT, \n" +
+        "           (unless we change player size)")]
+    public Vector2 CrouchOffset = new Vector2(-0.27f, -0.32f);
+    //[HideInInspector]
+    public Vector2 CrouchSize = new Vector2(0.4f, 0.65f);
+   // [HideInInspector]
+    public Vector2 NormalOffset = new Vector2(-0.27f, -0.32f);
+    // [HideInInspector]
+    public Vector2 NormalSize = new Vector2(0.85f, 1.31f);
 
 
 

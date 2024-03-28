@@ -18,6 +18,17 @@ using UnityEngine.Rendering;
 /// </summary>
 public class Player : MonoBehaviour
 {
+    private List<PlayerAbility> AllAbilities = new List<PlayerAbility>();
+    private List<PlayerAbility> AviableAbilities = new List<PlayerAbility>();
+
+    //this is the important one that we use in the ability states to do stuff with
+    public PlayerAbility CurrentAbility;
+
+    private PlayerAbility NoAbility;
+    private PlayerAbility GrappleAbility;
+    private PlayerAbility GunAbility;
+
+
     //These are all the state scripts that the player can switch between
     public PlayerStateMachine PSM { get; private set; }
     public PlayerGroundedState groundedState { get; private set; }
@@ -35,7 +46,9 @@ public class Player : MonoBehaviour
     public PlayerLandedState landedState { get; private set; }
     public PlayerInAirSlideState airSlideState { get; private set; }
     public PlayerGrapplingState grapplingState { get; private set; }
-
+    public PlayerShootGunState shootGunState { get; private set; }
+    
+    
     public PlayerInputHandler inputHandler { get; private set; }
     [Header("Put custom player data here")]
     [Tooltip("holds all the data of the player like speed, health, and whatever")]
@@ -53,6 +66,14 @@ public class Player : MonoBehaviour
     public CapsuleCollider2D cc;
     [HideInInspector]
     public DistanceJoint2D dj;
+    [HideInInspector]
+    public GameObject hand;
+    [HideInInspector]
+    public LineRenderer lr;
+
+
+    [HideInInspector]
+    public Animator anim;
 
 
     [HideInInspector]
@@ -60,8 +81,9 @@ public class Player : MonoBehaviour
     [HideInInspector]
     public bool isOnSlope;
 
+    private int abilityIterator = 1;
 
-    
+
     RaycastHit2D ray;
     RaycastHit2D SlopeRay;
 
@@ -69,35 +91,59 @@ public class Player : MonoBehaviour
     {
         PSM = new PlayerStateMachine();
 
-        groundedState = new PlayerGroundedState(this, playerData, PSM);
-        useAbilityState = new PlayerUseAbilityState(this,playerData,PSM);
+        groundedState = new PlayerGroundedState(this, playerData, PSM, "null");
+        useAbilityState = new PlayerUseAbilityState(this,playerData,PSM, "null");
 
-        idleState = new PlayerIdleState(this, playerData, PSM);
-        movingState = new PlayerMovingState(this, playerData, PSM);
-        jumpState = new PlayerJumpState(this, playerData, PSM);
-        crouchIdleState = new PlayerCrouchIdleState(this, playerData, PSM);
-        crouchMoveState = new PlayerCrouchMovingState(this, playerData, PSM);
-        slidingState = new PlayerSlidingState(this, playerData, PSM);
-        sprintingState = new PlayerSprintingState(this, playerData, PSM);
+        idleState = new PlayerIdleState(this, playerData, PSM, "isIdle");
+        movingState = new PlayerMovingState(this, playerData, PSM, "IsWalking");
+        jumpState = new PlayerJumpState(this, playerData, PSM, "JumpStart");
+        crouchIdleState = new PlayerCrouchIdleState(this, playerData, PSM, "IsCrouchingAnim");
+        crouchMoveState = new PlayerCrouchMovingState(this, playerData, PSM, "IsCrouchWalkingAnim");
+        slidingState = new PlayerSlidingState(this, playerData, PSM, "IsSlidingAnim");
+        sprintingState = new PlayerSprintingState(this, playerData, PSM, "IsSprinting");
         
-        inAirState = new PlayerInAirState(this, playerData, PSM);
-        landedState = new PlayerLandedState(this, playerData, PSM);
-        airSlideState = new PlayerInAirSlideState(this, playerData, PSM);
-        grapplingState = new PlayerGrapplingState(this, playerData, PSM);
-
+        inAirState = new PlayerInAirState(this, playerData, PSM, "InAir");
+        landedState = new PlayerLandedState(this, playerData, PSM, "Landed");
+        airSlideState = new PlayerInAirSlideState(this, playerData, PSM, "InAirSlideAnim");
+        grapplingState = new PlayerGrapplingState(this, playerData, PSM, "IsGrapplingAnim");
+        shootGunState = new PlayerShootGunState(this, playerData,PSM,"null");
 
 
         inputHandler = GetComponent<PlayerInputHandler>();
         rb = GetComponent<Rigidbody2D>();
         cc = GetComponent<CapsuleCollider2D>();
         dj = GetComponent<DistanceJoint2D>();
+        anim = GetComponent<Animator>();
 
+        lr = GetComponentInChildren<LineRenderer>();
+        hand = transform.GetChild(0).gameObject;
+
+
+        NoAbility = new PlayerAbility(true, false, "NoAbility", "Nothing", "Nothing");
+        GrappleAbility = new PlayerAbility(false, false, "Grappling", "HoldingGrapple","ShootGrapple"); 
+        GunAbility = new PlayerAbility(false, false, "Gun", "HoldingGun", "ShootGun");
+
+
+        AllAbilities.Add(NoAbility);
+        AllAbilities.Add(GrappleAbility);
+        AllAbilities.Add(GunAbility);
     }
 
 
     private void Start()
     {
         PSM.Initialize(idleState); // this starts the state machine by setting the player to the idle state on the start of the game
+
+        //this makes it so all abilities are aviable by default, mainly for testing purposes
+        if (playerData.AllAbilitiesUnlocked) {
+            GrappleAbility.SetUnlocked(true);
+            GunAbility.SetUnlocked(true);
+        }
+        
+        CurrentAbility = NoAbility;
+
+        //We should make a powerup that restores ammo
+        playerData.AmmoLeft = playerData.MaxShots;
     }
 
 
@@ -108,11 +154,104 @@ public class Player : MonoBehaviour
 
         isGrounded = IsGrounded();
         isOnSlope = IsOnSlope();
+
+        FlipPlayer();
+
+        AbilityHandling();
+
+        RotateHand();
+
     }
     
     private void FixedUpdate()
     {
         PSM.currentState.FixedUpdate(); // this is calling the base unity FixedUpdate method in the current state of the state machine
+    }
+
+    //Logic for changing abilities yea
+    #region AbilityStuff
+    private void AbilityHandling()
+    {
+        //Ability Handling ------ might want to switch to another script later not sure yet
+
+        //this checks all the abilites and see which ones are currently unlocked then adds them to the list of aviable abilites
+        foreach (var pA in AllAbilities)
+        {
+            if (pA.isUnlocked && !AviableAbilities.Contains(pA))
+            {
+                AviableAbilities.Add(pA);
+            }
+        }
+
+        //each of these check change the current abilty by iterating through the list of unlocked abilities
+        // until the iterator is either higher or lower than the bounds of the list of aviable abilites
+        // if its higher the iterator is set to 0, if lower its set to the total number of abilities in AviableAbilities
+        if (inputHandler.SwitchAbilityDown)
+        {
+            if (AviableAbilities.Count > 0)
+            {
+                CurrentAbility.SetEquiped(false);
+                CurrentAbility.ChangeSprite(hand.gameObject);
+                if (abilityIterator == 0)
+                    abilityIterator = AviableAbilities.Count;
+
+                abilityIterator--;
+                CurrentAbility = AviableAbilities[abilityIterator];
+
+                CurrentAbility.SetEquiped(true);
+                CurrentAbility.ChangeSprite(hand.gameObject);
+                Debug.Log(CurrentAbility.name);
+            }
+        }
+
+        if (inputHandler.SwitchAbilityUp)
+        {
+            if (AviableAbilities.Count > 0)
+            {
+                CurrentAbility.SetEquiped(false);
+                CurrentAbility.ChangeSprite(hand.gameObject);
+                abilityIterator++;
+                if (abilityIterator == AviableAbilities.Count)
+                    abilityIterator = 0;
+
+                CurrentAbility = AviableAbilities[abilityIterator];
+
+                CurrentAbility.SetEquiped(true);
+                CurrentAbility.ChangeSprite(hand.gameObject);
+                Debug.Log(CurrentAbility.name);
+            }
+        }
+
+    }
+
+    #endregion 
+
+    private void RotateHand()
+    {
+        //simply rotates the gun or whatever is being held so it lines up with player's aim
+        Vector3 AngleVector = inputHandler.mouseScreenPos - hand.transform.position;
+        float angle = Mathf.Atan2(AngleVector.y, AngleVector.x) * Mathf.Rad2Deg;
+        hand.transform.rotation = Quaternion.AngleAxis(angle + 180, Vector3.forward);
+    }
+
+    private void FlipPlayer() // self explanitory
+    {
+        if (inputHandler.moveDir.x == -1)
+        {
+            playerData.isFacingRight = false;
+            transform.localScale = new Vector3(-1, 1, 1);
+            hand.GetComponent<SpriteRenderer>().flipX = false;
+            hand.GetComponent<SpriteRenderer>().flipY = false;
+            hand.transform.GetChild(0).localPosition = new Vector3(1,0,0);
+        }
+        else if (inputHandler.moveDir.x == 1)
+        {
+            playerData.isFacingRight = true;
+            transform.localScale = new Vector3(1, 1, 1);
+            hand.GetComponent<SpriteRenderer>().flipX = true;
+            hand.GetComponent<SpriteRenderer>().flipY = true;
+            hand.transform.GetChild(0).localPosition = new Vector3(-1, 0, 0);
+        }
     }
 
     [SerializeField]
