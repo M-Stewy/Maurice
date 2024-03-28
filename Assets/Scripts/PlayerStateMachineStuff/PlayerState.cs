@@ -14,11 +14,14 @@ public class PlayerState
     protected PlayerData playerData;
     protected PlayerStateMachine playerStateMachine;
 
-    public PlayerState(Player player, PlayerData playerData, PlayerStateMachine playerStateMachine)
+    protected string playerAnim;
+
+    public PlayerState(Player player, PlayerData playerData, PlayerStateMachine playerStateMachine, string playerAnim)
     {
         this.player = player;
         this.playerData = playerData;
         this.playerStateMachine = playerStateMachine;
+        this.playerAnim = playerAnim;
     }
 
     public virtual void Enter()
@@ -26,6 +29,7 @@ public class PlayerState
         Checks();
         if(playerData.ShowEnterStateInConsole)
             UnityEngine.Debug.Log("Entered " + playerStateMachine.currentState);
+        player.anim.SetBool(playerAnim, true);
     }
 
     public virtual void Update()
@@ -36,7 +40,9 @@ public class PlayerState
 
     public virtual void FixedUpdate() { }
 
-    public virtual void Exit() { }
+    public virtual void Exit() {
+        player.anim.SetBool(playerAnim, false);
+    }
 
     public virtual void Checks()
     {

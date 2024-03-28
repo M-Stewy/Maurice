@@ -6,7 +6,7 @@
 /// </summary>
 public class PlayerCrouchMovingState : PlayerGroundedState
 {
-    public PlayerCrouchMovingState(Player player, PlayerData playerData, PlayerStateMachine playerStateMachine) : base(player, playerData, playerStateMachine)
+    public PlayerCrouchMovingState(Player player, PlayerData playerData, PlayerStateMachine playerStateMachine, string playerAnim) : base(player, playerData, playerStateMachine, playerAnim)
     {
     }
     float xInputRaw;
