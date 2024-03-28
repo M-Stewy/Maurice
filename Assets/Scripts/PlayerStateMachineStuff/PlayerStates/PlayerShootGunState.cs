@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor.Animations;
 using UnityEngine;
 
@@ -15,9 +16,15 @@ public class PlayerShootGunState : PlayerState
     {
     }
     Vector3 direction;
+    Vector3 bulletSpawnPoint;
     public override void Checks()
     {
         base.Checks();
+
+        bulletSpawnPoint = player.hand.transform.GetChild(0).position;
+        
+
+      
     }
 
     public override void Enter()
@@ -31,7 +38,8 @@ public class PlayerShootGunState : PlayerState
             player.CurrentAbility.DoAction(player.hand.gameObject, true);
             Shoot();
         }
-            
+
+        
     }
 
     public override void Exit()
@@ -57,7 +65,8 @@ public class PlayerShootGunState : PlayerState
 
     private void Shoot()
     {
-        //player.hand.GetComponent<PlayerGunScript>().ShootBullet(playerData.playerBullet,player.hand.transform.position,Quaternion.identity, direction.normalized * 1000f);
+        Debug.Log(bulletSpawnPoint);
+        player.hand.GetComponent<PlayerGunScript>().ShootBullet(playerData.playerBullet, bulletSpawnPoint, Quaternion.identity, direction.normalized * playerData.BulletForce);
         player.rb.AddForce(-direction * playerData.gunForce,ForceMode2D.Impulse);
         playerData.AmmoLeft--;
     }

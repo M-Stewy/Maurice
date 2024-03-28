@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c76d136c291a448b3d6eecc561d63c, type: 3}
   m_Name: DefaultPlayerData
   m_EditorClassIdentifier: 
+  isFacingRight: 0
   health: 3
   baseMoveSpeed: 15
   SprintSpeed: 30
@@ -41,7 +42,8 @@ MonoBehaviour:
   playerBullet: {fileID: 7928200351476023610, guid: 765e767cab148b64bad829cb45569f71, type: 3}
   gunForce: 3
   MaxShots: 7
-  AmmoLeft: 4
+  AmmoLeft: 7
+  BulletForce: 100
   CrouchOffset: {x: -0.27, y: -0.6}
   CrouchSize: {x: 0.85, y: 0.65}
   NormalOffset: {x: -0.27, y: -0.35}

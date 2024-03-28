@@ -16,7 +16,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "newPlayerData", menuName = "Data/Player Data/Base Player Data")]
 public class PlayerData : ScriptableObject
 {
-    
+
+    public bool isFacingRight;
+
     [Space(5)]
     [Header("Move Speed")]
     public float health;
@@ -71,6 +73,7 @@ public class PlayerData : ScriptableObject
     public float gunForce;
     public int MaxShots = 7;
     public int AmmoLeft;
+    public float BulletForce = 50;
 
     //[HideInInspector] 
     [Space]

@@ -69,7 +69,7 @@ public class Player : MonoBehaviour
     [HideInInspector]
     public GameObject hand;
     [HideInInspector]
-    LineRenderer lr;
+    public LineRenderer lr;
 
 
     [HideInInspector]
@@ -115,8 +115,9 @@ public class Player : MonoBehaviour
         dj = GetComponent<DistanceJoint2D>();
         anim = GetComponent<Animator>();
 
-        //lr = GetComponentInChildren<LineRenderer>();
+        lr = GetComponentInChildren<LineRenderer>();
         hand = transform.GetChild(0).gameObject;
+
 
         NoAbility = new PlayerAbility(true, false, "NoAbility", "Nothing", "Nothing");
         GrappleAbility = new PlayerAbility(false, false, "Grappling", "HoldingGrapple","ShootGrapple"); 
@@ -237,15 +238,19 @@ public class Player : MonoBehaviour
     {
         if (inputHandler.moveDir.x == -1)
         {
+            playerData.isFacingRight = false;
             transform.localScale = new Vector3(-1, 1, 1);
             hand.GetComponent<SpriteRenderer>().flipX = false;
             hand.GetComponent<SpriteRenderer>().flipY = false;
+            hand.transform.GetChild(0).localPosition = new Vector3(1,0,0);
         }
         else if (inputHandler.moveDir.x == 1)
         {
+            playerData.isFacingRight = true;
             transform.localScale = new Vector3(1, 1, 1);
             hand.GetComponent<SpriteRenderer>().flipX = true;
             hand.GetComponent<SpriteRenderer>().flipY = true;
+            hand.transform.GetChild(0).localPosition = new Vector3(-1, 0, 0);
         }
     }
 

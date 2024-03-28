@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerLayer:
     serializedVersion: 2
-    m_Bits: 136
+    m_Bits: 200
   turretRange: 8
   shootTimer: 2
   searchSpeed: 0.5

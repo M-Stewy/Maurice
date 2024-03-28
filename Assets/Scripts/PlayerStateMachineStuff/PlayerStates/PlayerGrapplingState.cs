@@ -91,6 +91,8 @@ public class PlayerGrapplingState : PlayerState
         {
             playerStateMachine.ChangeState(player.inAirState);
         }
+
+        player.lr.SetPosition(0,player.hand.transform.position);
     }
 
     
@@ -119,10 +121,12 @@ public class PlayerGrapplingState : PlayerState
         graple.tag = "GraplePoint";
         graple.AddComponent<SpriteRenderer>();
         graple.GetComponent<SpriteRenderer>().sprite = playerData.GrapplePointSprite;
+        graple.GetComponent<SpriteRenderer>().sortingOrder = 15;
         graple.transform.position = point;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         graple.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         graple.transform.SetParent(parentOBJ);
+
 
         /*
         graple.AddComponent<CircleCollider2D>();
@@ -147,10 +151,14 @@ public class PlayerGrapplingState : PlayerState
             player.dj.distance = Vector2.Distance(player.transform.position, point.transform.position);
             player.dj.enabled = true;
             player.dj.connectedAnchor = point.transform.position;
+            player.lr.enabled = true;
+            player.lr.SetPosition(1,point.transform.position);
+
         }
         else
         {
             player.dj.enabled = false;
+            player.lr.enabled = false;
         }
     }
 
@@ -160,7 +168,7 @@ public class PlayerGrapplingState : PlayerState
             Object.Destroy(GameObject.FindGameObjectWithTag("GraplePoint"));
 
         player.dj.enabled = false;
-
+        player.lr.enabled = false;
 
     }
     /*

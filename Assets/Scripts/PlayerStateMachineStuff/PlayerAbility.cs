@@ -27,7 +27,6 @@ public class PlayerAbility
     {
         hand.GetComponent<Animator>().SetBool(animBool, !isTrue);
         hand.GetComponent<Animator>().SetBool(actionAnim, isTrue);
-        Debug.Log("ACtionTest");
     }
 
     public PlayerAbility(bool isUnlocked, bool isEquiped, string name, string animBool, string actionAnim)

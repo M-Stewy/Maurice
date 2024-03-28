@@ -10,7 +10,7 @@ public class PlayerGunScript : MonoBehaviour
     public void ShootBullet(GameObject bullet, Vector3 position, Quaternion Q, Vector3 force)
     {
         GameObject shotBullet = Instantiate(bullet, position, Q);
-        shotBullet.GetComponent<Rigidbody2D>().AddForce(force);
+        shotBullet.GetComponent<Rigidbody2D>().AddForce(force,ForceMode2D.Impulse);
     }
    
 }
