@@ -13,30 +13,34 @@ MonoBehaviour:
   m_Name: JebPlayerData
   m_EditorClassIdentifier: 
   AblityIsGrapple: 1
+  health: 4
+  maxHealth: 5
   baseMoveSpeed: 30
   SprintSpeed: 60
   CrouchSpeed: 20
   SlideSpeedBoost: 5
-  health: 1
   JumpPower: 35
-  JumpTime: 75
+  JumpTime: 15
   TotalJumps: 1
   CyoteTime: 20
   GroundDrag: 1
   SlopeDrag: 0.001
   AirDrag: 0.75
-  SlideDrag: 0.05
+  SlideDrag: 0.5
   IdleDrag: 5
+  SlowFallDrag: 3
   GroundGravity: 1
-  SlopeGravity: 0
+  SlopeGravity: 2
   AirGravity: 5
+  SlowFallGravity: 0
   GrapplePointSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   LaymaskGrapple:
     serializedVersion: 2
     m_Bits: 72
-  GrappleReelSpeed: 10
+  GrappleReelSpeed: 100
   GrappleSwingSpeed: 25
   CrouchOffset: {x: 0, y: 0.5}
   CrouchSize: {x: 1, y: 1}
   NormalOffset: {x: 0, y: 0}
   NormalSize: {x: 1, y: 2}
+  ShowEnterStateInConsole: 0
