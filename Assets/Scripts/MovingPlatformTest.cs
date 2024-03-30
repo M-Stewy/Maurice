@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 /// <summary>
@@ -18,11 +19,15 @@ public class MovingPlatformTest : MonoBehaviour
     Transform[] point;
     [SerializeField]
     float moveSpeed;
+    [SerializeField]
+    float returnSpeed;
+    float speed;
     bool startGoing;
     [Tooltip("If true, the platform will not move untill the player touches it \n if false it will start moving once loaded")]
     public bool NeedsPlayer;
     [Tooltip("if true, the platform will loop back to the first point once it reaches the last \n if false it will simply stop once it reaches the last")]
     public bool Loop;
+    public bool ignorePlayerCompletely;
     bool STOP;
     bool goBack;
 
@@ -36,8 +41,9 @@ public class MovingPlatformTest : MonoBehaviour
         {
             startGoing = true;
         }
+        speed = moveSpeed;
     }
-    // Update is called once per frame
+    /*
     void Update()
     {
         if (STOP)
@@ -47,20 +53,23 @@ public class MovingPlatformTest : MonoBehaviour
         { 
                 if (Vector3.Distance(transform.position, point[i].position) < 0.02)
                 {
-                    i++;
+                        i++;
                     if(i >= point.Length)
                     {
                         if (!Loop)
                         {
-                        STOP = true;
-                        goBack = false;
+                            STOP = true;
+                            goBack = false;
                             return;
                         }
                             
                         i = 0;
-                    }
+                        speed = returnSpeed;
+                    } 
+                    else { speed = moveSpeed; }
+
                 }
-                _rb.MovePosition(Vector2.MoveTowards(transform.position,point[i].position,moveSpeed));
+                _rb.MovePosition(Vector2.MoveTowards(transform.position,point[i].position,speed));
         }
 
         if (goBack)
@@ -78,17 +87,70 @@ public class MovingPlatformTest : MonoBehaviour
             _rb.MovePosition(Vector2.MoveTowards(transform.position, point[i].position, moveSpeed));
         }
 
+    }*/
+
+    private void FixedUpdate()
+    {
+        if (STOP)
+            return;
+
+        if (startGoing)
+        {
+            if (Vector3.Distance(transform.position, point[i].position) < 0.02)
+            {
+                i++;
+                if (i >= point.Length)
+                {
+                    if (!Loop)
+                    {
+                        STOP = true;
+                        goBack = false;
+                        return;
+                    }
+
+                    i = 0;
+                    speed = returnSpeed;
+                }
+                else { speed = moveSpeed; }
+
+            }
+            _rb.MovePosition(Vector2.MoveTowards(transform.position, point[i].position, speed));
+        }
+
+        if (goBack)
+        {
+            if (Vector3.Distance(transform.position, point[i].position) < 0.02)
+            {
+                i--;
+                if (i <= 0)
+                {
+                    goBack = false;
+                    i = 0;
+                    return;
+                }
+            }
+            _rb.MovePosition(Vector2.MoveTowards(transform.position, point[i].position, moveSpeed));
+        }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if(ignorePlayerCompletely) return;
+
         collision.transform.SetParent(transform);
         startGoing = true;
         goBack = false;
-        Debug.Log(i);
+        if (i < point.Length - 1)
+        {
+            i++;
+        }
+
+        //Debug.Log(i);
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
+        if (ignorePlayerCompletely) return;
+
         collision.transform.SetParent(null);
         if(NeedsPlayer)
         {
@@ -96,8 +158,9 @@ public class MovingPlatformTest : MonoBehaviour
             goBack = true;
             if(i > 0 && i < point.Length)
                 i--;
+
+            //Debug.Log(i);
         }
-        Debug.Log(i);
     }
 
 }

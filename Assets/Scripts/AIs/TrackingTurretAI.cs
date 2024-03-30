@@ -42,6 +42,7 @@ public class TrackingTurretAI : MonoBehaviour
     bool seesGround = false;
     bool hasStartedSearch = false;
     bool justShot;
+    
 
     void Start()
     {

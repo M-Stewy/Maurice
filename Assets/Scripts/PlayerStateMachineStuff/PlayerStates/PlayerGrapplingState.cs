@@ -72,6 +72,7 @@ public class PlayerGrapplingState : PlayerState
         if (graple)
         {
             player.dj.connectedAnchor = graple.transform.position;
+            player.lr.SetPosition(1, graple.transform.position);
         }
 
 
