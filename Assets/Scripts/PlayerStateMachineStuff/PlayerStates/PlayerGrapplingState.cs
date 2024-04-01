@@ -60,6 +60,8 @@ public class PlayerGrapplingState : PlayerState
         }
         if (player.inputHandler.HoldingDown)
         {
+            if (player.dj.distance > playerData.GrappleDistance)
+                return;
             player.dj.distance += playerData.GrappleReelSpeed * Time.deltaTime;
         }
 
@@ -100,7 +102,7 @@ public class PlayerGrapplingState : PlayerState
     private void ShootSwingPoint()
     {
         direction = player.inputHandler.mouseScreenPos - player.transform.position;
-        RaycastHit2D rayHit = Physics2D.Raycast(player.transform.position, direction, 25f, playerData.LaymaskGrapple);
+        RaycastHit2D rayHit = Physics2D.Raycast(player.transform.position, direction, playerData.GrappleDistance, playerData.LaymaskGrapple);
         if (rayHit.collider != null)
         {
             DestoryGrapPoints();

@@ -32,20 +32,21 @@ MonoBehaviour:
   SlopeGravity: 2
   AirGravity: 5
   SlowFallGravity: 0
-  AllAbilitiesUnlocked: 0
+  AllAbilitiesUnlocked: 1
   GrapplePointSprite: {fileID: -1157753459, guid: 632f041408473894da813718f6b2f9ab, type: 3}
   LaymaskGrapple:
     serializedVersion: 2
     m_Bits: 64
-  GrappleReelSpeed: 5
-  GrappleSwingSpeed: 20
+  GrappleReelSpeed: 10
+  GrappleSwingSpeed: 25
+  GrappleDistance: 25
   playerBullet: {fileID: 7928200351476023610, guid: 765e767cab148b64bad829cb45569f71, type: 3}
   gunForce: 3
   MaxShots: 7
-  AmmoLeft: 0
+  AmmoLeft: 7
   BulletForce: 1000
-  CrouchOffset: {x: -0.27, y: -0.32}
-  CrouchSize: {x: 0.4, y: 0.65}
-  NormalOffset: {x: -0.27, y: -0.32}
+  CrouchOffset: {x: -0.27, y: -0.6}
+  CrouchSize: {x: 0.85, y: 0.65}
+  NormalOffset: {x: -0.27, y: -0.35}
   NormalSize: {x: 0.85, y: 1.31}
-  ShowEnterStateInConsole: 0
+  ShowEnterStateInConsole: 1

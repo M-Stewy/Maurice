@@ -139,7 +139,7 @@ public class Player : MonoBehaviour
             GrappleAbility.SetUnlocked(true);
             GunAbility.SetUnlocked(true);
         }
-        
+        NoAbility.SetUnlocked(true);
         CurrentAbility = NoAbility;
 
         //We should make a powerup that restores ammo
@@ -188,6 +188,8 @@ public class Player : MonoBehaviour
         // if its higher the iterator is set to 0, if lower its set to the total number of abilities in AviableAbilities
         if (inputHandler.SwitchAbilityDown)
         {
+            if (AviableAbilities.Count == 1)
+                return;
             if (AviableAbilities.Count > 0)
             {
                 CurrentAbility.SetEquiped(false);
@@ -206,6 +208,8 @@ public class Player : MonoBehaviour
 
         if (inputHandler.SwitchAbilityUp)
         {
+            if (AviableAbilities.Count == 1)
+                return;
             if (AviableAbilities.Count > 0)
             {
                 CurrentAbility.SetEquiped(false);
