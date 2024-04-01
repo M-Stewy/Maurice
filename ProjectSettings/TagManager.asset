@@ -6,6 +6,7 @@ TagManager:
   tags:
   - GraplePoint
   - Ground
+  - Hat
   layers:
   - Default
   - TransparentFX

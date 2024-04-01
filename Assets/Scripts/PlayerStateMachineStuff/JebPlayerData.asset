@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: JebPlayerData
   m_EditorClassIdentifier: 
   isFacingRight: 0
-  health: 5
+  health: 7
   maxHealth: 5
   baseMoveSpeed: 30
   SprintSpeed: 60
@@ -38,12 +38,12 @@ MonoBehaviour:
   LaymaskGrapple:
     serializedVersion: 2
     m_Bits: 72
-  GrappleReelSpeed: 100
+  GrappleReelSpeed: 50
   GrappleSwingSpeed: 25
   playerBullet: {fileID: 7928200351476023610, guid: 765e767cab148b64bad829cb45569f71, type: 3}
   gunForce: 3
   MaxShots: 7
-  AmmoLeft: 1
+  AmmoLeft: 7
   BulletForce: 100
   CrouchOffset: {x: 0, y: 0.5}
   CrouchSize: {x: 1, y: 1}
