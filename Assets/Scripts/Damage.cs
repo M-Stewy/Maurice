@@ -25,22 +25,17 @@ public class Damage : MonoBehaviour
 
     public void recieveDamage()
     {
-        if (GameObject.Find("Player(2.0)").GetComponent<Player>().playerData.health-1!=0)
+        if (GameObject.FindWithTag("Player").GetComponent<Player>().playerData.health-1!=0)
         {
-            GameObject.Find("Player(2.0)").GetComponent<Player>().playerData.health = GameObject.Find("Player(2.0)").GetComponent<Player>().playerData.health - 1;
-            UI.text = GameObject.Find("Player(2.0)").GetComponent<Player>().playerData.health.ToString();
+            GameObject.FindWithTag("Player").GetComponent<Player>().playerData.health = GameObject.FindWithTag("Player").GetComponent<Player>().playerData.health-1;
+            UI.text = GameObject.FindWithTag("Player").GetComponent<Player>().playerData.health.ToString();
         }
         else
         {
-            UI.text = (GameObject.Find("Player(2.0)").GetComponent<Player>().playerData.health-1).ToString();
-            Destroy(GameObject.Find("Player(2.0)"));
+            UI.text = (GameObject.FindWithTag("Player").GetComponent<Player>().playerData.health-1).ToString();
+            Destroy(GameObject.FindWithTag("Player"));
         }
         
     }
 
-    /*private void Start()
-    {
-        GameObject.Find("Player(2.0)").GetComponent<Player>().playerData.health = 3;
-        UI.text = GameObject.Find("Player(2.0)").GetComponent<Player>().playerData.health.ToString();
-    }*/
 }
