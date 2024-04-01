@@ -31,13 +31,13 @@ public class positionTracker : MonoBehaviour
     private void Start()
     {
         //THIS SETS HEALTH TO 3 WHEN SCENE STARTS-------------------------------------------------------------
-        GameObject.Find("Player(2.0)").GetComponent<Player>().playerData.health = 3;
-        UI.text = GameObject.Find("Player(2.0)").GetComponent<Player>().playerData.health.ToString();
+        GameObject.FindWithTag("Player").GetComponent<Player>().playerData.health = GameObject.FindWithTag("Player").GetComponent<Player>().playerData.maxHealth;
+        UI.text = GameObject.FindWithTag("Player").GetComponent<Player>().playerData.health.ToString();
     }
 
     public void updatePosition()
     {
-        SceneChange = GameObject.Find("Player(2.0)");
+        SceneChange = GameObject.FindWithTag("Player");
         xpos=SceneChange.GetComponent<SceneChange>().xpos;
         ypos=SceneChange.GetComponent<SceneChange>().ypos;
     }
@@ -49,8 +49,8 @@ public class positionTracker : MonoBehaviour
         {
             currentScene = SceneManager.GetActiveScene().name;
             UI = GameObject.Find("Health").GetComponent<TextMeshProUGUI>();
-            GameObject.Find("Player(2.0)").GetComponent<Player>().playerData.health = 3;
-            UI.text = GameObject.Find("Player(2.0)").GetComponent<Player>().playerData.health.ToString();
+            GameObject.FindWithTag("Player").GetComponent<Player>().playerData.health = GameObject.FindWithTag("Player").GetComponent<Player>().playerData.maxHealth;
+            UI.text = GameObject.FindWithTag("Player").GetComponent<Player>().playerData.health.ToString();
         }
     }
 }

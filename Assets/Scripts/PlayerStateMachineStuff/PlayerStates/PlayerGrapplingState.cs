@@ -14,13 +14,14 @@ using UnityEngine.Windows;
 /// </summary>
 public class PlayerGrapplingState : PlayerState
 {
-    public PlayerGrapplingState(Player player, PlayerData playerData, PlayerStateMachine playerStateMachine) : base(player, playerData, playerStateMachine)
+    public PlayerGrapplingState(Player player, PlayerData playerData, PlayerStateMachine playerStateMachine, string playerAnim) : base(player, playerData, playerStateMachine, playerAnim)
     {
     }
     float xInput;
     bool missedGrap;
 
     GameObject graple;
+    Vector3 direction;
     public override void Checks()
     {
         base.Checks();
@@ -33,6 +34,7 @@ public class PlayerGrapplingState : PlayerState
     {
         missedGrap = false;
         base.Enter();
+        player.CurrentAbility.DoAction(player.hand.gameObject, true);
         ShootSwingPoint();
         //Debug.Log("Entered Grapple State");
         
@@ -42,6 +44,7 @@ public class PlayerGrapplingState : PlayerState
     {
         base.Exit();
        DestoryGrapPoints();
+        player.CurrentAbility.DoAction(player.hand.gameObject, false);
     }
 
     public override void FixedUpdate()
@@ -49,6 +52,16 @@ public class PlayerGrapplingState : PlayerState
         base.FixedUpdate();
 
         player.rb.AddForce(new Vector2(xInput * player.playerData.GrappleSwingSpeed, 0));
+
+
+        if (player.inputHandler.HoldingUp)
+        {
+            player.dj.distance -= playerData.GrappleReelSpeed * Time.deltaTime;
+        }
+        if (player.inputHandler.HoldingDown)
+        {
+            player.dj.distance += playerData.GrappleReelSpeed * Time.deltaTime;
+        }
 
     }
 
@@ -62,15 +75,6 @@ public class PlayerGrapplingState : PlayerState
         }
 
 
-            if (player.inputHandler.HoldingUp)
-            {
-            player.dj.distance -= playerData.GrappleReelSpeed * Time.deltaTime;
-            }
-            if(player.inputHandler.HoldingDown)
-            {
-            player.dj.distance += playerData.GrappleReelSpeed * Time.deltaTime;
-        }
-
         if (player.inputHandler.PressedJump)
         {
             playerStateMachine.ChangeState(player.jumpState);
@@ -81,18 +85,21 @@ public class PlayerGrapplingState : PlayerState
         }
         if (player.inputHandler.PressedAbility1)
         {
-            playerStateMachine.ChangeState(player.grapplingState);
+            playerStateMachine.ChangeState(player.useAbilityState);
         }
         if (missedGrap)
         {
             playerStateMachine.ChangeState(player.inAirState);
         }
+
+        player.lr.SetPosition(0,player.hand.transform.position);
     }
 
     
     private void ShootSwingPoint()
     {
-        RaycastHit2D rayHit = Physics2D.Raycast(player.transform.position, player.inputHandler.mouseScreenPos - player.transform.position, 25f, playerData.LaymaskGrapple);
+        direction = player.inputHandler.mouseScreenPos - player.transform.position;
+        RaycastHit2D rayHit = Physics2D.Raycast(player.transform.position, direction, 25f, playerData.LaymaskGrapple);
         if (rayHit.collider != null)
         {
             DestoryGrapPoints();
@@ -114,8 +121,12 @@ public class PlayerGrapplingState : PlayerState
         graple.tag = "GraplePoint";
         graple.AddComponent<SpriteRenderer>();
         graple.GetComponent<SpriteRenderer>().sprite = playerData.GrapplePointSprite;
+        graple.GetComponent<SpriteRenderer>().sortingOrder = 15;
         graple.transform.position = point;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        graple.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         graple.transform.SetParent(parentOBJ);
+
 
         /*
         graple.AddComponent<CircleCollider2D>();
@@ -140,10 +151,14 @@ public class PlayerGrapplingState : PlayerState
             player.dj.distance = Vector2.Distance(player.transform.position, point.transform.position);
             player.dj.enabled = true;
             player.dj.connectedAnchor = point.transform.position;
+            player.lr.enabled = true;
+            player.lr.SetPosition(1,point.transform.position);
+
         }
         else
         {
             player.dj.enabled = false;
+            player.lr.enabled = false;
         }
     }
 
@@ -153,7 +168,7 @@ public class PlayerGrapplingState : PlayerState
             Object.Destroy(GameObject.FindGameObjectWithTag("GraplePoint"));
 
         player.dj.enabled = false;
-
+        player.lr.enabled = false;
 
     }
     /*
