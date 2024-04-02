@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: JebPlayerData
   m_EditorClassIdentifier: 
   isFacingRight: 0
-  health: 7
+  health: 8
   maxHealth: 5
   baseMoveSpeed: 30
   SprintSpeed: 60
@@ -39,7 +39,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 72
   GrappleReelSpeed: 50
-  GrappleSwingSpeed: 25
+  GrappleSwingSpeed: 60
   playerBullet: {fileID: 7928200351476023610, guid: 765e767cab148b64bad829cb45569f71, type: 3}
   gunForce: 3
   MaxShots: 7

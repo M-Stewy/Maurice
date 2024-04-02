@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
+using Unity.VisualScripting;
 
 //Made by Jeb
 
@@ -20,9 +21,9 @@ public class Hats : MonoBehaviour
         }
     }
 
-        public void recieveHealth()
-        {
-            GameObject.FindWithTag("Player").GetComponent<Player>().playerData.health = GameObject.FindWithTag("Player").GetComponent<Player>().playerData.health + 1;
-            UI.text = GameObject.FindWithTag("Player").GetComponent<Player>().playerData.health.ToString();
-        }
+    public void recieveHealth()
+    {
+        GameObject.FindWithTag("Player").GetComponent<Player>().playerData.health = GameObject.FindWithTag("Player").GetComponent<Player>().playerData.health + 1;
+        UI.text = GameObject.FindWithTag("Player").GetComponent<Player>().playerData.health.ToString();
+    }
 }
