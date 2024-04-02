@@ -22,6 +22,5 @@ public class Hats : MonoBehaviour
     public void recieveHealth()
     {
         GameObject.FindWithTag("Player").GetComponent<Player>().playerData.health = GameObject.FindWithTag("Player").GetComponent<Player>().playerData.health + 1;
-        //UI.text = GameObject.FindWithTag("Player").GetComponent<Player>().playerData.health.ToString();
     }
 }

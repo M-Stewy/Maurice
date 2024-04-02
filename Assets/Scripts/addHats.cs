@@ -9,7 +9,7 @@ using UnityEngine.Events;
 public class addHats : MonoBehaviour
 {
     public GameObject chosen;
-    public float distance = .2f;
+    public float distance = .45f;
     public UnityEvent increasePos;
     public UnityEvent decreasePos;
     public GameObject reset;
