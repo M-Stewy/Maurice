@@ -4,7 +4,6 @@ using JetBrains.Annotations;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
-using TMPro;
 
 //Made by Jeb
 
