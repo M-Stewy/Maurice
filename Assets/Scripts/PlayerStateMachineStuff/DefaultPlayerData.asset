@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: DefaultPlayerData
   m_EditorClassIdentifier: 
   isFacingRight: 1
+  GroundLayer:
+    serializedVersion: 2
+    m_Bits: 8
   health: 3
+  maxHealth: 0
   baseMoveSpeed: 15
   SprintSpeed: 30
   CrouchSpeed: 10
@@ -39,6 +43,7 @@ MonoBehaviour:
     m_Bits: 64
   GrappleReelSpeed: 10
   GrappleSwingSpeed: 25
+  GrappleDistance: 25
   playerBullet: {fileID: 7928200351476023610, guid: 765e767cab148b64bad829cb45569f71, type: 3}
   gunForce: 3
   MaxShots: 7

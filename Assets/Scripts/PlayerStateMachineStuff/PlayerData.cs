@@ -19,6 +19,10 @@ public class PlayerData : ScriptableObject
     [HideInInspector]
     public bool isFacingRight;
 
+    //This is the ground layer Defined in the inspector
+    [Tooltip("Ground Layer(any layers you want the player to be able to jump on)")]
+    public LayerMask GroundLayer;
+
     [Space(5)]
     [Header("Move Speed")]
     public float health;
