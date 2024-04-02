@@ -1,5 +1,83 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &404049601
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 404049602}
+  - component: {fileID: 404049603}
+  m_Layer: 7
+  m_Name: HatStart
+  m_TagString: Spawner
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &404049602
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404049601}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.24, y: 0.01, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6644076875820747991}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &404049603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404049601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1876d584476497c4ba9246a0e016c8a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chosen: {fileID: 4371262284979590315, guid: a88ad86edba15cd4aba2551b61c57aec, type: 3}
+  distance: 0.45
+  increasePos:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5772318129000260062, guid: a88ad86edba15cd4aba2551b61c57aec, type: 3}
+        m_TargetAssemblyTypeName: HatPos, Assembly-CSharp
+        m_MethodName: changePos
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  decreasePos:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5772318129000260062, guid: a88ad86edba15cd4aba2551b61c57aec, type: 3}
+        m_TargetAssemblyTypeName: HatPos, Assembly-CSharp
+        m_MethodName: decreasePos
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  reset: {fileID: 4371262284979590315, guid: a88ad86edba15cd4aba2551b61c57aec, type: 3}
+  childNum: 0
 --- !u!1 &4810963384277230510
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,6 +365,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5748311376327975773}
+  - {fileID: 404049602}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -354,7 +433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6677ec49eb49594b8d783a126ebce9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerData: {fileID: 11400000, guid: 67f5bc9b85e0a214d9f8a9a7e6474239, type: 2}
+  playerData: {fileID: 11400000, guid: 2b8c1f7e78267df43a0839a8d1c25205, type: 2}
   Laymask:
     serializedVersion: 2
     m_Bits: 8
@@ -429,6 +508,7 @@ MonoBehaviour:
   PressedJump: 0
   PressedAbility1: 0
   PressedAbility2: 0
+  HoldingAbility1: 0
   SwitchAbilityUp: 0
   SwitchAbilityDown: 0
 --- !u!232 &6644076875820747986

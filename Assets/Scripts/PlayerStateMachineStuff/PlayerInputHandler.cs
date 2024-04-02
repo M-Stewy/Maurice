@@ -50,6 +50,7 @@ public class PlayerInputHandler : MonoBehaviour
     public bool PressedJump;
     public bool PressedAbility1;
     public bool PressedAbility2;
+    public bool HoldingAbility1;
 
     public bool SwitchAbilityUp;
     public bool SwitchAbilityDown;
@@ -100,6 +101,8 @@ public class PlayerInputHandler : MonoBehaviour
         PressedAbility1 = checkForKeyQuickPress(_ability1);
 
         PressedAbility2 = checkForKeyQuickPress(_ability2);
+
+        HoldingAbility1 = checkForKeyPress(_ability1);
 
         if(Input.mouseScrollDelta.y == 0)
         {

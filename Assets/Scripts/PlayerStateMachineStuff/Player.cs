@@ -27,6 +27,7 @@ public class Player : MonoBehaviour
     private PlayerAbility NoAbility;
     private PlayerAbility GrappleAbility;
     private PlayerAbility GunAbility;
+    private PlayerAbility SlowFallAbility;
 
 
     //These are all the state scripts that the player can switch between
@@ -47,6 +48,7 @@ public class Player : MonoBehaviour
     public PlayerInAirSlideState airSlideState { get; private set; }
     public PlayerGrapplingState grapplingState { get; private set; }
     public PlayerShootGunState shootGunState { get; private set; }
+    public PlayerUmbrellaState UmbrellaState { get; private set; }
     
     
     public PlayerInputHandler inputHandler { get; private set; }
@@ -107,6 +109,7 @@ public class Player : MonoBehaviour
         airSlideState = new PlayerInAirSlideState(this, playerData, PSM, "InAirSlideAnim");
         grapplingState = new PlayerGrapplingState(this, playerData, PSM, "IsGrapplingAnim");
         shootGunState = new PlayerShootGunState(this, playerData,PSM,"null");
+        UmbrellaState = new PlayerUmbrellaState(this, playerData, PSM, "InAir");
 
 
         inputHandler = GetComponent<PlayerInputHandler>();
@@ -122,11 +125,13 @@ public class Player : MonoBehaviour
         NoAbility = new PlayerAbility(true, false, "NoAbility", "Nothing", "Nothing");
         GrappleAbility = new PlayerAbility(false, false, "Grappling", "HoldingGrapple","ShootGrapple"); 
         GunAbility = new PlayerAbility(false, false, "Gun", "HoldingGun", "ShootGun");
+        SlowFallAbility = new PlayerAbility(false, false, "Umbrella", "HoldingUmbrella", "DeployUmbrella");
 
 
         AllAbilities.Add(NoAbility);
         AllAbilities.Add(GrappleAbility);
         AllAbilities.Add(GunAbility);
+        AllAbilities.Add(SlowFallAbility);
     }
 
 
@@ -138,6 +143,7 @@ public class Player : MonoBehaviour
         if (playerData.AllAbilitiesUnlocked) {
             GrappleAbility.SetUnlocked(true);
             GunAbility.SetUnlocked(true);
+            SlowFallAbility.SetUnlocked(true);
         }
         
         CurrentAbility = NoAbility;
@@ -228,10 +234,23 @@ public class Player : MonoBehaviour
 
     private void RotateHand()
     {
-        //simply rotates the gun or whatever is being held so it lines up with player's aim
-        Vector3 AngleVector = inputHandler.mouseScreenPos - hand.transform.position;
-        float angle = Mathf.Atan2(AngleVector.y, AngleVector.x) * Mathf.Rad2Deg;
-        hand.transform.rotation = Quaternion.AngleAxis(angle + 180, Vector3.forward);
+        if (CurrentAbility.name == SlowFallAbility.name)
+        {
+            if (inputHandler.moveDir.x == -1)
+            {
+                hand.transform.rotation = Quaternion.AngleAxis(0, Vector3.forward);
+            } else if (inputHandler.moveDir.x == 1)
+            {
+                hand.transform.rotation = Quaternion.AngleAxis(180, Vector3.forward);
+            }
+        }
+        else
+        {
+            //simply rotates the gun or whatever is being held so it lines up with player's aim
+            Vector3 AngleVector = inputHandler.mouseScreenPos - hand.transform.position;
+            float angle = Mathf.Atan2(AngleVector.y, AngleVector.x) * Mathf.Rad2Deg;
+            hand.transform.rotation = Quaternion.AngleAxis(angle + 180, Vector3.forward);
+        }
     }
 
     private void FlipPlayer() // self explanitory
@@ -311,6 +330,21 @@ public class Player : MonoBehaviour
         {
             Gizmos.color = Color.red;
             Gizmos.DrawRay(cc.bounds.center, Vector2.down * 4.5f);
+        }
+
+    }
+
+    public void recieveDamage()
+    {
+        if (GameObject.FindWithTag("Player").GetComponent<Player>().playerData.health - 1 != 0)
+        {
+            playerData.health = playerData.health - 1;
+            //UI.text = playerData.health.ToString();
+        }
+        else
+        {
+            //UI.text = playerData.health - 1).ToString();
+            Destroy(GameObject.FindWithTag("Player"));
         }
 
     }
