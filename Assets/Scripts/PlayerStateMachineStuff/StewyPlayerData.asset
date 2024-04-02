@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: StewyPlayerData
   m_EditorClassIdentifier: 
   isFacingRight: 0
-  health: 3
+  GroundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  health: 0
+  maxHealth: 0
   baseMoveSpeed: 15
   SprintSpeed: 30
   CrouchSpeed: 10
@@ -37,15 +41,16 @@ MonoBehaviour:
   LaymaskGrapple:
     serializedVersion: 2
     m_Bits: 64
-  GrappleReelSpeed: 5
-  GrappleSwingSpeed: 20
+  GrappleReelSpeed: 10
+  GrappleSwingSpeed: 25
+  GrappleDistance: 25
   playerBullet: {fileID: 7928200351476023610, guid: 765e767cab148b64bad829cb45569f71, type: 3}
   gunForce: 3
   MaxShots: 7
-  AmmoLeft: 0
+  AmmoLeft: 7
   BulletForce: 1000
-  CrouchOffset: {x: -0.27, y: -0.32}
-  CrouchSize: {x: 0.4, y: 0.65}
-  NormalOffset: {x: -0.27, y: -0.32}
+  CrouchOffset: {x: -0.27, y: -0.6}
+  CrouchSize: {x: 0.85, y: 0.65}
+  NormalOffset: {x: -0.27, y: -0.35}
   NormalSize: {x: 0.85, y: 1.31}
   ShowEnterStateInConsole: 0

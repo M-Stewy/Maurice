@@ -54,9 +54,7 @@ public class Player : MonoBehaviour
     [Tooltip("holds all the data of the player like speed, health, and whatever")]
     [SerializeField] public PlayerData playerData;
 
-    //This is the ground layer Defined in the inspector
-    [Tooltip("Ground Layer(any layers you want the player to be able to jump on)")]
-    public LayerMask Laymask;
+   
 
 
     [HideInInspector]
@@ -139,7 +137,7 @@ public class Player : MonoBehaviour
             GrappleAbility.SetUnlocked(true);
             GunAbility.SetUnlocked(true);
         }
-        
+        NoAbility.SetUnlocked(true);
         CurrentAbility = NoAbility;
 
         //We should make a powerup that restores ammo
@@ -188,6 +186,8 @@ public class Player : MonoBehaviour
         // if its higher the iterator is set to 0, if lower its set to the total number of abilities in AviableAbilities
         if (inputHandler.SwitchAbilityDown)
         {
+            if (AviableAbilities.Count == 1)
+                return;
             if (AviableAbilities.Count > 0)
             {
                 CurrentAbility.SetEquiped(false);
@@ -206,6 +206,8 @@ public class Player : MonoBehaviour
 
         if (inputHandler.SwitchAbilityUp)
         {
+            if (AviableAbilities.Count == 1)
+                return;
             if (AviableAbilities.Count > 0)
             {
                 CurrentAbility.SetEquiped(false);
@@ -264,14 +266,14 @@ public class Player : MonoBehaviour
     {
         GroundCheckOffset = new Vector3(GroundCheckOffset.x,cc.bounds.size.y/2,GroundCheckOffset.z);
         GroundCheckFixer = new Vector3(GroundCheckFixer.x, cc.size.y/2 + .5f,GroundCheckFixer.z);
-        ray = Physics2D.BoxCast(cc.bounds.center - GroundCheckOffset, cc.bounds.size - GroundCheckFixer, 0, Vector2.down, 0.1f, Laymask);
+        ray = Physics2D.BoxCast(cc.bounds.center - GroundCheckOffset, cc.bounds.size - GroundCheckFixer, 0, Vector2.down, 0.1f, playerData.GroundLayer);
         return ray.collider != null;
         
     }
 
     private bool IsOnSlope()
     {
-        SlopeRay = Physics2D.Raycast(cc.bounds.center  - GroundCheckOffset, Vector2.down, 4.5f, Laymask);
+        SlopeRay = Physics2D.Raycast(cc.bounds.center  - GroundCheckOffset, Vector2.down, 4.5f, playerData.GroundLayer);
 
         if (SlopeRay.collider != null)
         {
@@ -284,6 +286,24 @@ public class Player : MonoBehaviour
 
         return false;
     }
+
+    public void AbilityUnlock(string abilityName)
+    {
+        switch (abilityName)
+        {
+            case "None":
+                NoAbility.SetUnlocked(true);
+                break;
+            case "Grapple":
+                GrappleAbility.SetUnlocked(true);
+                break;
+            case "Gun":
+                GunAbility.SetUnlocked(true);
+                break;
+        }
+    }
+
+
 
     //For Debugging Drawing for Grounded/Slope check
     private void OnDrawGizmos()
