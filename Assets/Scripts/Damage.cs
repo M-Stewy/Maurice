@@ -1,10 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using JetBrains.Annotations;
-using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
-using TMPro;
 
 //Made by Jeb
 
@@ -12,7 +10,7 @@ public class Damage : MonoBehaviour
 {
     public UnityEvent takeDamage;
     //public GameObject Health;
-    public TextMeshProUGUI UI;
+    //public TextMeshProUGUI UI;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -23,7 +21,7 @@ public class Damage : MonoBehaviour
         }
     }
 
-    public void recieveDamage()
+    /*public void recieveDamage()
     {
         if (GameObject.FindWithTag("Player").GetComponent<Player>().playerData.health-1!=0)
         {
@@ -36,6 +34,6 @@ public class Damage : MonoBehaviour
             Destroy(GameObject.FindWithTag("Player"));
         }
         
-    }
+    }*/
 
 }

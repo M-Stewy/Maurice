@@ -6,6 +6,8 @@ TagManager:
   tags:
   - GraplePoint
   - Ground
+  - Hat
+  - Spawner
   layers:
   - Default
   - TransparentFX
