@@ -353,7 +353,7 @@ public class Player : MonoBehaviour
             Destroy(gameObject);
             //GameObject.FindWithTag("Respawn").GetComponent<positionTracker>().checkpoint();
         }
-
+    }
 
     //----------------- Events to be called ---------------------
     public void AbilityUnlock(string abilityName)
