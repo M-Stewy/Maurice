@@ -13,6 +13,8 @@ public class positionTracker : MonoBehaviour
     public GameObject SceneChange;
     public static positionTracker instance;
     public string currentScene;
+    public float checkpointX;
+    public float checkpointY;
     void Awake()
     {
         if (instance == null)
@@ -35,10 +37,21 @@ public class positionTracker : MonoBehaviour
 
     public void updatePosition()
     {
+        //Debug.Log("Reached");
         SceneChange = GameObject.FindWithTag("Player");
         xpos=SceneChange.GetComponent<SceneChange>().xpos;
         ypos=SceneChange.GetComponent<SceneChange>().ypos;
+        //checkpointX = xpos;
+        //checkpointY = ypos;
     }
+
+    /*public void checkpoint()
+    {
+        //Also in SceneChange and Player scripts
+        checkpointX = SceneChange.GetComponent<SceneChange>().xpos;
+        checkpointY = SceneChange.GetComponent<SceneChange>().ypos;
+        GameObject.FindWithTag("Player").transform.position = new Vector2(checkpointX, checkpointY);
+    }*/
 
     private void Update()
     {
@@ -46,9 +59,7 @@ public class positionTracker : MonoBehaviour
         if (SceneManager.GetActiveScene().name != currentScene) 
         {
             currentScene = SceneManager.GetActiveScene().name;
-            //UI = GameObject.Find("Health").GetComponent<TextMeshProUGUI>();
             GameObject.FindWithTag("Player").GetComponent<Player>().playerData.health = GameObject.FindWithTag("Player").GetComponent<Player>().playerData.maxHealth;
-            //UI.text = GameObject.FindWithTag("Player").GetComponent<Player>().playerData.health.ToString();
         }
     }
 }

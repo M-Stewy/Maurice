@@ -9,13 +9,18 @@ using UnityEngine.Events;
 public class Damage : MonoBehaviour
 {
     public UnityEvent takeDamage;
+    public bool DestroyOnCollide=false;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
             takeDamage.Invoke();
-            Destroy(gameObject);
+            if (DestroyOnCollide == true)
+            {
+                Destroy(gameObject);
+            }
+            
         }
     }
 }

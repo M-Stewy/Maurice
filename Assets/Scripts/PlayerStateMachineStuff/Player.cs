@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.IO.LowLevel.Unsafe;
 using Unity.VisualScripting;
+using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.Rendering;
 /// <summary>
@@ -363,8 +364,8 @@ public class Player : MonoBehaviour
         }
         else
         {
-            //UI.text = playerData.health - 1).ToString();
-            Destroy(GameObject.FindWithTag("Player"));
+            Destroy(gameObject);
+            //GameObject.FindWithTag("Respawn").GetComponent<positionTracker>().checkpoint();
         }
 
     }
