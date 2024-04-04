@@ -13,6 +13,7 @@ public class HatPos : MonoBehaviour
 
     public void decreasePos()
     {
+        Debug.Log("Reached");
         this.transform.position = this.transform.position + new Vector3(0f, GameObject.FindWithTag("Spawner").GetComponent<addHats>().distance, 0f);
     }
 }

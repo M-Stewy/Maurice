@@ -22,9 +22,9 @@ public class SceneChange : MonoBehaviour
 
         if (SceneManager.GetActiveScene().name == "hubWorld")
         {
-            transform.position=new Vector2(positionTracker.GetComponent<positionTracker>().xpos, -3.925f/*positionTracker.GetComponent<positionTracker>().ypos*/);
+            transform.position = new Vector2(positionTracker.GetComponent<positionTracker>().xpos, -3.925f/*positionTracker.GetComponent<positionTracker>().ypos*/);
         }
-        
+
     }
 
     private void OnTriggerStay2D(Collider2D other)
@@ -32,25 +32,44 @@ public class SceneChange : MonoBehaviour
         //Debug.Log("Triggered");
         if (Input.GetKey(KeyCode.E))
         {
-            if (SceneManager.GetActiveScene().name=="hubWorld") {
+            if (SceneManager.GetActiveScene().name == "hubWorld")
+            {
                 xpos = Capsule.transform.position.x;
                 ypos = Capsule.transform.position.y;
                 positionTracker.GetComponent<positionTracker>().updatePosition();
 
             }
-           
-            if (other.name == "hubWorld") {
+
+            if (other.name == "hubWorld")
+            {
                 SceneManager.LoadScene("hubWorld");
-            } else if (other.name == "NikoScene") {
+            }
+            else if (other.name == "NikoScene")
+            {
                 SceneManager.LoadScene("NikoScene");
-            } else if (other.name == "StewyScene") {
+            }
+            else if (other.name == "StewyScene")
+            {
                 SceneManager.LoadScene("StewyScene");
-            } else if (other.name =="KyleScene") {
+            }
+            else if (other.name == "KyleScene")
+            {
                 SceneManager.LoadScene("KyleScene");
-            } else if (other.name == "JebScene") {
+            }
+            else if (other.name == "JebScene")
+            {
                 SceneManager.LoadScene("JebScene");
             }
         }
-        
+
     }
+
+    //Also in positionTracker and Player scripts
+    /*public void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            GameObject.FindWithTag("Respawn").GetComponent<positionTracker>().checkpoint();
+        }
+    }*/
 }
