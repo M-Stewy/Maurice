@@ -22,6 +22,7 @@ public class PlayerGrapplingState : PlayerState
 
     GameObject graple;
     Vector3 direction;
+    LayerMask GrapHitAble;
     public override void Checks()
     {
         base.Checks();
@@ -37,7 +38,7 @@ public class PlayerGrapplingState : PlayerState
         player.CurrentAbility.DoAction(player.hand.gameObject, true);
         ShootSwingPoint();
         //Debug.Log("Entered Grapple State");
-        
+        GrapHitAble = playerData.GroundLayer | playerData.LaymaskGrapple;
     }
 
     public override void Exit()
@@ -60,6 +61,8 @@ public class PlayerGrapplingState : PlayerState
         }
         if (player.inputHandler.HoldingDown)
         {
+            if (player.dj.distance > playerData.GrappleDistance)
+                return;
             player.dj.distance += playerData.GrappleReelSpeed * Time.deltaTime;
         }
 
@@ -72,6 +75,7 @@ public class PlayerGrapplingState : PlayerState
         if (graple)
         {
             player.dj.connectedAnchor = graple.transform.position;
+            player.lr.SetPosition(1, graple.transform.position);
         }
 
 
@@ -95,17 +99,26 @@ public class PlayerGrapplingState : PlayerState
         player.lr.SetPosition(0,player.hand.transform.position);
     }
 
-    
+    //I know this is terrible right now but Ill make it better... (probably not)
     private void ShootSwingPoint()
     {
         direction = player.inputHandler.mouseScreenPos - player.transform.position;
-        RaycastHit2D rayHit = Physics2D.Raycast(player.transform.position, direction, 25f, playerData.LaymaskGrapple);
+        RaycastHit2D rayHit = Physics2D.Raycast(player.transform.position, direction, playerData.GrappleDistance, GrapHitAble);
         if (rayHit.collider != null)
         {
-            DestoryGrapPoints();
-            missedGrap = false;
-            // Debug.Log(rayHit.point);
-            CreateGrapPoint(rayHit.point,rayHit.transform);
+           
+            if (rayHit.collider.gameObject.layer == LayerMask.NameToLayer("GrappleAble"))
+            {
+                DestoryGrapPoints();
+                missedGrap = false;
+                // Debug.Log(rayHit.point);
+                CreateGrapPoint(rayHit.point, rayHit.transform);
+            }
+            else
+            {
+                DestoryGrapPoints();
+                missedGrap = true;
+            }
         }
         else
         {

@@ -48,6 +48,9 @@ public class PlayerUseAbilityState : PlayerState
             case "Gun":
                 playerStateMachine.ChangeState(player.shootGunState);
                 break;
+            case "Umbrella":
+                playerStateMachine.ChangeState(player.UmbrellaState);
+                break;
             default:
                 playerStateMachine.ChangeState(player.idleState);
                 break;

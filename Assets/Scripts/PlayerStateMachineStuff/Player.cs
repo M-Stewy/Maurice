@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.IO.LowLevel.Unsafe;
 using Unity.VisualScripting;
+using UnityEditor.PackageManager;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Rendering;
 /// <summary>
 /// Made by Stewy
@@ -27,6 +28,7 @@ public class Player : MonoBehaviour
     private PlayerAbility NoAbility;
     private PlayerAbility GrappleAbility;
     private PlayerAbility GunAbility;
+    private PlayerAbility SlowFallAbility;
 
 
     //These are all the state scripts that the player can switch between
@@ -47,6 +49,7 @@ public class Player : MonoBehaviour
     public PlayerInAirSlideState airSlideState { get; private set; }
     public PlayerGrapplingState grapplingState { get; private set; }
     public PlayerShootGunState shootGunState { get; private set; }
+    public PlayerUmbrellaState UmbrellaState { get; private set; }
     
     
     public PlayerInputHandler inputHandler { get; private set; }
@@ -54,9 +57,7 @@ public class Player : MonoBehaviour
     [Tooltip("holds all the data of the player like speed, health, and whatever")]
     [SerializeField] public PlayerData playerData;
 
-    //This is the ground layer Defined in the inspector
-    [Tooltip("Ground Layer(any layers you want the player to be able to jump on)")]
-    public LayerMask Laymask;
+   
 
 
     [HideInInspector]
@@ -83,6 +84,8 @@ public class Player : MonoBehaviour
 
     private int abilityIterator = 1;
 
+    private Transform respawnPoint;
+    string testThing;
 
     RaycastHit2D ray;
     RaycastHit2D SlopeRay;
@@ -107,6 +110,7 @@ public class Player : MonoBehaviour
         airSlideState = new PlayerInAirSlideState(this, playerData, PSM, "InAirSlideAnim");
         grapplingState = new PlayerGrapplingState(this, playerData, PSM, "IsGrapplingAnim");
         shootGunState = new PlayerShootGunState(this, playerData,PSM,"null");
+        UmbrellaState = new PlayerUmbrellaState(this, playerData, PSM, "InAir");
 
 
         inputHandler = GetComponent<PlayerInputHandler>();
@@ -122,11 +126,15 @@ public class Player : MonoBehaviour
         NoAbility = new PlayerAbility(true, false, "NoAbility", "Nothing", "Nothing");
         GrappleAbility = new PlayerAbility(false, false, "Grappling", "HoldingGrapple","ShootGrapple"); 
         GunAbility = new PlayerAbility(false, false, "Gun", "HoldingGun", "ShootGun");
+        SlowFallAbility = new PlayerAbility(false, false, "Umbrella", "HoldingUmbrella", "DeployUmbrella");
 
 
         AllAbilities.Add(NoAbility);
         AllAbilities.Add(GrappleAbility);
         AllAbilities.Add(GunAbility);
+        AllAbilities.Add(SlowFallAbility);
+
+        respawnPoint = transform;
     }
 
 
@@ -138,8 +146,9 @@ public class Player : MonoBehaviour
         if (playerData.AllAbilitiesUnlocked) {
             GrappleAbility.SetUnlocked(true);
             GunAbility.SetUnlocked(true);
+            SlowFallAbility.SetUnlocked(true);
         }
-        
+        NoAbility.SetUnlocked(true);
         CurrentAbility = NoAbility;
 
         //We should make a powerup that restores ammo
@@ -188,6 +197,8 @@ public class Player : MonoBehaviour
         // if its higher the iterator is set to 0, if lower its set to the total number of abilities in AviableAbilities
         if (inputHandler.SwitchAbilityDown)
         {
+            if (AviableAbilities.Count == 1)
+                return;
             if (AviableAbilities.Count > 0)
             {
                 CurrentAbility.SetEquiped(false);
@@ -206,6 +217,8 @@ public class Player : MonoBehaviour
 
         if (inputHandler.SwitchAbilityUp)
         {
+            if (AviableAbilities.Count == 1)
+                return;
             if (AviableAbilities.Count > 0)
             {
                 CurrentAbility.SetEquiped(false);
@@ -228,10 +241,23 @@ public class Player : MonoBehaviour
 
     private void RotateHand()
     {
-        //simply rotates the gun or whatever is being held so it lines up with player's aim
-        Vector3 AngleVector = inputHandler.mouseScreenPos - hand.transform.position;
-        float angle = Mathf.Atan2(AngleVector.y, AngleVector.x) * Mathf.Rad2Deg;
-        hand.transform.rotation = Quaternion.AngleAxis(angle + 180, Vector3.forward);
+        if (CurrentAbility.name == SlowFallAbility.name)
+        {
+            if (inputHandler.moveDir.x == -1)
+            {
+                hand.transform.rotation = Quaternion.AngleAxis(0, Vector3.forward);
+            } else if (inputHandler.moveDir.x == 1)
+            {
+                hand.transform.rotation = Quaternion.AngleAxis(180, Vector3.forward);
+            }
+        }
+        else
+        {
+            //simply rotates the gun or whatever is being held so it lines up with player's aim
+            Vector3 AngleVector = inputHandler.mouseScreenPos - hand.transform.position;
+            float angle = Mathf.Atan2(AngleVector.y, AngleVector.x) * Mathf.Rad2Deg;
+            hand.transform.rotation = Quaternion.AngleAxis(angle + 180, Vector3.forward);
+        }
     }
 
     private void FlipPlayer() // self explanitory
@@ -264,14 +290,14 @@ public class Player : MonoBehaviour
     {
         GroundCheckOffset = new Vector3(GroundCheckOffset.x,cc.bounds.size.y/2,GroundCheckOffset.z);
         GroundCheckFixer = new Vector3(GroundCheckFixer.x, cc.size.y/2 + .5f,GroundCheckFixer.z);
-        ray = Physics2D.BoxCast(cc.bounds.center - GroundCheckOffset, cc.bounds.size - GroundCheckFixer, 0, Vector2.down, 0.1f, Laymask);
+        ray = Physics2D.BoxCast(cc.bounds.center - GroundCheckOffset, cc.bounds.size - GroundCheckFixer, 0, Vector2.down, 0.1f, playerData.GroundLayer);
         return ray.collider != null;
         
     }
 
     private bool IsOnSlope()
     {
-        SlopeRay = Physics2D.Raycast(cc.bounds.center  - GroundCheckOffset, Vector2.down, 4.5f, Laymask);
+        SlopeRay = Physics2D.Raycast(cc.bounds.center  - GroundCheckOffset, Vector2.down, 4.5f, playerData.GroundLayer);
 
         if (SlopeRay.collider != null)
         {
@@ -313,6 +339,57 @@ public class Player : MonoBehaviour
             Gizmos.DrawRay(cc.bounds.center, Vector2.down * 4.5f);
         }
 
+    }
+
+    public void recieveDamage()
+    {
+        if (GameObject.FindWithTag("Player").GetComponent<Player>().playerData.health - 1 != 0)
+        {
+            playerData.health = playerData.health - 1;
+            //UI.text = playerData.health.ToString();
+        }
+        else
+        {
+            Destroy(gameObject);
+            //GameObject.FindWithTag("Respawn").GetComponent<positionTracker>().checkpoint();
+        }
+    }
+
+    //----------------- Events to be called ---------------------
+    public void AbilityUnlock(string abilityName)
+    {
+        switch (abilityName)
+        {
+            case "None":
+                NoAbility.SetUnlocked(true);
+                break;
+            case "Grapple":
+                GrappleAbility.SetUnlocked(true);
+                break;
+            case "Gun":
+                GunAbility.SetUnlocked(true);
+                break;
+        }
+    }
+
+
+    public void SetRespawnPoint(Transform spawnP)
+    {
+        respawnPoint = spawnP;
+    }
+
+    public void RespawnPlayerV()
+    {
+        gameObject.transform.position = respawnPoint.position;
+        rb.velocity = new Vector2(0, 0);
+        PSM.ChangeState(idleState);
+    }
+    public UnityAction RespawnPlayer()
+    {
+        gameObject.transform.position = respawnPoint.position;
+        rb.velocity = new Vector2(0,0);
+        PSM.ChangeState(idleState);
+        return new UnityAction(RespawnPlayerV);
     }
 
 }
