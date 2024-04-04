@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.IO.LowLevel.Unsafe;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Rendering;
 /// <summary>
 /// Made by Stewy
@@ -81,6 +81,8 @@ public class Player : MonoBehaviour
 
     private int abilityIterator = 1;
 
+    private Transform respawnPoint;
+    string testThing;
 
     RaycastHit2D ray;
     RaycastHit2D SlopeRay;
@@ -125,6 +127,8 @@ public class Player : MonoBehaviour
         AllAbilities.Add(NoAbility);
         AllAbilities.Add(GrappleAbility);
         AllAbilities.Add(GunAbility);
+
+        respawnPoint = transform;
     }
 
 
@@ -287,24 +291,6 @@ public class Player : MonoBehaviour
         return false;
     }
 
-    public void AbilityUnlock(string abilityName)
-    {
-        switch (abilityName)
-        {
-            case "None":
-                NoAbility.SetUnlocked(true);
-                break;
-            case "Grapple":
-                GrappleAbility.SetUnlocked(true);
-                break;
-            case "Gun":
-                GunAbility.SetUnlocked(true);
-                break;
-        }
-    }
-
-
-
     //For Debugging Drawing for Grounded/Slope check
     private void OnDrawGizmos()
     {
@@ -333,6 +319,43 @@ public class Player : MonoBehaviour
             Gizmos.DrawRay(cc.bounds.center, Vector2.down * 4.5f);
         }
 
+    }
+
+    //----------------- Events to be called ---------------------
+    public void AbilityUnlock(string abilityName)
+    {
+        switch (abilityName)
+        {
+            case "None":
+                NoAbility.SetUnlocked(true);
+                break;
+            case "Grapple":
+                GrappleAbility.SetUnlocked(true);
+                break;
+            case "Gun":
+                GunAbility.SetUnlocked(true);
+                break;
+        }
+    }
+
+
+    public void SetRespawnPoint(Transform spawnP)
+    {
+        respawnPoint = spawnP;
+    }
+
+    public void RespawnPlayerV()
+    {
+        gameObject.transform.position = respawnPoint.position;
+        rb.velocity = new Vector2(0, 0);
+        PSM.ChangeState(idleState);
+    }
+    public UnityAction RespawnPlayer()
+    {
+        gameObject.transform.position = respawnPoint.position;
+        rb.velocity = new Vector2(0,0);
+        PSM.ChangeState(idleState);
+        return new UnityAction(RespawnPlayerV);
     }
 
 }
