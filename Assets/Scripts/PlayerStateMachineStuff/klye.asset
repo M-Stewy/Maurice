@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4c76d136c291a448b3d6eecc561d63c, type: 3}
+  m_Name: klye
+  m_EditorClassIdentifier: 
+  isFacingRight: 1
+  health: 0
+  maxHealth: 0
+  baseMoveSpeed: 30
+  SprintSpeed: 60
+  CrouchSpeed: 20
+  SlideSpeedBoost: 5
+  JumpPower: 100
+  JumpTime: 20
+  TotalJumps: 1
+  CyoteTime: 10
+  GroundDrag: 1
+  SlopeDrag: 0.0001
+  AirDrag: 0.75
+  SlideDrag: 0.001
+  IdleDrag: 5
+  SlowFallDrag: 3
+  GroundGravity: 1
+  SlopeGravity: 3
+  AirGravity: 5
+  SlowFallGravity: 0
+  AllAbilitiesUnlocked: 0
+  GrapplePointSprite: {fileID: 0}
+  LaymaskGrapple:
+    serializedVersion: 2
+    m_Bits: 0
+  GrappleReelSpeed: 5
+  GrappleSwingSpeed: 20
+  playerBullet: {fileID: 0}
+  gunForce: 0
+  MaxShots: 7
+  AmmoLeft: 7
+  BulletForce: 50
+  CrouchOffset: {x: -0.27, y: -0.32}
+  CrouchSize: {x: 0.4, y: 0.65}
+  NormalOffset: {x: -0.27, y: -0.32}
+  NormalSize: {x: 0.85, y: 1.31}
+  ShowEnterStateInConsole: 0
