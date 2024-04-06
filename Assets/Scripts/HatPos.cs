@@ -6,14 +6,15 @@ using UnityEngine;
 
 public class HatPos : MonoBehaviour
 {
+    public float distance = .45f;
     public void changePos()
     {
-        this.transform.position = this.transform.position - new Vector3(0f, GameObject.FindWithTag("Spawner").GetComponent<addHats>().distance, 0f);
+        this.transform.position = this.transform.position - new Vector3(0f, distance, 0f);
     }
 
     public void decreasePos()
     {
-        Debug.Log("Reached");
-        this.transform.position = this.transform.position + new Vector3(0f, GameObject.FindWithTag("Spawner").GetComponent<addHats>().distance, 0f);
+        //Debug.Log("Reached");
+        this.transform.position = this.transform.position + new Vector3(0f, distance, 0f);
     }
 }

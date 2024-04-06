@@ -16,7 +16,7 @@ MonoBehaviour:
   GroundLayer:
     serializedVersion: 2
     m_Bits: 8
-  health: 4
+  health: 2
   maxHealth: 1
   baseMoveSpeed: 30
   SprintSpeed: 60
@@ -42,13 +42,13 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 72
   GrappleReelSpeed: 25
-  GrappleSwingSpeed: 25
+  GrappleSwingSpeed: 50
   GrappleDistance: 50
   playerBullet: {fileID: 7928200351476023610, guid: 765e767cab148b64bad829cb45569f71, type: 3}
   gunForce: 3
   MaxShots: 7
   AmmoLeft: 7
-  BulletForce: 50
+  BulletForce: 200
   CrouchOffset: {x: 0, y: 0.5}
   CrouchSize: {x: 1, y: 1}
   NormalOffset: {x: 0, y: 0}

@@ -8,23 +8,34 @@ using UnityEngine.Events;
 
 public class addHats : MonoBehaviour
 {
-    public GameObject chosen;
-    public float distance = .45f;
+    public GameObject[] chosen = new GameObject[4];
+    private int randomNum;
     public UnityEvent increasePos;
     public UnityEvent decreasePos;
-    public GameObject reset;
     public int childNum;
+    private GameObject childForMove;
 
     public void Awake()
     {
-        reset.transform.position = new Vector3(0f, 0f, 0f);
+        for (int i=0; i<4; i++)
+        {
+            chosen[i].transform.position = new Vector3(0f, 0f, 0f);
+        }
+        
     }
 
     public void recieveHat()
     {
-        Instantiate(chosen, this.transform);
+        randomNum = Random.Range(0, 4);
+        childNum = this.transform.childCount;
+        Instantiate(chosen[randomNum], this.transform);
         increasePos.Invoke();
-        this.transform.position = this.transform.position + new Vector3(0f, distance, 0f);
+        if (childNum != 0)
+        {
+            childForMove = this.transform.GetChild(childNum-1).gameObject;
+            this.transform.position = this.transform.position + new Vector3(0f, childForMove.GetComponent<HatPos>().distance, 0f);
+        }
+        
     }
 
     public void destroyHat()
@@ -32,6 +43,7 @@ public class addHats : MonoBehaviour
         childNum = this.transform.childCount;
         Destroy(this.transform.GetChild(childNum-1).gameObject);
         decreasePos.Invoke();
-        this.transform.position = this.transform.position - new Vector3(0f, distance, 0f);
+        childForMove = this.transform.GetChild(childNum - 1).gameObject;
+        this.transform.position = this.transform.position - new Vector3(0f, childForMove.GetComponent<HatPos>().distance, 0f);
     }
 }
