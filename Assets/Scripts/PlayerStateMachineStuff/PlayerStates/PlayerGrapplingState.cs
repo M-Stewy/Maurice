@@ -39,6 +39,8 @@ public class PlayerGrapplingState : PlayerState
         ShootSwingPoint();
         //Debug.Log("Entered Grapple State");
         GrapHitAble = playerData.GroundLayer | playerData.LaymaskGrapple;
+
+        player.PlayAudioFile(playerData.ShootGrappleSFX, false);
     }
 
     public override void Exit()

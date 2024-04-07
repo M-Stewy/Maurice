@@ -39,6 +39,8 @@ public class PlayerShootGunState : PlayerState
             Shoot();
         }
 
+        //testing this currently
+        player.PlayAudioFile(playerData.ShootGunSFX, false);
         
     }
 

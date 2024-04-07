@@ -36,11 +36,13 @@ public class PlayerJumpState : PlayerState
     {
         base.Enter();
 
-        //UnityEngine.Debug.Log("Entered Jump State");
+        // testing this currently
+        player.PlayAudioFile(playerData.JumpSFX, true);
+
+       
 
         player.rb.drag = playerData.AirDrag;
 
-        //player.rb.AddForce(new UnityEngine.Vector2(0,playerData.JumpPower), UnityEngine.ForceMode2D.Impulse);
         jumpTimer = 0;
 
         remainingJumps--;

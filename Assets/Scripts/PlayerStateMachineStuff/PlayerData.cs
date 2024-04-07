@@ -81,6 +81,20 @@ public class PlayerData : ScriptableObject
     public int AmmoLeft;
     public float BulletForce = 50;
 
+    [Space(10)]
+    [Header("AudioFiles")]
+
+    public AudioClip JumpSFX;
+    public AudioClip WalkingSFX;
+    public AudioClip SlideSFX;
+    public AudioClip ShootGunSFX;
+    public AudioClip ShootGrappleSFX;
+    public AudioClip LandedSFX;
+    public AudioClip HitSFX;
+    public AudioClip UmbrellaSFX; // No idea if this is needed but just in case Im gonna try and implement it
+
+
+
     //[HideInInspector] 
     [Space]
     [Header("DO NOT CHANGE THESE FROM DEFAULT, \n" +

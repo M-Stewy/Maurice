@@ -71,10 +71,15 @@ public class Player : MonoBehaviour
     public GameObject hand;
     [HideInInspector]
     public LineRenderer lr;
-
+    [HideInInspector]
+    public AudioSource audioS;
 
     [HideInInspector]
     public Animator anim;
+
+
+    [HideInInspector]
+    public AudioClip CurrentClip;
 
 
     [HideInInspector]
@@ -118,6 +123,7 @@ public class Player : MonoBehaviour
         cc = GetComponent<CapsuleCollider2D>();
         dj = GetComponent<DistanceJoint2D>();
         anim = GetComponent<Animator>();
+        audioS = GetComponent<AudioSource>();
 
         lr = GetComponentInChildren<LineRenderer>();
         hand = transform.GetChild(0).gameObject;
@@ -341,6 +347,19 @@ public class Player : MonoBehaviour
 
     }
 
+    public void PlayAudioFile(AudioClip tempClip, bool doRandom)
+    {
+        if (doRandom)
+        {
+           // TODO -- make it so it plays a random pitch of the SFX --
+        }
+        audioS.PlayOneShot(tempClip);
+    }
+
+
+
+    //----------------- Events to be called ---------------------
+
     public void recieveDamage()
     {
         if (GameObject.FindWithTag("Player").GetComponent<Player>().playerData.health - 1 != 0)
@@ -355,7 +374,6 @@ public class Player : MonoBehaviour
         }
     }
 
-    //----------------- Events to be called ---------------------
     public void AbilityUnlock(string abilityName)
     {
         switch (abilityName)

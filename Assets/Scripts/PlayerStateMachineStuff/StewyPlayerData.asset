@@ -36,7 +36,7 @@ MonoBehaviour:
   SlopeGravity: 2
   AirGravity: 5
   SlowFallGravity: 0
-  AllAbilitiesUnlocked: 0
+  AllAbilitiesUnlocked: 1
   GrapplePointSprite: {fileID: -1157753459, guid: 632f041408473894da813718f6b2f9ab, type: 3}
   LaymaskGrapple:
     serializedVersion: 2
@@ -47,8 +47,16 @@ MonoBehaviour:
   playerBullet: {fileID: 7928200351476023610, guid: 765e767cab148b64bad829cb45569f71, type: 3}
   gunForce: 3
   MaxShots: 7
-  AmmoLeft: 7
+  AmmoLeft: 0
   BulletForce: 1000
+  JumpSFX: {fileID: 8300000, guid: ed7e5aeaecfa31145962605a4a4ec106, type: 3}
+  WalkingSFX: {fileID: 0}
+  SlideSFX: {fileID: 0}
+  ShootGunSFX: {fileID: 8300000, guid: 314e872175f430a418f7b1d40d5f9e0f, type: 3}
+  ShootGrappleSFX: {fileID: 8300000, guid: 6d48b97c0d076e14c923258a81afb87e, type: 3}
+  LandedSFX: {fileID: 0}
+  HitSFX: {fileID: 0}
+  UmbrellaSFX: {fileID: 0}
   CrouchOffset: {x: -0.27, y: -0.6}
   CrouchSize: {x: 0.85, y: 0.65}
   NormalOffset: {x: -0.27, y: -0.35}
