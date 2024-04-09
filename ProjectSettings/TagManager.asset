@@ -9,6 +9,7 @@ TagManager:
   - Hat
   - Spawner
   - DisableAtEnd
+  - HatStart
   layers:
   - Default
   - TransparentFX

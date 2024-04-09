@@ -7,14 +7,17 @@ using UnityEngine;
 public class HatPos : MonoBehaviour
 {
     public float distance = .45f;
+    private float realDistance;
     public void changePos()
     {
-        this.transform.position = this.transform.position - new Vector3(0f, distance, 0f);
+        realDistance = GameObject.FindWithTag("HatStart").GetComponent<addHats>().distance;
+        this.transform.position = this.transform.position - new Vector3(0f, realDistance, 0f);
     }
 
     public void decreasePos()
     {
         //Debug.Log("Reached");
-        this.transform.position = this.transform.position + new Vector3(0f, distance, 0f);
+        realDistance = GameObject.FindWithTag("HatStart").GetComponent<addHats>().distance;
+        this.transform.position = this.transform.position + new Vector3(0f, realDistance, 0f);
     }
 }
