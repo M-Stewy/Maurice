@@ -32,7 +32,8 @@ public class addHats : MonoBehaviour
         Instantiate(chosen[randomNum], this.transform);
         if (childNum != 0)
         {
-            childForMove = this.transform.GetChild(childNum-1).gameObject;
+            //Used to be childNum + 1
+            childForMove = this.transform.GetChild(childNum).gameObject;
             distance = childForMove.GetComponent<HatPos>().distance;
             this.transform.position = this.transform.position + new Vector3(0f, distance, 1f);
             increasePos.Invoke();
