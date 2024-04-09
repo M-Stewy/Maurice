@@ -44,6 +44,10 @@ public class addHats : MonoBehaviour
         Destroy(this.transform.GetChild(childNum-1).gameObject);
         decreasePos.Invoke();
         childForMove = this.transform.GetChild(childNum - 1).gameObject;
-        this.transform.position = this.transform.position - new Vector3(0f, childForMove.GetComponent<HatPos>().distance, 0f);
+        if (childNum-1 != 0)
+        {
+            this.transform.position = this.transform.position - new Vector3(0f, childForMove.GetComponent<HatPos>().distance, 0f);
+        }
+        
     }
 }
