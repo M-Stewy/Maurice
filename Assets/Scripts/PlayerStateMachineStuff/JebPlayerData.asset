@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c76d136c291a448b3d6eecc561d63c, type: 3}
   m_Name: JebPlayerData
   m_EditorClassIdentifier: 
-  isFacingRight: 1
+  isFacingRight: 0
   GroundLayer:
     serializedVersion: 2
     m_Bits: 8
-  health: 2
+  health: 3
   maxHealth: 1
   baseMoveSpeed: 30
   SprintSpeed: 60
@@ -35,7 +35,7 @@ MonoBehaviour:
   GroundGravity: 1
   SlopeGravity: 2
   AirGravity: 5
-  SlowFallGravity: 3
+  SlowFallGravity: 2
   AllAbilitiesUnlocked: 1
   GrapplePointSprite: {fileID: -1157753459, guid: 632f041408473894da813718f6b2f9ab, type: 3}
   LaymaskGrapple:
