@@ -27,7 +27,7 @@ public class PlayerSprintingState : PlayerGroundedState
 
         dragTimer = 50;
         dragSet = false;
-        player.PlayAudioFile(playerData.WalkingSFX, true, 12, 16, .5f,.5f);
+        player.PlayAudioFile(playerData.WalkingSFX, true, 1.5f, 2, .5f,.5f);
     }
 
     public override void Exit()

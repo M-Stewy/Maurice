@@ -350,6 +350,7 @@ public class Player : MonoBehaviour
     public void PlayAudioFile(AudioClip tempClip, bool loop)
     {
         audioS.volume = 0.5f;
+        audioS.pitch = 1;
         audioS.loop = loop;
         audioS.PlayOneShot(tempClip);
     }

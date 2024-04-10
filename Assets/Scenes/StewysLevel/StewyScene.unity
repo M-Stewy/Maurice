@@ -870,6 +870,18 @@ MonoBehaviour:
   PlayerTouch:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 565147872}
+        m_TargetAssemblyTypeName: TitleScreenDisplay, Assembly-CSharp
+        m_MethodName: CallTitleDisplay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 2231385190413913591}
         m_TargetAssemblyTypeName: Player, Assembly-CSharp
         m_MethodName: AbilityUnlock
@@ -1418,7 +1430,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &565147871
 Transform:
   m_ObjectHideFlags: 0
@@ -2630,7 +2642,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 857941262}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.49002075, y: 2.9999905, z: -10}
+  m_LocalPosition: {x: 964.7, y: 159.2, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5654,7 +5666,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2231385190413913481}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.7, y: -3.9, z: 0}
+  m_LocalPosition: {x: 951.49, y: 152.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5713,7 +5725,7 @@ MonoBehaviour:
   isGrounded: 0
   isOnSlope: 0
   GroundCheckFixer: {x: 0.3, y: 1.155, z: 0}
-  GroundCheckOffset: {x: 0, y: 0.65499985, z: 0}
+  GroundCheckOffset: {x: 0, y: 0.6550064, z: 0}
 --- !u!114 &3556181620977761943
 MonoBehaviour:
   m_ObjectHideFlags: 0
