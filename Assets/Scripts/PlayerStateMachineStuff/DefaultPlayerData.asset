@@ -12,27 +12,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c76d136c291a448b3d6eecc561d63c, type: 3}
   m_Name: DefaultPlayerData
   m_EditorClassIdentifier: 
-  isFacingRight: 0
+  isFacingRight: 1
   health: 3
+  maxHealth: 0
   baseMoveSpeed: 15
   SprintSpeed: 30
   CrouchSpeed: 10
   SlideSpeedBoost: 5
-  JumpPower: 35
-  JumpTime: 15
+  JumpPower: 32
+  JumpTime: 12.5
   TotalJumps: 1
   CyoteTime: 20
   GroundDrag: 1
   SlopeDrag: 0.001
   AirDrag: 0.75
-  SlideDrag: 0.5
-  IdleDrag: 5
+  SlideDrag: 0.1
+  IdleDrag: 15
   SlowFallDrag: 3
   GroundGravity: 1
-  SlopeGravity: 2
-  AirGravity: 5
+  SlopeGravity: 1
+  AirGravity: 3
   SlowFallGravity: 0
-  AllAbilitiesUnlocked: 1
+  AllAbilitiesUnlocked: 0
   GrapplePointSprite: {fileID: -1157753459, guid: 632f041408473894da813718f6b2f9ab, type: 3}
   LaymaskGrapple:
     serializedVersion: 2
