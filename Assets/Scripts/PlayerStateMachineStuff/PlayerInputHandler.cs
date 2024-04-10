@@ -14,18 +14,18 @@ public class PlayerInputHandler : MonoBehaviour
     /// not sure how hard that would be yet so just having them for the sake of it I guess
     ///</summary>
 
-    private KeyCode _up;
-    private KeyCode _down;
-    private KeyCode _left;
-    private KeyCode _right;
+    private KeyCode[] _up;
+    private KeyCode[] _down;
+   // private KeyCode _left;
+    //private KeyCode _right;
 
-    private KeyCode _jump;
-    private KeyCode _crouch;
-    private KeyCode _sprint;
+    private KeyCode[] _jump;
+    private KeyCode[] _crouch;
+    private KeyCode[] _sprint;
 
-    private KeyCode _switchAbility;
-    private KeyCode _ability1;
-    private KeyCode _ability2;
+   //private KeyCode _switchAbility;
+    private KeyCode[] _ability1;
+    private KeyCode[] _ability2;
 
    
     /// these are being called by other classes to know wether or not inputs
@@ -58,16 +58,23 @@ public class PlayerInputHandler : MonoBehaviour
 
     private void Start()
     {
-        _jump = KeyCode.Space;
-        _crouch = KeyCode.LeftControl;
-        _sprint = KeyCode.LeftShift;
-        _switchAbility = KeyCode.Mouse2;
+        _jump[0] = KeyCode.Space;
+        _jump[1] = KeyCode.Joystick1Button16;
+        _crouch[0] = KeyCode.LeftControl;
+        _crouch[1] = KeyCode.Joystick1Button17;
+        _sprint[0] = KeyCode.LeftShift;
+        _sprint[1] = KeyCode.Joystick1Button12;
+        //_switchAbility = KeyCode.Mouse2;
 
-        _ability1 = KeyCode.Mouse0;
-        _ability2 = KeyCode.Mouse1;
+        _ability1[0] = KeyCode.Mouse0;
+        _ability1[1] = KeyCode.Joystick1Button18;
+        _ability2[0] = KeyCode.Mouse1;
+        _ability2[1] = KeyCode.Joystick1Button19;
 
-        _up = KeyCode.W;
-        _down = KeyCode.S;
+        _up[0] = KeyCode.W;
+        _up[1] = KeyCode.Joystick1Button5;
+        _down[0] = KeyCode.S;
+        _down[1] = KeyCode.Joystick1Button6;
 
         _camera = FindObjectOfType<Camera>();
     }
@@ -119,6 +126,7 @@ public class PlayerInputHandler : MonoBehaviour
             
     }
 
+   
     private bool checkForKeyPress(KeyCode key)
     {
         if (Input.GetKeyDown(key))
@@ -144,11 +152,50 @@ public class PlayerInputHandler : MonoBehaviour
         {
             return true;
         }
-        
+
         if (Input.GetKeyUp(key))
         {
             return false;
         }
+        return false;
+    }
+    private bool checkForKeyPress(KeyCode[] key)
+    {
+        foreach (KeyCode keyCode in key)
+        {
+            if (Input.GetKeyDown(keyCode))
+            {
+                return true;
+            }
+            if (Input.GetKey(keyCode))
+            {
+                return true;
+            }
+            if (Input.GetKeyUp(keyCode))
+            {
+                return false;
+            }
+            return false;
+
+        }
+        return false;
+    }
+
+    private bool checkForKeyQuickPress(KeyCode[] key)
+    {
+        foreach(KeyCode keyCode in key)
+        {
+            if (Input.GetKeyDown(keyCode))
+            {
+                return true;
+            }
+
+            if (Input.GetKeyUp(keyCode))
+            {
+                return false;
+            }
+        }
+        
         return false;
     }
 

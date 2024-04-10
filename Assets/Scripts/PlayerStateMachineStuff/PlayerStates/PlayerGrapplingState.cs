@@ -40,7 +40,7 @@ public class PlayerGrapplingState : PlayerState
         //Debug.Log("Entered Grapple State");
         GrapHitAble = playerData.GroundLayer | playerData.LaymaskGrapple;
 
-        player.PlayAudioFile(playerData.ShootGrappleSFX, false);
+        
     }
 
     public override void Exit()
@@ -126,12 +126,15 @@ public class PlayerGrapplingState : PlayerState
         {
             DestoryGrapPoints();
             missedGrap = true;
+            player.PlayAudioFile(playerData.MissGrappleSFX, false);
         }
 
     }
 
     private void CreateGrapPoint(Vector2 point, Transform parentOBJ)
     {
+        player.PlayAudioFile(playerData.HitGrappleSFX, false);
+
         graple = new GameObject("GrapplePoint");
         graple.tag = "GraplePoint";
         graple.AddComponent<SpriteRenderer>();

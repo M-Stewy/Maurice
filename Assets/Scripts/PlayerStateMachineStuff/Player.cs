@@ -347,13 +347,22 @@ public class Player : MonoBehaviour
 
     }
 
-    public void PlayAudioFile(AudioClip tempClip, bool doRandom)
+    public void PlayAudioFile(AudioClip tempClip, bool loop)
     {
-        if (doRandom)
-        {
-           // TODO -- make it so it plays a random pitch of the SFX --
-        }
+        audioS.volume = 0.5f;
+        audioS.loop = loop;
         audioS.PlayOneShot(tempClip);
+    }
+    public void PlayAudioFile(AudioClip tempClip,bool loop,float minPitch, float maxPitch, float minVol, float maxVol)
+    {
+        audioS.pitch = Random.Range(minPitch, maxPitch);
+        audioS.volume = Random.Range(minVol, maxVol);
+        audioS.loop = loop;
+        audioS.PlayOneShot(tempClip);
+    }
+    public void StopAudioFile()
+    {
+        audioS.Stop();
     }
 
 

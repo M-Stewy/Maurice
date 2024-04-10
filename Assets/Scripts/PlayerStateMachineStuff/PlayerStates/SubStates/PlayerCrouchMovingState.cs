@@ -21,7 +21,7 @@ public class PlayerCrouchMovingState : PlayerGroundedState
         player.rb.drag = playerData.GroundDrag;
         player.cc.size = playerData.CrouchSize;
         player.cc.offset = playerData.CrouchOffset;
-
+        player.PlayAudioFile(playerData.CrouchWalkSFX, true);
         base.Enter();
     }
 

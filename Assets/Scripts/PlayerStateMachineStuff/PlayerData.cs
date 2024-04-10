@@ -89,9 +89,15 @@ public class PlayerData : ScriptableObject
     public AudioClip SlideSFX;
     public AudioClip ShootGunSFX;
     public AudioClip ShootGrappleSFX;
+    public AudioClip MissGrappleSFX;
+    public AudioClip HitGrappleSFX;
     public AudioClip LandedSFX;
     public AudioClip HitSFX;
     public AudioClip UmbrellaSFX; // No idea if this is needed but just in case Im gonna try and implement it
+    public AudioClip CrouchSFX;
+    public AudioClip CrouchWalkSFX;
+    public AudioClip AirWooshSFX;
+
 
 
 

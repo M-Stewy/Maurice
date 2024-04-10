@@ -14,6 +14,7 @@ public class PlayerLandedState : PlayerGroundedState
     {
         //UnityEngine.Debug.Log("Entered Landed State");
         base.Enter();
+        player.PlayAudioFile(playerData.LandedSFX, false);
     }
 
     public override void Exit()
