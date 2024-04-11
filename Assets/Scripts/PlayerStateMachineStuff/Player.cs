@@ -5,6 +5,7 @@ using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 /// <summary>
 /// Made by Stewy
 /// 
@@ -425,12 +426,10 @@ public class Player : MonoBehaviour
         if (playerData.health - 1 != 0)
         {
             playerData.health = playerData.health - 1;
-            //UI.text = playerData.health.ToString();
         }
         else
         {
-            Destroy(gameObject);
-            //GameObject.FindWithTag("Respawn").GetComponent<positionTracker>().checkpoint();
+            SceneManager.LoadScene("HubWorld");
         }
     }
 

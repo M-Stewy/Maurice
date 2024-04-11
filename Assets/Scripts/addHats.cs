@@ -8,23 +8,41 @@ using UnityEngine.Events;
 
 public class addHats : MonoBehaviour
 {
-    public GameObject chosen;
-    public float distance = .45f;
+    public GameObject[] chosen = new GameObject[9];
+    private int randomNum;
     public UnityEvent increasePos;
     public UnityEvent decreasePos;
-    public GameObject reset;
     public int childNum;
+    private GameObject childForMove;
+    public float distance;
 
     public void Awake()
     {
-        reset.transform.position = new Vector3(0f, 0f, 0f);
+        for (int i=0; i<9; i++)
+        {
+            chosen[i].transform.position = new Vector3(0f, 0f, 0f);
+        }
+        
     }
 
     public void recieveHat()
     {
-        Instantiate(chosen, this.transform);
-        increasePos.Invoke();
-        this.transform.position = this.transform.position + new Vector3(0f, distance, 0f);
+        randomNum = Random.Range(0, 9);
+        childNum = this.transform.childCount;
+        Instantiate(chosen[randomNum], this.transform);
+        if (childNum != 0)
+        {
+            //Used to be childNum + 1
+            childForMove = this.transform.GetChild(childNum).gameObject;
+            distance = childForMove.GetComponent<HatPos>().distance;
+            this.transform.position = this.transform.position + new Vector3(0f, distance, 1f);
+            increasePos.Invoke();
+        } else
+        {
+            distance = GameObject.FindWithTag("Hat").GetComponent<HatPos>().distance;
+            increasePos.Invoke();
+        }
+        
     }
 
     public void destroyHat()
@@ -32,6 +50,12 @@ public class addHats : MonoBehaviour
         childNum = this.transform.childCount;
         Destroy(this.transform.GetChild(childNum-1).gameObject);
         decreasePos.Invoke();
-        this.transform.position = this.transform.position - new Vector3(0f, distance, 0f);
+        childForMove = this.transform.GetChild(childNum - 1).gameObject;
+        distance = childForMove.GetComponent<HatPos>().distance;
+        if (childNum-1 != 0)
+        {
+            this.transform.position = this.transform.position - new Vector3(0f, distance, 1f);
+        }
+        
     }
 }
