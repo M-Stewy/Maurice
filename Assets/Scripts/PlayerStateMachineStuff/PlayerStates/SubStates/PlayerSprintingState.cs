@@ -27,11 +27,13 @@ public class PlayerSprintingState : PlayerGroundedState
 
         dragTimer = 50;
         dragSet = false;
+        player.PlayAudioFile(playerData.WalkingSFX, true, 2f, 2f, .5f,.5f);
     }
 
     public override void Exit()
     {
         base.Exit();
+        player.StopAudioFile(playerData.WalkingSFX);
     }
 
     public override void FixedUpdate()
