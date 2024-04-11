@@ -14,6 +14,7 @@ public class Hats : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            recieveHealth();
             addHealth.Invoke();
             Destroy(gameObject);
         }

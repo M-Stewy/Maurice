@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c76d136c291a448b3d6eecc561d63c, type: 3}
   m_Name: JebPlayerData
   m_EditorClassIdentifier: 
-  isFacingRight: 1
+  isFacingRight: 0
   GroundLayer:
     serializedVersion: 2
     m_Bits: 8
-  health: 4
+  health: 3
   maxHealth: 1
   baseMoveSpeed: 30
   SprintSpeed: 60
@@ -35,22 +35,22 @@ MonoBehaviour:
   GroundGravity: 1
   SlopeGravity: 2
   AirGravity: 5
-  SlowFallGravity: 3
+  SlowFallGravity: 2
   AllAbilitiesUnlocked: 1
   GrapplePointSprite: {fileID: -1157753459, guid: 632f041408473894da813718f6b2f9ab, type: 3}
   LaymaskGrapple:
     serializedVersion: 2
     m_Bits: 72
-  GrappleReelSpeed: 25
-  GrappleSwingSpeed: 25
+  GrappleReelSpeed: 15
+  GrappleSwingSpeed: 50
   GrappleDistance: 50
   playerBullet: {fileID: 7928200351476023610, guid: 765e767cab148b64bad829cb45569f71, type: 3}
   gunForce: 3
   MaxShots: 7
   AmmoLeft: 7
-  BulletForce: 50
-  CrouchOffset: {x: 0, y: 0.5}
-  CrouchSize: {x: 1, y: 1}
-  NormalOffset: {x: 0, y: 0}
-  NormalSize: {x: 1, y: 2}
+  BulletForce: 200
+  CrouchOffset: {x: -0.27, y: -0.6}
+  CrouchSize: {x: 0.85, y: 0.65}
+  NormalOffset: {x: -0.27, y: -0.35}
+  NormalSize: {x: 0.85, y: 1.31}
   ShowEnterStateInConsole: 0

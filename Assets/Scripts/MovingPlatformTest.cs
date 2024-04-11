@@ -146,7 +146,6 @@ public class MovingPlatformTest : MonoBehaviour
 
         //Debug.Log(i);
     }
-
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (ignorePlayerCompletely) return;
