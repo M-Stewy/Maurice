@@ -45,11 +45,13 @@ public class PlayerInAirSlideState : PlayerState
         player.cc.offset = playerData.CrouchOffset;
 
         player.rb.AddForce(new UnityEngine.Vector2(playerData.SlideSpeedBoost * xInputRaw, -playerData.SlideSpeedBoost), UnityEngine.ForceMode2D.Impulse);
+        player.PlayAudioFile(playerData.SlideSFX, true, 0.8f, 1, .45f, .55f);
     }
 
     public override void Exit()
     {
         base.Exit();
+        player.StopAudioFile(playerData.SlideSFX);
     }
 
     public override void FixedUpdate()

@@ -32,26 +32,14 @@ public class positionTracker : MonoBehaviour
     {
         //THIS SETS HEALTH TO 3 WHEN SCENE STARTS-------------------------------------------------------------
         GameObject.FindWithTag("Player").GetComponent<Player>().playerData.health = GameObject.FindWithTag("Player").GetComponent<Player>().playerData.maxHealth;
-        //UI.text = GameObject.FindWithTag("Player").GetComponent<Player>().playerData.health.ToString();
     }
 
     public void updatePosition()
     {
-        //Debug.Log("Reached");
         SceneChange = GameObject.FindWithTag("Player");
         xpos=SceneChange.GetComponent<SceneChange>().xpos;
         ypos=SceneChange.GetComponent<SceneChange>().ypos;
-        //checkpointX = xpos;
-        //checkpointY = ypos;
     }
-
-    /*public void checkpoint()
-    {
-        //Also in SceneChange and Player scripts
-        checkpointX = SceneChange.GetComponent<SceneChange>().xpos;
-        checkpointY = SceneChange.GetComponent<SceneChange>().ypos;
-        GameObject.FindWithTag("Player").transform.position = new Vector2(checkpointX, checkpointY);
-    }*/
 
     private void Update()
     {
