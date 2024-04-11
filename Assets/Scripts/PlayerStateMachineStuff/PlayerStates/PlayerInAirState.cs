@@ -37,11 +37,24 @@ public class PlayerInAirState : PlayerState
         player.rb.drag = playerData.AirDrag;
 
         base.Enter();
+
+        if (player.rb.velocity.magnitude > 15 || player.rb.velocity.magnitude < -15)
+        {
+            if (!player.audioS.isPlaying)
+            {
+                player.PlayAudioFile(playerData.AirWooshSFX, true, 0.9f, 1, .4f, .45f);
+            }
+        }
+        else
+        {
+            player.StopAudioFile(playerData.AirWooshSFX);
+        }
     }
 
     public override void Exit()
     {
         base.Exit();
+        
     }
 
     public override void FixedUpdate()

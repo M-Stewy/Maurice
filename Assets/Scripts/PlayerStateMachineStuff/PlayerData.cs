@@ -84,20 +84,24 @@ public class PlayerData : ScriptableObject
     [Space(10)]
     [Header("AudioFiles")]
 
+    public int AudioCutoffTime;
+
     public AudioClip JumpSFX;
     public AudioClip WalkingSFX;
     public AudioClip SlideSFX;
-    public AudioClip ShootGunSFX;
-    public AudioClip ShootGrappleSFX;
-    public AudioClip MissGrappleSFX;
-    public AudioClip HitGrappleSFX;
     public AudioClip LandedSFX;
     public AudioClip HitSFX;
-    public AudioClip UmbrellaSFX; // No idea if this is needed but just in case Im gonna try and implement it
     public AudioClip CrouchSFX;
     public AudioClip CrouchWalkSFX;
     public AudioClip AirWooshSFX;
 
+    public AudioClip SwitchAbilitySFX;
+    public AudioClip UmbrellaSFX;
+    public AudioClip ShootGunSFX;
+    public AudioClip EmptyGunSFX;
+    public AudioClip ShootGrappleSFX;
+    public AudioClip MissGrappleSFX;
+    public AudioClip HitGrappleSFX;
 
 
 

@@ -30,7 +30,8 @@ public class PlayerMovingState : PlayerGroundedState
     public override void Exit()
     {
         base.Exit();
-        player.StopAudioFile();
+
+        player.StopAudioFile(playerData.WalkingSFX);
     }
 
     public override void FixedUpdate()

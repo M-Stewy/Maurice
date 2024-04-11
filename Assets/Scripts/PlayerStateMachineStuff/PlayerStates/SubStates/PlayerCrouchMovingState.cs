@@ -28,6 +28,7 @@ public class PlayerCrouchMovingState : PlayerGroundedState
     public override void Exit()
     {
         base.Exit();
+        player.StopAudioFile(playerData.CrouchWalkSFX);
     }
 
     public override void FixedUpdate()

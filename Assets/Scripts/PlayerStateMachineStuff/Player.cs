@@ -71,8 +71,12 @@ public class Player : MonoBehaviour
     public GameObject hand;
     [HideInInspector]
     public LineRenderer lr;
+
     [HideInInspector]
     public AudioSource audioS;
+    [HideInInspector]
+    public AudioSource HandAudioS;
+
 
     [HideInInspector]
     public Animator anim;
@@ -90,7 +94,6 @@ public class Player : MonoBehaviour
     private int abilityIterator = 1;
 
     private Transform respawnPoint;
-    string testThing;
 
     RaycastHit2D ray;
     RaycastHit2D SlopeRay;
@@ -127,6 +130,7 @@ public class Player : MonoBehaviour
 
         lr = GetComponentInChildren<LineRenderer>();
         hand = transform.GetChild(0).gameObject;
+        HandAudioS = GetComponentsInChildren<AudioSource>()[1];
 
 
         NoAbility = new PlayerAbility(true, false, "NoAbility", "Nothing", "Nothing");
@@ -176,6 +180,11 @@ public class Player : MonoBehaviour
 
         RotateHand();
 
+        if (inputHandler.PressedCrouch)
+        {
+            audioS.PlayOneShot(playerData.CrouchSFX);
+            Debug.Log("playedCrouch");
+        }
     }
     
     private void FixedUpdate()
@@ -207,6 +216,8 @@ public class Player : MonoBehaviour
                 return;
             if (AviableAbilities.Count > 0)
             {
+                HandAudioS.PlayOneShot(playerData.SwitchAbilitySFX);
+
                 CurrentAbility.SetEquiped(false);
                 CurrentAbility.ChangeSprite(hand.gameObject);
                 if (abilityIterator == 0)
@@ -227,6 +238,8 @@ public class Player : MonoBehaviour
                 return;
             if (AviableAbilities.Count > 0)
             {
+                HandAudioS.PlayOneShot(playerData.SwitchAbilitySFX);
+
                 CurrentAbility.SetEquiped(false);
                 CurrentAbility.ChangeSprite(hand.gameObject);
                 abilityIterator++;
@@ -346,9 +359,12 @@ public class Player : MonoBehaviour
         }
 
     }
+    #region AudioStuff
 
+    bool shouldAudioStop;
     public void PlayAudioFile(AudioClip tempClip, bool loop)
     {
+        shouldAudioStop = false;
         audioS.volume = 0.5f;
         audioS.pitch = 1;
         audioS.loop = loop;
@@ -356,23 +372,57 @@ public class Player : MonoBehaviour
     }
     public void PlayAudioFile(AudioClip tempClip,bool loop,float minPitch, float maxPitch, float minVol, float maxVol)
     {
+        shouldAudioStop = false;
         audioS.pitch = Random.Range(minPitch, maxPitch);
         audioS.volume = Random.Range(minVol, maxVol);
         audioS.loop = loop;
         audioS.PlayOneShot(tempClip);
     }
-    public void StopAudioFile()
+
+    public void StopAudioFile(AudioClip tempClip)
     {
-        audioS.Stop();
+        shouldAudioStop = true;
+        if (audioS.isPlaying)
+        {
+            StartCoroutine(AudioCutOff(tempClip));
+        }
+        if(shouldAudioStop)
+            audioS.Stop();
+    }
+    public void AbiltySoundEffect(AudioClip tempClip)
+    {
+        HandAudioS.PlayOneShot(tempClip);
     }
 
-
+    IEnumerator AudioCutOff(AudioClip tempClip)
+    {
+        if (audioS.clip = tempClip)
+        {
+            for (int i = 50; i > 0; i--)
+            {
+                if (shouldAudioStop)
+                {
+                    yield return new WaitForSeconds(0.05f);
+                    audioS.volume -= 0.05f;
+                }
+                else
+                {
+                    yield return null;
+                    audioS.volume = 0.5f;
+                }
+            }
+        }
+        yield return null;
+    }
+    #endregion
 
     //----------------- Events to be called ---------------------
 
     public void recieveDamage()
     {
-        if (GameObject.FindWithTag("Player").GetComponent<Player>().playerData.health - 1 != 0)
+        audioS.PlayOneShot(playerData.HitSFX);
+
+        if (playerData.health - 1 != 0)
         {
             playerData.health = playerData.health - 1;
             //UI.text = playerData.health.ToString();

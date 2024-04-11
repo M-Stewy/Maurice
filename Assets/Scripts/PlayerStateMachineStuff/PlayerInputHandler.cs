@@ -48,6 +48,7 @@ public class PlayerInputHandler : MonoBehaviour
     public bool HoldingDown;
 
     public bool PressedJump;
+    public bool PressedCrouch;
     public bool PressedAbility1;
     public bool PressedAbility2;
     public bool HoldingAbility1;
@@ -100,6 +101,8 @@ public class PlayerInputHandler : MonoBehaviour
         HoldingDown = checkForKeyPress(_down);
 
         holdingCrouch = checkForKeyPress(_crouch);
+
+        PressedCrouch = checkForKeyQuickPress(_crouch);
 
         holdingSprint = checkForKeyPress(_sprint);
 
@@ -160,7 +163,7 @@ public class PlayerInputHandler : MonoBehaviour
         return false;
     }
 
-
+    //this is for testing controller suppoty, didnt work but I might get back to it later
     private bool checkForKeyPress(KeyCode[] key)
     {
         foreach (KeyCode keyCode in key)
