@@ -483,7 +483,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &159369468
 GameObject:
@@ -798,7 +798,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &246112657
 BoxCollider2D:
@@ -1331,7 +1331,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &389979843
 GameObject:
@@ -1516,6 +1516,284 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &433772243
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 433772245}
+  - component: {fileID: 433772244}
+  m_Layer: 7
+  m_Name: HatStart
+  m_TagString: HatStart
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &433772244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433772243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1876d584476497c4ba9246a0e016c8a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chosen:
+  - {fileID: 4371262284979590315, guid: a88ad86edba15cd4aba2551b61c57aec, type: 3}
+  - {fileID: 8059815856737415646, guid: 53aeb9840fbaea8448cb5c8e5829dad2, type: 3}
+  - {fileID: 2487087248420123483, guid: a717b81c71836e44b971df9086f079a8, type: 3}
+  - {fileID: 6178722911376050228, guid: 0679b1ed426ced649aa3a347f71c58bf, type: 3}
+  - {fileID: 4470167581437306793, guid: 40682021d4d6c5b428548ff4f6b20358, type: 3}
+  - {fileID: 7250694422037513450, guid: 08523172ec030a240a9bc7aff43e52cf, type: 3}
+  - {fileID: 8287195713272368477, guid: 990f31bf43a33094595c087ac8886e50, type: 3}
+  - {fileID: 7670289867154994184, guid: 02dad95838fbd6b4d9d135310294d45b, type: 3}
+  - {fileID: 5391043403228002984, guid: 26a1da74b91566941a72c384d680b84c, type: 3}
+  increasePos:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5772318129000260062, guid: a88ad86edba15cd4aba2551b61c57aec, type: 3}
+        m_TargetAssemblyTypeName: HatPos, Assembly-CSharp
+        m_MethodName: changePos
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4752929556774137499, guid: 53aeb9840fbaea8448cb5c8e5829dad2, type: 3}
+        m_TargetAssemblyTypeName: HatPos, Assembly-CSharp
+        m_MethodName: changePos
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6273482168852411217, guid: a717b81c71836e44b971df9086f079a8, type: 3}
+        m_TargetAssemblyTypeName: HatPos, Assembly-CSharp
+        m_MethodName: changePos
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7944332012785127781, guid: 0679b1ed426ced649aa3a347f71c58bf, type: 3}
+        m_TargetAssemblyTypeName: HatPos, Assembly-CSharp
+        m_MethodName: changePos
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8695424220468850459, guid: 40682021d4d6c5b428548ff4f6b20358, type: 3}
+        m_TargetAssemblyTypeName: HatPos, Assembly-CSharp
+        m_MethodName: changePos
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2625071491518327509, guid: 08523172ec030a240a9bc7aff43e52cf, type: 3}
+        m_TargetAssemblyTypeName: HatPos, Assembly-CSharp
+        m_MethodName: changePos
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5566582979337144394, guid: 990f31bf43a33094595c087ac8886e50, type: 3}
+        m_TargetAssemblyTypeName: HatPos, Assembly-CSharp
+        m_MethodName: changePos
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1048163323253539694, guid: 02dad95838fbd6b4d9d135310294d45b, type: 3}
+        m_TargetAssemblyTypeName: HatPos, Assembly-CSharp
+        m_MethodName: changePos
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2173574591630468767, guid: 26a1da74b91566941a72c384d680b84c, type: 3}
+        m_TargetAssemblyTypeName: HatPos, Assembly-CSharp
+        m_MethodName: changePos
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  decreasePos:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5772318129000260062, guid: a88ad86edba15cd4aba2551b61c57aec, type: 3}
+        m_TargetAssemblyTypeName: HatPos, Assembly-CSharp
+        m_MethodName: decreasePos
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4752929556774137499, guid: 53aeb9840fbaea8448cb5c8e5829dad2, type: 3}
+        m_TargetAssemblyTypeName: HatPos, Assembly-CSharp
+        m_MethodName: decreasePos
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6273482168852411217, guid: a717b81c71836e44b971df9086f079a8, type: 3}
+        m_TargetAssemblyTypeName: HatPos, Assembly-CSharp
+        m_MethodName: decreasePos
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7944332012785127781, guid: 0679b1ed426ced649aa3a347f71c58bf, type: 3}
+        m_TargetAssemblyTypeName: HatPos, Assembly-CSharp
+        m_MethodName: decreasePos
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8695424220468850459, guid: 40682021d4d6c5b428548ff4f6b20358, type: 3}
+        m_TargetAssemblyTypeName: HatPos, Assembly-CSharp
+        m_MethodName: decreasePos
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2625071491518327509, guid: 08523172ec030a240a9bc7aff43e52cf, type: 3}
+        m_TargetAssemblyTypeName: HatPos, Assembly-CSharp
+        m_MethodName: decreasePos
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5566582979337144394, guid: 990f31bf43a33094595c087ac8886e50, type: 3}
+        m_TargetAssemblyTypeName: HatPos, Assembly-CSharp
+        m_MethodName: decreasePos
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1048163323253539694, guid: 02dad95838fbd6b4d9d135310294d45b, type: 3}
+        m_TargetAssemblyTypeName: HatPos, Assembly-CSharp
+        m_MethodName: decreasePos
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2173574591630468767, guid: 26a1da74b91566941a72c384d680b84c, type: 3}
+        m_TargetAssemblyTypeName: HatPos, Assembly-CSharp
+        m_MethodName: decreasePos
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  childNum: 0
+  distance: 0
+--- !u!4 &433772245
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433772243}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.2, y: 0.35, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2231385190413913589}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &468757588
 GameObject:
   m_ObjectHideFlags: 0
@@ -1562,7 +1840,7 @@ Transform:
   - {fileID: 682196494}
   - {fileID: 1817036487}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &533767508
 GameObject:
@@ -2463,7 +2741,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &694766631
 GameObject:
@@ -2583,6 +2861,71 @@ Transform:
   m_Father: {fileID: 1817036487}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &733429046
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 461130549, guid: d4f47b45b9cade94aa669c7146294145, type: 3}
+      propertyPath: addHealth.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 433772244}
+    - target: {fileID: 461130549, guid: d4f47b45b9cade94aa669c7146294145, type: 3}
+      propertyPath: addHealth.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: recieveHat
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134542457628425753, guid: d4f47b45b9cade94aa669c7146294145, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134542457628425753, guid: d4f47b45b9cade94aa669c7146294145, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.3444214
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134542457628425753, guid: d4f47b45b9cade94aa669c7146294145, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134542457628425753, guid: d4f47b45b9cade94aa669c7146294145, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134542457628425753, guid: d4f47b45b9cade94aa669c7146294145, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134542457628425753, guid: d4f47b45b9cade94aa669c7146294145, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134542457628425753, guid: d4f47b45b9cade94aa669c7146294145, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134542457628425753, guid: d4f47b45b9cade94aa669c7146294145, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134542457628425753, guid: d4f47b45b9cade94aa669c7146294145, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134542457628425753, guid: d4f47b45b9cade94aa669c7146294145, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134542457628425753, guid: d4f47b45b9cade94aa669c7146294145, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4909363543653925894, guid: d4f47b45b9cade94aa669c7146294145, type: 3}
+      propertyPath: m_Name
+      value: hat0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d4f47b45b9cade94aa669c7146294145, type: 3}
 --- !u!1 &765251447
 GameObject:
   m_ObjectHideFlags: 0
@@ -2883,7 +3226,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &853586496
 GameObject:
@@ -4377,7 +4720,7 @@ RectTransform:
   m_Children:
   - {fileID: 809151340}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5155,8 +5498,93 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1680305144
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6180170754409977179, guid: cd912617ec0c9c249a3b0ece0153c567, type: 3}
+      propertyPath: m_Name
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 6180170754409977180, guid: cd912617ec0c9c249a3b0ece0153c567, type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 433772244}
+    - target: {fileID: 6180170754409977180, guid: cd912617ec0c9c249a3b0ece0153c567, type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2231385190413913591}
+    - target: {fileID: 6180170754409977180, guid: cd912617ec0c9c249a3b0ece0153c567, type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: destroyHat
+      objectReference: {fileID: 0}
+    - target: {fileID: 6180170754409977180, guid: cd912617ec0c9c249a3b0ece0153c567, type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: recieveDamage
+      objectReference: {fileID: 0}
+    - target: {fileID: 6180170754409977182, guid: cd912617ec0c9c249a3b0ece0153c567, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6180170754409977182, guid: cd912617ec0c9c249a3b0ece0153c567, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6180170754409977182, guid: cd912617ec0c9c249a3b0ece0153c567, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6180170754409977182, guid: cd912617ec0c9c249a3b0ece0153c567, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6180170754409977182, guid: cd912617ec0c9c249a3b0ece0153c567, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 6180170754409977182, guid: cd912617ec0c9c249a3b0ece0153c567, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.5420985
+      objectReference: {fileID: 0}
+    - target: {fileID: 6180170754409977182, guid: cd912617ec0c9c249a3b0ece0153c567, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6180170754409977182, guid: cd912617ec0c9c249a3b0ece0153c567, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6180170754409977182, guid: cd912617ec0c9c249a3b0ece0153c567, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6180170754409977182, guid: cd912617ec0c9c249a3b0ece0153c567, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6180170754409977182, guid: cd912617ec0c9c249a3b0ece0153c567, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6180170754409977182, guid: cd912617ec0c9c249a3b0ece0153c567, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6180170754409977182, guid: cd912617ec0c9c249a3b0ece0153c567, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6180170754409977182, guid: cd912617ec0c9c249a3b0ece0153c567, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cd912617ec0c9c249a3b0ece0153c567, type: 3}
 --- !u!1 &1704865715
 GameObject:
   m_ObjectHideFlags: 0
@@ -6483,7 +6911,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2066684280
 GameObject:
@@ -6980,8 +7408,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 938405724235702911}
+  - {fileID: 433772245}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2231385190413913590
 MonoBehaviour:
