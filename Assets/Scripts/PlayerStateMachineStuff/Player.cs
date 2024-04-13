@@ -446,6 +446,9 @@ public class Player : MonoBehaviour
             case "Gun":
                 GunAbility.SetUnlocked(true);
                 break;
+            case "Umbrella":
+                SlowFallAbility.SetUnlocked(true);
+                break;
         }
     }
 
