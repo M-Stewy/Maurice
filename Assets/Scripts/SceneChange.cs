@@ -9,8 +9,8 @@ using UnityEngine.XR;
 public class SceneChange : MonoBehaviour
 {
 
-    public float xpos;
-    public float ypos;
+    public float xpos = 0;
+    public float ypos = 0;
     public float standardypos = -3.925f;
     public GameObject Capsule;
     public GameObject positionTracker;

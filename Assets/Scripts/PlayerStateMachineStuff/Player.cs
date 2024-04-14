@@ -56,7 +56,7 @@ public class Player : MonoBehaviour
     public PlayerInputHandler inputHandler { get; private set; }
     [Header("Put custom player data here")]
     [Tooltip("holds all the data of the player like speed, health, and whatever")]
-    [SerializeField] public PlayerData playerData;
+    public PlayerData playerData;
 
    
 
@@ -77,6 +77,8 @@ public class Player : MonoBehaviour
     public AudioSource audioS;
     [HideInInspector]
     public AudioSource HandAudioS;
+    [HideInInspector]
+    public AudioSource DamageAudioS;
 
 
     [HideInInspector]
@@ -131,7 +133,8 @@ public class Player : MonoBehaviour
 
         lr = GetComponentInChildren<LineRenderer>();
         hand = transform.GetChild(0).gameObject;
-        HandAudioS = GetComponentsInChildren<AudioSource>()[1];
+        DamageAudioS = GetComponentsInChildren<AudioSource>()[1];
+        HandAudioS = GetComponentsInChildren<AudioSource>()[2];
 
 
         NoAbility = new PlayerAbility(true, false, "NoAbility", "Nothing", "Nothing");
@@ -166,7 +169,30 @@ public class Player : MonoBehaviour
         playerData.AmmoLeft = playerData.MaxShots;
     }
 
+    public void UpdateStateMachine()
+    {
+        PSM = new PlayerStateMachine();
 
+        groundedState = new PlayerGroundedState(this, playerData, PSM, "null");
+        useAbilityState = new PlayerUseAbilityState(this, playerData, PSM, "null");
+
+        idleState = new PlayerIdleState(this, playerData, PSM, "isIdle");
+        movingState = new PlayerMovingState(this, playerData, PSM, "IsWalking");
+        jumpState = new PlayerJumpState(this, playerData, PSM, "JumpStart");
+        crouchIdleState = new PlayerCrouchIdleState(this, playerData, PSM, "IsCrouchingAnim");
+        crouchMoveState = new PlayerCrouchMovingState(this, playerData, PSM, "IsCrouchWalkingAnim");
+        slidingState = new PlayerSlidingState(this, playerData, PSM, "IsSlidingAnim");
+        sprintingState = new PlayerSprintingState(this, playerData, PSM, "IsSprinting");
+
+        inAirState = new PlayerInAirState(this, playerData, PSM, "InAir");
+        landedState = new PlayerLandedState(this, playerData, PSM, "Landed");
+        airSlideState = new PlayerInAirSlideState(this, playerData, PSM, "InAirSlideAnim");
+        grapplingState = new PlayerGrapplingState(this, playerData, PSM, "IsGrapplingAnim");
+        shootGunState = new PlayerShootGunState(this, playerData, PSM, "null");
+        UmbrellaState = new PlayerUmbrellaState(this, playerData, PSM, "InAir");
+
+        PSM.Initialize(idleState);
+    }
 
     private void Update()
     {
@@ -421,7 +447,7 @@ public class Player : MonoBehaviour
 
     public void recieveDamage()
     {
-        audioS.PlayOneShot(playerData.HitSFX);
+        DamageAudioS.PlayOneShot(playerData.HitSFX);
 
         if (playerData.health - 1 != 0)
         {

@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4c76d136c291a448b3d6eecc561d63c, type: 3}
+  m_Name: StewyZeroG
+  m_EditorClassIdentifier: 
+  isFacingRight: 1
+  GroundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  health: 1
+  maxHealth: 0
+  baseMoveSpeed: 5
+  SprintSpeed: 10
+  CrouchSpeed: 3
+  SlideSpeedBoost: 5
+  JumpPower: 35
+  JumpTime: 15
+  TotalJumps: 1
+  CyoteTime: 20
+  GroundDrag: 1
+  SlopeDrag: 0.001
+  AirDrag: 0.75
+  SlideDrag: 0.5
+  IdleDrag: 5
+  SlowFallDrag: 3
+  GroundGravity: 0.1
+  SlopeGravity: 0.1
+  AirGravity: 0.0001
+  SlowFallGravity: 0
+  AllAbilitiesUnlocked: 0
+  GrapplePointSprite: {fileID: -1157753459, guid: 632f041408473894da813718f6b2f9ab, type: 3}
+  LaymaskGrapple:
+    serializedVersion: 2
+    m_Bits: 64
+  GrappleReelSpeed: 10
+  GrappleSwingSpeed: 25
+  GrappleDistance: 25
+  playerBullet: {fileID: 7928200351476023610, guid: 765e767cab148b64bad829cb45569f71, type: 3}
+  gunForce: 3
+  MaxShots: 7
+  AmmoLeft: 7
+  BulletForce: 1000
+  AudioCutoffTime: 20
+  JumpSFX: {fileID: 8300000, guid: ed7e5aeaecfa31145962605a4a4ec106, type: 3}
+  WalkingSFX: {fileID: 8300000, guid: 12e25b1b9762c614c9da9b585fbaf650, type: 3}
+  SlideSFX: {fileID: 8300000, guid: 06bc5fca2f4e60d44bb470fef01676a0, type: 3}
+  LandedSFX: {fileID: 8300000, guid: 1f554cc1d6c670d42ab991ae8bc6cd94, type: 3}
+  HitSFX: {fileID: 8300000, guid: edd70e3520d48034e9dcb7c15e9dfcd0, type: 3}
+  CrouchSFX: {fileID: 8300000, guid: 94f2dc2dbb4fa4446bd884981aadb717, type: 3}
+  CrouchWalkSFX: {fileID: 8300000, guid: f0ccea0903ee66749bcbf2b55cedc72b, type: 3}
+  AirWooshSFX: {fileID: 8300000, guid: ad924480ccae1ff448d8b44be10488c5, type: 3}
+  SwitchAbilitySFX: {fileID: 8300000, guid: cde39cb80bb701d45b55ee87d00bffec, type: 3}
+  UmbrellaSFX: {fileID: 0}
+  ShootGunSFX: {fileID: 8300000, guid: 314e872175f430a418f7b1d40d5f9e0f, type: 3}
+  EmptyGunSFX: {fileID: 8300000, guid: 5518035b049c6aa4fbd1e9df4bae96d0, type: 3}
+  ShootGrappleSFX: {fileID: 8300000, guid: aae5f06f099542a4cbdfb2b72b5c7eb0, type: 3}
+  MissGrappleSFX: {fileID: 8300000, guid: d337239ac94ed504caa90b1eac0d287e, type: 3}
+  HitGrappleSFX: {fileID: 8300000, guid: 6d48b97c0d076e14c923258a81afb87e, type: 3}
+  CrouchOffset: {x: -0.27, y: -0.6}
+  CrouchSize: {x: 0.85, y: 0.65}
+  NormalOffset: {x: -0.27, y: -0.35}
+  NormalSize: {x: 0.85, y: 1.31}
+  ShowEnterStateInConsole: 0

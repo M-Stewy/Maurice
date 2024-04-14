@@ -4,7 +4,7 @@ using UnityEngine;
 /// <summary>
 /// Made by Stewy
 /// 
-/// Displays a title screen of 
+/// Displays a title screen of whatever
 /// 
 /// </summary>
 

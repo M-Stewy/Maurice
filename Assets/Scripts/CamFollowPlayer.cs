@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using UnityEngine;
-
-
-//Made by Stewy
+/// <summary>
+/// Made by Stewy
+/// 
+/// makes the camera follow the player with various factors affecting its speed distance etc.
+/// </summary>
 
 public class CamFollowPlayer : MonoBehaviour
 {

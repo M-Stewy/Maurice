@@ -1,7 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// Made by Stewy
+/// 
+/// Changes the background to something else dynamicly throughout the level
+/// </summary>
 public class BackGroundChanger : MonoBehaviour
 {
     [SerializeField]

@@ -2,7 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+/// <summary>
+/// Made by Stewy
+/// 
+/// Loads another scene additively (old one does not get delted on load) 
+/// so that multiple scenes can be active at once
+/// </summary>
 public class LoadNextPartOfLevel : MonoBehaviour
 {
     public string nameOfScene;

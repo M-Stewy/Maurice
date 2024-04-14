@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 
 /// <summary>
@@ -16,6 +13,15 @@ using UnityEngine;
 public class MovingPlatformTest : MonoBehaviour
 {
     [SerializeField]
+    AudioClip movingSFX;
+    [SerializeField]
+    AudioClip EndSFX;
+    [SerializeField]
+    float pitchValue;
+
+    AudioSource aSs;
+
+    [SerializeField]
     Transform[] point;
     [SerializeField]
     float moveSpeed;
@@ -28,6 +34,8 @@ public class MovingPlatformTest : MonoBehaviour
     [Tooltip("if true, the platform will loop back to the first point once it reaches the last \n if false it will simply stop once it reaches the last")]
     public bool Loop;
     public bool ignorePlayerCompletely;
+    public bool useAudio = false;
+    public bool dontPlayAudioOnReturn = false;
     bool STOP;
     bool goBack;
 
@@ -42,53 +50,39 @@ public class MovingPlatformTest : MonoBehaviour
             startGoing = true;
         }
         speed = moveSpeed;
+        if (useAudio)
+        {
+            aSs = GetComponent<AudioSource>();
+            aSs.clip = movingSFX;
+            aSs.pitch = pitchValue;
+
+        }
     }
-    /*
-    void Update()
+
+    private void Update()
     {
         if (STOP)
-            return;
-
-        if (startGoing)
-        { 
-                if (Vector3.Distance(transform.position, point[i].position) < 0.02)
-                {
-                        i++;
-                    if(i >= point.Length)
-                    {
-                        if (!Loop)
-                        {
-                            STOP = true;
-                            goBack = false;
-                            return;
-                        }
-                            
-                        i = 0;
-                        speed = returnSpeed;
-                    } 
-                    else { speed = moveSpeed; }
-
-                }
-                _rb.MovePosition(Vector2.MoveTowards(transform.position,point[i].position,speed));
-        }
-
-        if (goBack)
         {
-            if (Vector3.Distance(transform.position, point[i].position) < 0.02)
-            {
-                i--;
-                if (i <= 0)
-                {
-                    goBack = false;
-                    i = 0;
-                    return;
-                }
-            }
-            _rb.MovePosition(Vector2.MoveTowards(transform.position, point[i].position, moveSpeed));
+            aSs.Pause();
+            return;
         }
 
-    }*/
-
+        if(dontPlayAudioOnReturn && i == 0)
+        {
+            aSs.Pause();
+            return;
+        } 
+        else if (startGoing)
+        {
+            if (useAudio)
+            {
+                aSs.loop = true;
+                if (!aSs.isPlaying)
+                    
+                    aSs.Play();
+            }
+        }
+    }
     private void FixedUpdate()
     {
         if (STOP)
@@ -105,11 +99,15 @@ public class MovingPlatformTest : MonoBehaviour
                     {
                         STOP = true;
                         goBack = false;
+                        aSs.loop = false;
+                        if(useAudio)
+                            aSs.PlayOneShot(EndSFX);
                         return;
                     }
 
                     i = 0;
                     speed = returnSpeed;
+
                 }
                 else { speed = moveSpeed; }
 
@@ -135,14 +133,15 @@ public class MovingPlatformTest : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(ignorePlayerCompletely) return;
-
         collision.transform.SetParent(transform);
         startGoing = true;
         goBack = false;
+
         if (i < point.Length - 1)
         {
             i++;
-        }
+        } 
+        
 
         //Debug.Log(i);
     }

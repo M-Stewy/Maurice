@@ -1,8 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-
+/// <summary>
+/// Made by Stewy
+/// 
+/// this is a "temporary" fix for events not working properly between mulitple scenes for my level
+/// </summary>
 public class AutoDetectPlayerEvent : MonoBehaviour
 {
     
@@ -19,6 +21,8 @@ public class AutoDetectPlayerEvent : MonoBehaviour
         {
             Debug.Log("Player hit laserGrid");
             collision.GetComponent<Player>().RespawnPlayerV();
+            collision.GetComponent<Player>().recieveDamage();
+            collision.GetComponentInChildren<addHats>().destroyHat();
         }
     }
 }
