@@ -23,13 +23,15 @@ public class PlayerMovingState : PlayerGroundedState
         player.rb.drag = playerData.GroundDrag;
         player.cc.size = playerData.NormalSize;
         player.cc.offset = playerData.NormalOffset;
-
+        player.PlayAudioFile(playerData.WalkingSFX, true);
         base.Enter();
     }
 
     public override void Exit()
     {
         base.Exit();
+
+        player.StopAudioFile(playerData.WalkingSFX);
     }
 
     public override void FixedUpdate()

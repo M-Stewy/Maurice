@@ -32,17 +32,29 @@ public class PlayerInAirState : PlayerState
 
     public override void Enter()
     {
-        //UnityEngine.Debug.Log("Entered Air State");
 
         player.rb.gravityScale = playerData.AirGravity;
         player.rb.drag = playerData.AirDrag;
 
         base.Enter();
+
+        if (player.rb.velocity.magnitude > 15 || player.rb.velocity.magnitude < -15)
+        {
+            if (!player.audioS.isPlaying)
+            {
+                player.PlayAudioFile(playerData.AirWooshSFX, true, 0.9f, 1, .4f, .45f);
+            }
+        }
+        else
+        {
+            player.StopAudioFile(playerData.AirWooshSFX);
+        }
     }
 
     public override void Exit()
     {
         base.Exit();
+        
     }
 
     public override void FixedUpdate()

@@ -1,3 +1,4 @@
+using UnityEngine;
 /// <summary>
 /// Made by Stewy
 /// 
@@ -15,7 +16,6 @@ public class PlayerState
     protected PlayerStateMachine playerStateMachine;
 
     protected string playerAnim;
-
     public PlayerState(Player player, PlayerData playerData, PlayerStateMachine playerStateMachine, string playerAnim)
     {
         this.player = player;

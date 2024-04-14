@@ -13,38 +13,42 @@ MonoBehaviour:
   m_Name: DefaultPlayerData
   m_EditorClassIdentifier: 
   isFacingRight: 1
+  GroundLayer:
+    serializedVersion: 2
+    m_Bits: 8
   health: 3
   maxHealth: 0
   baseMoveSpeed: 15
   SprintSpeed: 30
   CrouchSpeed: 10
   SlideSpeedBoost: 5
-  JumpPower: 32
-  JumpTime: 12.5
+  JumpPower: 35
+  JumpTime: 15
   TotalJumps: 1
   CyoteTime: 20
   GroundDrag: 1
   SlopeDrag: 0.001
   AirDrag: 0.75
-  SlideDrag: 0.1
-  IdleDrag: 15
+  SlideDrag: 0.5
+  IdleDrag: 5
   SlowFallDrag: 3
   GroundGravity: 1
-  SlopeGravity: 1
-  AirGravity: 3
+  SlopeGravity: 2
+  AirGravity: 5
   SlowFallGravity: 0
-  AllAbilitiesUnlocked: 0
+  AllAbilitiesUnlocked: 1
   GrapplePointSprite: {fileID: -1157753459, guid: 632f041408473894da813718f6b2f9ab, type: 3}
   LaymaskGrapple:
     serializedVersion: 2
     m_Bits: 64
   GrappleReelSpeed: 10
   GrappleSwingSpeed: 25
+  GrappleDistance: 25
   playerBullet: {fileID: 7928200351476023610, guid: 765e767cab148b64bad829cb45569f71, type: 3}
   gunForce: 3
   MaxShots: 7
   AmmoLeft: 7
-  BulletForce: 100
+  BulletForce: 1000
   CrouchOffset: {x: -0.27, y: -0.6}
   CrouchSize: {x: 0.85, y: 0.65}
   NormalOffset: {x: -0.27, y: -0.35}

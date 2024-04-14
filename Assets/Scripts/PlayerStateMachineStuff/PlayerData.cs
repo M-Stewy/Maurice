@@ -16,8 +16,12 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "newPlayerData", menuName = "Data/Player Data/Base Player Data")]
 public class PlayerData : ScriptableObject
 {
-
+    [HideInInspector]
     public bool isFacingRight;
+
+    //This is the ground layer Defined in the inspector
+    [Tooltip("Ground Layer(any layers you want the player to be able to jump on)")]
+    public LayerMask GroundLayer;
 
     [Space(5)]
     [Header("Move Speed")]
@@ -66,6 +70,7 @@ public class PlayerData : ScriptableObject
     public LayerMask LaymaskGrapple;
     public float GrappleReelSpeed = 5f; //This gets weird at higher values need to firgure out why
     public float GrappleSwingSpeed = 20f;
+    public float GrappleDistance = 25f;
 
 
     [Header("Gun Stuff")]
@@ -76,15 +81,39 @@ public class PlayerData : ScriptableObject
     public int AmmoLeft;
     public float BulletForce = 50;
 
+    [Space(10)]
+    [Header("AudioFiles")]
+
+    public int AudioCutoffTime;
+
+    public AudioClip JumpSFX;
+    public AudioClip WalkingSFX;
+    public AudioClip SlideSFX;
+    public AudioClip LandedSFX;
+    public AudioClip HitSFX;
+    public AudioClip CrouchSFX;
+    public AudioClip CrouchWalkSFX;
+    public AudioClip AirWooshSFX;
+
+    public AudioClip SwitchAbilitySFX;
+    public AudioClip UmbrellaSFX;
+    public AudioClip ShootGunSFX;
+    public AudioClip EmptyGunSFX;
+    public AudioClip ShootGrappleSFX;
+    public AudioClip MissGrappleSFX;
+    public AudioClip HitGrappleSFX;
+
+
+
     //[HideInInspector] 
     [Space]
     [Header("DO NOT CHANGE THESE FROM DEFAULT, \n" +
         "           (unless we change player size)")]
-    public Vector2 CrouchOffset = new Vector2(-0.27f, -0.32f);
+    public Vector2 CrouchOffset = new Vector2(-0.27f, -0.6f);
     //[HideInInspector]
-    public Vector2 CrouchSize = new Vector2(0.4f, 0.65f);
+    public Vector2 CrouchSize = new Vector2(0.85f, 0.65f);
    // [HideInInspector]
-    public Vector2 NormalOffset = new Vector2(-0.27f, -0.32f);
+    public Vector2 NormalOffset = new Vector2(-0.27f, -0.35f);
     // [HideInInspector]
     public Vector2 NormalSize = new Vector2(0.85f, 1.31f);
 

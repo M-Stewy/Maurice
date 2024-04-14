@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -13,8 +12,9 @@ public class positionTracker : MonoBehaviour
     public float ypos;
     public GameObject SceneChange;
     public static positionTracker instance;
-    public TextMeshProUGUI UI;
     public string currentScene;
+    public float checkpointX;
+    public float checkpointY;
     void Awake()
     {
         if (instance == null)
@@ -32,7 +32,6 @@ public class positionTracker : MonoBehaviour
     {
         //THIS SETS HEALTH TO 3 WHEN SCENE STARTS-------------------------------------------------------------
         GameObject.FindWithTag("Player").GetComponent<Player>().playerData.health = GameObject.FindWithTag("Player").GetComponent<Player>().playerData.maxHealth;
-        UI.text = GameObject.FindWithTag("Player").GetComponent<Player>().playerData.health.ToString();
     }
 
     public void updatePosition()
@@ -48,9 +47,7 @@ public class positionTracker : MonoBehaviour
         if (SceneManager.GetActiveScene().name != currentScene) 
         {
             currentScene = SceneManager.GetActiveScene().name;
-            UI = GameObject.Find("Health").GetComponent<TextMeshProUGUI>();
             GameObject.FindWithTag("Player").GetComponent<Player>().playerData.health = GameObject.FindWithTag("Player").GetComponent<Player>().playerData.maxHealth;
-            UI.text = GameObject.FindWithTag("Player").GetComponent<Player>().playerData.health.ToString();
         }
     }
 }

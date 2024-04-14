@@ -22,6 +22,7 @@ public class PlayerGrapplingState : PlayerState
 
     GameObject graple;
     Vector3 direction;
+    LayerMask GrapHitAble;
     public override void Checks()
     {
         base.Checks();
@@ -37,6 +38,8 @@ public class PlayerGrapplingState : PlayerState
         player.CurrentAbility.DoAction(player.hand.gameObject, true);
         ShootSwingPoint();
         //Debug.Log("Entered Grapple State");
+        GrapHitAble = playerData.GroundLayer | playerData.LaymaskGrapple;
+
         
     }
 
@@ -45,6 +48,8 @@ public class PlayerGrapplingState : PlayerState
         base.Exit();
        DestoryGrapPoints();
         player.CurrentAbility.DoAction(player.hand.gameObject, false);
+
+        player.StopAudioFile(playerData.AirWooshSFX);
     }
 
     public override void FixedUpdate()
@@ -60,6 +65,8 @@ public class PlayerGrapplingState : PlayerState
         }
         if (player.inputHandler.HoldingDown)
         {
+            if (player.dj.distance > playerData.GrappleDistance)
+                return;
             player.dj.distance += playerData.GrappleReelSpeed * Time.deltaTime;
         }
 
@@ -72,6 +79,7 @@ public class PlayerGrapplingState : PlayerState
         if (graple)
         {
             player.dj.connectedAnchor = graple.transform.position;
+            player.lr.SetPosition(1, graple.transform.position);
         }
 
 
@@ -93,30 +101,60 @@ public class PlayerGrapplingState : PlayerState
         }
 
         player.lr.SetPosition(0,player.hand.transform.position);
+
+
+        
+            if (player.rb.velocity.magnitude > 15 || player.rb.velocity.magnitude < -15)
+            {
+                if (!player.audioS.isPlaying)
+                {
+                    player.PlayAudioFile(playerData.AirWooshSFX, true);
+                }
+            }
+            else
+            {
+                player.StopAudioFile(playerData.AirWooshSFX);
+            }
+        
+        
     }
 
-    
+    //I know this is terrible right now but Ill make it better... (probably not)
     private void ShootSwingPoint()
     {
+        player.AbiltySoundEffect(playerData.ShootGrappleSFX);
+
         direction = player.inputHandler.mouseScreenPos - player.transform.position;
-        RaycastHit2D rayHit = Physics2D.Raycast(player.transform.position, direction, 25f, playerData.LaymaskGrapple);
+        RaycastHit2D rayHit = Physics2D.Raycast(player.transform.position, direction, playerData.GrappleDistance, GrapHitAble);
         if (rayHit.collider != null)
         {
-            DestoryGrapPoints();
-            missedGrap = false;
-            // Debug.Log(rayHit.point);
-            CreateGrapPoint(rayHit.point,rayHit.transform);
+           
+            if (rayHit.collider.gameObject.layer == LayerMask.NameToLayer("GrappleAble"))
+            {
+                DestoryGrapPoints();
+                missedGrap = false;
+                // Debug.Log(rayHit.point);
+                CreateGrapPoint(rayHit.point, rayHit.transform);
+            }
+            else
+            {
+                DestoryGrapPoints();
+                missedGrap = true;
+            }
         }
         else
         {
             DestoryGrapPoints();
             missedGrap = true;
+            player.AbiltySoundEffect(playerData.MissGrappleSFX);
         }
 
     }
 
     private void CreateGrapPoint(Vector2 point, Transform parentOBJ)
     {
+        player.AbiltySoundEffect(playerData.HitGrappleSFX);
+
         graple = new GameObject("GrapplePoint");
         graple.tag = "GraplePoint";
         graple.AddComponent<SpriteRenderer>();
