@@ -42,7 +42,9 @@ public class SceneChange : MonoBehaviour
 
             if (other.name == "hubWorld")
             {
-                SceneManager.LoadScene("hubWorld");
+                GameObject.FindWithTag("Win").GetComponent<TitleScreenDisplay>().CallTitleDisplay();
+                StartCoroutine(wait(5));
+                //SceneManager.LoadScene("hubWorld");
             }
             else if (other.name == "NikoScene")
             {
@@ -62,6 +64,12 @@ public class SceneChange : MonoBehaviour
             }
         }
 
+    }
+
+    IEnumerator wait(float num)
+    {
+        yield return new WaitForSeconds(num);
+        SceneManager.LoadScene("hubWorld");
     }
 
     //Also in positionTracker and Player scripts

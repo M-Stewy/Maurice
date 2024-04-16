@@ -429,8 +429,15 @@ public class Player : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("HubWorld");
+            GameObject.FindWithTag("Lose").GetComponent<TitleScreenDisplay>().CallTitleDisplay();
+            StartCoroutine(wait(5));
         }
+    }
+
+    IEnumerator wait(float num)
+    {
+        yield return new WaitForSeconds(num);
+        SceneManager.LoadScene("HubWorld");
     }
 
     public void AbilityUnlock(string abilityName)
