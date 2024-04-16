@@ -61,27 +61,27 @@ public class MovingPlatformTest : MonoBehaviour
 
     private void Update()
     {
-        if (STOP)
+        if(useAudio)
         {
-            aSs.Pause();
-            return;
-        }
-
-        if(dontPlayAudioOnReturn && i == 0)
-        {
-            aSs.Pause();
-            return;
-        } 
-        else if (startGoing)
-        {
-            if (useAudio)
+            if (STOP)
             {
-                aSs.loop = true;
-                if (!aSs.isPlaying)
-                    
-                    aSs.Play();
+                aSs.Pause();
+                return;
+            }
+
+            if (dontPlayAudioOnReturn && i == 0)
+            {
+                aSs.Pause();
+                return;
+            }
+            else if (startGoing)
+            {
+                    aSs.loop = true;
+                    if (!aSs.isPlaying)
+                       aSs.Play();
             }
         }
+           
     }
     private void FixedUpdate()
     {

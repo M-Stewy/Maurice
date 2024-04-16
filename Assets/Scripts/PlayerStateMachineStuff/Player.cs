@@ -255,7 +255,8 @@ public class Player : MonoBehaviour
 
                 CurrentAbility.SetEquiped(true);
                 CurrentAbility.ChangeSprite(hand.gameObject);
-                Debug.Log(CurrentAbility.name);
+                if(playerData.DebugAbilitySwitching)
+                    Debug.Log(CurrentAbility.name);
             }
         }
 
@@ -277,7 +278,8 @@ public class Player : MonoBehaviour
 
                 CurrentAbility.SetEquiped(true);
                 CurrentAbility.ChangeSprite(hand.gameObject);
-                Debug.Log(CurrentAbility.name);
+                if (playerData.DebugAbilitySwitching)
+                    Debug.Log(CurrentAbility.name);
             }
         }
 

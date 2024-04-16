@@ -10,6 +10,8 @@ TagManager:
   - Spawner
   - DisableAtEnd
   - HatStart
+  - Fence
+  - Scott
   layers:
   - Default
   - TransparentFX

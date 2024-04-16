@@ -7,7 +7,8 @@ using UnityEngine.Events;
 /// </summary>
 public class AutoDetectPlayerEvent : MonoBehaviour
 {
-    
+    [SerializeField]
+    bool destroyOnHit;
 
     private void Start()
     {
@@ -23,6 +24,11 @@ public class AutoDetectPlayerEvent : MonoBehaviour
             collision.GetComponent<Player>().RespawnPlayerV();
             collision.GetComponent<Player>().recieveDamage();
             collision.GetComponentInChildren<addHats>().destroyHat();
+        }
+
+        if(destroyOnHit)
+        {
+            Destroy(gameObject);
         }
     }
 }

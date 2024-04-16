@@ -22,6 +22,8 @@ public class TrackingTurretAI : MonoBehaviour
     private float shootTimer;
     [SerializeField]
     private float searchSpeed;
+    [SerializeField]
+    private float bulletForce = 1;
 
     [SerializeField]
     Transform Tip;
@@ -142,7 +144,7 @@ public class TrackingTurretAI : MonoBehaviour
         anim.SetBool("IsShooting", true);
 
         GameObject firedBullet = Instantiate(bullet, Tip.position,Quaternion.identity);
-        firedBullet.GetComponent<Rigidbody2D>().AddForce(targetDir.normalized * 1000f);
+        firedBullet.GetComponent<Rigidbody2D>().AddForce(targetDir.normalized * 1000f * bulletForce);
 
         yield return new WaitForEndOfFrame();
         anim.SetBool("IsShooting", false);
