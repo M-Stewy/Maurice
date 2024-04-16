@@ -434,6 +434,11 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void recieveHealth()
+    {
+        GameObject.FindWithTag("Player").GetComponent<Player>().playerData.health = GameObject.FindWithTag("Player").GetComponent<Player>().playerData.health + 1;
+    }
+
     IEnumerator wait(float num)
     {
         yield return new WaitForSeconds(num);
