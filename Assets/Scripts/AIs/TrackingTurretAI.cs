@@ -143,7 +143,7 @@ public class TrackingTurretAI : MonoBehaviour
         justShot = true;
         anim.SetBool("IsShooting", true);
 
-        GameObject firedBullet = Instantiate(bullet, Tip.position,Quaternion.identity);
+        GameObject firedBullet = Instantiate(bullet, Tip.position, Quaternion.identity);
         firedBullet.GetComponent<Rigidbody2D>().AddForce(targetDir.normalized * 1000f * bulletForce);
 
         yield return new WaitForEndOfFrame();

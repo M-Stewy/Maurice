@@ -16,14 +16,14 @@ MonoBehaviour:
   GroundLayer:
     serializedVersion: 2
     m_Bits: 8
-  health: 1
+  health: 21
   maxHealth: 0
   baseMoveSpeed: 20
   SprintSpeed: 40
   CrouchSpeed: 10
   SlideSpeedBoost: 10
-  JumpPower: 15
-  JumpTime: 50
+  JumpPower: 25
+  JumpTime: 20
   TotalJumps: 1
   CyoteTime: 11
   GroundDrag: 1
@@ -47,8 +47,8 @@ MonoBehaviour:
   GrappleDistance: 25
   playerBullet: {fileID: 7928200351476023610, guid: 765e767cab148b64bad829cb45569f71, type: 3}
   gunForce: 0
-  MaxShots: 7
-  AmmoLeft: 7
+  MaxShots: 14
+  AmmoLeft: 0
   BulletForce: 1500
   AudioCutoffTime: 25
   JumpSFX: {fileID: 8300000, guid: ed7e5aeaecfa31145962605a4a4ec106, type: 3}

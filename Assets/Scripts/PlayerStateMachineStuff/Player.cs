@@ -461,6 +461,11 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void ResetAmmo()
+    {
+        playerData.AmmoLeft = playerData.MaxShots;
+    }
+
     public void AbilityUnlock(string abilityName)
     {
         switch (abilityName)
