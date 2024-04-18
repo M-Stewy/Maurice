@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/Scenes/StewysLevel/Stewy-GunPickAndLevelChangeScene.unity
     guid: 8a949e4efab97e846b436b1de1e7b5de
   - enabled: 1
+    path: Assets/Scenes/SuperSecertScottShowdown.unity
+    guid: 431e028481d0edf4b81affc2b060a953
+  - enabled: 0
     path: Assets/Scenes/TestingScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}

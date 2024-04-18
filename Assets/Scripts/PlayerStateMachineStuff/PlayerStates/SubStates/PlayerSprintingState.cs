@@ -73,8 +73,6 @@ public class PlayerSprintingState : PlayerGroundedState
 
     private void SetDrag()
     {
-        UnityEngine.Debug.Log("Test");
-
         // ----------------- Slope Shit ------------------- \\
         if (Slope)
         {

@@ -62,6 +62,7 @@ public class PlayerData : ScriptableObject
     [Space]
 
     public bool AllAbilitiesUnlocked;
+    public bool DebugAbilitySwitching;
 
     [Space]
     [Header("Grapple Stuff")]
