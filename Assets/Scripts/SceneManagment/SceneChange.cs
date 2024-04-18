@@ -14,7 +14,6 @@ public class SceneChange : MonoBehaviour
     public float standardypos = -3.925f;
     public GameObject Capsule;
     public GameObject positionTracker;
-    public bool KyleDone = false, StewyDone = false, NikoDone = false, JebDone = false;
 
     private void Awake()
     {
@@ -43,6 +42,22 @@ public class SceneChange : MonoBehaviour
 
             if (other.name == "hubWorld")
             {
+                if (SceneManager.GetActiveScene().name.ToString() == "KyleScene")
+                {
+                    GameObject.FindWithTag("Respawn").GetComponent<positionTracker>().KyleDone = true;
+                }
+                else if (SceneManager.GetActiveScene().name.ToString() == "StewyScene")
+                {
+                    GameObject.FindWithTag("Respawn").GetComponent<positionTracker>().StewyDone = true;
+                }
+                else if (SceneManager.GetActiveScene().name.ToString() == "NikoScene")
+                {
+                    GameObject.FindWithTag("Respawn").GetComponent<positionTracker>().NikoDone = true;
+                }
+                else if (SceneManager.GetActiveScene().name.ToString() == "JebScene")
+                {
+                    GameObject.FindWithTag("Respawn").GetComponent<positionTracker>().JebDone = true;
+                }
                 GameObject.FindWithTag("Win").GetComponent<TitleScreenDisplay>().CallTitleDisplay();
                 StartCoroutine(wait(5));
                 //SceneManager.LoadScene("hubWorld");
@@ -65,7 +80,7 @@ public class SceneChange : MonoBehaviour
             }
             else if (other.name == "SuperSecertScottShowdown")
             {
-                if (KyleDone == true && NikoDone == true && StewyDone == true && JebDone == true)
+                if (positionTracker.GetComponent<positionTracker>().KyleDone == true && positionTracker.GetComponent<positionTracker>().NikoDone == true && positionTracker.GetComponent<positionTracker>().StewyDone == true && positionTracker.GetComponent<positionTracker>().JebDone == true)
                 {
                     SceneManager.LoadScene("SuperSecertScottShowdown");
                 }
@@ -77,26 +92,6 @@ public class SceneChange : MonoBehaviour
 
     IEnumerator wait(float num)
     {
-        if (SceneManager.GetActiveScene().name.ToString() == "KyleScene")
-        {
-            KyleDone = true;
-            GameObject.FindWithTag("Respawn").GetComponent<positionTracker>().KyleDone = true;
-        }
-        else if (SceneManager.GetActiveScene().name.ToString() == "StewyScene")
-        {
-            StewyDone = true;
-            GameObject.FindWithTag("Respawn").GetComponent<positionTracker>().StewyDone = true;
-        }
-        else if (SceneManager.GetActiveScene().name.ToString() == "NikoScene")
-        {
-            NikoDone = true;
-            GameObject.FindWithTag("Respawn").GetComponent<positionTracker>().NikoDone = true;
-        }
-        else if (SceneManager.GetActiveScene().name.ToString() == "JebScene")
-        {
-            JebDone = true;
-            GameObject.FindWithTag("Respawn").GetComponent<positionTracker>().JebDone = true;
-        }
         yield return new WaitForSeconds(num);
         SceneManager.LoadScene("hubWorld");
     }
