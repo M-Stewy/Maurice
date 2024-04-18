@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class April_16 : MonoBehaviour
 {
     public Vector3 finishPos = Vector3.zero;
     public float speed = 0.55f;

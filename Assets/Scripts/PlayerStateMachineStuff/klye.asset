@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c76d136c291a448b3d6eecc561d63c, type: 3}
   m_Name: klye
   m_EditorClassIdentifier: 
-  isFacingRight: 0
+  isFacingRight: 1
   GroundLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -36,23 +36,23 @@ MonoBehaviour:
   SlopeGravity: 3
   AirGravity: 5
   SlowFallGravity: 0
-  AllAbilitiesUnlocked: 0
+  AllAbilitiesUnlocked: 1
   DebugAbilitySwitching: 0
-  GrapplePointSprite: {fileID: 0}
+  GrapplePointSprite: {fileID: -1157753459, guid: 632f041408473894da813718f6b2f9ab, type: 3}
   LaymaskGrapple:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   GrappleReelSpeed: 5
   GrappleSwingSpeed: 20
   GrappleDistance: 25
-  playerBullet: {fileID: 0}
+  playerBullet: {fileID: 7928200351476023610, guid: 765e767cab148b64bad829cb45569f71, type: 3}
   gunForce: 0
   MaxShots: 7
   AmmoLeft: 7
   BulletForce: 50
   AudioCutoffTime: 0
-  JumpSFX: {fileID: 0}
-  WalkingSFX: {fileID: 0}
+  JumpSFX: {fileID: 8300000, guid: c6ae2ede7120d254d905020b73fbd854, type: 3}
+  WalkingSFX: {fileID: 8300000, guid: fa08479c3de7c314aa3df4e3f5f5f7cd, type: 3}
   SlideSFX: {fileID: 0}
   LandedSFX: {fileID: 0}
   HitSFX: {fileID: 0}
