@@ -63,11 +63,11 @@ public class SceneChange : MonoBehaviour
             {
                 SceneManager.LoadScene("JebScene");
             }
-            else if (other.name == "SuperSecretScottShowdown")
+            else if (other.name == "SuperSecertScottShowdown")
             {
                 if (KyleDone == true && NikoDone == true && StewyDone == true && JebDone == true)
                 {
-                    SceneManager.LoadScene("SuperSecretScottShowdown");
+                    SceneManager.LoadScene("SuperSecertScottShowdown");
                 }
                 
             }

@@ -44,21 +44,21 @@ public class Player : MonoBehaviour
     public PlayerCrouchMovingState crouchMoveState { get; private set; }
     public PlayerSlidingState slidingState { get; private set; }
     public PlayerSprintingState sprintingState { get; private set; }
-    
+
     public PlayerInAirState inAirState { get; private set; }
     public PlayerLandedState landedState { get; private set; }
     public PlayerInAirSlideState airSlideState { get; private set; }
     public PlayerGrapplingState grapplingState { get; private set; }
     public PlayerShootGunState shootGunState { get; private set; }
     public PlayerUmbrellaState UmbrellaState { get; private set; }
-    
-    
+
+
     public PlayerInputHandler inputHandler { get; private set; }
     [Header("Put custom player data here")]
     [Tooltip("holds all the data of the player like speed, health, and whatever")]
     public PlayerData playerData;
 
-   
+
 
 
     [HideInInspector]
@@ -106,7 +106,7 @@ public class Player : MonoBehaviour
         PSM = new PlayerStateMachine();
 
         groundedState = new PlayerGroundedState(this, playerData, PSM, "null");
-        useAbilityState = new PlayerUseAbilityState(this,playerData,PSM, "null");
+        useAbilityState = new PlayerUseAbilityState(this, playerData, PSM, "null");
 
         idleState = new PlayerIdleState(this, playerData, PSM, "isIdle");
         movingState = new PlayerMovingState(this, playerData, PSM, "IsWalking");
@@ -115,12 +115,12 @@ public class Player : MonoBehaviour
         crouchMoveState = new PlayerCrouchMovingState(this, playerData, PSM, "IsCrouchWalkingAnim");
         slidingState = new PlayerSlidingState(this, playerData, PSM, "IsSlidingAnim");
         sprintingState = new PlayerSprintingState(this, playerData, PSM, "IsSprinting");
-        
+
         inAirState = new PlayerInAirState(this, playerData, PSM, "InAir");
         landedState = new PlayerLandedState(this, playerData, PSM, "Landed");
         airSlideState = new PlayerInAirSlideState(this, playerData, PSM, "InAirSlideAnim");
         grapplingState = new PlayerGrapplingState(this, playerData, PSM, "IsGrapplingAnim");
-        shootGunState = new PlayerShootGunState(this, playerData,PSM,"null");
+        shootGunState = new PlayerShootGunState(this, playerData, PSM, "null");
         UmbrellaState = new PlayerUmbrellaState(this, playerData, PSM, "InAir");
 
 
@@ -138,7 +138,7 @@ public class Player : MonoBehaviour
 
 
         NoAbility = new PlayerAbility(true, false, "NoAbility", "Nothing", "Nothing");
-        GrappleAbility = new PlayerAbility(false, false, "Grappling", "HoldingGrapple","ShootGrapple"); 
+        GrappleAbility = new PlayerAbility(false, false, "Grappling", "HoldingGrapple", "ShootGrapple");
         GunAbility = new PlayerAbility(false, false, "Gun", "HoldingGun", "ShootGun");
         SlowFallAbility = new PlayerAbility(false, false, "Umbrella", "HoldingUmbrella", "DeployUmbrella");
 
@@ -213,7 +213,7 @@ public class Player : MonoBehaviour
             Debug.Log("playedCrouch");
         }
     }
-    
+
     private void FixedUpdate()
     {
         PSM.currentState.FixedUpdate(); // this is calling the base unity FixedUpdate method in the current state of the state machine
@@ -255,7 +255,7 @@ public class Player : MonoBehaviour
 
                 CurrentAbility.SetEquiped(true);
                 CurrentAbility.ChangeSprite(hand.gameObject);
-                if(playerData.DebugAbilitySwitching)
+                if (playerData.DebugAbilitySwitching)
                     Debug.Log(CurrentAbility.name);
             }
         }
@@ -316,7 +316,7 @@ public class Player : MonoBehaviour
             transform.localScale = new Vector3(-1, 1, 1);
             hand.GetComponent<SpriteRenderer>().flipX = false;
             hand.GetComponent<SpriteRenderer>().flipY = false;
-            hand.transform.GetChild(0).localPosition = new Vector3(1,0,0);
+            hand.transform.GetChild(0).localPosition = new Vector3(1, 0, 0);
         }
         else if (inputHandler.moveDir.x == 1)
         {
@@ -331,21 +331,21 @@ public class Player : MonoBehaviour
     [SerializeField]
     Vector3 GroundCheckFixer = new Vector3(.3f, .2f, 0f);
     [SerializeField]
-    Vector3 GroundCheckOffset = new Vector3(0,.5f,0);
+    Vector3 GroundCheckOffset = new Vector3(0, .5f, 0);
 
     //using a raycast box to check for the ground below
     private bool IsGrounded()
     {
-        GroundCheckOffset = new Vector3(GroundCheckOffset.x,cc.bounds.size.y/2,GroundCheckOffset.z);
-        GroundCheckFixer = new Vector3(GroundCheckFixer.x, cc.size.y/2 + .5f,GroundCheckFixer.z);
+        GroundCheckOffset = new Vector3(GroundCheckOffset.x, cc.bounds.size.y / 2, GroundCheckOffset.z);
+        GroundCheckFixer = new Vector3(GroundCheckFixer.x, cc.size.y / 2 + .5f, GroundCheckFixer.z);
         ray = Physics2D.BoxCast(cc.bounds.center - GroundCheckOffset, cc.bounds.size - GroundCheckFixer, 0, Vector2.down, 0.1f, playerData.GroundLayer);
         return ray.collider != null;
-        
+
     }
 
     private bool IsOnSlope()
     {
-        SlopeRay = Physics2D.Raycast(cc.bounds.center  - GroundCheckOffset, Vector2.down, 4.5f, playerData.GroundLayer);
+        SlopeRay = Physics2D.Raycast(cc.bounds.center - GroundCheckOffset, Vector2.down, 4.5f, playerData.GroundLayer);
 
         if (SlopeRay.collider != null)
         {
@@ -362,18 +362,18 @@ public class Player : MonoBehaviour
     //For Debugging Drawing for Grounded/Slope check
     private void OnDrawGizmos()
     {
-            Gizmos.color = Color.red;
+        Gizmos.color = Color.red;
 
-        if(IsGrounded() )
+        if (IsGrounded())
         {
-            
+
             Gizmos.color = Color.green;
             Gizmos.DrawWireCube(cc.bounds.center - GroundCheckOffset + -transform.up * ray.distance, cc.bounds.size - GroundCheckFixer);
         }
         else
         {
             Gizmos.color = Color.yellow;
-            Gizmos.DrawWireCube(cc.bounds.center  - GroundCheckOffset + -transform.up * 0.1f, cc.bounds.size - GroundCheckFixer);
+            Gizmos.DrawWireCube(cc.bounds.center - GroundCheckOffset + -transform.up * 0.1f, cc.bounds.size - GroundCheckFixer);
         }
 
         if (isOnSlope)
@@ -399,7 +399,7 @@ public class Player : MonoBehaviour
         audioS.loop = loop;
         audioS.PlayOneShot(tempClip);
     }
-    public void PlayAudioFile(AudioClip tempClip,bool loop,float minPitch, float maxPitch, float minVol, float maxVol)
+    public void PlayAudioFile(AudioClip tempClip, bool loop, float minPitch, float maxPitch, float minVol, float maxVol)
     {
         shouldAudioStop = false;
         audioS.pitch = Random.Range(minPitch, maxPitch);
@@ -415,7 +415,7 @@ public class Player : MonoBehaviour
         {
             StartCoroutine(AudioCutOff(tempClip));
         }
-        if(shouldAudioStop)
+        if (shouldAudioStop)
             audioS.Stop();
     }
     public void AbiltySoundEffect(AudioClip tempClip)
@@ -466,56 +466,55 @@ public class Player : MonoBehaviour
     public void ResetAmmo()
     {
         playerData.AmmoLeft = playerData.MaxShots;
-
-    public void recieveHealth()
-    {
-        GameObject.FindWithTag("Player").GetComponent<Player>().playerData.health = GameObject.FindWithTag("Player").GetComponent<Player>().playerData.health + 1;
     }
-
-    IEnumerator wait(float num)
-    {
-        yield return new WaitForSeconds(num);
-        SceneManager.LoadScene("HubWorld");
-
-    }
-
-    public void AbilityUnlock(string abilityName)
-    {
-        switch (abilityName)
+        public void recieveHealth()
         {
-            case "None":
-                NoAbility.SetUnlocked(true);
-                break;
-            case "Grapple":
-                GrappleAbility.SetUnlocked(true);
-                break;
-            case "Gun":
-                GunAbility.SetUnlocked(true);
-                break;
-            case "Umbrella":
-                SlowFallAbility.SetUnlocked(true);
-                break;
+            GameObject.FindWithTag("Player").GetComponent<Player>().playerData.health = GameObject.FindWithTag("Player").GetComponent<Player>().playerData.health + 1;
         }
-    }
+
+        IEnumerator wait(float num)
+        {
+            yield return new WaitForSeconds(num);
+            SceneManager.LoadScene("HubWorld");
+
+        }
+
+        public void AbilityUnlock(string abilityName)
+        {
+            switch (abilityName)
+            {
+                case "None":
+                    NoAbility.SetUnlocked(true);
+                    break;
+                case "Grapple":
+                    GrappleAbility.SetUnlocked(true);
+                    break;
+                case "Gun":
+                    GunAbility.SetUnlocked(true);
+                    break;
+                case "Umbrella":
+                    SlowFallAbility.SetUnlocked(true);
+                    break;
+            }
+        }
 
 
-    public void SetRespawnPoint(Transform spawnP)
-    {
-        respawnPoint = spawnP;
-    }
+        public void SetRespawnPoint(Transform spawnP)
+        {
+            respawnPoint = spawnP;
+        }
 
-    public void RespawnPlayerV()
-    {
-        gameObject.transform.position = respawnPoint.position;
-        rb.velocity = new Vector2(0, 0);
-        PSM.ChangeState(idleState);
-    }
-    public UnityAction RespawnPlayer()
-    {
-        gameObject.transform.position = respawnPoint.position;
-        rb.velocity = new Vector2(0,0);
-        PSM.ChangeState(idleState);
-        return new UnityAction(RespawnPlayerV);
-    }
-
-}
+        public void RespawnPlayerV()
+        {
+            gameObject.transform.position = respawnPoint.position;
+            rb.velocity = new Vector2(0, 0);
+            PSM.ChangeState(idleState);
+        }
+        public UnityAction RespawnPlayer()
+        {
+            gameObject.transform.position = respawnPoint.position;
+            rb.velocity = new Vector2(0, 0);
+            PSM.ChangeState(idleState);
+            return new UnityAction(RespawnPlayerV);
+        }
+    } 
