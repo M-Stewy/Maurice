@@ -16,8 +16,8 @@ MonoBehaviour:
   GroundLayer:
     serializedVersion: 2
     m_Bits: 8
-  health: 0
-  maxHealth: 0
+  health: 1
+  maxHealth: 1
   baseMoveSpeed: 30
   SprintSpeed: 60
   CrouchSpeed: 20
@@ -37,6 +37,7 @@ MonoBehaviour:
   AirGravity: 5
   SlowFallGravity: 0
   AllAbilitiesUnlocked: 0
+  DebugAbilitySwitching: 0
   GrapplePointSprite: {fileID: 0}
   LaymaskGrapple:
     serializedVersion: 2
@@ -49,6 +50,22 @@ MonoBehaviour:
   MaxShots: 7
   AmmoLeft: 7
   BulletForce: 50
+  AudioCutoffTime: 0
+  JumpSFX: {fileID: 0}
+  WalkingSFX: {fileID: 0}
+  SlideSFX: {fileID: 0}
+  LandedSFX: {fileID: 0}
+  HitSFX: {fileID: 0}
+  CrouchSFX: {fileID: 0}
+  CrouchWalkSFX: {fileID: 0}
+  AirWooshSFX: {fileID: 0}
+  SwitchAbilitySFX: {fileID: 0}
+  UmbrellaSFX: {fileID: 0}
+  ShootGunSFX: {fileID: 0}
+  EmptyGunSFX: {fileID: 0}
+  ShootGrappleSFX: {fileID: 0}
+  MissGrappleSFX: {fileID: 0}
+  HitGrappleSFX: {fileID: 0}
   CrouchOffset: {x: -0.27, y: -0.32}
   CrouchSize: {x: 0.4, y: 0.65}
   NormalOffset: {x: -0.27, y: -0.32}

@@ -62,6 +62,7 @@ public class PlayerData : ScriptableObject
     [Space]
 
     public bool AllAbilitiesUnlocked;
+    public bool DebugAbilitySwitching;
 
     [Space]
     [Header("Grapple Stuff")]
@@ -80,6 +81,30 @@ public class PlayerData : ScriptableObject
     public int MaxShots = 7;
     public int AmmoLeft;
     public float BulletForce = 50;
+
+    [Space(10)]
+    [Header("AudioFiles")]
+
+    public int AudioCutoffTime;
+
+    public AudioClip JumpSFX;
+    public AudioClip WalkingSFX;
+    public AudioClip SlideSFX;
+    public AudioClip LandedSFX;
+    public AudioClip HitSFX;
+    public AudioClip CrouchSFX;
+    public AudioClip CrouchWalkSFX;
+    public AudioClip AirWooshSFX;
+
+    public AudioClip SwitchAbilitySFX;
+    public AudioClip UmbrellaSFX;
+    public AudioClip ShootGunSFX;
+    public AudioClip EmptyGunSFX;
+    public AudioClip ShootGrappleSFX;
+    public AudioClip MissGrappleSFX;
+    public AudioClip HitGrappleSFX;
+
+
 
     //[HideInInspector] 
     [Space]

@@ -8,8 +8,6 @@ using UnityEngine;
 /// rotates the turret by a small angle every 0.001 sec
 /// once it detects the player it locks onto its position
 /// 
-///                 --TODO-- shoot at the player
-///                 
 /// if the player is not detected and it instead sees the ground,
 /// it changes the angle its rotating in so it sweeps the area
 /// (this might change depending on how the level layout goes)
@@ -24,6 +22,8 @@ public class TrackingTurretAI : MonoBehaviour
     private float shootTimer;
     [SerializeField]
     private float searchSpeed;
+    [SerializeField]
+    private float bulletForce = 1;
 
     [SerializeField]
     Transform Tip;
@@ -39,7 +39,6 @@ public class TrackingTurretAI : MonoBehaviour
     LineRenderer lineRen;
 
     bool canSeePlayer = false;
-    bool seesGround = false;
     bool hasStartedSearch = false;
     bool justShot;
     
@@ -99,7 +98,6 @@ public class TrackingTurretAI : MonoBehaviour
         if (ray.collider.CompareTag("Player"))
         {
             hasStartedSearch = false;
-            seesGround = false;
             return true;
         }else if (ray.collider.CompareTag("Ground"))
         {
@@ -107,12 +105,10 @@ public class TrackingTurretAI : MonoBehaviour
             transform.Rotate(0, 0, 5f * inverter);
             
             hasStartedSearch = false;
-            seesGround = true;
             return false;
         }
         else
         {
-            seesGround = false;
             return false;
         }
     }
@@ -147,8 +143,8 @@ public class TrackingTurretAI : MonoBehaviour
         justShot = true;
         anim.SetBool("IsShooting", true);
 
-        GameObject firedBullet = Instantiate(bullet, Tip.position,Quaternion.identity);
-        firedBullet.GetComponent<Rigidbody2D>().AddForce(targetDir.normalized * 1000f);
+        GameObject firedBullet = Instantiate(bullet, Tip.position, Quaternion.identity);
+        firedBullet.GetComponent<Rigidbody2D>().AddForce(targetDir.normalized * 1000f * bulletForce);
 
         yield return new WaitForEndOfFrame();
         anim.SetBool("IsShooting", false);

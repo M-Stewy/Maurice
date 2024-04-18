@@ -141,6 +141,8 @@ MonoBehaviour:
   rb: {fileID: 2231385190928464939}
   cc: {fileID: 2231385190928464938}
   dj: {fileID: 0}
+  hand: {fileID: 0}
+  lr: {fileID: 0}
   anim: {fileID: 0}
   isGrounded: 0
   isOnSlope: 0
@@ -226,7 +228,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 1
-  m_Distance: 1
+  m_Distance: 208.06006
   m_MaxDistanceOnly: 0
 --- !u!114 &-5667190415346036938
 MonoBehaviour:

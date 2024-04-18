@@ -38,8 +38,11 @@ public class PlayerShootGunState : PlayerState
             player.CurrentAbility.DoAction(player.hand.gameObject, true);
             Shoot();
         }
+        else
+        {
+            player.AbiltySoundEffect(playerData.EmptyGunSFX);
+        }
 
-        
     }
 
     public override void Exit()
@@ -65,6 +68,7 @@ public class PlayerShootGunState : PlayerState
 
     private void Shoot()
     {
+        player.AbiltySoundEffect(playerData.ShootGunSFX);
         Debug.Log(bulletSpawnPoint);
         player.hand.GetComponent<PlayerGunScript>().ShootBullet(playerData.playerBullet, bulletSpawnPoint, Quaternion.identity, direction.normalized * playerData.BulletForce);
         player.rb.AddForce(-direction * playerData.gunForce,ForceMode2D.Impulse);

@@ -21,7 +21,7 @@ public class PlayerCrouchIdleState : PlayerGroundedState
         player.rb.drag = playerData.IdleDrag;
         player.cc.size = playerData.CrouchSize;
         player.cc.offset = playerData.CrouchOffset;
-
+       // player.PlayAudioFile(playerData.CrouchSFX, false);  this wont work how you'd think unfortunately
         base.Enter();
     }
 

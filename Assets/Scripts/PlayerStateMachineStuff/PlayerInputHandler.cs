@@ -16,14 +16,14 @@ public class PlayerInputHandler : MonoBehaviour
 
     private KeyCode _up;
     private KeyCode _down;
-    private KeyCode _left;
-    private KeyCode _right;
+   // private KeyCode _left;
+    //private KeyCode _right;
 
     private KeyCode _jump;
     private KeyCode _crouch;
     private KeyCode _sprint;
 
-    private KeyCode _switchAbility;
+   //private KeyCode _switchAbility;
     private KeyCode _ability1;
     private KeyCode _ability2;
 
@@ -48,6 +48,7 @@ public class PlayerInputHandler : MonoBehaviour
     public bool HoldingDown;
 
     public bool PressedJump;
+    public bool PressedCrouch;
     public bool PressedAbility1;
     public bool PressedAbility2;
     public bool HoldingAbility1;
@@ -59,15 +60,22 @@ public class PlayerInputHandler : MonoBehaviour
     private void Start()
     {
         _jump = KeyCode.Space;
+       // _jump[1] = KeyCode.Joystick1Button16;
         _crouch = KeyCode.LeftControl;
+      //  _crouch[1] = KeyCode.Joystick1Button17;
         _sprint = KeyCode.LeftShift;
-        _switchAbility = KeyCode.Mouse2;
+      //  _sprint[1] = KeyCode.Joystick1Button12;
+        //_switchAbility = KeyCode.Mouse2;
 
         _ability1 = KeyCode.Mouse0;
+      //  _ability1[1] = KeyCode.Joystick1Button18;
         _ability2 = KeyCode.Mouse1;
+      //  _ability2[1] = KeyCode.Joystick1Button19;
 
         _up = KeyCode.W;
+     //   _up[1] = KeyCode.Joystick1Button5;
         _down = KeyCode.S;
+      //  _down[1] = KeyCode.Joystick1Button6;
 
         _camera = FindObjectOfType<Camera>();
     }
@@ -94,6 +102,8 @@ public class PlayerInputHandler : MonoBehaviour
 
         holdingCrouch = checkForKeyPress(_crouch);
 
+        PressedCrouch = checkForKeyQuickPress(_crouch);
+
         holdingSprint = checkForKeyPress(_sprint);
 
         //checkForKeyPress(_switchAbility); Dont need this if we do mouse wheel to switch
@@ -119,6 +129,7 @@ public class PlayerInputHandler : MonoBehaviour
             
     }
 
+   
     private bool checkForKeyPress(KeyCode key)
     {
         if (Input.GetKeyDown(key))
@@ -144,11 +155,52 @@ public class PlayerInputHandler : MonoBehaviour
         {
             return true;
         }
-        
+
         if (Input.GetKeyUp(key))
         {
             return false;
         }
+        return false;
+    }
+
+    //this is for testing controller suppoty, didnt work but I might get back to it later
+    private bool checkForKeyPress(KeyCode[] key)
+    {
+        foreach (KeyCode keyCode in key)
+        {
+            if (Input.GetKeyDown(keyCode))
+            {
+                return true;
+            }
+            if (Input.GetKey(keyCode))
+            {
+                return true;
+            }
+            if (Input.GetKeyUp(keyCode))
+            {
+                return false;
+            }
+            return false;
+
+        }
+        return false;
+    }
+
+    private bool checkForKeyQuickPress(KeyCode[] key)
+    {
+        foreach(KeyCode keyCode in key)
+        {
+            if (Input.GetKeyDown(keyCode))
+            {
+                return true;
+            }
+
+            if (Input.GetKeyUp(keyCode))
+            {
+                return false;
+            }
+        }
+        
         return false;
     }
 

@@ -26,12 +26,14 @@ public class PlayerSlidingState : PlayerGroundedState
         player.cc.size = playerData.CrouchSize;
         player.cc.offset = playerData.CrouchOffset;
 
-        player.rb.AddForce(new UnityEngine.Vector2(playerData.SlideSpeedBoost * xInputRaw, -20f), UnityEngine.ForceMode2D.Impulse); 
+        player.rb.AddForce(new UnityEngine.Vector2(playerData.SlideSpeedBoost * xInputRaw, -20f), UnityEngine.ForceMode2D.Impulse);
+        player.PlayAudioFile(playerData.SlideSFX, true);
     }
 
     public override void Exit()
     {
         base.Exit();
+        player.StopAudioFile(playerData.SlideSFX);
     }
 
     public override void FixedUpdate()

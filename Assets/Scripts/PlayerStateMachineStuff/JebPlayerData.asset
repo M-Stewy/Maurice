@@ -16,7 +16,7 @@ MonoBehaviour:
   GroundLayer:
     serializedVersion: 2
     m_Bits: 8
-  health: 4
+  health: 7
   maxHealth: 1
   baseMoveSpeed: 30
   SprintSpeed: 60
@@ -35,22 +35,38 @@ MonoBehaviour:
   GroundGravity: 1
   SlopeGravity: 2
   AirGravity: 5
-  SlowFallGravity: 3
-  AllAbilitiesUnlocked: 1
+  SlowFallGravity: 2
+  AllAbilitiesUnlocked: 0
   GrapplePointSprite: {fileID: -1157753459, guid: 632f041408473894da813718f6b2f9ab, type: 3}
   LaymaskGrapple:
     serializedVersion: 2
     m_Bits: 72
-  GrappleReelSpeed: 25
-  GrappleSwingSpeed: 25
-  GrappleDistance: 50
+  GrappleReelSpeed: 15
+  GrappleSwingSpeed: 50
+  GrappleDistance: 30
   playerBullet: {fileID: 7928200351476023610, guid: 765e767cab148b64bad829cb45569f71, type: 3}
   gunForce: 3
   MaxShots: 7
   AmmoLeft: 7
-  BulletForce: 50
-  CrouchOffset: {x: 0, y: 0.5}
-  CrouchSize: {x: 1, y: 1}
-  NormalOffset: {x: 0, y: 0}
-  NormalSize: {x: 1, y: 2}
+  BulletForce: 200
+  AudioCutoffTime: 0
+  JumpSFX: {fileID: 8300000, guid: ed7e5aeaecfa31145962605a4a4ec106, type: 3}
+  WalkingSFX: {fileID: 8300000, guid: 8903a962e7da53b4bbbca57b4c839987, type: 3}
+  SlideSFX: {fileID: 8300000, guid: 06bc5fca2f4e60d44bb470fef01676a0, type: 3}
+  LandedSFX: {fileID: 8300000, guid: 1f554cc1d6c670d42ab991ae8bc6cd94, type: 3}
+  HitSFX: {fileID: 8300000, guid: c6ae2ede7120d254d905020b73fbd854, type: 3}
+  CrouchSFX: {fileID: 8300000, guid: 94f2dc2dbb4fa4446bd884981aadb717, type: 3}
+  CrouchWalkSFX: {fileID: 8300000, guid: f0ccea0903ee66749bcbf2b55cedc72b, type: 3}
+  AirWooshSFX: {fileID: 8300000, guid: ad924480ccae1ff448d8b44be10488c5, type: 3}
+  SwitchAbilitySFX: {fileID: 8300000, guid: cde39cb80bb701d45b55ee87d00bffec, type: 3}
+  UmbrellaSFX: {fileID: 8300000, guid: 6fc74f1f8f5596043afe0a30b4d57a87, type: 3}
+  ShootGunSFX: {fileID: 8300000, guid: 25513767c18b42d4aadd791e7d234f84, type: 3}
+  EmptyGunSFX: {fileID: 8300000, guid: 5518035b049c6aa4fbd1e9df4bae96d0, type: 3}
+  ShootGrappleSFX: {fileID: 8300000, guid: aae5f06f099542a4cbdfb2b72b5c7eb0, type: 3}
+  MissGrappleSFX: {fileID: 8300000, guid: d337239ac94ed504caa90b1eac0d287e, type: 3}
+  HitGrappleSFX: {fileID: 8300000, guid: 6d48b97c0d076e14c923258a81afb87e, type: 3}
+  CrouchOffset: {x: -0.27, y: -0.6}
+  CrouchSize: {x: 0.85, y: 0.65}
+  NormalOffset: {x: -0.27, y: -0.35}
+  NormalSize: {x: 0.85, y: 1.31}
   ShowEnterStateInConsole: 0
