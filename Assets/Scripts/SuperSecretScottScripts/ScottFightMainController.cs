@@ -99,7 +99,7 @@ public class ScottFightMainController : MonoBehaviour
                     currentlyAttacking = true;
                     break;
                 case ScottAttack.HoldingItem:
-
+                    HoldingItemAttack(currentPhase);
                     currentlyAttacking = true;
                     break;
                 case ScottAttack.DoNothing:
@@ -134,7 +134,7 @@ public class ScottFightMainController : MonoBehaviour
         yield return new WaitForSeconds(travelTime);
         if (OI < AttackOrder.Count())
         {
-            Debug.Log(OI);
+            //Debug.Log(OI);
             currentAttack = AttackOrder[OI];
             OI++;
         }
@@ -271,26 +271,26 @@ public class ScottFightMainController : MonoBehaviour
             case ScottPhase.phase2:
                 SetActiveLHand(3);
                 SetActiveRHand(0);
-                StartCoroutine(GrabPlayer1(LHandBase, 0.01f, 0.000001f, new Vector3(0, 60, 0)));
+                StartCoroutine(GrabPlayer1(LHandBase, 0.01f, 0.000001f, new Vector3(0, 90, 0)));
 
                 break;
             case ScottPhase.phase3:
                 SetActiveLHand(0);
                 SetActiveRHand(3);
-                StartCoroutine(GrabPlayer1(RHandBase, 0.01f, 0.000001f, new Vector3(0, 60, 0)));
+                StartCoroutine(GrabPlayer1(RHandBase, 0.01f, 0.000001f, new Vector3(0, 120, 0)));
 
                 break;
         }
     }
 
-    void HoldingItemAttack(ScottPhase CurPhase)
+    void HoldingItemAttack(ScottPhase CurPhase) //currently non-operational
     {
         switch (CurPhase)
         {
             case ScottPhase.phase1:
                 SetActiveLHand(5);
                 SetActiveRHand(5);
-               
+                StartCoroutine(HoldingAttack(RHandBase, 165, .0001f));
                 break;
             case ScottPhase.phase2:
                 SetActiveLHand(5);
@@ -355,12 +355,14 @@ public class ScottFightMainController : MonoBehaviour
             currentAttack = ScottAttack.DoNothing;
     }
 
-    IEnumerator ShootHand1(GameObject attackingHand, float attackSpeed, int attackTimes,float bulletSpeed)
+    IEnumerator ShootHand1(GameObject attackingHand, float attackSpeed, int attackTimes,float bulletSpeed) // make finger shoot, Bang!
     {
         float truebulletSpeed = bulletSpeed;
         for (int i = 0; i < attackTimes; i++)
         {
-            if(attackingHand == LHandBase)
+            attackingHand.transform.GetChild(2).GetComponent<Animator>().SetBool("JustShot", false);
+            yield return new WaitForSeconds(attackSpeed/2);
+            if (attackingHand == LHandBase)
             {
                 attackingHand.transform.up = -FacePlayer(attackingHand);
                 truebulletSpeed = -bulletSpeed;
@@ -369,18 +371,19 @@ public class ScottFightMainController : MonoBehaviour
                 attackingHand.transform.up = FacePlayer(attackingHand);
                 truebulletSpeed = bulletSpeed;
             }
-            Debug.Log("Pew!");
+            //Debug.Log("Pew!");
+            attackingHand.transform.GetChild(2).GetComponent<Animator>().SetBool("JustShot", true);
             shootBullet(attackingHand,attackingHand.transform.up, truebulletSpeed);
-            yield return new WaitForSeconds(attackSpeed);
+            yield return new WaitForSeconds(attackSpeed/2);
         }
-        // make finger shoot, Bang!
+        attackingHand.transform.GetChild(2).GetComponent<Animator>().SetBool("JustShot", false);
         yield return new WaitForSeconds(1f);
         currentAttack = ScottAttack.DoNothing;
     }
 
     void shootBullet(GameObject Hand,Vector3 Dir, float bulletSpeed)
     {
-        Debug.Log(Hand.transform.GetChild(2).name);
+       // Debug.Log(Hand.transform.GetChild(2).name);
         GameObject Shotbullet = Instantiate(bullet, Hand.transform.GetChild(2).transform.GetChild(0).position, Hand.transform.GetChild(2).transform.GetChild(0).transform.rotation);
         Shotbullet.GetComponent<Rigidbody2D>().AddForce(Dir.normalized * 10f * bulletSpeed, ForceMode2D.Impulse);
     }
@@ -414,9 +417,23 @@ public class ScottFightMainController : MonoBehaviour
         currentAttack = ScottAttack.DoNothing;
     }
 
-    IEnumerator HoldingAttack()
+    IEnumerator HoldingAttack(GameObject attackingHand, float swingAngle, float swingSpeed)
     {
-        yield return null;
+        if(swingAngle < 0f)
+            for (int i = 0; i > swingAngle; i--)
+            {
+                attackingHand.transform.Rotate(0, 0, -1);
+                yield return new WaitForSeconds(swingSpeed);
+            }
+        else
+            for(int i = 0; i < swingAngle; i++)
+            {
+                attackingHand.transform.Rotate(0,0,1);
+                yield return new WaitForSeconds(swingSpeed);
+            }
+        
+        yield return new WaitForSeconds(1f);
+        currentAttack = ScottAttack.DoNothing;
     }
 
 
