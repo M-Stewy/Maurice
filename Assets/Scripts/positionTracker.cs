@@ -15,6 +15,7 @@ public class positionTracker : MonoBehaviour
     public string currentScene;
     public float checkpointX;
     public float checkpointY;
+    public bool KyleDone = false, StewyDone = false, NikoDone = false, JebDone = false;
     void Awake()
     {
         if (instance == null)

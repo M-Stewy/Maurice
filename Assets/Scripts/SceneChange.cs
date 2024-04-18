@@ -14,6 +14,7 @@ public class SceneChange : MonoBehaviour
     public float standardypos = -3.925f;
     public GameObject Capsule;
     public GameObject positionTracker;
+    public bool KyleDone = false, StewyDone = false, NikoDone = false, JebDone = false;
 
     private void Awake()
     {
@@ -62,22 +63,42 @@ public class SceneChange : MonoBehaviour
             {
                 SceneManager.LoadScene("JebScene");
             }
+            else if (other.name == "SuperSecretScottShowdown")
+            {
+                if (KyleDone == true && NikoDone == true && StewyDone == true && JebDone == true)
+                {
+                    SceneManager.LoadScene("SuperSecretScottShowdown");
+                }
+                
+            }
         }
 
     }
 
     IEnumerator wait(float num)
     {
+        if (SceneManager.GetActiveScene().name.ToString() == "KyleScene")
+        {
+            KyleDone = true;
+            GameObject.FindWithTag("Respawn").GetComponent<positionTracker>().KyleDone = true;
+        }
+        else if (SceneManager.GetActiveScene().name.ToString() == "StewyScene")
+        {
+            StewyDone = true;
+            GameObject.FindWithTag("Respawn").GetComponent<positionTracker>().StewyDone = true;
+        }
+        else if (SceneManager.GetActiveScene().name.ToString() == "NikoScene")
+        {
+            NikoDone = true;
+            GameObject.FindWithTag("Respawn").GetComponent<positionTracker>().NikoDone = true;
+        }
+        else if (SceneManager.GetActiveScene().name.ToString() == "JebScene")
+        {
+            JebDone = true;
+            GameObject.FindWithTag("Respawn").GetComponent<positionTracker>().JebDone = true;
+        }
         yield return new WaitForSeconds(num);
         SceneManager.LoadScene("hubWorld");
     }
 
-    //Also in positionTracker and Player scripts
-    /*public void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            GameObject.FindWithTag("Respawn").GetComponent<positionTracker>().checkpoint();
-        }
-    }*/
 }
