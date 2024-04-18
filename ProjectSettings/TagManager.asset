@@ -12,6 +12,8 @@ TagManager:
   - HatStart
   - Fence
   - Scott
+  - Lose
+  - Win
   layers:
   - Default
   - TransparentFX
@@ -49,15 +51,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Hats
-    uniqueID: 1486100219
+  - name: Moving Platforms
+    uniqueID: 627847407
     locked: 0
-  - name: baseTiles
-    uniqueID: 4041344869
+  - name: Enemies
+    uniqueID: 729268157
     locked: 0
-  - name: noCollision
-    uniqueID: 698189713
-    locked: 0
-  - name: lines
-    uniqueID: 1387660247
+  - name: Splash screens
+    uniqueID: 300385041
     locked: 0

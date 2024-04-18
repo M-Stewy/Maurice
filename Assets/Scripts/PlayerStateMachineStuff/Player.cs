@@ -457,13 +457,26 @@ public class Player : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("HubWorld");
+            GameObject.FindWithTag("Lose").GetComponent<TitleScreenDisplay>().CallTitleDisplay();
+            StartCoroutine(wait(5));
         }
     }
+
 
     public void ResetAmmo()
     {
         playerData.AmmoLeft = playerData.MaxShots;
+
+    public void recieveHealth()
+    {
+        GameObject.FindWithTag("Player").GetComponent<Player>().playerData.health = GameObject.FindWithTag("Player").GetComponent<Player>().playerData.health + 1;
+    }
+
+    IEnumerator wait(float num)
+    {
+        yield return new WaitForSeconds(num);
+        SceneManager.LoadScene("HubWorld");
+
     }
 
     public void AbilityUnlock(string abilityName)
@@ -478,6 +491,9 @@ public class Player : MonoBehaviour
                 break;
             case "Gun":
                 GunAbility.SetUnlocked(true);
+                break;
+            case "Umbrella":
+                SlowFallAbility.SetUnlocked(true);
                 break;
         }
     }

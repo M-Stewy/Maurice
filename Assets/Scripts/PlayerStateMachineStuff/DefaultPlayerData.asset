@@ -16,8 +16,8 @@ MonoBehaviour:
   GroundLayer:
     serializedVersion: 2
     m_Bits: 8
-  health: 0
-  maxHealth: 0
+  health: 1
+  maxHealth: 1
   baseMoveSpeed: 15
   SprintSpeed: 30
   CrouchSpeed: 10

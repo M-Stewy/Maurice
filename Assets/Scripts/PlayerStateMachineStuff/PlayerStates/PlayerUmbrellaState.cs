@@ -45,6 +45,8 @@ public class PlayerUmbrellaState : PlayerState
         player.CurrentAbility.DoAction(player.hand.gameObject, true);
 
         base.Enter();
+
+        player.AbiltySoundEffect(playerData.UmbrellaSFX);
     }
 
     public override void Exit()

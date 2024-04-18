@@ -14,6 +14,7 @@ public class SceneChange : MonoBehaviour
     public float standardypos = -3.925f;
     public GameObject Capsule;
     public GameObject positionTracker;
+    public bool KyleDone = false, StewyDone = false, NikoDone = false, JebDone = false;
 
     private void Awake()
     {
@@ -42,7 +43,9 @@ public class SceneChange : MonoBehaviour
 
             if (other.name == "hubWorld")
             {
-                SceneManager.LoadScene("hubWorld");
+                GameObject.FindWithTag("Win").GetComponent<TitleScreenDisplay>().CallTitleDisplay();
+                StartCoroutine(wait(5));
+                //SceneManager.LoadScene("hubWorld");
             }
             else if (other.name == "NikoScene")
             {
@@ -60,16 +63,42 @@ public class SceneChange : MonoBehaviour
             {
                 SceneManager.LoadScene("JebScene");
             }
+            else if (other.name == "SuperSecretScottShowdown")
+            {
+                if (KyleDone == true && NikoDone == true && StewyDone == true && JebDone == true)
+                {
+                    SceneManager.LoadScene("SuperSecretScottShowdown");
+                }
+                
+            }
         }
 
     }
 
-    //Also in positionTracker and Player scripts
-    /*public void OnTriggerEnter2D(Collider2D other)
+    IEnumerator wait(float num)
     {
-        if (other.CompareTag("Player"))
+        if (SceneManager.GetActiveScene().name.ToString() == "KyleScene")
         {
-            GameObject.FindWithTag("Respawn").GetComponent<positionTracker>().checkpoint();
+            KyleDone = true;
+            GameObject.FindWithTag("Respawn").GetComponent<positionTracker>().KyleDone = true;
         }
-    }*/
+        else if (SceneManager.GetActiveScene().name.ToString() == "StewyScene")
+        {
+            StewyDone = true;
+            GameObject.FindWithTag("Respawn").GetComponent<positionTracker>().StewyDone = true;
+        }
+        else if (SceneManager.GetActiveScene().name.ToString() == "NikoScene")
+        {
+            NikoDone = true;
+            GameObject.FindWithTag("Respawn").GetComponent<positionTracker>().NikoDone = true;
+        }
+        else if (SceneManager.GetActiveScene().name.ToString() == "JebScene")
+        {
+            JebDone = true;
+            GameObject.FindWithTag("Respawn").GetComponent<positionTracker>().JebDone = true;
+        }
+        yield return new WaitForSeconds(num);
+        SceneManager.LoadScene("hubWorld");
+    }
+
 }

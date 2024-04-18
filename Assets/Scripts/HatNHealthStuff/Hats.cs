@@ -14,14 +14,14 @@ public class Hats : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            recieveHealth();
+            GameObject.FindWithTag("Player").GetComponent<Player>().recieveHealth();
             addHealth.Invoke();
             Destroy(gameObject);
         }
     }
 
-    public void recieveHealth()
+    /*public void recieveHealth()
     {
         GameObject.FindWithTag("Player").GetComponent<Player>().playerData.health = GameObject.FindWithTag("Player").GetComponent<Player>().playerData.health + 1;
-    }
+    }*/
 }
