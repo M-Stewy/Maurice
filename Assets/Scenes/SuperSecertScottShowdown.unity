@@ -923,6 +923,10 @@ MonoBehaviour:
   currentScene: 
   checkpointX: 0
   checkpointY: 0
+  KyleDone: 0
+  StewyDone: 0
+  NikoDone: 0
+  JebDone: 0
 --- !u!4 &388423557
 Transform:
   m_ObjectHideFlags: 0
@@ -17813,6 +17817,10 @@ MonoBehaviour:
   standardypos: -3.495001
   Capsule: {fileID: 0}
   positionTracker: {fileID: 0}
+  KyleDone: 0
+  StewyDone: 0
+  NikoDone: 0
+  JebDone: 0
 --- !u!82 &4667739943735449324
 AudioSource:
   m_ObjectHideFlags: 0
