@@ -1,10 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 /// <summary>
 /// Made by Stewy
