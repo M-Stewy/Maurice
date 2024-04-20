@@ -55,6 +55,7 @@ public class ScottFightMainController : MonoBehaviour
 
     enum ScottAttack
     {
+        StartIdle,
         DoNothing,
         SlamHand,
         ShootBullets,
@@ -181,6 +182,18 @@ public class ScottFightMainController : MonoBehaviour
             hands.SetActive(false);
         }
         LHand[handIndexNum].SetActive(true);
+    }
+
+    public void StartFight(bool FightStarted)
+    {
+        if(FightStarted)
+        {
+            currentAttack = ScottAttack.DoNothing;
+        }
+        else
+        {
+            currentAttack = ScottAttack.StartIdle;
+        }
     }
     #endregion
 
