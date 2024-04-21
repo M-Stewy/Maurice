@@ -1,9 +1,17 @@
 using System.Collections;
 using System.Linq;
 using UnityEngine;
-
+using UnityEngine.Events;
+/// <summary>
+/// Made by Stewy
+///     And 
+///     
+/// Basically, this script is Scotts brain.
+/// </summary>
 public class ScottFightMainController : MonoBehaviour
 {
+    public UnityEvent ScottFuckingDies_SAD_; // this will be used to trigger either a more dramatic cutscene or go right to credits.
+
     public int scottStartHealth = 15;
 
     public int health;
@@ -44,6 +52,7 @@ public class ScottFightMainController : MonoBehaviour
     bool inRoutine;
 
     bool currentlyAttacking;
+    bool isDead;
 
     enum ScottPhase
     {
@@ -79,6 +88,14 @@ public class ScottFightMainController : MonoBehaviour
 
     private void Update()
     {
+        if(isDead) return;
+        if(currentPhase == ScottPhase.Dead && !isDead)
+        {
+            isDead = true;
+            DeathCutSceneStart();
+            return;
+        }
+
         if (!currentlyAttacking)
         {
             switch (currentAttack)
@@ -220,6 +237,27 @@ public class ScottFightMainController : MonoBehaviour
         health--;
         PhaseChange();
     }
+
+    void DeathCutSceneStart()
+    {
+        SetActiveRHand(6);
+        SetActiveLHand(6);
+        Debug.Log("Bleh xP");
+        StartCoroutine(ScottDeathSAD(100, 0.5f, 20));
+        
+    }
+    IEnumerator ScottDeathSAD(int unitsDown, float Speed, float time)
+    {
+        for(int i = unitsDown; i >= 0; i--)
+        {
+            transform.Translate(new Vector3(0, -Speed, 0));
+            yield return new WaitForSeconds(1/time);
+        }
+        //Call the end of SceneStuff here
+        ScottFuckingDies_SAD_.Invoke();
+        yield return null;
+    }
+
     #endregion
 
     #region SetUp For Attacks

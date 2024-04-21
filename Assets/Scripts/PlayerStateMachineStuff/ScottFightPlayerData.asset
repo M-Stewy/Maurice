@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c76d136c291a448b3d6eecc561d63c, type: 3}
   m_Name: ScottFightPlayerData
   m_EditorClassIdentifier: 
-  isFacingRight: 0
+  isFacingRight: 1
   GroundLayer:
     serializedVersion: 2
     m_Bits: 8
-  health: 1
+  health: 5
   maxHealth: 0
   baseMoveSpeed: 20
   SprintSpeed: 40
@@ -48,7 +48,7 @@ MonoBehaviour:
   playerBullet: {fileID: 7928200351476023610, guid: 765e767cab148b64bad829cb45569f71, type: 3}
   gunForce: 0
   MaxShots: 14
-  AmmoLeft: 14
+  AmmoLeft: 122319
   BulletForce: 1500
   AudioCutoffTime: 25
   JumpSFX: {fileID: 8300000, guid: ed7e5aeaecfa31145962605a4a4ec106, type: 3}
