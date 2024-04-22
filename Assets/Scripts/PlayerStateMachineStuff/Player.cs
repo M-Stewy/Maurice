@@ -101,6 +101,7 @@ public class Player : MonoBehaviour
     RaycastHit2D ray;
     RaycastHit2D SlopeRay;
 
+
     private void Awake()
     {
         PSM = new PlayerStateMachine();
@@ -446,11 +447,14 @@ public class Player : MonoBehaviour
     #endregion
 
     //----------------- Events to be called ---------------------
-
+    [HideInInspector]
+    public bool immuneFrames = false;
     public void recieveDamage()
     {
-        DamageAudioS.PlayOneShot(playerData.HitSFX);
+        if (immuneFrames) return;
 
+        DamageAudioS.PlayOneShot(playerData.HitSFX);
+        StartCoroutine(IFrames() );
         if (playerData.health - 1 != 0)
         {
             playerData.health = playerData.health - 1;
@@ -461,7 +465,19 @@ public class Player : MonoBehaviour
             StartCoroutine(wait(5));
         }
     }
-
+    IEnumerator IFrames()
+    {
+        yield return new WaitForSeconds(0.0001f);
+        immuneFrames = true;
+        for (int i = 0; i <= playerData.immuneFrameTime; i++)
+        {
+            GetComponent<SpriteRenderer>().enabled = false;
+            yield return new WaitForSeconds(0.0001f);
+            GetComponent<SpriteRenderer>().enabled = true;
+            yield return new WaitForSeconds(0.0001f);
+        }
+        immuneFrames = false;
+    }
 
     public void ResetAmmo()
     {
