@@ -170,30 +170,7 @@ public class Player : MonoBehaviour
         playerData.AmmoLeft = playerData.MaxShots;
     }
 
-    public void UpdateStateMachine()
-    {
-        PSM = new PlayerStateMachine();
-
-        groundedState = new PlayerGroundedState(this, playerData, PSM, "null");
-        useAbilityState = new PlayerUseAbilityState(this, playerData, PSM, "null");
-
-        idleState = new PlayerIdleState(this, playerData, PSM, "isIdle");
-        movingState = new PlayerMovingState(this, playerData, PSM, "IsWalking");
-        jumpState = new PlayerJumpState(this, playerData, PSM, "JumpStart");
-        crouchIdleState = new PlayerCrouchIdleState(this, playerData, PSM, "IsCrouchingAnim");
-        crouchMoveState = new PlayerCrouchMovingState(this, playerData, PSM, "IsCrouchWalkingAnim");
-        slidingState = new PlayerSlidingState(this, playerData, PSM, "IsSlidingAnim");
-        sprintingState = new PlayerSprintingState(this, playerData, PSM, "IsSprinting");
-
-        inAirState = new PlayerInAirState(this, playerData, PSM, "InAir");
-        landedState = new PlayerLandedState(this, playerData, PSM, "Landed");
-        airSlideState = new PlayerInAirSlideState(this, playerData, PSM, "InAirSlideAnim");
-        grapplingState = new PlayerGrapplingState(this, playerData, PSM, "IsGrapplingAnim");
-        shootGunState = new PlayerShootGunState(this, playerData, PSM, "null");
-        UmbrellaState = new PlayerUmbrellaState(this, playerData, PSM, "InAir");
-
-        PSM.Initialize(idleState);
-    }
+    
 
     private void Update()
     {
@@ -444,6 +421,24 @@ public class Player : MonoBehaviour
         }
         yield return null;
     }
+
+    public void StopAllAudio(float time)
+    {
+        StartCoroutine(AudioPauseForSecs(time));
+
+    }
+     IEnumerator AudioPauseForSecs(float time)
+    {
+        audioS.mute = true;
+        HandAudioS.mute = true;
+        DamageAudioS.mute = true;
+        yield return new WaitForSeconds(time);
+        audioS.mute = false;
+        HandAudioS.mute = false;
+        DamageAudioS.mute = false;
+        
+    }
+
     #endregion
 
     //----------------- Events to be called ---------------------
