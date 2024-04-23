@@ -425,8 +425,8 @@ public class Player : MonoBehaviour
     public void StopAllAudio(float time)
     {
         StartCoroutine(AudioPauseForSecs(time));
-
     }
+
      IEnumerator AudioPauseForSecs(float time)
     {
         audioS.mute = true;
@@ -472,6 +472,27 @@ public class Player : MonoBehaviour
             yield return new WaitForSeconds(0.0001f);
         }
         immuneFrames = false;
+    }
+    /// <summary>
+    /// removes player input and sound effects for a peroid of time
+    /// will be used for when a cutscene starts / when one of the pickup popups are on screen
+    /// </summary>
+    /// <param name="time"></param>
+    public void RemoveInputAndAudio(float time)
+    {
+        StopAllAudio(time);
+        RemoveInput(time);
+    }
+
+    public void RemoveInput(float time)
+    {
+        StartCoroutine(StopAllInputs(time));
+    }
+    IEnumerator StopAllInputs(float time)
+    {
+        GetComponent<PlayerInputHandler>().enabled = false;
+        yield return new WaitForSeconds(time);
+        GetComponent<PlayerInputHandler>().enabled = true;
     }
 
     public void ResetAmmo()
