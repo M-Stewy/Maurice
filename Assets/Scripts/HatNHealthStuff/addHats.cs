@@ -50,14 +50,14 @@ public class addHats : MonoBehaviour
         if (FindObjectOfType<Player>().GetComponent<Player>().immuneFrames) return; //Stops the player from losing a hat even when they are in immune state
         
         childNum = this.transform.childCount;
-        Destroy(this.transform.GetChild(childNum-1).gameObject);
-        decreasePos.Invoke();
-        childForMove = this.transform.GetChild(childNum - 1).gameObject;
-        distance = childForMove.GetComponent<HatPos>().distance;
-        if (childNum-1 != 0)
+        if (childNum != 0)
         {
-            this.transform.position = this.transform.position - new Vector3(0f, distance, 1f);
+            Destroy(this.transform.GetChild(childNum-1).gameObject);
+            decreasePos.Invoke();
+            childForMove = this.transform.GetChild(childNum - 1).gameObject;
+            distance = childForMove.GetComponent<HatPos>().distance;
+
         }
-        
+        if (childNum-1 != 0) {this.transform.position = this.transform.position - new Vector3(0f, distance, 1f); }
     }
 }
