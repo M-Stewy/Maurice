@@ -141,6 +141,7 @@ public class PlayerInputHandler : MonoBehaviour
         PressedAbility2 = checkForKeyQuickPress(_ability2, _ability2Controller);
 
         HoldingAbility1 = checkForKeyPress(_ability1, _ability1Controller);
+        //HoldingAbility1 = checkForHolding(_ability1, _ability1Controller);
 
 
         
@@ -192,26 +193,41 @@ public class PlayerInputHandler : MonoBehaviour
                 HoldingDown = true;
             } else HoldingDown = false;
             
-            //Only used with Xbox Controllers
+            //Only used with Xbox Controllers -----------------------
             if(Input.GetAxis("XboxTriggers")!=0) 
             {
-                if(Input.GetAxis("XboxTriggers")>0 && Input.GetAxis("XboxTriggers")<1) {
+                if(Input.GetAxis("XboxTriggers")>0 && Input.GetAxis("XboxTriggers")<=1) {
                     
                     PressedAbility2=true;
-                    //PressedAbility2=false;
                 }
-                if(Input.GetAxis("XboxTriggers")<0 && Input.GetAxis("XboxTriggers")>-1) {
+                else if(Input.GetAxis("XboxTriggers")<0 && Input.GetAxis("XboxTriggers")>=-1) {
                     PressedAbility1=true;
-                    //PressedAbility1=false;
+                    //HoldingAbility1=true;
                 }
-                else {
-                    PressedAbility1=false;
-                    PressedAbility2=false;
-                }
+            } 
+            else 
+            {
+                PressedAbility1=false;
+                HoldingAbility1=false;
+                PressedAbility2=false;
             }
         }
         
     }
+
+    //Didn't work
+    /*private bool checkForHolding(KeyCode key, KeyCode keyC) 
+    {
+        if (Input.GetKeyDown(key) || Input.GetKeyDown(keyC))
+        {
+            return true;
+        }
+        if (Input.GetKey(key) || Input.GetKey(keyC))
+        {
+            return true;
+        }
+        return false;
+    }*/
 
    
     private bool checkForKeyPress(KeyCode key)
