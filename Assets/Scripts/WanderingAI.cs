@@ -21,15 +21,15 @@ public class WanderingAI : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        Debug.DrawRay(Tip.position + new Vector3(0.6f * left * Mathf.Abs(direction), 0, 0), Vector2.right * direction, Color.green);
+        Debug.DrawRay(Tip.position + new Vector3(0.6f * left * Mathf.Abs(direction), 0, 0), Vector2.right * left * Mathf.Abs(direction), Color.green);
 
         if (stop) { return; }
         transform.Translate(speed * left * direction * Time.deltaTime, 0, 0);
 
-        RaycastHit2D hit = Physics2D.Raycast(Tip.position + new Vector3(0.6f * left * Mathf.Abs(direction), 0, 0), Vector2.right* direction, obstacleRange); 
-        Debug.DrawRay(Tip.position + new Vector3(0.6f * left * Mathf.Abs(direction), 0, 0), Vector2.right * direction, Color.green);
+        RaycastHit2D hit = Physics2D.Raycast(Tip.position + new Vector3(0.6f * left * Mathf.Abs(direction), 0, 0), Vector2.right* left * Mathf.Abs(direction), obstacleRange); 
+        Debug.DrawRay(Tip.position + new Vector3(0.6f * left * Mathf.Abs(direction), 0, 0), Vector2.right * left * Mathf.Abs(direction), Color.green);
 
         if (hit.collider != null)
         {
