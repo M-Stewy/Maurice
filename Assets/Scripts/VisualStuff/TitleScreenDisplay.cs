@@ -15,6 +15,9 @@ public class TitleScreenDisplay : MonoBehaviour
     [SerializeField]
     private bool OnStart;
 
+    [SerializeField]
+    private bool UseAudio;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +35,12 @@ public class TitleScreenDisplay : MonoBehaviour
 
     public void CallTitleDisplay()
     {
+        if (UseAudio)
+        {
+            GetComponent<AudioSource>().loop = false;
+            GetComponent<AudioSource>().Play();
+        }
+
         Debug.Log("called title display");
         StartCoroutine(TitleDisplay(titleTime));
     }

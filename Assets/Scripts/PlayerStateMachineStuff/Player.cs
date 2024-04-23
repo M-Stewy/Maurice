@@ -282,8 +282,9 @@ public class Player : MonoBehaviour
 
     }
 
-    #endregion 
+    #endregion
 
+    #region Rotate and Ground Stuff
     private void RotateHand()
     {
         if (CurrentAbility.name == SlowFallAbility.name)
@@ -385,6 +386,8 @@ public class Player : MonoBehaviour
         }
 
     }
+    #endregion
+
     #region AudioStuff
 
     bool shouldAudioStop;
