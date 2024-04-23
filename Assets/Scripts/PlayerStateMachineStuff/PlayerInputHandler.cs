@@ -70,18 +70,21 @@ public class PlayerInputHandler : MonoBehaviour
     private void Start()
     {
         _jump = KeyCode.Space;
-        _jumpController = KeyCode.Joystick1Button1;
+        //_jumpController = KeyCode.Joystick1Button1; //PS4
+        _jumpController = KeyCode.Joystick1Button0; //Xbox
         _crouch = KeyCode.LeftControl;
-        _crouchController = KeyCode.Joystick1Button2;
+        //_crouchController = KeyCode.Joystick1Button2; //PS4
+        _crouchController = KeyCode.Joystick1Button1; //Xbox
         _sprint = KeyCode.LeftShift;
-        _sprintController = KeyCode.Joystick1Button10;
-        _switchAbility = KeyCode.Joystick1Button3;
+        //_sprintController = KeyCode.Joystick1Button10; //PS4
+        _sprintController = KeyCode.Joystick1Button2; //Xbox
+        _switchAbility = KeyCode.Joystick1Button3; //Both controllers (In theory)
        
 
         _ability1 = KeyCode.Mouse0;
-        _ability1Controller = KeyCode.Joystick1Button5;
+        //_ability1Controller = KeyCode.Joystick1Button5; //PS4
         _ability2 = KeyCode.Mouse1;
-        _ability2Controller = KeyCode.Joystick1Button4;
+        //_ability2Controller = KeyCode.Joystick1Button4; //PS4
 
         _up = KeyCode.W;
         _upController = KeyCode.Joystick1Button5; // this isnt needed
@@ -99,7 +102,6 @@ public class PlayerInputHandler : MonoBehaviour
         moveDir = new Vector2(Input.GetAxis("Horizontal"),Input.GetAxis("Vertical"));
         moveDirRaw = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
-
         string[] controllers = Input.GetJoystickNames();
         for (int x = 0; x < controllers.Length; x++)
         {
@@ -109,9 +111,9 @@ public class PlayerInputHandler : MonoBehaviour
                 print("PS4 CONTROLLER IS CONNECTED");
                 isController = true;
             } 
-            else if (controllers[x].Length == 33)
+            else if (controllers[x].Length == 5/*33*/) //the length was returning 0 then was returning 5, so its strange.
             {
-                print("XBOX ONE CONTROLLER IS CONNECTED");
+                //print("XBOX CONTROLLER IS CONNECTED");
                 isController = true;
             } else isController = false;
            
@@ -189,6 +191,24 @@ public class PlayerInputHandler : MonoBehaviour
             {
                 HoldingDown = true;
             } else HoldingDown = false;
+            
+            //Only used with Xbox Controllers
+            if(Input.GetAxis("XboxTriggers")!=0) 
+            {
+                if(Input.GetAxis("XboxTriggers")>0 && Input.GetAxis("XboxTriggers")<1) {
+                    
+                    PressedAbility2=true;
+                    //PressedAbility2=false;
+                }
+                if(Input.GetAxis("XboxTriggers")<0 && Input.GetAxis("XboxTriggers")>-1) {
+                    PressedAbility1=true;
+                    //PressedAbility1=false;
+                }
+                else {
+                    PressedAbility1=false;
+                    PressedAbility2=false;
+                }
+            }
         }
         
     }
