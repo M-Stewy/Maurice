@@ -10,6 +10,9 @@ using UnityEngine;
 public class PlayerInputHandler : MonoBehaviour
 {
 
+    public bool isXbox=false;
+    public bool isPS=false;
+
     /// we might use these instead of getaxis so we could have custom keybinds
     /// not sure how hard that would be yet so just having them for the sake of it I guess
 
@@ -69,22 +72,49 @@ public class PlayerInputHandler : MonoBehaviour
 
     private void Start()
     {
-        _jump = KeyCode.Space;
-        //_jumpController = KeyCode.Joystick1Button1; //PS4
-        _jumpController = KeyCode.Joystick1Button0; //Xbox
-        _crouch = KeyCode.LeftControl;
-        //_crouchController = KeyCode.Joystick1Button2; //PS4
-        _crouchController = KeyCode.Joystick1Button1; //Xbox
-        _sprint = KeyCode.LeftShift;
-        //_sprintController = KeyCode.Joystick1Button10; //PS4
-        _sprintController = KeyCode.Joystick1Button2; //Xbox
-        _switchAbility = KeyCode.Joystick1Button3; //Both controllers (In theory)
-       
+        string[] controllers = Input.GetJoystickNames();
+        for (int x = 0; x < controllers.Length; x++)
+        {
+            //print(controllers[x].Length);
+            if (controllers[x].Length == 19)
+            {
+                print("PS4 CONTROLLER IS CONNECTED");
+                isController = true;
+                isPS=true;
+            } 
+            else if (controllers[x].Length == 5/*33*/) //the length was returning 0 then was returning 5, so its strange.
+            {
+                //print("XBOX CONTROLLER IS CONNECTED");
+                isController = true;
+                isXbox=true;
+            } else isController = false;
+           
+        }
 
+        if (isXbox==true) {
+            Debug.Log("Xbox");
+            _jumpController = KeyCode.Joystick1Button0; //Xbox
+            _crouchController = KeyCode.Joystick1Button1; //Xbox
+            _sprintController = KeyCode.Joystick1Button2; //Xbox
+
+        }
+        if (isPS) {
+            //For Playstation controls, also must change Horizontal Axis to Axis3 in input manager
+            _jumpController = KeyCode.Joystick1Button1; //PS4
+            _crouchController = KeyCode.Joystick1Button2; //PS4
+            _sprintController = KeyCode.Joystick1Button10; //PS4
+            _ability1Controller = KeyCode.Joystick1Button5; //PS4
+            _ability2Controller = KeyCode.Joystick1Button4; //PS4
+        }
+        
+        _switchAbility = KeyCode.Joystick1Button3; //Both controllers (In theory)
+
+        _jump = KeyCode.Space;
+        _crouch = KeyCode.LeftControl;
+        _sprint = KeyCode.LeftShift;
+        
         _ability1 = KeyCode.Mouse0;
-        //_ability1Controller = KeyCode.Joystick1Button5; //PS4
         _ability2 = KeyCode.Mouse1;
-        //_ability2Controller = KeyCode.Joystick1Button4; //PS4
 
         _up = KeyCode.W;
         _upController = KeyCode.Joystick1Button5; // this isnt needed
@@ -105,16 +135,18 @@ public class PlayerInputHandler : MonoBehaviour
         string[] controllers = Input.GetJoystickNames();
         for (int x = 0; x < controllers.Length; x++)
         {
-            print(controllers[x].Length);
+            //print(controllers[x].Length);
             if (controllers[x].Length == 19)
             {
                 print("PS4 CONTROLLER IS CONNECTED");
                 isController = true;
+                isPS=true;
             } 
             else if (controllers[x].Length == 5/*33*/) //the length was returning 0 then was returning 5, so its strange.
             {
                 //print("XBOX CONTROLLER IS CONNECTED");
                 isController = true;
+                isXbox=true;
             } else isController = false;
            
         }
@@ -168,50 +200,80 @@ public class PlayerInputHandler : MonoBehaviour
         }
         else // using a controller
         {
-            if(Input.GetAxis("Aim Horizontal") != 0)
-                if (Input.GetAxis("Aim Vertical") != 0)
-                    _ControllerPos = new Vector3(Input.GetAxis("Aim Horizontal") * 5, Input.GetAxis("Aim Vertical") * 5, 0);
+            if (isXbox) //XBOX CONTROLLER ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+            {
+                if(Input.GetAxis("Aim Horizontal") != 0)
+                    if (Input.GetAxis("Aim Vertical") != 0)
+                        _ControllerPos = new Vector3(Input.GetAxis("Aim Horizontal") * 5, Input.GetAxis("Aim Vertical") * 5, 0);
             
-                   mouseScreenPos = transform.position + _ControllerPos;
+                        mouseScreenPos = transform.position + _ControllerPos;
             
-            if (switchAbiltiyPressed)
-            {
-                SwitchAbilityUp = true;
-            }
-            else
-            {
-                SwitchAbilityUp = false;
-            }
-            if (Input.GetAxis("Vertical") > 0.5f)
-            {
-                HoldingUp = true;
-            }
-            else HoldingUp = false;
+                if (switchAbiltiyPressed)
+                {
+                    SwitchAbilityUp = true;
+                }
+                else
+                {
+                    SwitchAbilityUp = false;
+                }
+                if (Input.GetAxis("Vertical") > 0.5f)
+                {
+                    HoldingUp = true;
+                }
+                else HoldingUp = false;
 
-            if(Input.GetAxis("Vertical") < -.5f)
-            {
-                HoldingDown = true;
-            } else HoldingDown = false;
-            
-            //Only used with Xbox Controllers -----------------------
-            if(Input.GetAxis("XboxTriggers")!=0) 
-            {
-                if(Input.GetAxis("XboxTriggers")>0 && Input.GetAxis("XboxTriggers")<=1) {
-                    
-                    PressedAbility2=true;
+                if(Input.GetAxis("Vertical") < -.5f)
+                {
+                    HoldingDown = true;
+                } else HoldingDown = false;
+                
+                //Only used with Xbox Controllers -----------------------
+                if(Input.GetAxis("XboxTriggers")!=0) 
+                {
+                    if(Input.GetAxis("XboxTriggers")>0 && Input.GetAxis("XboxTriggers")<=1) {
+                        
+                        PressedAbility2=true;
+                    }
+                    else if(Input.GetAxis("XboxTriggers")<0 && Input.GetAxis("XboxTriggers")>=-1) {
+                        PressedAbility1=true;
+                        //HoldingAbility1=true;
+                    }
+                } 
+                else 
+                {
+                    PressedAbility1=false;
+                    HoldingAbility1=false;
+                    PressedAbility2=false;
                 }
-                else if(Input.GetAxis("XboxTriggers")<0 && Input.GetAxis("XboxTriggers")>=-1) {
-                    PressedAbility1=true;
-                    //HoldingAbility1=true;
-                }
-            } 
-            else 
-            {
-                PressedAbility1=false;
-                HoldingAbility1=false;
-                PressedAbility2=false;
             }
-        }
+            if (isPS) //PLAYSTATION CONTROLLER -----------------------------------------------------------------------------------------------------------------------------------------------------------------
+            {
+                if(Input.GetAxis("PS Aim Horizontal") != 0)
+                    if (Input.GetAxis("Aim Vertical") != 0)
+                        _ControllerPos = new Vector3(Input.GetAxis("PS Aim Horizontal") * 5, Input.GetAxis("Aim Vertical") * 5, 0);
+            
+                        mouseScreenPos = transform.position + _ControllerPos;
+            
+                if (switchAbiltiyPressed)
+                {
+                    SwitchAbilityUp = true;
+                }
+                else
+                {
+                    SwitchAbilityUp = false;
+                }
+                if (Input.GetAxis("Vertical") > 0.5f)
+                {
+                    HoldingUp = true;
+                }
+                else HoldingUp = false;
+
+                if(Input.GetAxis("Vertical") < -.5f)
+                {
+                    HoldingDown = true;
+                } else HoldingDown = false;
+            }
+        }    
         
     }
 
