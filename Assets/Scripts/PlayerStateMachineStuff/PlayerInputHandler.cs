@@ -105,7 +105,7 @@ public class PlayerInputHandler : MonoBehaviour
             //print(controllers[x].Length);
             if (controllers[x].Length == 19)
             {
-                print("PS4 CONTROLLER IS CONNECTED");
+                //print("PS4 CONTROLLER IS CONNECTED");
                 isController = true;
                 isPS=true;
                 SetKeyBinds();
@@ -171,8 +171,7 @@ public class PlayerInputHandler : MonoBehaviour
         {
             if (isXbox) //XBOX CONTROLLER ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             {
-                if(Input.GetAxis("Aim Horizontal") != 0)
-                    if (Input.GetAxis("Aim Vertical") != 0)
+                if(Input.GetAxis("Aim Horizontal") != 0 || Input.GetAxis("Aim Vertical") != 0)
                         _ControllerPos = new Vector3(Input.GetAxis("Aim Horizontal") * 5, Input.GetAxis("Aim Vertical") * 5, 0);
             
                         mouseScreenPos = transform.position + _ControllerPos;
@@ -268,7 +267,7 @@ public class PlayerInputHandler : MonoBehaviour
             //print(controllers[x].Length);
             if (controllers[x].Length == 19)
             {
-                print("PS4 CONTROLLER IS CONNECTED");
+                //print("PS4 CONTROLLER IS CONNECTED");
                 isController = true;
                 isPS = true;
             }
@@ -284,7 +283,7 @@ public class PlayerInputHandler : MonoBehaviour
 
         if (isXbox == true)
         {
-            Debug.Log("Xbox");
+            //Debug.Log("Xbox");
             _jumpController = KeyCode.Joystick1Button0; //Xbox
             _crouchController = KeyCode.Joystick1Button1; //Xbox
             _sprintController = KeyCode.Joystick1Button2; //Xbox
@@ -292,7 +291,6 @@ public class PlayerInputHandler : MonoBehaviour
         }
         if (isPS)
         {
-            //For Playstation controls, also must change Horizontal Axis to Axis3 in input manager
             _jumpController = KeyCode.Joystick1Button1; //PS4
             _crouchController = KeyCode.Joystick1Button2; //PS4
             _sprintController = KeyCode.Joystick1Button10; //PS4
