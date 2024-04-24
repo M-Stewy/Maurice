@@ -38,6 +38,9 @@ public class PlayerInputHandler : MonoBehaviour
     private KeyCode _ability2;
     private KeyCode _ability2Controller;
 
+    private KeyCode _SwitchAbilityUpC; //Bumpers on Xbox?
+    private KeyCode _SwitchAbilityDownC;
+
    
     /// these are being called by other classes to know wether or not inputs
     ///   are being inputed and then using the values from here to figure out
@@ -69,12 +72,14 @@ public class PlayerInputHandler : MonoBehaviour
     public bool SwitchAbilityDown;
     private bool switchAbiltiyPressed;
 
+    private bool SwitchAbilityUpC;
+    private bool SwitchAbilityDownC;
 
     private void Start()
     {
         SetKeyBinds();
         
-        _switchAbility = KeyCode.Joystick1Button3; //Both controllers (In theory)
+        //_switchAbility = KeyCode.Joystick1Button3; //Both controllers (In theory)
 
         _jump = KeyCode.Space;
         _crouch = KeyCode.LeftControl;
@@ -110,7 +115,7 @@ public class PlayerInputHandler : MonoBehaviour
                 isPS=true;
                 SetKeyBinds();
             } 
-            else if (controllers[x].Length == 5/*33*/) //the length was returning 0 then was returning 5, so its strange.
+            else if (controllers[x].Length == 5 || controllers[x].Length == 33) //the length was returning 0 then was returning 5, so its strange.
             {
                 //print("XBOX CONTROLLER IS CONNECTED");
                 isController = true;
@@ -144,6 +149,9 @@ public class PlayerInputHandler : MonoBehaviour
         HoldingAbility1 = checkForKeyPress(_ability1, _ability1Controller);
         //HoldingAbility1 = checkForHolding(_ability1, _ability1Controller);
 
+        SwitchAbilityUpC = checkForKeyQuickPress(_SwitchAbilityUpC);
+        SwitchAbilityDownC = checkForKeyQuickPress(_SwitchAbilityDownC);
+
 
         
         if (!isController) // keyboard and mouse
@@ -176,7 +184,25 @@ public class PlayerInputHandler : MonoBehaviour
             
                         mouseScreenPos = transform.position + _ControllerPos;
             
-                if (switchAbiltiyPressed)
+                /*if (switchAbiltiyPressed)
+                {
+                    SwitchAbilityUp = true;
+                }
+                else
+                {
+                    SwitchAbilityUp = false;
+                }*/
+
+                if (SwitchAbilityDownC) 
+                {
+                    SwitchAbilityDown = true;
+                } 
+                else
+                {
+                    SwitchAbilityDown = false;
+                }
+
+                if (SwitchAbilityUpC) 
                 {
                     SwitchAbilityUp = true;
                 }
@@ -184,6 +210,7 @@ public class PlayerInputHandler : MonoBehaviour
                 {
                     SwitchAbilityUp = false;
                 }
+
                 if (Input.GetAxis("Vertical") > 0.5f)
                 {
                     HoldingUp = true;
@@ -271,7 +298,7 @@ public class PlayerInputHandler : MonoBehaviour
                 isController = true;
                 isPS = true;
             }
-            else if (controllers[x].Length == 5/*33*/) //the length was returning 0 then was returning 5, so its strange.
+            else if (controllers[x].Length == 5 || controllers[x].Length == 33) //the length was returning 0 then was returning 5, so its strange.
             {
                 //print("XBOX CONTROLLER IS CONNECTED");
                 isController = true;
@@ -287,7 +314,9 @@ public class PlayerInputHandler : MonoBehaviour
             _jumpController = KeyCode.Joystick1Button0; //Xbox
             _crouchController = KeyCode.Joystick1Button1; //Xbox
             _sprintController = KeyCode.Joystick1Button2; //Xbox
-
+            _SwitchAbilityUpC = KeyCode.Joystick1Button5;
+            _SwitchAbilityDownC = KeyCode.Joystick1Button4;
+            
         }
         if (isPS)
         {
@@ -296,6 +325,7 @@ public class PlayerInputHandler : MonoBehaviour
             _sprintController = KeyCode.Joystick1Button10; //PS4
             _ability1Controller = KeyCode.Joystick1Button5; //PS4
             _ability2Controller = KeyCode.Joystick1Button4; //PS4
+            _switchAbility = KeyCode.Joystick1Button3; //Could be both
         }
 
     }
