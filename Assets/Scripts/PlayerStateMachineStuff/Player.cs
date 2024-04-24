@@ -187,7 +187,7 @@ public class Player : MonoBehaviour
 
         if (inputHandler.PressedCrouch)
         {
-            audioS.PlayOneShot(playerData.CrouchSFX);
+            audioS.PlayOneShot(playerData.CrouchSFX); // this actaully does work it just sounds weird so I dont think we'll use it.
             Debug.Log("playedCrouch");
         }
     }
@@ -480,6 +480,8 @@ public class Player : MonoBehaviour
     /// <param name="time"></param>
     public void RemoveInputAndAudio(float time)
     {
+        PSM.ChangeState(idleState);
+        rb.velocity = new Vector2(0, 0);
         StopAllAudio(time);
         RemoveInput(time);
     }

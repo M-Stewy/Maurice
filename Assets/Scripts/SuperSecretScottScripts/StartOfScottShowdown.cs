@@ -13,6 +13,9 @@ public class StartOfScottShowdown : MonoBehaviour
     [SerializeField]
     Transform CutScenePos;
 
+    [SerializeField]
+    GameObject PlayerPusher;
+
     bool hasBeenTriggered = false;
     bool hasStopped;
     private void OnTriggerEnter2D(Collider2D collision)
@@ -23,6 +26,8 @@ public class StartOfScottShowdown : MonoBehaviour
             hasBeenTriggered = true;
             hasStopped = false;
             StartCoroutine(CutScene(12.5f) );
+            PlayerPusher.SetActive(true);
+            FindObjectOfType<Player>().RemoveInputAndAudio(12.5f);
         }
     }
 

@@ -16,6 +16,7 @@ public class AbilityPickUp : MonoBehaviour
     {
         if (collision.collider.CompareTag("Player"))
         {
+            
             PlayerTouch.Invoke();
             Destroy(gameObject);
         }

@@ -438,12 +438,14 @@ public class ScottFightMainController : MonoBehaviour
         GameObject Shotbullet = Instantiate(bullet, Hand.transform.GetChild(2).transform.GetChild(0).position, Hand.transform.GetChild(2).transform.GetChild(0).transform.rotation);
         Shotbullet.GetComponent<Rigidbody2D>().AddForce(Dir.normalized * 10f * bulletSpeed, ForceMode2D.Impulse);
     }
-
+    bool exitCurrent;
     IEnumerator GrabPlayer1(GameObject attackingHand, float grabberSpeed, float grabberUpSpeed, Vector3 UpDist)
     {
+        exitCurrent = false;
+        StartCoroutine(shouldExit(10f));
         Vector3 playerPos = FindObjectOfType<Player>().transform.position;
         
-        while ((attackingHand.transform.position - playerPos).magnitude > 1f)
+        while ((attackingHand.transform.position - playerPos).magnitude > 1f && !exitCurrent)
         {
             playerPos = FindObjectOfType<Player>().transform.position;
             attackingHand.transform.position = Vector2.MoveTowards(attackingHand.transform.position, playerPos,  0.1f);
@@ -454,18 +456,26 @@ public class ScottFightMainController : MonoBehaviour
             SetActiveHandGeneral(attackingHand, 4);
             yield return new WaitForSeconds(0.5f);
             FindObjectOfType<Player>().transform.SetParent(attackingHand.transform);
+            FindObjectOfType<Player>().RemoveInput(.1f);
             Vector3 SkySpot = attackingHand.transform.position + UpDist;
 
             while((attackingHand.transform.position - SkySpot).magnitude > 1)
             {
                 attackingHand.transform.position = Vector2.MoveTowards(attackingHand.transform.position, SkySpot, 0.1f);
                 yield return new WaitForSeconds(0.0001f);
+                FindObjectOfType<Player>().RemoveInput(.001f);
             }
-            FindObjectOfType<Player>().transform.SetParent(null);
-            SetActiveHandGeneral(attackingHand, 3);
+                FindObjectOfType<Player>().transform.SetParent(null);
+                SetActiveHandGeneral(attackingHand, 3);
         }
+        StopCoroutine(shouldExit(10f));
         yield return new WaitForSeconds(1f);
         currentAttack = ScottAttack.DoNothing;
+    }
+    IEnumerator shouldExit(float time)
+    {
+        yield return new WaitForSeconds(time);
+        exitCurrent = true; 
     }
 
     IEnumerator HoldingAttack(GameObject attackingHand, float swingAngle, float swingSpeed)
