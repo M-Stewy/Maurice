@@ -117,9 +117,9 @@ public class PlayerInputHandler : MonoBehaviour
         _ability2 = KeyCode.Mouse1;
 
         _up = KeyCode.W;
-        _upController = KeyCode.Joystick1Button5; // this isnt needed
+       // _upController = KeyCode.Joystick1Button5; // this isnt needed
         _down = KeyCode.S;
-        _downController = KeyCode.Joystick1Button6; // nor is this
+       // _downController = KeyCode.Joystick1Button6; // nor is this
 
         _camera = FindObjectOfType<Camera>();
     }
@@ -248,9 +248,9 @@ public class PlayerInputHandler : MonoBehaviour
             }
             if (isPS) //PLAYSTATION CONTROLLER -----------------------------------------------------------------------------------------------------------------------------------------------------------------
             {
-                if(Input.GetAxis("PS Aim Horizontal") != 0)
-                    if (Input.GetAxis("Aim Vertical") != 0)
-                        _ControllerPos = new Vector3(Input.GetAxis("PS Aim Horizontal") * 5, Input.GetAxis("Aim Vertical") * 5, 0);
+                if(Input.GetAxis("PS Horizontal Aim") != 0)
+                    if (Input.GetAxis("PS Vertical Aim") != 0)
+                        _ControllerPos = new Vector3(Input.GetAxis("PS Horizontal Aim") * 5, Input.GetAxis("PS Vertical Aim") * 5, 0);
             
                         mouseScreenPos = transform.position + _ControllerPos;
             
