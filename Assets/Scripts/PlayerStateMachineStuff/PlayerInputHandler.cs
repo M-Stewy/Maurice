@@ -72,40 +72,7 @@ public class PlayerInputHandler : MonoBehaviour
 
     private void Start()
     {
-        string[] controllers = Input.GetJoystickNames();
-        for (int x = 0; x < controllers.Length; x++)
-        {
-            //print(controllers[x].Length);
-            if (controllers[x].Length == 19)
-            {
-                print("PS4 CONTROLLER IS CONNECTED");
-                isController = true;
-                isPS=true;
-            } 
-            else if (controllers[x].Length == 5/*33*/) //the length was returning 0 then was returning 5, so its strange.
-            {
-                //print("XBOX CONTROLLER IS CONNECTED");
-                isController = true;
-                isXbox=true;
-            } else isController = false;
-           
-        }
-
-        if (isXbox==true) {
-            Debug.Log("Xbox");
-            _jumpController = KeyCode.Joystick1Button0; //Xbox
-            _crouchController = KeyCode.Joystick1Button1; //Xbox
-            _sprintController = KeyCode.Joystick1Button2; //Xbox
-
-        }
-        if (isPS) {
-            //For Playstation controls, also must change Horizontal Axis to Axis3 in input manager
-            _jumpController = KeyCode.Joystick1Button1; //PS4
-            _crouchController = KeyCode.Joystick1Button2; //PS4
-            _sprintController = KeyCode.Joystick1Button10; //PS4
-            _ability1Controller = KeyCode.Joystick1Button5; //PS4
-            _ability2Controller = KeyCode.Joystick1Button4; //PS4
-        }
+        SetKeyBinds();
         
         _switchAbility = KeyCode.Joystick1Button3; //Both controllers (In theory)
 
@@ -141,12 +108,14 @@ public class PlayerInputHandler : MonoBehaviour
                 print("PS4 CONTROLLER IS CONNECTED");
                 isController = true;
                 isPS=true;
+                SetKeyBinds();
             } 
             else if (controllers[x].Length == 5/*33*/) //the length was returning 0 then was returning 5, so its strange.
             {
                 //print("XBOX CONTROLLER IS CONNECTED");
                 isController = true;
                 isXbox=true;
+                SetKeyBinds();
             } else isController = false;
            
         }
@@ -291,7 +260,49 @@ public class PlayerInputHandler : MonoBehaviour
         return false;
     }*/
 
-   
+    private void SetKeyBinds()
+    {
+        string[] controllers = Input.GetJoystickNames();
+        for (int x = 0; x < controllers.Length; x++)
+        {
+            //print(controllers[x].Length);
+            if (controllers[x].Length == 19)
+            {
+                print("PS4 CONTROLLER IS CONNECTED");
+                isController = true;
+                isPS = true;
+            }
+            else if (controllers[x].Length == 5/*33*/) //the length was returning 0 then was returning 5, so its strange.
+            {
+                //print("XBOX CONTROLLER IS CONNECTED");
+                isController = true;
+                isXbox = true;
+            }
+            else isController = false;
+
+        }
+
+        if (isXbox == true)
+        {
+            Debug.Log("Xbox");
+            _jumpController = KeyCode.Joystick1Button0; //Xbox
+            _crouchController = KeyCode.Joystick1Button1; //Xbox
+            _sprintController = KeyCode.Joystick1Button2; //Xbox
+
+        }
+        if (isPS)
+        {
+            //For Playstation controls, also must change Horizontal Axis to Axis3 in input manager
+            _jumpController = KeyCode.Joystick1Button1; //PS4
+            _crouchController = KeyCode.Joystick1Button2; //PS4
+            _sprintController = KeyCode.Joystick1Button10; //PS4
+            _ability1Controller = KeyCode.Joystick1Button5; //PS4
+            _ability2Controller = KeyCode.Joystick1Button4; //PS4
+        }
+
+    }
+
+
     private bool checkForKeyPress(KeyCode key)
     {
         if (Input.GetKeyDown(key))
