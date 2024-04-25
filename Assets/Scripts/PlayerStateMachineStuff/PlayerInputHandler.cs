@@ -12,6 +12,8 @@ public class PlayerInputHandler : MonoBehaviour
 
     public bool isXbox=false;
     public bool isPS=false;
+    private bool justPressed1 = false;
+    private bool justPressed2 = false;
 
     /// we might use these instead of getaxis so we could have custom keybinds
     /// not sure how hard that would be yet so just having them for the sake of it I guess
@@ -146,8 +148,7 @@ public class PlayerInputHandler : MonoBehaviour
 
         PressedAbility2 = checkForKeyQuickPress(_ability2, _ability2Controller);
 
-        HoldingAbility1 = checkForKeyPress(_ability1, _ability1Controller);
-        //HoldingAbility1 = checkForHolding(_ability1, _ability1Controller);
+        //HoldingAbility1 = checkForKeyPress(_ability1, _ability1Controller);
 
         SwitchAbilityUpC = checkForKeyQuickPress(_SwitchAbilityUpC);
         SwitchAbilityDownC = checkForKeyQuickPress(_SwitchAbilityDownC);
@@ -156,6 +157,7 @@ public class PlayerInputHandler : MonoBehaviour
         
         if (!isController) // keyboard and mouse
         {
+            HoldingAbility1 = checkForKeyPress(_ability1, _ability1Controller);
 
             _mousePos = Input.mousePosition;
             _mousePos.z = 100;
@@ -223,15 +225,17 @@ public class PlayerInputHandler : MonoBehaviour
                 } else HoldingDown = false;
                 
                 //Only used with Xbox Controllers -----------------------
-                if(Input.GetAxis("XboxTriggers")!=0) 
+                if(Input.GetAxisRaw("XboxTriggers")!=0) 
                 {
-                    if(Input.GetAxis("XboxTriggers")>0 && Input.GetAxis("XboxTriggers")<=1) {
+                    if(Input.GetAxisRaw("XboxTriggers") == 1 && !justPressed2 /*Input.GetAxisRaw("XboxTriggers")>0 && Input.GetAxis("XboxTriggers")<=1*/) {
                         
                         PressedAbility2=true;
+                        justPressed2 = true;
                     }
-                    else if(Input.GetAxis("XboxTriggers")<0 && Input.GetAxis("XboxTriggers")>=-1) {
+                    else if(Input.GetAxisRaw("XboxTriggers") == -1 && !justPressed1 /*Input.GetAxisRaw("XboxTriggers")<0 && Input.GetAxis("XboxTriggers")>=-1*/) {
                         PressedAbility1=true;
-                        //HoldingAbility1=true;
+                        HoldingAbility1=true;
+                        justPressed1 = true;
                     }
                 } 
                 else 
@@ -239,11 +243,15 @@ public class PlayerInputHandler : MonoBehaviour
                     PressedAbility1=false;
                     HoldingAbility1=false;
                     PressedAbility2=false;
+                    justPressed1 = false;
+                    justPressed2 = false;
                 }
             }
             if (isPS) //PLAYSTATION CONTROLLER -----------------------------------------------------------------------------------------------------------------------------------------------------------------
             {
-                if(Input.GetAxis("PS Horizontal Aim") != 0)
+                HoldingAbility1 = checkForKeyPress(_ability1, _ability1Controller);
+
+                if (Input.GetAxis("PS Horizontal Aim") != 0)
                     if (Input.GetAxis("PS Vertical Aim") != 0)
                         _ControllerPos = new Vector3(Input.GetAxis("PS Horizontal Aim") * 5, Input.GetAxis("PS Vertical Aim") * 5, 0);
             
