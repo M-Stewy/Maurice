@@ -1,9 +1,17 @@
 using System.Collections;
 using System.Linq;
 using UnityEngine;
-
+using UnityEngine.Events;
+/// <summary>
+/// Made by Stewy
+///     And 
+///     
+/// Basically, this script is Scotts brain.
+/// </summary>
 public class ScottFightMainController : MonoBehaviour
 {
+    public UnityEvent ScottFuckingDies_SAD_; // this will be used to trigger either a more dramatic cutscene or go right to credits.
+
     public int scottStartHealth = 15;
 
     public int health;
@@ -44,6 +52,7 @@ public class ScottFightMainController : MonoBehaviour
     bool inRoutine;
 
     bool currentlyAttacking;
+    bool isDead;
 
     enum ScottPhase
     {
@@ -55,6 +64,7 @@ public class ScottFightMainController : MonoBehaviour
 
     enum ScottAttack
     {
+        StartIdle,
         DoNothing,
         SlamHand,
         ShootBullets,
@@ -78,6 +88,14 @@ public class ScottFightMainController : MonoBehaviour
 
     private void Update()
     {
+        if(isDead) return;
+        if(currentPhase == ScottPhase.Dead && !isDead)
+        {
+            isDead = true;
+            DeathCutSceneStart();
+            return;
+        }
+
         if (!currentlyAttacking)
         {
             switch (currentAttack)
@@ -182,6 +200,18 @@ public class ScottFightMainController : MonoBehaviour
         }
         LHand[handIndexNum].SetActive(true);
     }
+
+    public void StartFight(bool FightStarted)
+    {
+        if(FightStarted)
+        {
+            currentAttack = ScottAttack.DoNothing;
+        }
+        else
+        {
+            currentAttack = ScottAttack.StartIdle;
+        }
+    }
     #endregion
 
     #region Boss Health Stuff
@@ -207,6 +237,27 @@ public class ScottFightMainController : MonoBehaviour
         health--;
         PhaseChange();
     }
+
+    void DeathCutSceneStart()
+    {
+        SetActiveRHand(6);
+        SetActiveLHand(6);
+        Debug.Log("Bleh xP");
+        StartCoroutine(ScottDeathSAD(100, 0.5f, 20));
+        
+    }
+    IEnumerator ScottDeathSAD(int unitsDown, float Speed, float time)
+    {
+        for(int i = unitsDown; i >= 0; i--)
+        {
+            transform.Translate(new Vector3(0, -Speed, 0));
+            yield return new WaitForSeconds(1/time);
+        }
+        //Call the end of SceneStuff here
+        ScottFuckingDies_SAD_.Invoke();
+        yield return null;
+    }
+
     #endregion
 
     #region SetUp For Attacks
@@ -387,12 +438,14 @@ public class ScottFightMainController : MonoBehaviour
         GameObject Shotbullet = Instantiate(bullet, Hand.transform.GetChild(2).transform.GetChild(0).position, Hand.transform.GetChild(2).transform.GetChild(0).transform.rotation);
         Shotbullet.GetComponent<Rigidbody2D>().AddForce(Dir.normalized * 10f * bulletSpeed, ForceMode2D.Impulse);
     }
-
+    bool exitCurrent;
     IEnumerator GrabPlayer1(GameObject attackingHand, float grabberSpeed, float grabberUpSpeed, Vector3 UpDist)
     {
+        exitCurrent = false;
+        StartCoroutine(shouldExit(10f));
         Vector3 playerPos = FindObjectOfType<Player>().transform.position;
         
-        while ((attackingHand.transform.position - playerPos).magnitude > 1f)
+        while ((attackingHand.transform.position - playerPos).magnitude > 1f && !exitCurrent)
         {
             playerPos = FindObjectOfType<Player>().transform.position;
             attackingHand.transform.position = Vector2.MoveTowards(attackingHand.transform.position, playerPos,  0.1f);
@@ -403,18 +456,26 @@ public class ScottFightMainController : MonoBehaviour
             SetActiveHandGeneral(attackingHand, 4);
             yield return new WaitForSeconds(0.5f);
             FindObjectOfType<Player>().transform.SetParent(attackingHand.transform);
+            FindObjectOfType<Player>().RemoveInput(.1f);
             Vector3 SkySpot = attackingHand.transform.position + UpDist;
 
             while((attackingHand.transform.position - SkySpot).magnitude > 1)
             {
                 attackingHand.transform.position = Vector2.MoveTowards(attackingHand.transform.position, SkySpot, 0.1f);
                 yield return new WaitForSeconds(0.0001f);
+                FindObjectOfType<Player>().RemoveInput(.001f);
             }
-            FindObjectOfType<Player>().transform.SetParent(null);
-            SetActiveHandGeneral(attackingHand, 3);
+                FindObjectOfType<Player>().transform.SetParent(null);
+                SetActiveHandGeneral(attackingHand, 3);
         }
+        StopCoroutine(shouldExit(10f));
         yield return new WaitForSeconds(1f);
         currentAttack = ScottAttack.DoNothing;
+    }
+    IEnumerator shouldExit(float time)
+    {
+        yield return new WaitForSeconds(time);
+        exitCurrent = true; 
     }
 
     IEnumerator HoldingAttack(GameObject attackingHand, float swingAngle, float swingSpeed)

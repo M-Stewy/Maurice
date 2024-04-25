@@ -24,13 +24,18 @@ public class PlayerData : ScriptableObject
     public LayerMask GroundLayer;
 
     [Space(5)]
-    [Header("Move Speed")]
+    [Header("Health Stuff")]
     public float health;
-    public float maxHealth;
+    public float maxHealth = 1;
+    public float immuneFrameTime = 160;
+
+    [Space(5)]
+    [Header("Move Speed")]
     public float baseMoveSpeed = 30f;
     public float SprintSpeed = 60f;
     public float CrouchSpeed = 20f;
     public float SlideSpeedBoost = 5f;
+    
 
     [Space]
     [Header("Jump stuff")]

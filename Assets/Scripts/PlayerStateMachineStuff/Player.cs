@@ -98,6 +98,7 @@ public class Player : MonoBehaviour
     RaycastHit2D ray;
     RaycastHit2D SlopeRay;
 
+
     private void Awake()
     {
         PSM = new PlayerStateMachine();
@@ -166,30 +167,7 @@ public class Player : MonoBehaviour
         playerData.AmmoLeft = playerData.MaxShots;
     }
 
-    public void UpdateStateMachine()
-    {
-        PSM = new PlayerStateMachine();
-
-        groundedState = new PlayerGroundedState(this, playerData, PSM, "null");
-        useAbilityState = new PlayerUseAbilityState(this, playerData, PSM, "null");
-
-        idleState = new PlayerIdleState(this, playerData, PSM, "isIdle");
-        movingState = new PlayerMovingState(this, playerData, PSM, "IsWalking");
-        jumpState = new PlayerJumpState(this, playerData, PSM, "JumpStart");
-        crouchIdleState = new PlayerCrouchIdleState(this, playerData, PSM, "IsCrouchingAnim");
-        crouchMoveState = new PlayerCrouchMovingState(this, playerData, PSM, "IsCrouchWalkingAnim");
-        slidingState = new PlayerSlidingState(this, playerData, PSM, "IsSlidingAnim");
-        sprintingState = new PlayerSprintingState(this, playerData, PSM, "IsSprinting");
-
-        inAirState = new PlayerInAirState(this, playerData, PSM, "InAir");
-        landedState = new PlayerLandedState(this, playerData, PSM, "Landed");
-        airSlideState = new PlayerInAirSlideState(this, playerData, PSM, "InAirSlideAnim");
-        grapplingState = new PlayerGrapplingState(this, playerData, PSM, "IsGrapplingAnim");
-        shootGunState = new PlayerShootGunState(this, playerData, PSM, "null");
-        UmbrellaState = new PlayerUmbrellaState(this, playerData, PSM, "InAir");
-
-        PSM.Initialize(idleState);
-    }
+    
 
     private void Update()
     {
@@ -206,7 +184,7 @@ public class Player : MonoBehaviour
 
         if (inputHandler.PressedCrouch)
         {
-            audioS.PlayOneShot(playerData.CrouchSFX);
+            audioS.PlayOneShot(playerData.CrouchSFX); // this actaully does work it just sounds weird so I dont think we'll use it.
             Debug.Log("playedCrouch");
         }
     }
@@ -443,14 +421,35 @@ public class Player : MonoBehaviour
         }
         yield return null;
     }
+
+    public void StopAllAudio(float time)
+    {
+        StartCoroutine(AudioPauseForSecs(time));
+    }
+
+     IEnumerator AudioPauseForSecs(float time)
+    {
+        audioS.mute = true;
+        HandAudioS.mute = true;
+        DamageAudioS.mute = true;
+        yield return new WaitForSeconds(time);
+        audioS.mute = false;
+        HandAudioS.mute = false;
+        DamageAudioS.mute = false;
+        
+    }
+
     #endregion
 
     //----------------- Events to be called ---------------------
-
+    [HideInInspector]
+    public bool immuneFrames = false;
     public void recieveDamage()
     {
-        DamageAudioS.PlayOneShot(playerData.HitSFX);
+        if (immuneFrames) return;
 
+        DamageAudioS.PlayOneShot(playerData.HitSFX);
+        StartCoroutine(IFrames() );
         if (playerData.health - 1 != 0)
         {
             playerData.health = playerData.health - 1;
@@ -461,7 +460,42 @@ public class Player : MonoBehaviour
             StartCoroutine(wait(5));
         }
     }
+    IEnumerator IFrames()
+    {
+        yield return new WaitForSeconds(0.0001f);
+        immuneFrames = true;
+        for (int i = 0; i <= playerData.immuneFrameTime; i++)
+        {
+            GetComponent<SpriteRenderer>().enabled = false;
+            yield return new WaitForSeconds(0.0001f);
+            GetComponent<SpriteRenderer>().enabled = true;
+            yield return new WaitForSeconds(0.0001f);
+        }
+        immuneFrames = false;
+    }
+    /// <summary>
+    /// removes player input and sound effects for a peroid of time
+    /// will be used for when a cutscene starts / when one of the pickup popups are on screen
+    /// </summary>
+    /// <param name="time"></param>
+    public void RemoveInputAndAudio(float time)
+    {
+        PSM.ChangeState(idleState);
+        rb.velocity = new Vector2(0, 0);
+        StopAllAudio(time);
+        RemoveInput(time);
+    }
 
+    public void RemoveInput(float time)
+    {
+        StartCoroutine(StopAllInputs(time));
+    }
+    IEnumerator StopAllInputs(float time)
+    {
+        GetComponent<PlayerInputHandler>().enabled = false;
+        yield return new WaitForSeconds(time);
+        GetComponent<PlayerInputHandler>().enabled = true;
+    }
 
     public void ResetAmmo()
     {

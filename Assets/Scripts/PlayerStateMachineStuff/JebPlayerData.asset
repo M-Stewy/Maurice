@@ -16,8 +16,9 @@ MonoBehaviour:
   GroundLayer:
     serializedVersion: 2
     m_Bits: 8
-  health: 7
+  health: 1
   maxHealth: 1
+  immuneFrameTime: 160
   baseMoveSpeed: 30
   SprintSpeed: 60
   CrouchSpeed: 20
@@ -37,6 +38,7 @@ MonoBehaviour:
   AirGravity: 5
   SlowFallGravity: 2
   AllAbilitiesUnlocked: 0
+  DebugAbilitySwitching: 1
   GrapplePointSprite: {fileID: -1157753459, guid: 632f041408473894da813718f6b2f9ab, type: 3}
   LaymaskGrapple:
     serializedVersion: 2

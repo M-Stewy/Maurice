@@ -30,7 +30,7 @@ public class SceneChange : MonoBehaviour
     private void OnTriggerStay2D(Collider2D other)
     {
         //Debug.Log("Triggered");
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKey(KeyCode.E) || Input.GetKey(KeyCode.Joystick1Button3))
         {
             if (SceneManager.GetActiveScene().name == "hubWorld")
             {
