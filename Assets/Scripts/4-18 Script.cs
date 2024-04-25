@@ -41,7 +41,7 @@ public class PlayerCollisions : MonoBehaviour
             playerHealth = 0;
             //change to lose screen
             //SceneManager.LoadScene("Lose");
-            UnityEditor.EditorApplication.isPlaying = false;
+            //UnityEditor.EditorApplication.isPlaying = false;
 
         }
 
@@ -59,7 +59,7 @@ public class PlayerCollisions : MonoBehaviour
             //change to lose screen
             //SceneManager.LoadScene("Lose");
 
-            UnityEditor.EditorApplication.isPlaying = false;
+           // UnityEditor.EditorApplication.isPlaying = false;
 
         }
 

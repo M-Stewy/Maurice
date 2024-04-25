@@ -1,10 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 /// <summary>
 /// Made by Stewy
@@ -285,8 +282,9 @@ public class Player : MonoBehaviour
 
     }
 
-    #endregion 
+    #endregion
 
+    #region Rotate and Ground Stuff
     private void RotateHand()
     {
         if (CurrentAbility.name == SlowFallAbility.name)
@@ -388,6 +386,8 @@ public class Player : MonoBehaviour
         }
 
     }
+    #endregion
+
     #region AudioStuff
 
     bool shouldAudioStop;
