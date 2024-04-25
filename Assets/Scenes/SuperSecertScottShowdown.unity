@@ -397,6 +397,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   titleTime: 1
   OnStart: 0
+  UseAudio: 0
 --- !u!212 &72809480
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1700,6 +1701,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   titleTime: 5
   OnStart: 0
+  UseAudio: 0
 --- !u!212 &449914961
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1967,6 +1969,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   titleTime: 1
   OnStart: 0
+  UseAudio: 0
 --- !u!212 &520222986
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2136,6 +2139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   titleTime: 1
   OnStart: 0
+  UseAudio: 0
 --- !u!212 &630659002
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20694,7 +20698,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1861902750
 Transform:
   m_ObjectHideFlags: 0
@@ -21803,10 +21807,6 @@ MonoBehaviour:
   standardypos: -3.495001
   Capsule: {fileID: 0}
   positionTracker: {fileID: 0}
-  KyleDone: 0
-  StewyDone: 0
-  NikoDone: 0
-  JebDone: 0
 --- !u!82 &4667739943735449324
 AudioSource:
   m_ObjectHideFlags: 0
@@ -22225,6 +22225,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe9fd0844a0e59e4891141d02b1daa09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isXbox: 0
+  isPS: 0
   moveDir: {x: 0, y: 0}
   moveDirRaw: {x: 0, y: 0}
   mouseScreenPos: {x: 0, y: 0, z: 0}
