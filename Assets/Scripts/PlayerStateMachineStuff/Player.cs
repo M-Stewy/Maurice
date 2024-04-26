@@ -171,6 +171,9 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+        if (FindObjectOfType<PauseMenu>().isPaused) return; // We will probably need to put this line in several scripts
+
+
         PSM.currentState.Update(); // this is calling the base unity Update method in the current state of the state machine
 
         isGrounded = IsGrounded();

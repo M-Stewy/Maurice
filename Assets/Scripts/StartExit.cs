@@ -14,7 +14,7 @@ public class StartExit : MonoBehaviour
 
 
         //This one is for running as an exe outside of the unity editor
-        //Application.Quit();
+        Application.Quit();
 
     }
 
