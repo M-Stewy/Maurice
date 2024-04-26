@@ -387,22 +387,26 @@ public class ScottFightMainController : MonoBehaviour
     {
         //RHand 7 == Umbrella, 8 == Grapple, 9 == Gun
         int random = Random.Range(7, 10);
+        float WaitTime = 4f;
         switch (CurPhase)
         {
             case ScottPhase.phase1:
                 SetActiveLHand(random);
                 SetActiveRHand(random);
-                StartCoroutine(RockPaperScissorsAttack(random));
+                WaitTime = 4f;
+                StartCoroutine(RockPaperScissorsAttack(random, WaitTime));
                 break;
             case ScottPhase.phase2:
                 SetActiveLHand(random);
                 SetActiveRHand(random);
-                StartCoroutine(RockPaperScissorsAttack(random));
+                WaitTime = 3f;
+                StartCoroutine(RockPaperScissorsAttack(random, WaitTime));
                 break;
             case ScottPhase.phase3:
                 SetActiveLHand(random);
                 SetActiveRHand(random);
-                StartCoroutine(RockPaperScissorsAttack(random));
+                WaitTime = 2f;
+                StartCoroutine(RockPaperScissorsAttack(random, WaitTime));
                 break;
         }
     }
@@ -420,10 +424,10 @@ public class ScottFightMainController : MonoBehaviour
         yield return null;
     }
 
-    IEnumerator RockPaperScissorsAttack(int AttackNum)
+    IEnumerator RockPaperScissorsAttack(int AttackNum, float WaitTime)
     {
         var RPSPlayer = FindObjectOfType<Player>().GetComponent<Player>();
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(WaitTime);
         if ((RPSPlayer.CurrentAbility == RPSPlayer.GrappleAbility) && (AttackNum == 8)) {Debug.Log("Completed Grapple"); }
         else if ((RPSPlayer.CurrentAbility == RPSPlayer.GunAbility) && (AttackNum == 9)) {Debug.Log("Completed Gun"); }
         else if ((RPSPlayer.CurrentAbility == RPSPlayer.SlowFallAbility) && (AttackNum == 7)) {Debug.Log("Completed Umbrella"); }
