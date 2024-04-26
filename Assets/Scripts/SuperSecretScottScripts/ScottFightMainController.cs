@@ -70,7 +70,8 @@ public class ScottFightMainController : MonoBehaviour
         ShootBullets,
         GrabPlayer,
         HoldingItem,
-        MoveToPlayer
+        MoveToPlayer,
+        RockPaperScissors
     }
 
 
@@ -123,6 +124,10 @@ public class ScottFightMainController : MonoBehaviour
                 case ScottAttack.DoNothing:
                     IdleAttack(currentPhase);
                     currentlyAttacking = false;
+                    break;
+                case ScottAttack.RockPaperScissors:
+                    RockPaperScissors(currentPhase);
+                    currentlyAttacking = true;
                     break;
 
             }
@@ -378,6 +383,30 @@ public class ScottFightMainController : MonoBehaviour
         }
     }
 
+    void RockPaperScissors(ScottPhase CurPhase)
+    {
+        //RHand 7 == Umbrella, 8 == Grapple, 9 == Gun
+        int random = Random.Range(7, 10);
+        switch (CurPhase)
+        {
+            case ScottPhase.phase1:
+                SetActiveLHand(random);
+                SetActiveRHand(random);
+                StartCoroutine(RockPaperScissorsAttack(random));
+                break;
+            case ScottPhase.phase2:
+                SetActiveLHand(random);
+                SetActiveRHand(random);
+                StartCoroutine(RockPaperScissorsAttack(random));
+                break;
+            case ScottPhase.phase3:
+                SetActiveLHand(random);
+                SetActiveRHand(random);
+                StartCoroutine(RockPaperScissorsAttack(random));
+                break;
+        }
+    }
+
     #endregion
 
     #region ActualAttackCode
@@ -388,6 +417,18 @@ public class ScottFightMainController : MonoBehaviour
         LHandBase.transform.localPosition = LHandStartPos;
         RHandBase.transform.localRotation = RHandStartRot;
         LHandBase.transform.localRotation = LHandStartRot;
+        yield return null;
+    }
+
+    IEnumerator RockPaperScissorsAttack(int AttackNum)
+    {
+        var RPSPlayer = FindObjectOfType<Player>().GetComponent<Player>();
+        yield return new WaitForSeconds(4f);
+        if ((RPSPlayer.CurrentAbility == RPSPlayer.GrappleAbility) && (AttackNum == 8)) {Debug.Log("Completed Grapple"); }
+        else if ((RPSPlayer.CurrentAbility == RPSPlayer.GunAbility) && (AttackNum == 9)) {Debug.Log("Completed Gun"); }
+        else if ((RPSPlayer.CurrentAbility == RPSPlayer.SlowFallAbility) && (AttackNum == 7)) {Debug.Log("Completed Umbrella"); }
+        else {RPSPlayer.recieveDamage(); Debug.Log("Failed All"); }
+        currentAttack = ScottAttack.DoNothing;
         yield return null;
     }
 

@@ -54,6 +54,8 @@ public class PlayerUmbrellaState : PlayerState
         player.CurrentAbility.DoAction(player.hand.gameObject, false);
 
         base.Exit();
+
+        player.AbiltySoundEffect(playerData.UmbrellaCloseSFX);
     }
 
     public override void FixedUpdate()

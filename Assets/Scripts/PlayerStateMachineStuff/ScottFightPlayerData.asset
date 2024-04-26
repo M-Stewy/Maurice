@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c76d136c291a448b3d6eecc561d63c, type: 3}
   m_Name: ScottFightPlayerData
   m_EditorClassIdentifier: 
-  isFacingRight: 0
+  isFacingRight: 1
   GroundLayer:
     serializedVersion: 2
     m_Bits: 8
-  health: 5
+  health: 2
   maxHealth: 1
   immuneFrameTime: 160
   baseMoveSpeed: 20
@@ -37,7 +37,7 @@ MonoBehaviour:
   SlopeGravity: 3
   AirGravity: 5
   SlowFallGravity: 0
-  AllAbilitiesUnlocked: 0
+  AllAbilitiesUnlocked: 1
   DebugAbilitySwitching: 0
   GrapplePointSprite: {fileID: -1157753459, guid: 632f041408473894da813718f6b2f9ab, type: 3}
   LaymaskGrapple:
@@ -62,6 +62,7 @@ MonoBehaviour:
   AirWooshSFX: {fileID: 8300000, guid: ad924480ccae1ff448d8b44be10488c5, type: 3}
   SwitchAbilitySFX: {fileID: 8300000, guid: cde39cb80bb701d45b55ee87d00bffec, type: 3}
   UmbrellaSFX: {fileID: 0}
+  UmbrellaCloseSFX: {fileID: 0}
   ShootGunSFX: {fileID: 8300000, guid: 314e872175f430a418f7b1d40d5f9e0f, type: 3}
   EmptyGunSFX: {fileID: 8300000, guid: 5518035b049c6aa4fbd1e9df4bae96d0, type: 3}
   ShootGrappleSFX: {fileID: 8300000, guid: aae5f06f099542a4cbdfb2b72b5c7eb0, type: 3}
