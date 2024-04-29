@@ -16,7 +16,7 @@ MonoBehaviour:
   GroundLayer:
     serializedVersion: 2
     m_Bits: 8
-  health: 2
+  health: 6
   maxHealth: 1
   immuneFrameTime: 160
   baseMoveSpeed: 20
@@ -37,8 +37,8 @@ MonoBehaviour:
   SlopeGravity: 3
   AirGravity: 5
   SlowFallGravity: 0
-  AllAbilitiesUnlocked: 1
-  DebugAbilitySwitching: 0
+  AllAbilitiesUnlocked: 0
+  DebugAbilitySwitching: 1
   GrapplePointSprite: {fileID: -1157753459, guid: 632f041408473894da813718f6b2f9ab, type: 3}
   LaymaskGrapple:
     serializedVersion: 2
@@ -49,7 +49,7 @@ MonoBehaviour:
   playerBullet: {fileID: 7928200351476023610, guid: 765e767cab148b64bad829cb45569f71, type: 3}
   gunForce: 0
   MaxShots: 14
-  AmmoLeft: 14
+  AmmoLeft: 9
   BulletForce: 150
   AudioCutoffTime: 25
   JumpSFX: {fileID: 8300000, guid: ed7e5aeaecfa31145962605a4a4ec106, type: 3}
