@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -12,6 +11,8 @@ public class PauseMenu : MonoBehaviour
     AudioSource aS;
     [SerializeField] AudioClip hitPause;
     [SerializeField] AudioClip hitUnpause;
+    [SerializeField] AudioClip buttonSelected;
+    [SerializeField] AudioClip buttonPressed;
 
     private void Awake()
     {
@@ -49,6 +50,7 @@ public class PauseMenu : MonoBehaviour
 
     public void PauseGame()
     {
+        aS.volume = 1.0f;
         aS.PlayOneShot(hitPause);
         Time.timeScale = 0f;
         Menu.SetActive(true);
@@ -61,6 +63,7 @@ public class PauseMenu : MonoBehaviour
 
     public void ResumeGame()
     {
+        aS.volume = 1.0f;
         aS.PlayOneShot(hitUnpause);
         Menu.SetActive(false);
         Time.timeScale = 1.0f;
@@ -78,5 +81,18 @@ public class PauseMenu : MonoBehaviour
     {
         Application.Quit();
         UnityEditor.EditorApplication.isPlaying = false;
+    }
+
+    public void PressedSFX()
+    {
+        aS.volume = 1.0f;
+        aS.PlayOneShot(buttonPressed);
+    }
+
+    public void PlaySFXOnSelect()
+    {
+        aS.volume = 0.5f;
+        aS.PlayOneShot(buttonSelected);
+        Debug.Log("slected a button");
     }
 }
