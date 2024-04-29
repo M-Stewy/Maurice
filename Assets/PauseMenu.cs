@@ -9,6 +9,15 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] GameObject Menu;
     [SerializeField] GameObject firstButton;
 
+    AudioSource aS;
+    [SerializeField] AudioClip hitPause;
+    [SerializeField] AudioClip hitUnpause;
+
+    private void Awake()
+    {
+        aS = GetComponent<AudioSource>();
+        aS.ignoreListenerPause = true;
+    }
     private void Update()
     {
 
@@ -40,6 +49,7 @@ public class PauseMenu : MonoBehaviour
 
     public void PauseGame()
     {
+        aS.PlayOneShot(hitPause);
         Time.timeScale = 0f;
         Menu.SetActive(true);
         AudioListener.pause = true;
@@ -51,6 +61,7 @@ public class PauseMenu : MonoBehaviour
 
     public void ResumeGame()
     {
+        aS.PlayOneShot(hitUnpause);
         Menu.SetActive(false);
         Time.timeScale = 1.0f;
         AudioListener.pause = false;

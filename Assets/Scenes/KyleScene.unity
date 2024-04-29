@@ -232,6 +232,8 @@ MonoBehaviour:
   isPaused: 0
   Menu: {fileID: 1774034542}
   firstButton: {fileID: 800763578}
+  hitPause: {fileID: 8300000, guid: 0c5befb9cfcc9ca4f9488d2f17e593be, type: 3}
+  hitUnpause: {fileID: 8300000, guid: 6434554845b88e344b07f3b9be5624df, type: 3}
 --- !u!4 &113911950
 Transform:
   m_ObjectHideFlags: 0
