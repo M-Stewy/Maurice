@@ -22,8 +22,16 @@ public class TitleScreenDisplay : MonoBehaviour
     void Start()
     {
         GetComponent<SpriteRenderer>().enabled = false;
-        if(OnStart)
-            StartCoroutine(TitleDisplay(titleTime)  );
+        if (OnStart)
+        {
+            if (UseAudio)
+            {
+                GetComponent<AudioSource>().loop = false;
+                GetComponent<AudioSource>().Play();
+            }
+            StartCoroutine(TitleDisplay(titleTime));
+        }
+           
     }
 
     private IEnumerator TitleDisplay(float time)
