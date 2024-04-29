@@ -525,18 +525,11 @@ public class ScottFightMainController : MonoBehaviour
 
     IEnumerator HoldingAttack(GameObject attackingHand, float swingAngle, float swingSpeed)
     {
-        if(swingAngle < 0f)
-            for (int i = 0; i > swingAngle; i--)
-            {
-                attackingHand.transform.Rotate(0, 0, -1);
-                yield return new WaitForSeconds(swingSpeed);
-            }
-        else
-            for(int i = 0; i < swingAngle; i++)
-            {
-                attackingHand.transform.Rotate(0,0,1);
-                yield return new WaitForSeconds(swingSpeed);
-            }
+        //first it should go down to ground layer
+
+        //then raise up really quickly
+
+        //then hover in the air for a bit while something covers the ground and causes damage if touched
         
         yield return new WaitForSeconds(1f);
         currentAttack = ScottAttack.DoNothing;
