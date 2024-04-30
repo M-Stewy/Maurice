@@ -10,10 +10,10 @@ using UnityEngine.Events;
 /// </summary>
 public class ScottFightMainController : MonoBehaviour
 {
+
     public UnityEvent ScottFuckingDies_SAD_; // this will be used to trigger either a more dramatic cutscene or go right to credits.
 
-    public int scottStartHealth = 15;
-
+    int scottStartHealth = 15;
     public int health;
 
     [SerializeField]
@@ -21,12 +21,25 @@ public class ScottFightMainController : MonoBehaviour
     Vector3 FollowV3;
     [SerializeField]
     float followTime;
+    [Space(5)]
+
+    [Header("Scott Sounds")]
+    [SerializeField]
+    AudioClip[] ScottHurtSounds;
+    AudioClip[] HappyScottNoises;
+    AudioClip[] SadScottNoises;
+
+
+    [Space(5)]
+    [Header("Scott throws hands")]
 
     [SerializeField]
     ScottPhase currentPhase;
     [SerializeField]
     ScottAttack currentAttack;
-
+    [Space(2)]
+    [SerializeField]
+    GameObject[] ScottHeads;
     [SerializeField]
     GameObject Head;
     [SerializeField]
@@ -53,6 +66,8 @@ public class ScottFightMainController : MonoBehaviour
 
     bool currentlyAttacking;
     bool isDead;
+
+    AudioSource ass;
 
     enum ScottPhase
     {
@@ -85,6 +100,7 @@ public class ScottFightMainController : MonoBehaviour
         RHandStartRot = RHandBase.transform.localRotation;
         LHandStartRot = LHandBase.transform.localRotation;
         currentlyAttacking = false;
+        ass = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -239,6 +255,7 @@ public class ScottFightMainController : MonoBehaviour
 
     public void ReceiveDamage()
     {
+        ass.PlayOneShot(ScottHurtSounds[Random.Range(0,ScottHurtSounds.Length)]);
         health--;
         PhaseChange();
     }
