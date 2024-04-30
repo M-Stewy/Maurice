@@ -13,8 +13,9 @@ public class soundToggle : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && (Input.GetKey(KeyCode.E) || Input.GetKey(KeyCode.Joystick1Button3))) {
+        if (other.CompareTag("Player") && (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Joystick1Button3))) {
             Audio.mute = !Audio.mute;
+            Debug.Log("Reached");
         }
     }
 }
