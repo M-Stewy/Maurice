@@ -12,7 +12,11 @@ public class BulletScript : MonoBehaviour
     {
         if (collision.transform.CompareTag("Scott"))
         {
-            GameObject.FindGameObjectWithTag("Scott").GetComponentInParent<ScottFightMainController>().ReceiveDamage();
+            collision.transform.GetComponentInParent<ScottFightMainController>().ReceiveDamage();
+        }
+        if (collision.transform.CompareTag("enemy"))
+        {
+            //  collision.transform.GetComponentInParent<WHERE YOU PUT THE NAME OF THE SCRIPT YOU MADE>().ReceiveDamage();
         }
 
         Destroy(gameObject);
