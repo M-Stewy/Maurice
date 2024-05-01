@@ -15,6 +15,7 @@ TagManager:
   - Lose
   - Win
   - MusicManager
+  - Wall
   layers:
   - Default
   - TransparentFX
