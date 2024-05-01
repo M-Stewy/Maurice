@@ -8,6 +8,7 @@ public class PauseMenu : MonoBehaviour
     public bool isPaused = false;
     [SerializeField] GameObject Menu;
     [SerializeField] GameObject firstButton;
+    [SerializeField] GameObject backFirstButton;
     public GameObject TheTutorial;
     public GameObject Xbox;
     public GameObject PS;
@@ -88,6 +89,8 @@ public class PauseMenu : MonoBehaviour
         } else {
             KBM.SetActive(true);
         }
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(backFirstButton);
     }
 
     public void TutorialBack() {
@@ -97,5 +100,7 @@ public class PauseMenu : MonoBehaviour
         PS.SetActive(false);
         KBM.SetActive(false);
         Menu.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(firstButton);
     }
 }
