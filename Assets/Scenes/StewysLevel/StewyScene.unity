@@ -4109,7 +4109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MultiPlay: 1
-  Volume: 0
+  Volume: 0.35
   fadeInTime: 7.5
   fadeOutTime: 7.5
   increant: 0.1
@@ -13299,13 +13299,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1664389282}
-  m_LocalRotation: {x: -0, y: -0, z: 0.4668497, w: 0.8843367}
-  m_LocalPosition: {x: -21.449503, y: -5.3363914, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.46174863, w: 0.8870109}
+  m_LocalPosition: {x: -7.5000005, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_Father: {fileID: 938405724235702911}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 55}
 --- !u!212 &1664389284
 SpriteRenderer:
@@ -17103,6 +17103,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1063248525}
+  - {fileID: 1664389283}
   m_Father: {fileID: 2231385190413913589}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.66}
