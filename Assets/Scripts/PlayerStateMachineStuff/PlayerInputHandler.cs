@@ -10,6 +10,8 @@ using UnityEngine;
 public class PlayerInputHandler : MonoBehaviour
 {
 
+    [SerializeField]
+    GameObject ControllerCursor;
     public bool isXbox=false;
     public bool isPS=false;
     private bool justPressed1 = false;
@@ -157,6 +159,8 @@ public class PlayerInputHandler : MonoBehaviour
         
         if (!isController) // keyboard and mouse
         {
+            Cursor.visible = true;
+            ControllerCursor.SetActive(false);
             HoldingAbility1 = checkForKeyPress(_ability1, _ability1Controller);
 
             _mousePos = Input.mousePosition;
@@ -179,12 +183,20 @@ public class PlayerInputHandler : MonoBehaviour
         }
         else // using a controller
         {
+            Cursor.visible = false;
+            
             if (isXbox) //XBOX CONTROLLER ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             {
                 if(Input.GetAxis("Aim Horizontal") != 0 || Input.GetAxis("Aim Vertical") != 0)
-                        _ControllerPos = new Vector3(Input.GetAxis("Aim Horizontal") * 5, Input.GetAxis("Aim Vertical") * 5, 0);
-            
-                        mouseScreenPos = transform.position + _ControllerPos;
+                {
+                    _ControllerPos = new Vector3(Input.GetAxis("Aim Horizontal") * 5, Input.GetAxis("Aim Vertical") * 5, 0);
+                    ControllerCursor.SetActive(true);
+                }
+                else
+                {
+                    ControllerCursor.SetActive(false);
+                }
+                mouseScreenPos = transform.position + _ControllerPos;
             
                 /*if (switchAbiltiyPressed)
                 {
@@ -251,13 +263,29 @@ public class PlayerInputHandler : MonoBehaviour
             {
                 HoldingAbility1 = checkForKeyPress(_ability1, _ability1Controller);
 
-                if (Input.GetAxis("PS Horizontal Aim") != 0)
-                    if (Input.GetAxis("PS Vertical Aim") != 0)
-                        _ControllerPos = new Vector3(Input.GetAxis("PS Horizontal Aim") * 5, Input.GetAxis("PS Vertical Aim") * 5, 0);
+                if (Input.GetAxis("PS Horizontal Aim") != 0 || Input.GetAxis("PS Vertical Aim") != 0)
+                {
+                    _ControllerPos = new Vector3(Input.GetAxis("PS Horizontal Aim") * 5, Input.GetAxis("PS Vertical Aim") * 5, 0);
+                    ControllerCursor.SetActive(true);
+                }
+                else
+                {
+                    ControllerCursor.SetActive(false);
+                }
+                       
             
                         mouseScreenPos = transform.position + _ControllerPos;
-            
-                if (switchAbiltiyPressed)
+
+                if (SwitchAbilityDownC)
+                {
+                    SwitchAbilityDown = true;
+                }
+                else
+                {
+                    SwitchAbilityDown = false;
+                }
+
+                if (SwitchAbilityUpC)
                 {
                     SwitchAbilityUp = true;
                 }
@@ -331,9 +359,10 @@ public class PlayerInputHandler : MonoBehaviour
             _jumpController = KeyCode.Joystick1Button1; //PS4
             _crouchController = KeyCode.Joystick1Button2; //PS4
             _sprintController = KeyCode.Joystick1Button10; //PS4
-            _ability1Controller = KeyCode.Joystick1Button5; //PS4
-            _ability2Controller = KeyCode.Joystick1Button4; //PS4
-            _switchAbility = KeyCode.Joystick1Button3; //Could be both
+            _ability1Controller = KeyCode.Joystick1Button7; //PS4
+            _ability2Controller = KeyCode.Joystick1Button6; //PS4
+            _SwitchAbilityUpC = KeyCode.Joystick1Button5;   //PS4
+            _SwitchAbilityDownC = KeyCode.Joystick1Button4; //PS4
         }
 
     }

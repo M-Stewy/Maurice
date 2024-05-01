@@ -18,6 +18,9 @@ public class TitleScreenDisplay : MonoBehaviour
     [SerializeField]
     private bool UseAudio;
 
+    [SerializeField]
+    private bool shouldMuteMusic;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +33,14 @@ public class TitleScreenDisplay : MonoBehaviour
                 GetComponent<AudioSource>().Play();
             }
             StartCoroutine(TitleDisplay(titleTime));
+
+            if(shouldMuteMusic)
+            {
+                if (FindObjectOfType<MusicManager>())
+                {
+                    FindObjectOfType<MusicManager>().PauseMusicforSec(titleTime - 0.5f);
+                }
+            }
         }
            
     }
@@ -47,6 +58,13 @@ public class TitleScreenDisplay : MonoBehaviour
         {
             GetComponent<AudioSource>().loop = false;
             GetComponent<AudioSource>().Play();
+        }
+        if (shouldMuteMusic)
+        {
+            if (FindObjectOfType<MusicManager>())
+            {
+                FindObjectOfType<MusicManager>().PauseMusicforSec(titleTime - 0.5f);
+            }
         }
 
         Debug.Log("called title display");

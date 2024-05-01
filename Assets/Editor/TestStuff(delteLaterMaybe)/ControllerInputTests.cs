@@ -27,19 +27,19 @@ public class ControllerInputTests : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Joystick1Button4))
         {
-            Debug.Log("Joystick 4"); // is left trigger on PS controller, left bumper on Xbox
+            Debug.Log("Joystick 4"); // is left bumper on PS controller, left bumper on Xbox
         }
         if (Input.GetKeyDown(KeyCode.Joystick1Button5))
         {
-            Debug.Log("Joystick 5"); // is right trigger on PS controller, right bumper on Xbox
+            Debug.Log("Joystick 5"); // is right bumper on PS controller, right bumper on Xbox
         }
         if (Input.GetKeyDown(KeyCode.Joystick1Button6))
         {
-            Debug.Log("Joystick 6"); // is left bumper on PS controller, back button on Xbox
+            Debug.Log("Joystick 6"); // is left trigger on PS controller, back button on Xbox
         }
         if (Input.GetKeyDown(KeyCode.Joystick1Button7))
         {
-            Debug.Log("Joystick 7"); // is right bumper on PS controller, Start button on Xbox
+            Debug.Log("Joystick 7"); // is right trigger on PS controller, Start button on Xbox
         }
         if (Input.GetKeyDown(KeyCode.Joystick1Button8))
         {

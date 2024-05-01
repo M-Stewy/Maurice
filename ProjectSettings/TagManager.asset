@@ -14,6 +14,7 @@ TagManager:
   - Scott
   - Lose
   - Win
+  - MusicManager
   layers:
   - Default
   - TransparentFX

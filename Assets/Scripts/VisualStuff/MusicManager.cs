@@ -151,4 +151,22 @@ public class MusicManager : MonoBehaviour
             source.Stop();
         }
     }
+
+    public void PauseMusicforSec(float sec)
+    {
+        StartCoroutine(pauseMusic(sec));
+    }
+
+    IEnumerator pauseMusic(float sec)
+    {
+        foreach(var S in CurrentMusicSources)
+        {
+            S.mute = true;
+        }
+        yield return new WaitForSeconds(sec);
+        foreach (var S in CurrentMusicSources)
+        {
+            S.mute = false;
+        }
+    }
 }
