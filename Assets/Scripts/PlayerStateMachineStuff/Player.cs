@@ -298,6 +298,13 @@ public class Player : MonoBehaviour
             hand.GetComponent<SpriteRenderer>().flipX = false;
             hand.GetComponent<SpriteRenderer>().flipY = false;
             hand.transform.GetChild(0).localPosition = new Vector3(1, 0, 0);
+            if (hand.transform.GetChild(1))
+            {
+                hand.transform.GetChild(1).GetComponent<SpriteRenderer>().flipY = true;
+                hand.transform.GetChild(1).GetComponent<SpriteRenderer>().flipX = true;
+                hand.transform.GetChild(1).localPosition = new Vector3(7.5f, 0, 0);
+            }
+                
         }
         else if (inputHandler.moveDir.x == 1)
         {
@@ -306,6 +313,12 @@ public class Player : MonoBehaviour
             hand.GetComponent<SpriteRenderer>().flipX = true;
             hand.GetComponent<SpriteRenderer>().flipY = true;
             hand.transform.GetChild(0).localPosition = new Vector3(-1, 0, 0);
+            if (hand.transform.GetChild(1))
+            {
+                hand.transform.GetChild(1).GetComponent<SpriteRenderer>().flipY = false;
+                hand.transform.GetChild(1).GetComponent<SpriteRenderer>().flipX = false;
+                hand.transform.GetChild(1).localPosition = new Vector3(-7.5f, 0, 0);
+            }
         }
     }
 
