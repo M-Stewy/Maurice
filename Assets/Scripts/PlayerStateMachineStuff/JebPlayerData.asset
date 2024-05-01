@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c76d136c291a448b3d6eecc561d63c, type: 3}
   m_Name: JebPlayerData
   m_EditorClassIdentifier: 
-  isFacingRight: 0
+  isFacingRight: 1
   GroundLayer:
     serializedVersion: 2
     m_Bits: 8
-  health: 1
+  health: 4
   maxHealth: 1
   immuneFrameTime: 160
   baseMoveSpeed: 30
@@ -53,7 +53,7 @@ MonoBehaviour:
   BulletForce: 200
   AudioCutoffTime: 0
   JumpSFX: {fileID: 8300000, guid: ed7e5aeaecfa31145962605a4a4ec106, type: 3}
-  WalkingSFX: {fileID: 8300000, guid: 12e25b1b9762c614c9da9b585fbaf650, type: 3}
+  WalkingSFX: {fileID: 8300000, guid: 8903a962e7da53b4bbbca57b4c839987, type: 3}
   SlideSFX: {fileID: 8300000, guid: 06bc5fca2f4e60d44bb470fef01676a0, type: 3}
   LandedSFX: {fileID: 8300000, guid: 1f554cc1d6c670d42ab991ae8bc6cd94, type: 3}
   HitSFX: {fileID: 8300000, guid: c6ae2ede7120d254d905020b73fbd854, type: 3}
@@ -62,6 +62,7 @@ MonoBehaviour:
   AirWooshSFX: {fileID: 8300000, guid: ad924480ccae1ff448d8b44be10488c5, type: 3}
   SwitchAbilitySFX: {fileID: 8300000, guid: cde39cb80bb701d45b55ee87d00bffec, type: 3}
   UmbrellaSFX: {fileID: 8300000, guid: 6fc74f1f8f5596043afe0a30b4d57a87, type: 3}
+  UmbrellaCloseSFX: {fileID: 8300000, guid: a651af21f04d7b544bdf0353c1f08acf, type: 3}
   ShootGunSFX: {fileID: 8300000, guid: 25513767c18b42d4aadd791e7d234f84, type: 3}
   EmptyGunSFX: {fileID: 8300000, guid: 5518035b049c6aa4fbd1e9df4bae96d0, type: 3}
   ShootGrappleSFX: {fileID: 8300000, guid: aae5f06f099542a4cbdfb2b72b5c7eb0, type: 3}

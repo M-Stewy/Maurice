@@ -3,28 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - GraplePoint
-  - Ground
-  - Hat
-  - Spawner
-  - DisableAtEnd
-  - HatStart
-  - Fence
-  - Scott
-  - Lose
-  - Win
-  - MusicManager
-  - Wall
+  tags: []
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Ground
+  - 
   - Water
   - UI
-  - GrappleAble
-  - Player
+  - 
+  - 
   - 
   - 
   - 
@@ -52,13 +40,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Moving Platforms
-    uniqueID: 627847407
-    locked: 0
-  - name: Enemies
-    uniqueID: 729268157
-    locked: 0
-  - name: Splash screens
-    uniqueID: 300385041
     locked: 0

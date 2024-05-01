@@ -10,10 +10,10 @@ using UnityEngine.Events;
 /// </summary>
 public class ScottFightMainController : MonoBehaviour
 {
+
     public UnityEvent ScottFuckingDies_SAD_; // this will be used to trigger either a more dramatic cutscene or go right to credits.
 
-    public int scottStartHealth = 15;
-
+    int scottStartHealth = 15;
     public int health;
 
     [SerializeField]
@@ -21,12 +21,25 @@ public class ScottFightMainController : MonoBehaviour
     Vector3 FollowV3;
     [SerializeField]
     float followTime;
+    [Space(5)]
+
+    [Header("Scott Sounds")]
+    [SerializeField]
+    AudioClip[] ScottHurtSounds;
+    AudioClip[] HappyScottNoises;
+    AudioClip[] SadScottNoises;
+
+
+    [Space(5)]
+    [Header("Scott throws hands")]
 
     [SerializeField]
     ScottPhase currentPhase;
     [SerializeField]
     ScottAttack currentAttack;
-
+    [Space(2)]
+    [SerializeField]
+    GameObject[] ScottHeads;
     [SerializeField]
     GameObject Head;
     [SerializeField]
@@ -54,6 +67,8 @@ public class ScottFightMainController : MonoBehaviour
     bool currentlyAttacking;
     bool isDead;
 
+    AudioSource ass;
+
     enum ScottPhase
     {
         phase1,
@@ -70,7 +85,8 @@ public class ScottFightMainController : MonoBehaviour
         ShootBullets,
         GrabPlayer,
         HoldingItem,
-        MoveToPlayer
+        MoveToPlayer,
+        RockPaperScissors
     }
 
 
@@ -84,6 +100,7 @@ public class ScottFightMainController : MonoBehaviour
         RHandStartRot = RHandBase.transform.localRotation;
         LHandStartRot = LHandBase.transform.localRotation;
         currentlyAttacking = false;
+        ass = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -123,6 +140,10 @@ public class ScottFightMainController : MonoBehaviour
                 case ScottAttack.DoNothing:
                     IdleAttack(currentPhase);
                     currentlyAttacking = false;
+                    break;
+                case ScottAttack.RockPaperScissors:
+                    RockPaperScissors(currentPhase);
+                    currentlyAttacking = true;
                     break;
 
             }
@@ -234,6 +255,7 @@ public class ScottFightMainController : MonoBehaviour
 
     public void ReceiveDamage()
     {
+        ass.PlayOneShot(ScottHurtSounds[Random.Range(0,ScottHurtSounds.Length)]);
         health--;
         PhaseChange();
     }
@@ -378,6 +400,34 @@ public class ScottFightMainController : MonoBehaviour
         }
     }
 
+    void RockPaperScissors(ScottPhase CurPhase)
+    {
+        //RHand 7 == Umbrella, 8 == Grapple, 9 == Gun
+        int random = Random.Range(7, 10);
+        float WaitTime = 4f;
+        switch (CurPhase)
+        {
+            case ScottPhase.phase1:
+                SetActiveLHand(random);
+                SetActiveRHand(random);
+                WaitTime = 4f;
+                StartCoroutine(RockPaperScissorsAttack(random, WaitTime));
+                break;
+            case ScottPhase.phase2:
+                SetActiveLHand(random);
+                SetActiveRHand(random);
+                WaitTime = 3f;
+                StartCoroutine(RockPaperScissorsAttack(random, WaitTime));
+                break;
+            case ScottPhase.phase3:
+                SetActiveLHand(random);
+                SetActiveRHand(random);
+                WaitTime = 2f;
+                StartCoroutine(RockPaperScissorsAttack(random, WaitTime));
+                break;
+        }
+    }
+
     #endregion
 
     #region ActualAttackCode
@@ -388,6 +438,18 @@ public class ScottFightMainController : MonoBehaviour
         LHandBase.transform.localPosition = LHandStartPos;
         RHandBase.transform.localRotation = RHandStartRot;
         LHandBase.transform.localRotation = LHandStartRot;
+        yield return null;
+    }
+
+    IEnumerator RockPaperScissorsAttack(int AttackNum, float WaitTime)
+    {
+        var RPSPlayer = FindObjectOfType<Player>().GetComponent<Player>();
+        yield return new WaitForSeconds(WaitTime);
+        if ((RPSPlayer.CurrentAbility == RPSPlayer.GrappleAbility) && (AttackNum == 8)) {Debug.Log("Completed Grapple"); }
+        else if ((RPSPlayer.CurrentAbility == RPSPlayer.GunAbility) && (AttackNum == 9)) {Debug.Log("Completed Gun"); }
+        else if ((RPSPlayer.CurrentAbility == RPSPlayer.SlowFallAbility) && (AttackNum == 7)) {Debug.Log("Completed Umbrella"); }
+        else {RPSPlayer.recieveDamage(); Debug.Log("Failed All"); }
+        currentAttack = ScottAttack.DoNothing;
         yield return null;
     }
 
@@ -480,18 +542,11 @@ public class ScottFightMainController : MonoBehaviour
 
     IEnumerator HoldingAttack(GameObject attackingHand, float swingAngle, float swingSpeed)
     {
-        if(swingAngle < 0f)
-            for (int i = 0; i > swingAngle; i--)
-            {
-                attackingHand.transform.Rotate(0, 0, -1);
-                yield return new WaitForSeconds(swingSpeed);
-            }
-        else
-            for(int i = 0; i < swingAngle; i++)
-            {
-                attackingHand.transform.Rotate(0,0,1);
-                yield return new WaitForSeconds(swingSpeed);
-            }
+        //first it should go down to ground layer
+
+        //then raise up really quickly
+
+        //then hover in the air for a bit while something covers the ground and causes damage if touched
         
         yield return new WaitForSeconds(1f);
         currentAttack = ScottAttack.DoNothing;

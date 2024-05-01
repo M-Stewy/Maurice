@@ -19,6 +19,9 @@ public class StartOfScottShowdown : MonoBehaviour
     [SerializeField]
     GameObject BackGround;
 
+    [SerializeField] GameObject FightDeco;
+    [SerializeField] GameObject PreFightDeco;
+
     bool hasBeenTriggered = false;
     bool hasStopped;
     private void OnTriggerEnter2D(Collider2D collision)
@@ -57,6 +60,8 @@ public class StartOfScottShowdown : MonoBehaviour
         ScottHimSelf.GetComponent<ScottFightMainController>().StartFight(true);
         cam.GetComponent<CamFollowPlayer>().enabled = true;
         BackGround.gameObject.SetActive(true); 
+        FightDeco.gameObject.SetActive(true);
+        PreFightDeco.gameObject.SetActive(false);
     }
 
 

@@ -36,9 +36,9 @@ MonoBehaviour:
   GroundGravity: 1
   SlopeGravity: 3
   AirGravity: 5
-  SlowFallGravity: 0
+  SlowFallGravity: 2
   AllAbilitiesUnlocked: 0
-  DebugAbilitySwitching: 0
+  DebugAbilitySwitching: 1
   GrapplePointSprite: {fileID: -1157753459, guid: 632f041408473894da813718f6b2f9ab, type: 3}
   LaymaskGrapple:
     serializedVersion: 2
@@ -48,8 +48,8 @@ MonoBehaviour:
   GrappleDistance: 25
   playerBullet: {fileID: 7928200351476023610, guid: 765e767cab148b64bad829cb45569f71, type: 3}
   gunForce: 0
-  MaxShots: 14
-  AmmoLeft: 14
+  MaxShots: 7
+  AmmoLeft: 1
   BulletForce: 150
   AudioCutoffTime: 25
   JumpSFX: {fileID: 8300000, guid: ed7e5aeaecfa31145962605a4a4ec106, type: 3}
@@ -61,7 +61,8 @@ MonoBehaviour:
   CrouchWalkSFX: {fileID: 8300000, guid: f0ccea0903ee66749bcbf2b55cedc72b, type: 3}
   AirWooshSFX: {fileID: 8300000, guid: ad924480ccae1ff448d8b44be10488c5, type: 3}
   SwitchAbilitySFX: {fileID: 8300000, guid: cde39cb80bb701d45b55ee87d00bffec, type: 3}
-  UmbrellaSFX: {fileID: 0}
+  UmbrellaSFX: {fileID: 8300000, guid: 6fc74f1f8f5596043afe0a30b4d57a87, type: 3}
+  UmbrellaCloseSFX: {fileID: 8300000, guid: a651af21f04d7b544bdf0353c1f08acf, type: 3}
   ShootGunSFX: {fileID: 8300000, guid: 314e872175f430a418f7b1d40d5f9e0f, type: 3}
   EmptyGunSFX: {fileID: 8300000, guid: 5518035b049c6aa4fbd1e9df4bae96d0, type: 3}
   ShootGrappleSFX: {fileID: 8300000, guid: aae5f06f099542a4cbdfb2b72b5c7eb0, type: 3}

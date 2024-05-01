@@ -23,10 +23,14 @@ public class Player : MonoBehaviour
     //this is the important one that we use in the ability states to do stuff with
     public PlayerAbility CurrentAbility;
 
-    private PlayerAbility NoAbility;
-    private PlayerAbility GrappleAbility;
-    private PlayerAbility GunAbility;
-    private PlayerAbility SlowFallAbility;
+    [HideInInspector]
+    public PlayerAbility NoAbility;
+    [HideInInspector]
+    public PlayerAbility GrappleAbility;
+    [HideInInspector]
+    public PlayerAbility GunAbility;
+    [HideInInspector]
+    public PlayerAbility SlowFallAbility;
 
 
     //These are all the state scripts that the player can switch between

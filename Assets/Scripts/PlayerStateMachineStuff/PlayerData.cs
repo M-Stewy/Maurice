@@ -103,6 +103,7 @@ public class PlayerData : ScriptableObject
 
     public AudioClip SwitchAbilitySFX;
     public AudioClip UmbrellaSFX;
+    public AudioClip UmbrellaCloseSFX;
     public AudioClip ShootGunSFX;
     public AudioClip EmptyGunSFX;
     public AudioClip ShootGrappleSFX;
