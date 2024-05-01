@@ -18,6 +18,7 @@ MonoBehaviour:
     m_Bits: 8
   health: 1
   maxHealth: 1
+  immuneFrameTime: 160
   baseMoveSpeed: 15
   SprintSpeed: 30
   CrouchSpeed: 10
@@ -36,7 +37,8 @@ MonoBehaviour:
   SlopeGravity: 2
   AirGravity: 5
   SlowFallGravity: 0
-  AllAbilitiesUnlocked: 1
+  AllAbilitiesUnlocked: 0
+  DebugAbilitySwitching: 0
   GrapplePointSprite: {fileID: -1157753459, guid: 632f041408473894da813718f6b2f9ab, type: 3}
   LaymaskGrapple:
     serializedVersion: 2

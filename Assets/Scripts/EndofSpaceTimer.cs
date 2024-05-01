@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 /// <summary>
 /// Made by Stewy
 /// 
@@ -22,6 +23,9 @@ public class EndofSpaceTimer : MonoBehaviour
     [SerializeField]
     Sprite[] Numbers;
 
+    [SerializeField]
+    AudioClip Boom;
+
     private int minutes;
     private int seconds;
 
@@ -31,6 +35,7 @@ public class EndofSpaceTimer : MonoBehaviour
     private int secondsLeft;
 
     [SerializeField]  bool countingUp;
+    [SerializeField] bool BOOOMonZero;
     private Vector3 velocity = Vector3.zero;
     private void Start()
     {
@@ -48,6 +53,33 @@ public class EndofSpaceTimer : MonoBehaviour
         SetSprites();
 
         transform.position = Vector3.SmoothDamp(transform.position, FindObjectOfType<Camera>().transform.position - PositionOffset, ref velocity,0.001f);
+
+        if(secondsLeft <= 0 && BOOOMonZero)
+        {
+            AudioSource.PlayClipAtPoint(Boom, transform.position,Random.Range(.5f,1f));
+            AudioSource.PlayClipAtPoint(Boom, transform.position + new Vector3(Random.Range(-10,10), Random.Range(-1, 1), 0), Random.Range(.5f, 1f));
+            AudioSource.PlayClipAtPoint(Boom, transform.position + new Vector3(Random.Range(-1, 10), Random.Range(-5, 5), 0), Random.Range(.5f, 1f));
+            AudioSource.PlayClipAtPoint(Boom, transform.position + new Vector3(Random.Range(-5, 10), Random.Range(-2, 20), 0), Random.Range(.5f, 1f));
+            AudioSource.PlayClipAtPoint(Boom, transform.position + new Vector3(Random.Range(-10, 10), Random.Range(-5, 5), 0), Random.Range(.5f, 1f));
+            AudioSource.PlayClipAtPoint(Boom, transform.position + new Vector3(Random.Range(-1, 1), Random.Range(-1, 10), 0), Random.Range(.5f, 1f));
+            AudioSource.PlayClipAtPoint(Boom, transform.position + new Vector3(Random.Range(-5, 5), Random.Range(-1, 10), 0), Random.Range(.5f, 1f));
+            AudioSource.PlayClipAtPoint(Boom, transform.position + new Vector3(Random.Range(-2, 20), Random.Range(-1, 10), 0), Random.Range(.5f, 1f));
+            AudioSource.PlayClipAtPoint(Boom, transform.position + new Vector3(Random.Range(-5, 5), Random.Range(-10, 10), 0), Random.Range(.5f, 1f));
+            BOOOMonZero = false;
+            GameObject.FindWithTag("Lose").GetComponent<TitleScreenDisplay>().CallTitleDisplay();
+            if (FindObjectOfType<MusicManager>())
+            {
+                FindObjectOfType<MusicManager>().StopAllMusic();
+            }
+            StartCoroutine(wait(5));
+        }
+    }
+
+    IEnumerator wait(float num)
+    {
+        yield return new WaitForSeconds(num);
+        SceneManager.LoadScene("HubWorld");
+
     }
     IEnumerator CountDown(int timer)
     {

@@ -406,10 +406,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21aad0e00c0ed3d438ebb1a17666779e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movingSFX: {fileID: 0}
+  EndSFX: {fileID: 0}
+  pitchValue: 0
   point:
   - {fileID: 1268420321}
   - {fileID: 1001509402}
   moveSpeed: 0.1
+  returnSpeed: 0
+  NeedsPlayer: 0
+  Loop: 0
+  ignorePlayerCompletely: 0
+  useAudio: 0
+  dontPlayAudioOnReturn: 0
 --- !u!212 &112464781
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -952,7 +961,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &319269612
 Transform:
   m_ObjectHideFlags: 0
@@ -1324,6 +1333,8 @@ MonoBehaviour:
   PlayerTrans: {fileID: 1609939521}
   YOffset: 2.5
   timeOffSet: 0.11
+  displacement: 5
+  Ymultipler: 2
 --- !u!1 &546394009
 GameObject:
   m_ObjectHideFlags: 0
@@ -1574,10 +1585,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21aad0e00c0ed3d438ebb1a17666779e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movingSFX: {fileID: 0}
+  EndSFX: {fileID: 0}
+  pitchValue: 0
   point:
   - {fileID: 247264521}
   - {fileID: 1222605530}
   moveSpeed: 0.5
+  returnSpeed: 0
+  NeedsPlayer: 0
+  Loop: 0
+  ignorePlayerCompletely: 0
+  useAudio: 0
+  dontPlayAudioOnReturn: 0
 --- !u!212 &753539051
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2499,6 +2519,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2028646623}
   m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1307960152
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1307960154}
+  - component: {fileID: 1307960153}
+  m_Layer: 0
+  m_Name: ContollerTesting
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1307960153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1307960152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e62e9162dabe014aa5e3a0cdd31cef2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1307960154
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1307960152}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 707.301, y: -126.03939, z: -22.627117}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1485954810
 GameObject:
@@ -3488,7 +3552,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1906368680
 Transform:
   m_ObjectHideFlags: 0
@@ -3927,6 +3991,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player(2.0)
       objectReference: {fileID: 0}
+    - target: {fileID: 2231385190928464936, guid: 6c5cf27c87e14fc49828e7529488f829, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2231385190928464938, guid: 6c5cf27c87e14fc49828e7529488f829, type: 3}
       propertyPath: m_Size.y
       value: 2
@@ -3980,12 +4048,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2231385190928464982, guid: 6c5cf27c87e14fc49828e7529488f829, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2231385190928464982, guid: 6c5cf27c87e14fc49828e7529488f829, type: 3}
       propertyPath: GroundCheckFixer.x
       value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 2231385190928464982, guid: 6c5cf27c87e14fc49828e7529488f829, type: 3}
       propertyPath: GroundCheckFixer.y
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 2231385190928464982, guid: 6c5cf27c87e14fc49828e7529488f829, type: 3}
       propertyPath: GroundCheckFixer.z

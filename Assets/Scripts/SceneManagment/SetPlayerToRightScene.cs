@@ -18,7 +18,7 @@ public class SetPlayerToRightScene : MonoBehaviour
         if (collision.collider.CompareTag("Player")) 
         {
             //Debug.Log("Should be player to right layer?");
-            SceneManager.MoveGameObjectToScene(collision.gameObject, SceneManager.GetSceneByName(sceneToPutPlayerIn) );
+            //SceneManager.MoveGameObjectToScene(collision.gameObject, SceneManager.GetSceneByName(sceneToPutPlayerIn) );
         }
     }
 }
