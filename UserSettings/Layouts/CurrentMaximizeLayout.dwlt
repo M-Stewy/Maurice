@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 3074
+  controlID: 3845
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,7 +141,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 3075
+  controlID: 3846
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 3076
+  controlID: 3847
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -225,9 +225,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 9ab90000
-      m_LastClickedID: 47514
-      m_ExpandedIDs: 36e3ffff4ce8ffff2afbffffa86c0000d46c000070b1000074b1000060bd000064bd0000
+      m_SelectedIDs: e8770000
+      m_LastClickedID: 0
+      m_ExpandedIDs: eab9fffff2bfffff6cc1ffff58cdffff36e3ffff4ce8ffff2afbffffa86c0000d46c000070b1000074b1000060bd0000daed0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -364,7 +364,7 @@ MonoBehaviour:
       containerId: overlay-toolbar__top
       floating: 0
       collapsed: 0
-      displayed: 1
+      displayed: 0
       snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
@@ -698,21 +698,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes/StewysLevel
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 80
   m_LastFolders:
-  - Assets/Scenes/StewysLevel
+  - Assets/Scenes
   m_LastFoldersGridSize: 80
   m_LastProjectPath: E:\Unitythings\LCCC games and stuff\2D-Unity-Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 56}
-    m_SelectedIDs: e2770000
-    m_LastClickedID: 30690
+    m_SelectedIDs: ce770000
+    m_LastClickedID: 30670
     m_ExpandedIDs: 000000003e760000407600004276000044760000ce77000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -766,9 +766,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 9ab90000
-    m_LastClickedInstanceID: 47514
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: e8770000
+    m_LastClickedInstanceID: 30696
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300009466000026230200325f0100f0610000a6740000006200005288000030880000
     m_RenameOverlay:
       m_UserAcceptedRename: 0

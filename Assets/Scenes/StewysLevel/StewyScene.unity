@@ -321,7 +321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1166140b194a49a4c8ac55a8af53e2c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  titleTime: 5
+  titleTime: 10
   OnStart: 0
   UseAudio: 1
   shouldMuteMusic: 1
