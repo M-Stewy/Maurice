@@ -18,4 +18,9 @@ public class soundToggle : MonoBehaviour
             Debug.Log("Reached");
         }
     }
+
+    public void MuteMusic()
+    {
+        Audio.mute = true;
+    }
 }

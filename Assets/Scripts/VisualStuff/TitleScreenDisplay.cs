@@ -40,6 +40,10 @@ public class TitleScreenDisplay : MonoBehaviour
                 {
                     FindObjectOfType<MusicManager>().PauseMusicforSec(titleTime - 0.5f);
                 }
+                if(FindObjectOfType<soundToggle>()) 
+                {
+                    FindObjectOfType<soundToggle>().MuteMusic();
+                }
             }
         }
            
