@@ -14,10 +14,10 @@ public class BulletScript : MonoBehaviour
         {
             collision.transform.GetComponentInParent<ScottFightMainController>().ReceiveDamage();
         }
-        if (collision.transform.CompareTag("enemy"))
-        {
-            //  collision.transform.GetComponentInParent<WHERE YOU PUT THE NAME OF THE SCRIPT YOU MADE>().ReceiveDamage();
-        }
+     //   if (collision.transform.CompareTag("enemy"))
+     //   {
+     //        collision.transform.GetComponentInParent<WHERE YOU PUT THE NAME OF THE SCRIPT YOU MADE>().ReceiveDamage();
+     //   }
 
         Destroy(gameObject);
     }

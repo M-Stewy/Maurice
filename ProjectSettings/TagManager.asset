@@ -3,16 +3,29 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Hat
+  - Win
+  - Lose
+  - HatStart
+  - MusicManager
+  - Wall
+  - Ground
+  - DisableAtEnd
+  - Scott
+  - enemy
+  - GraplePoint
+  - Spawner
+  - Fence
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
-  - 
-  - 
+  - GrappleAble
+  - Player
   - 
   - 
   - 

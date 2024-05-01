@@ -60,8 +60,6 @@ public class Player : MonoBehaviour
     public PlayerData playerData;
 
 
-    [SerializeField] MusicManager musicManager;
-
     [HideInInspector]
     public Rigidbody2D rb;
     //[HideInInspector]
