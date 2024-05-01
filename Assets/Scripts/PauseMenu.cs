@@ -116,7 +116,7 @@ public class PauseMenu : MonoBehaviour
 
     public void TutorialBack()
     {
-        Debug.Log("Reached");
+        //Debug.Log("Reached");
         TheTutorial.SetActive(false);
         Xbox.SetActive(false);
         PS.SetActive(false);

@@ -16,7 +16,7 @@ MonoBehaviour:
   GroundLayer:
     serializedVersion: 2
     m_Bits: 8
-  health: 4
+  health: 1
   maxHealth: 1
   immuneFrameTime: 160
   baseMoveSpeed: 30
@@ -43,7 +43,7 @@ MonoBehaviour:
   LaymaskGrapple:
     serializedVersion: 2
     m_Bits: 72
-  GrappleReelSpeed: 15
+  GrappleReelSpeed: 12
   GrappleSwingSpeed: 50
   GrappleDistance: 30
   playerBullet: {fileID: 7928200351476023610, guid: 765e767cab148b64bad829cb45569f71, type: 3}
