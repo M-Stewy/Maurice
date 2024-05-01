@@ -37,7 +37,7 @@ public class PauseMenu : MonoBehaviour
             
         if (FindObjectOfType<PlayerInputHandler>().isXbox)
         {
-            Debug.Log("PAUSE: XboxGet");
+            //Debug.Log("PAUSE: XboxGet");
             if (Input.GetKeyDown(KeyCode.Joystick1Button7) /*Put controller input here aswell*/)
                         {
                             if (!isPaused)

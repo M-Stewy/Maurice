@@ -14,6 +14,7 @@ public class SceneChange : MonoBehaviour
     public float standardypos = -3.925f;
     public GameObject Capsule;
     public GameObject positionTracker;
+    public GameObject JebEnd;
 
     private void Awake()
     {
@@ -57,9 +58,11 @@ public class SceneChange : MonoBehaviour
                 else if (SceneManager.GetActiveScene().name.ToString() == "JebScene")
                 {
                     GameObject.FindWithTag("Respawn").GetComponent<positionTracker>().JebDone = true;
+                    //StartCoroutine(JebEndWait());
                 }
+                    
                 GameObject.FindWithTag("Win").GetComponent<TitleScreenDisplay>().CallTitleDisplay();
-                StartCoroutine(wait(5));
+                StartCoroutine(wait(4));
                 //SceneManager.LoadScene("hubWorld");
             }
             else if (other.name == "NikoScene")
@@ -80,7 +83,7 @@ public class SceneChange : MonoBehaviour
             }
             else if (other.name == "SuperSecertScottShowdown")
             {
-                if (positionTracker.GetComponent<positionTracker>().KyleDone == true && positionTracker.GetComponent<positionTracker>().NikoDone == true && positionTracker.GetComponent<positionTracker>().StewyDone == true && positionTracker.GetComponent<positionTracker>().JebDone == true)
+                if (/*positionTracker.GetComponent<positionTracker>().KyleDone == true &&*/ positionTracker.GetComponent<positionTracker>().NikoDone == true && positionTracker.GetComponent<positionTracker>().StewyDone == true && positionTracker.GetComponent<positionTracker>().JebDone == true)
                 {
                     SceneManager.LoadScene("SuperSecertScottShowdown");
                 }
@@ -95,5 +98,13 @@ public class SceneChange : MonoBehaviour
         yield return new WaitForSeconds(num);
         SceneManager.LoadScene("hubWorld");
     }
+
+    /*IEnumerator JebEndWait() {
+        //GameObject.FindWithTag("DisableAtEnd").SetActive(false);
+        JebEnd.SetActive(true);
+        yield return new WaitForSeconds(3f);
+        JebEnd.SetActive(false);
+        GameObject.FindWithTag("MainCamera").GetComponent<CamFollowPlayer>().PlayerTrans = JebEnd.transform;
+    }*/
 
 }
