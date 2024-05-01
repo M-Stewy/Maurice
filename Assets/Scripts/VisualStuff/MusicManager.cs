@@ -142,4 +142,13 @@ public class MusicManager : MonoBehaviour
 
         return -1;
     }
+
+
+    public void StopAllMusic()
+    {
+        foreach(var source in MusicSource)
+        {
+            source.Stop();
+        }
+    }
 }

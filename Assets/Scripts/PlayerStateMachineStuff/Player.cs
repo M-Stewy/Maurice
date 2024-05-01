@@ -56,7 +56,7 @@ public class Player : MonoBehaviour
     public PlayerData playerData;
 
 
-
+    [SerializeField] MusicManager musicManager;
 
     [HideInInspector]
     public Rigidbody2D rb;
@@ -459,6 +459,10 @@ public class Player : MonoBehaviour
         }
         else
         {
+            if (FindObjectOfType<MusicManager>())
+            {
+                FindObjectOfType<MusicManager>().StopAllMusic();
+            }
             GameObject.FindWithTag("Lose").GetComponent<TitleScreenDisplay>().CallTitleDisplay();
             StartCoroutine(wait(5));
         }
@@ -491,6 +495,7 @@ public class Player : MonoBehaviour
 
     public void RemoveInput(float time)
     {
+        rb.velocity = new Vector2(0, 0);
         StartCoroutine(StopAllInputs(time));
     }
     IEnumerator StopAllInputs(float time)

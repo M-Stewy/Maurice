@@ -23,6 +23,9 @@ public class EndofSpaceTimer : MonoBehaviour
     [SerializeField]
     Sprite[] Numbers;
 
+    [SerializeField]
+    AudioClip Boom;
+
     private int minutes;
     private int seconds;
 
@@ -53,8 +56,21 @@ public class EndofSpaceTimer : MonoBehaviour
 
         if(secondsLeft <= 0 && BOOOMonZero)
         {
+            AudioSource.PlayClipAtPoint(Boom, transform.position,Random.Range(.5f,1f));
+            AudioSource.PlayClipAtPoint(Boom, transform.position + new Vector3(Random.Range(-10,10), Random.Range(-1, 1), 0), Random.Range(.5f, 1f));
+            AudioSource.PlayClipAtPoint(Boom, transform.position + new Vector3(Random.Range(-1, 10), Random.Range(-5, 5), 0), Random.Range(.5f, 1f));
+            AudioSource.PlayClipAtPoint(Boom, transform.position + new Vector3(Random.Range(-5, 10), Random.Range(-2, 20), 0), Random.Range(.5f, 1f));
+            AudioSource.PlayClipAtPoint(Boom, transform.position + new Vector3(Random.Range(-10, 10), Random.Range(-5, 5), 0), Random.Range(.5f, 1f));
+            AudioSource.PlayClipAtPoint(Boom, transform.position + new Vector3(Random.Range(-1, 1), Random.Range(-1, 10), 0), Random.Range(.5f, 1f));
+            AudioSource.PlayClipAtPoint(Boom, transform.position + new Vector3(Random.Range(-5, 5), Random.Range(-1, 10), 0), Random.Range(.5f, 1f));
+            AudioSource.PlayClipAtPoint(Boom, transform.position + new Vector3(Random.Range(-2, 20), Random.Range(-1, 10), 0), Random.Range(.5f, 1f));
+            AudioSource.PlayClipAtPoint(Boom, transform.position + new Vector3(Random.Range(-5, 5), Random.Range(-10, 10), 0), Random.Range(.5f, 1f));
             BOOOMonZero = false;
             GameObject.FindWithTag("Lose").GetComponent<TitleScreenDisplay>().CallTitleDisplay();
+            if (FindObjectOfType<MusicManager>())
+            {
+                FindObjectOfType<MusicManager>().StopAllMusic();
+            }
             StartCoroutine(wait(5));
         }
     }
