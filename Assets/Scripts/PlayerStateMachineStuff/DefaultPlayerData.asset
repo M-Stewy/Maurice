@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c76d136c291a448b3d6eecc561d63c, type: 3}
   m_Name: DefaultPlayerData
   m_EditorClassIdentifier: 
-  isFacingRight: 0
+  isFacingRight: 1
   GroundLayer:
     serializedVersion: 2
     m_Bits: 8
-  health: 1
+  health: 2
   maxHealth: 1
   immuneFrameTime: 160
   baseMoveSpeed: 15
@@ -31,7 +31,7 @@ MonoBehaviour:
   SlopeDrag: 0.001
   AirDrag: 0.75
   SlideDrag: 0.5
-  IdleDrag: 5
+  IdleDrag: 10
   SlowFallDrag: 3
   GroundGravity: 1
   SlopeGravity: 2

@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 7547887876066538228}
   - component: {fileID: 6134525077563933058}
   - component: {fileID: 5455772594594846872}
-  - component: {fileID: -4480105301483593840}
+  - component: {fileID: 5252045021309960512}
+  - component: {fileID: 7951118773197339597}
   m_Layer: 0
   m_Name: PlayersBullet
   m_TagString: Untagged
@@ -55,7 +56,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_Sprite: {fileID: -1619586968, guid: 431dded4e74128449bd0f13ebfc663eb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -124,7 +125,20 @@ CircleCollider2D:
   m_Offset: {x: -0.035217192, y: 0.027264774}
   serializedVersion: 2
   m_Radius: 0.14214846
---- !u!114 &-4480105301483593840
+--- !u!114 &5252045021309960512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7928200351476023610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c9824c858ed1114692c3ae7f8297f7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 1
+--- !u!114 &7951118773197339597
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -90,7 +90,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -135,19 +135,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerData: {fileID: 11400000, guid: 67f5bc9b85e0a214d9f8a9a7e6474239, type: 2}
-  Laymask:
-    serializedVersion: 2
-    m_Bits: 8
   rb: {fileID: 2231385190928464939}
   cc: {fileID: 2231385190928464938}
   dj: {fileID: 0}
   hand: {fileID: 0}
   lr: {fileID: 0}
+  audioS: {fileID: 0}
+  HandAudioS: {fileID: 0}
+  DamageAudioS: {fileID: 0}
   anim: {fileID: 0}
+  CurrentClip: {fileID: 0}
   isGrounded: 0
   isOnSlope: 0
   GroundCheckFixer: {x: 0.3, y: 1.5, z: 0}
   GroundCheckOffset: {x: 0, y: 1, z: 0}
+  immuneFrames: 0
 --- !u!70 &2231385190928464938
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -197,18 +199,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe9fd0844a0e59e4891141d02b1daa09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isXbox: 0
+  isPS: 0
   moveDir: {x: 0, y: 0}
   moveDirRaw: {x: 0, y: 0}
   mouseScreenPos: {x: 0, y: 0, z: 0}
   _mousePos: {x: 0, y: 0, z: 0}
+  _ControllerPos: {x: 0, y: 0, z: 0}
   HoldingJump: 0
   holdingCrouch: 0
   holdingSprint: 0
   HoldingUp: 0
   HoldingDown: 0
   PressedJump: 0
+  PressedCrouch: 0
   PressedAbility1: 0
   PressedAbility2: 0
+  HoldingAbility1: 0
   SwitchAbilityUp: 0
   SwitchAbilityDown: 0
 --- !u!232 &2231385190928464977
