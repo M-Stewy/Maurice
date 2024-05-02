@@ -15,6 +15,7 @@ TagManager:
   - Lose
   - Win
   - Wall
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -24,7 +25,7 @@ TagManager:
   - UI
   - GrappleAble
   - Player
-  - 
+  - Object
   - 
   - 
   - 

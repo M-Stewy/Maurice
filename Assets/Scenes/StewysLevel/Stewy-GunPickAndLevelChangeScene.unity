@@ -176,7 +176,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -28246,6 +28246,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21aad0e00c0ed3d438ebb1a17666779e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movingSFX: {fileID: 0}
+  EndSFX: {fileID: 0}
+  pitchValue: 0
   point:
   - {fileID: 1092652446}
   moveSpeed: 0
@@ -28253,6 +28256,8 @@ MonoBehaviour:
   NeedsPlayer: 1
   Loop: 1
   ignorePlayerCompletely: 0
+  useAudio: 0
+  dontPlayAudioOnReturn: 0
 --- !u!50 &1092652449
 Rigidbody2D:
   serializedVersion: 4
@@ -28320,7 +28325,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -29736,7 +29741,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -76200,7 +76205,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
