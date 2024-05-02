@@ -467,13 +467,14 @@ public class Player : MonoBehaviour
         if (immuneFrames) return;
 
         DamageAudioS.PlayOneShot(playerData.HitSFX);
-        StartCoroutine(IFrames() );
         if (playerData.health - 1 != 0)
         {
+            StartCoroutine(IFrames());
             playerData.health = playerData.health - 1;
         }
         else
         {
+            immuneFrames = true;
             if (FindObjectOfType<MusicManager>())
             {
                 FindObjectOfType<MusicManager>().StopAllMusic();
@@ -486,6 +487,7 @@ public class Player : MonoBehaviour
             StartCoroutine(wait(5));
         }
     }
+   
     IEnumerator IFrames()
     {
         yield return new WaitForSeconds(0.0001f);

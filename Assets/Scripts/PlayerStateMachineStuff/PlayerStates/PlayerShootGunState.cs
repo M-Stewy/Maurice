@@ -65,7 +65,7 @@ public class PlayerShootGunState : PlayerState
     private void Shoot()
     {
         player.AbiltySoundEffect(playerData.ShootGunSFX);
-        Debug.Log(bulletSpawnPoint);
+        //Debug.Log(bulletSpawnPoint);
         player.hand.GetComponent<PlayerGunScript>().ShootBullet(playerData.playerBullet, bulletSpawnPoint, Quaternion.identity, direction.normalized * playerData.BulletForce);
         player.rb.AddForce(-direction * playerData.gunForce,ForceMode2D.Impulse);
         playerData.AmmoLeft--;

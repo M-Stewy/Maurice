@@ -18,7 +18,8 @@ public class AmmoPickUp : MonoBehaviour
            //AudioSource.PlayOneShot(SoundClip);
             AudioSource.PlayClipAtPoint(SoundClip, transform.position);
             collision.GetComponent<Player>().ResetAmmo();
-            FindObjectOfType<AmmoSpawner>().PickedUp();
+            if(FindObjectOfType<AmmoSpawner>())
+                FindObjectOfType<AmmoSpawner>().PickedUp();
             Destroy(gameObject);
         }
     }

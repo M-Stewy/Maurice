@@ -8,6 +8,8 @@ using UnityEngine.XR;
 
 public class SceneChange : MonoBehaviour
 {
+    private bool CanAcessesKyleScene = false;
+
 
     public float xpos = 0;
     public float ypos = 0;
@@ -30,6 +32,10 @@ public class SceneChange : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
+        if (Input.GetKey(KeyCode.K) && Input.GetKey(KeyCode.Y) && Input.GetKey(KeyCode.L)) CanAcessesKyleScene = true;
+        
+
+
         //Debug.Log("Triggered");
         if (Input.GetKey(KeyCode.E) || Input.GetKey(KeyCode.Joystick1Button3))
         {
@@ -75,7 +81,10 @@ public class SceneChange : MonoBehaviour
             }
             else if (other.name == "KyleScene")
             {
-                SceneManager.LoadScene("KyleScene");
+                if(CanAcessesKyleScene)
+                    SceneManager.LoadScene("KyleScene");
+                else
+                    GameObject.FindGameObjectWithTag("Error Noise Thing").GetComponent<AudioSource>().Play();
             }
             else if (other.name == "JebScene")
             {
@@ -86,6 +95,9 @@ public class SceneChange : MonoBehaviour
                 if (/*positionTracker.GetComponent<positionTracker>().KyleDone == true &&*/ positionTracker.GetComponent<positionTracker>().NikoDone == true && positionTracker.GetComponent<positionTracker>().StewyDone == true && positionTracker.GetComponent<positionTracker>().JebDone == true)
                 {
                     SceneManager.LoadScene("SuperSecertScottShowdown");
+                }else
+                {
+                    GameObject.FindGameObjectWithTag("Error Noise Thing").GetComponent<AudioSource>().Play(); // I just thought this would be fun :)
                 }
                 
             }
