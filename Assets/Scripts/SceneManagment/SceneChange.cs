@@ -94,7 +94,7 @@ public class SceneChange : MonoBehaviour
             {
                 if (/*positionTracker.GetComponent<positionTracker>().KyleDone == true &&*/ positionTracker.GetComponent<positionTracker>().NikoDone == true && positionTracker.GetComponent<positionTracker>().StewyDone == true && positionTracker.GetComponent<positionTracker>().JebDone == true)
                 {
-                    SceneManager.LoadScene("SuperSecertScottShowdown");
+                   // SceneManager.LoadScene("SuperSecertScottShowdown"); //UnComment This Later
                 }else
                 {
                     GameObject.FindGameObjectWithTag("Error Noise Thing").GetComponent<AudioSource>().Play(); // I just thought this would be fun :)
