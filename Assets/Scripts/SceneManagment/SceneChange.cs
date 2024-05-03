@@ -64,7 +64,7 @@ public class SceneChange : MonoBehaviour
                 else if (SceneManager.GetActiveScene().name.ToString() == "JebScene")
                 {
                     GameObject.FindWithTag("Respawn").GetComponent<positionTracker>().JebDone = true;
-                    //StartCoroutine(JebEndWait());
+                    StartCoroutine(JebEndWait());
                 }
                     
                 GameObject.FindWithTag("Win").GetComponent<TitleScreenDisplay>().CallTitleDisplay();
@@ -111,12 +111,12 @@ public class SceneChange : MonoBehaviour
         SceneManager.LoadScene("hubWorld");
     }
 
-    /*IEnumerator JebEndWait() {
+    IEnumerator JebEndWait() {
         //GameObject.FindWithTag("DisableAtEnd").SetActive(false);
         JebEnd.SetActive(true);
         yield return new WaitForSeconds(3f);
         JebEnd.SetActive(false);
         GameObject.FindWithTag("MainCamera").GetComponent<CamFollowPlayer>().PlayerTrans = JebEnd.transform;
-    }*/
+    }
 
 }
