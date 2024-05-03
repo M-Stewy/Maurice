@@ -115,8 +115,19 @@ public class PlayerGrapplingState : PlayerState
             {
                 player.StopAudioFile(playerData.AirWooshSFX);
             }
-        
-        
+
+        if (!isTouchingaGrapplePoint())
+        {
+            DestoryGrapPoints();
+            playerStateMachine.ChangeState(player.inAirState);
+        }
+    }
+
+    bool isTouchingaGrapplePoint()
+    {
+       if(GameObject.FindWithTag("GraplePoint"))
+        return Physics2D.CircleCast(graple.GetComponent<CircleCollider2D>().bounds.center, graple.GetComponent<CircleCollider2D>().bounds.extents.x , graple.transform.up, GrapHitAble);
+       return false;
     }
 
     //I know this is terrible right now but Ill make it better... (probably not)
@@ -160,6 +171,9 @@ public class PlayerGrapplingState : PlayerState
         graple.AddComponent<SpriteRenderer>();
         graple.GetComponent<SpriteRenderer>().sprite = playerData.GrapplePointSprite;
         graple.GetComponent<SpriteRenderer>().sortingOrder = 15;
+        graple.AddComponent<CircleCollider2D>();
+        graple.GetComponent<CircleCollider2D>().isTrigger = true;
+        graple.GetComponent<CircleCollider2D>().radius = .5f;
         graple.transform.position = point;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         graple.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);

@@ -363,7 +363,7 @@ public class ScottFightMainController : MonoBehaviour
             case ScottPhase.phase1:
                 SetActiveLHand(5);
                 SetActiveRHand(5);
-                StartCoroutine(HoldingAttack(RHandBase, 165, .0001f));
+                StartCoroutine(HoldingAttack(RHandBase, 5, 1f));
                 break;
             case ScottPhase.phase2:
                 SetActiveLHand(5);
@@ -540,14 +540,31 @@ public class ScottFightMainController : MonoBehaviour
         exitCurrent = true; 
     }
 
-    IEnumerator HoldingAttack(GameObject attackingHand, float swingAngle, float swingSpeed)
+    IEnumerator HoldingAttack(GameObject attackingHand, float attkTime, float attkSpeed)
     {
         //first it should go down to ground layer
+        Vector3 floorPos = GameObject.FindGameObjectWithTag("Wall").transform.position;
+        yield return new WaitForSeconds(0.5f);
 
-        //then raise up really quickly
+        while (attackingHand.transform.position.y > floorPos.y)
+        {
+            attackingHand.transform.position -= new Vector3(0, attkSpeed/10, 0);
+            yield return new WaitForSeconds(1 / (attkTime * 100));
+        }
 
-        //then hover in the air for a bit while something covers the ground and causes damage if touched
+        while (attackingHand.transform.position.y < floorPos.y + 20)
+        {
+            Debug.Log("Should be going up?");
+            attackingHand.transform.position += new Vector3(0, attkSpeed, 0);
+            yield return new WaitForSeconds(1 / (attkTime * 1000));
+        }   //then raise up really quickly
+
+        GameObject.FindWithTag("Fence").transform.GetChild(0).gameObject.SetActive(true);
+            yield return new WaitForSeconds(attkTime * 2);
+        GameObject.FindWithTag("Fence").transform.GetChild(0).gameObject.SetActive(false);
         
+        //then hover in the air for a bit while something covers the ground and causes damage if touched
+
         yield return new WaitForSeconds(1f);
         currentAttack = ScottAttack.DoNothing;
     }
