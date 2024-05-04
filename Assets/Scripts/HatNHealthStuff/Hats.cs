@@ -10,6 +10,7 @@ public class Hats : MonoBehaviour
 {
     public UnityEvent addHealth;
     [SerializeField] AudioClip pickUpSFX;
+    [SerializeField] bool isPreFab;
     
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -17,7 +18,10 @@ public class Hats : MonoBehaviour
         {
             AudioSource.PlayClipAtPoint(pickUpSFX, transform.position);
             GameObject.FindWithTag("Player").GetComponent<Player>().recieveHealth();
-            addHealth.Invoke();
+            if(isPreFab)
+                GameObject.FindWithTag("Player").GetComponentInChildren<addHats>().recieveHat();
+            else
+                addHealth.Invoke();
             Destroy(gameObject);
         }
     }

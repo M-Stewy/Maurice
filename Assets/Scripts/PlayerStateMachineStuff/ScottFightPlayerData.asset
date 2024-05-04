@@ -16,7 +16,7 @@ MonoBehaviour:
   GroundLayer:
     serializedVersion: 2
     m_Bits: 8
-  health: 1
+  health: 3
   maxHealth: 1
   immuneFrameTime: 160
   baseMoveSpeed: 20
@@ -32,13 +32,13 @@ MonoBehaviour:
   AirDrag: 0.65
   SlideDrag: 0.001
   IdleDrag: 6
-  SlowFallDrag: 3
+  SlowFallDrag: 2.5
   GroundGravity: 1
   SlopeGravity: 3
   AirGravity: 5
   SlowFallGravity: 2
   AllAbilitiesUnlocked: 0
-  DebugAbilitySwitching: 1
+  DebugAbilitySwitching: 0
   GrapplePointSprite: {fileID: -1157753459, guid: 632f041408473894da813718f6b2f9ab, type: 3}
   LaymaskGrapple:
     serializedVersion: 2
@@ -72,4 +72,4 @@ MonoBehaviour:
   CrouchSize: {x: 0.85, y: 0.65}
   NormalOffset: {x: -0.27, y: -0.35}
   NormalSize: {x: 0.85, y: 1.31}
-  ShowEnterStateInConsole: 1
+  ShowEnterStateInConsole: 0
