@@ -508,7 +508,6 @@ public class Player : MonoBehaviour
     /// <param name="time"></param>
     public void RemoveInputAndAudio(float time)
     {
-        PSM.ChangeState(idleState);
         rb.velocity = new Vector2(0, 0);
         StopAllAudio(time);
         RemoveInput(time);
@@ -521,7 +520,10 @@ public class Player : MonoBehaviour
     }
     IEnumerator StopAllInputs(float time)
     {
+        GetComponent<PlayerInputHandler>().setAllToZero();
         GetComponent<PlayerInputHandler>().enabled = false;
+        PSM.ChangeState(idleState);
+        rb.velocity = new Vector2(0, 0);
         yield return new WaitForSeconds(time);
         GetComponent<PlayerInputHandler>().enabled = true;
     }

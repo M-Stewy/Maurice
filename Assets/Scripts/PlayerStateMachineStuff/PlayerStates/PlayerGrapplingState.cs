@@ -120,6 +120,7 @@ public class PlayerGrapplingState : PlayerState
         {
             DestoryGrapPoints();
             playerStateMachine.ChangeState(player.inAirState);
+            Object.Destroy(GameObject.FindWithTag("GraplePoint"));
         }
     }
 

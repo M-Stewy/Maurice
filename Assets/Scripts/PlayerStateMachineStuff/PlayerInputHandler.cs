@@ -439,4 +439,27 @@ public class PlayerInputHandler : MonoBehaviour
     }
 
 
+    public void setAllToZero()
+    {
+        HoldingJump = false;
+        holdingCrouch = false;
+        holdingSprint = false;
+        HoldingUp = false;
+        HoldingDown = false;
+        PressedJump = false;
+        PressedCrouch = false;
+        PressedAbility1 = false;
+        PressedAbility2 = false;
+        HoldingAbility1 = false; 
+        SwitchAbilityUp = false;
+        SwitchAbilityDown = false;
+        switchAbiltiyPressed = false;
+        SwitchAbilityUpC = false;
+        SwitchAbilityDownC = false;
+
+        moveDir = Vector2.zero;
+        moveDirRaw = Vector2.zero;
+    }
+
+
 }

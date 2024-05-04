@@ -542,7 +542,7 @@ public class ScottFightMainController : MonoBehaviour
 
     IEnumerator HoldingAttack(GameObject attackingHand, float attkTime, float attkSpeed)
     {
-        //first it should go down to ground layer
+            //first it should go down to ground layer
         Vector3 floorPos = GameObject.FindGameObjectWithTag("Wall").transform.position;
         yield return new WaitForSeconds(0.5f);
 
@@ -551,19 +551,20 @@ public class ScottFightMainController : MonoBehaviour
             attackingHand.transform.position -= new Vector3(0, attkSpeed/10, 0);
             yield return new WaitForSeconds(1 / (attkTime * 100));
         }
-
+            //then raise up really quickly
         while (attackingHand.transform.position.y < floorPos.y + 20)
         {
             Debug.Log("Should be going up?");
             attackingHand.transform.position += new Vector3(0, attkSpeed, 0);
             yield return new WaitForSeconds(1 / (attkTime * 1000));
-        }   //then raise up really quickly
-
+        }
+            //then hover in the air for a bit while something covers the ground and causes damage if touched
+        yield return new WaitForSeconds( 10 / attkTime); 
         GameObject.FindWithTag("Fence").transform.GetChild(0).gameObject.SetActive(true);
             yield return new WaitForSeconds(attkTime * 2);
         GameObject.FindWithTag("Fence").transform.GetChild(0).gameObject.SetActive(false);
         
-        //then hover in the air for a bit while something covers the ground and causes damage if touched
+       
 
         yield return new WaitForSeconds(1f);
         currentAttack = ScottAttack.DoNothing;
