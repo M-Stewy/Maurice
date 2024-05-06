@@ -26,7 +26,9 @@ public class ScottFightMainController : MonoBehaviour
     [Header("Scott Sounds")]
     [SerializeField]
     AudioClip[] ScottHurtSounds;
+    [SerializeField]
     AudioClip[] HappyScottNoises;
+    [SerializeField]
     AudioClip[] SadScottNoises;
 
 
@@ -66,6 +68,8 @@ public class ScottFightMainController : MonoBehaviour
 
     bool currentlyAttacking;
     bool isDead;
+
+    private float chanceAtSheild;
 
     AudioSource ass;
 
@@ -157,6 +161,7 @@ public class ScottFightMainController : MonoBehaviour
     }
    
     #region Basic Utilities
+            // --------------------------------------------- Basic Utilis ----------------------------------------------------
     Vector3 velocity = Vector3.zero;
     void GoToPlayer()
     {
@@ -227,27 +232,43 @@ public class ScottFightMainController : MonoBehaviour
         if(FightStarted)
         {
             currentAttack = ScottAttack.DoNothing;
+            HeadAnimStateSetter(true);
         }
         else
         {
+            HeadAnimStateSetter(false);
             currentAttack = ScottAttack.StartIdle;
         }
     }
+
+    private void SetCurrentHead(int headIndexNum)
+    {
+        foreach (var head in ScottHeads)
+        {
+            head.SetActive(false);
+        }
+        ScottHeads[headIndexNum].SetActive(true);
+    }
+    // ------------------------------------- Basic Utilis ---------------------------------------------------------
     #endregion
 
     #region Boss Health Stuff
+            // ---------------------------------------------------- Boss Health Stuff --------------------------------------------------------------
     void PhaseChange()
     {
         if (health >= 10)
         {
+            chanceAtSheild = 5;
             currentPhase = ScottPhase.phase1;
         }
         else if (health >= 5)
         {
+            chanceAtSheild = 2.5f;
             currentPhase = ScottPhase.phase2;
         }
         else if (health > 0)
         {
+            chanceAtSheild = 1;
             currentPhase = ScottPhase.phase3;
         }
         else currentPhase = ScottPhase.Dead;
@@ -255,13 +276,16 @@ public class ScottFightMainController : MonoBehaviour
 
     public void ReceiveDamage()
     {
+        if (currentPhase == ScottPhase.Dead) return;
         ass.PlayOneShot(ScottHurtSounds[Random.Range(0,ScottHurtSounds.Length)]);
         health--;
         PhaseChange();
+        StartCoroutine(JustHurt(chanceAtSheild / Random.Range(5,10)));
     }
 
     void DeathCutSceneStart()
     {
+        HeadAnimStateSetter(false);
         SetActiveRHand(6);
         SetActiveLHand(6);
         Debug.Log("Bleh xP");
@@ -279,8 +303,40 @@ public class ScottFightMainController : MonoBehaviour
         ScottFuckingDies_SAD_.Invoke();
         yield return null;
     }
+    // ----------------------------------------------- End Health Stuff ------------------------------------------------------------
+    #endregion
+
+    #region HeadStateStuff
+    
+    IEnumerator ChangeToShield(float time)
+    {
+        HeadAnimStateSetter(false);
+        SetCurrentHead(1);
+        yield return new WaitForSeconds(time);
+        SetCurrentHead(0);
+        HeadAnimStateSetter(true);
+    }
+
+    IEnumerator JustHurt(float timer)
+    {
+        HeadAnimStateSetter(false);
+        SetCurrentHead(5);
+        yield return new WaitForSeconds(timer);
+        if (Random.Range(0, chanceAtSheild) < 1)
+            StartCoroutine(ChangeToShield(timer * 10));
+        else
+            SetCurrentHead(0);
+
+        HeadAnimStateSetter(true);
+    }
+
+    void HeadAnimStateSetter(bool YN)
+    {
+        Head.GetComponent<Animator>().SetBool("On", YN);
+    }
 
     #endregion
+
 
     #region SetUp For Attacks
     void SlamHandAttack(ScottPhase CurPhase)
@@ -572,4 +628,6 @@ public class ScottFightMainController : MonoBehaviour
 
 
     #endregion
+
+
 }
