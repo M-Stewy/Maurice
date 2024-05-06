@@ -93,7 +93,8 @@ public class ScottFightMainController : MonoBehaviour
         RockPaperScissors
     }
 
-
+    #region Start and Update
+        // --------------------------------- Start and Update -----------------------------------------------------------
     private void Start()
     {
         health = scottStartHealth;
@@ -159,9 +160,11 @@ public class ScottFightMainController : MonoBehaviour
             StartCoroutine(BetweenAttacks(1.5f));
         }
     }
-   
+    // --------------------------------- End Start and Update -----------------------------------------------------------
+    #endregion
+
     #region Basic Utilities
-            // --------------------------------------------- Basic Utilis ----------------------------------------------------
+    // --------------------------------------------- Basic Utilis ----------------------------------------------------
     Vector3 velocity = Vector3.zero;
     void GoToPlayer()
     {
@@ -340,8 +343,8 @@ public class ScottFightMainController : MonoBehaviour
         // ----------------------------------------------- End Head State Stuff ------------------------------------------------------------
     #endregion
 
-
     #region SetUp For Attacks
+        // ----------------------------------------- Attck Setup -----------------------------------------------
     void SlamHandAttack(ScottPhase CurPhase)
     {
         switch (CurPhase)
@@ -415,24 +418,24 @@ public class ScottFightMainController : MonoBehaviour
         }
     }
 
-    void HoldingItemAttack(ScottPhase CurPhase) //currently non-operational
+    void HoldingItemAttack(ScottPhase CurPhase) //technically works, might need to adjust a bit
     {
         switch (CurPhase)
         {
             case ScottPhase.phase1:
                 SetActiveLHand(5);
-                SetActiveRHand(5);
+                SetActiveRHand(0);
                 StartCoroutine(HoldingAttack(RHandBase, 5, 1f));
                 break;
             case ScottPhase.phase2:
                 SetActiveLHand(5);
-                SetActiveRHand(5);
-                
+                SetActiveRHand(0);
+                StartCoroutine(HoldingAttack(RHandBase, 3.75f, 1f));
                 break;
             case ScottPhase.phase3:
                 SetActiveLHand(5);
-                SetActiveRHand(5);
-
+                SetActiveRHand(0);
+                StartCoroutine(HoldingAttack(RHandBase, 2.5f, 1f));
                 break;
         }
     }
@@ -486,11 +489,11 @@ public class ScottFightMainController : MonoBehaviour
                 break;
         }
     }
-
+    // ----------------------------------------- Attck Setup -----------------------------------------------
     #endregion
 
     #region ActualAttackCode
-
+    // ----------------------------------------- Attck Main Code -----------------------------------------------
     IEnumerator BackToIdle()
     {
         RHandBase.transform.localPosition = RHandStartPos;
@@ -504,10 +507,22 @@ public class ScottFightMainController : MonoBehaviour
     {
         var RPSPlayer = FindObjectOfType<Player>().GetComponent<Player>();
         yield return new WaitForSeconds(WaitTime);
-        if ((RPSPlayer.CurrentAbility == RPSPlayer.GrappleAbility) && (AttackNum == 8)) {Debug.Log("Completed Grapple"); }
-        else if ((RPSPlayer.CurrentAbility == RPSPlayer.GunAbility) && (AttackNum == 9)) {Debug.Log("Completed Gun"); }
-        else if ((RPSPlayer.CurrentAbility == RPSPlayer.SlowFallAbility) && (AttackNum == 7)) {Debug.Log("Completed Umbrella"); }
-        else {RPSPlayer.recieveDamage(); Debug.Log("Failed All"); }
+        if ((RPSPlayer.CurrentAbility == RPSPlayer.GrappleAbility) && (AttackNum == 8)) {
+            Debug.Log("Completed Grapple");
+            ass.PlayOneShot(HappyScottNoises[Random.Range(0,HappyScottNoises.Length)]);
+        }
+        else if ((RPSPlayer.CurrentAbility == RPSPlayer.GunAbility) && (AttackNum == 9)) {
+            Debug.Log("Completed Gun");
+            ass.PlayOneShot(HappyScottNoises[Random.Range(0, HappyScottNoises.Length)]);
+        }
+        else if ((RPSPlayer.CurrentAbility == RPSPlayer.SlowFallAbility) && (AttackNum == 7)) {
+            Debug.Log("Completed Umbrella");
+            ass.PlayOneShot(HappyScottNoises[Random.Range(0, HappyScottNoises.Length)]);
+        }
+        else {
+            RPSPlayer.recieveDamage(); Debug.Log("Failed All");
+            ass.PlayOneShot(SadScottNoises[Random.Range(0, SadScottNoises.Length)]); // should this one be happy and the others dissapointed?
+        } 
         currentAttack = ScottAttack.DoNothing;
         yield return null;
     }
@@ -555,7 +570,6 @@ public class ScottFightMainController : MonoBehaviour
 
     void shootBullet(GameObject Hand,Vector3 Dir, float bulletSpeed)
     {
-       // Debug.Log(Hand.transform.GetChild(2).name);
         GameObject Shotbullet = Instantiate(bullet, Hand.transform.GetChild(2).transform.GetChild(0).position, Hand.transform.GetChild(2).transform.GetChild(0).transform.rotation);
         Shotbullet.GetComponent<Rigidbody2D>().AddForce(Dir.normalized * 10f * bulletSpeed, ForceMode2D.Impulse);
     }
@@ -628,8 +642,7 @@ public class ScottFightMainController : MonoBehaviour
         yield return new WaitForSeconds(1f);
         currentAttack = ScottAttack.DoNothing;
     }
-
-
+        // ----------------------------------------- End Attck Main Code -----------------------------------------------
     #endregion
 
 
