@@ -277,6 +277,7 @@ public class ScottFightMainController : MonoBehaviour
     public void ReceiveDamage()
     {
         if (currentPhase == ScottPhase.Dead) return;
+
         ass.PlayOneShot(ScottHurtSounds[Random.Range(0,ScottHurtSounds.Length)]);
         health--;
         PhaseChange();
@@ -289,12 +290,14 @@ public class ScottFightMainController : MonoBehaviour
         SetActiveRHand(6);
         SetActiveLHand(6);
         Debug.Log("Bleh xP");
+        StopAllCoroutines();
         StartCoroutine(ScottDeathSAD(100, 0.5f, 20));
         
     }
     IEnumerator ScottDeathSAD(int unitsDown, float Speed, float time)
     {
-        for(int i = unitsDown; i >= 0; i--)
+        HeadAnimStateSetter(false);
+        for (int i = unitsDown; i >= 0; i--)
         {
             transform.Translate(new Vector3(0, -Speed, 0));
             yield return new WaitForSeconds(1/time);
@@ -307,7 +310,7 @@ public class ScottFightMainController : MonoBehaviour
     #endregion
 
     #region HeadStateStuff
-    
+        // ----------------------------------------------- Head State Stuff ------------------------------------------------------------
     IEnumerator ChangeToShield(float time)
     {
         HeadAnimStateSetter(false);
@@ -334,7 +337,7 @@ public class ScottFightMainController : MonoBehaviour
     {
         Head.GetComponent<Animator>().SetBool("On", YN);
     }
-
+        // ----------------------------------------------- End Head State Stuff ------------------------------------------------------------
     #endregion
 
 
