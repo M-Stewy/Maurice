@@ -44,6 +44,10 @@ public class positionTracker : MonoBehaviour
 
     private void Update()
     {
+        if (SceneManager.GetActiveScene().name == "Credits")
+        {
+            return;
+        }
         
         if (SceneManager.GetActiveScene().name != currentScene) 
         {

@@ -119,4 +119,8 @@ public class SceneChange : MonoBehaviour
         GameObject.FindWithTag("MainCamera").GetComponent<CamFollowPlayer>().PlayerTrans = JebEnd.transform;
     }
 
+    public void Credits() {
+        SceneManager.LoadScene("Credits");
+    }
+
 }
