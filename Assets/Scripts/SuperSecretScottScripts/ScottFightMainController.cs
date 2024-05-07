@@ -317,15 +317,20 @@ public class ScottFightMainController : MonoBehaviour
         StartCoroutine(ScottDeathSAD(100, 0.5f, 20));
         
     }
+    [SerializeField]
+    GameObject explosion;
     IEnumerator ScottDeathSAD(int unitsDown, float Speed, float time)
     {
         HeadAnimStateSetter(false);
         for (int i = unitsDown; i >= 0; i--)
         {
             transform.Translate(new Vector3(0, -Speed, 0));
+            if(Random.Range(0,10) >= 9)
+                Instantiate(explosion, transform.position + new Vector3(Random.Range(-5.5f,5.5f), Random.Range(-5.5f, 5.5f), 0) , Quaternion.Euler(0, 0, Random.Range(-180f, 180f)));
             yield return new WaitForSeconds(1/time);
         }
         //Call the end of SceneStuff here
+        music.StopAllMusic();
         ScottFuckingDies_SAD_.Invoke();
         yield return null;
     }
