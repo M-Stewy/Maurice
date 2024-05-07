@@ -72,6 +72,7 @@ public class ScottFightMainController : MonoBehaviour
     private float chanceAtSheild;
 
     AudioSource ass;
+    BossMusic music;
 
     enum ScottPhase
     {
@@ -106,6 +107,8 @@ public class ScottFightMainController : MonoBehaviour
         LHandStartRot = LHandBase.transform.localRotation;
         currentlyAttacking = false;
         ass = GetComponent<AudioSource>();
+        music = FindObjectOfType<BossMusic>().GetComponent<BossMusic>();
+        
     }
 
     private void Update()
@@ -266,15 +269,21 @@ public class ScottFightMainController : MonoBehaviour
         }
         else if (health >= 5)
         {
+            music.currentTrack = 3;
             chanceAtSheild = 2.5f;
             currentPhase = ScottPhase.phase2;
         }
         else if (health > 0)
         {
+            music.currentTrack = 4;
             chanceAtSheild = 1;
             currentPhase = ScottPhase.phase3;
         }
-        else currentPhase = ScottPhase.Dead;
+        else {
+            music.currentTrack = 5;
+            currentPhase = ScottPhase.Dead; 
+        }
+
     }
 
     public void ReceiveDamage()
@@ -423,18 +432,18 @@ public class ScottFightMainController : MonoBehaviour
         switch (CurPhase)
         {
             case ScottPhase.phase1:
-                SetActiveLHand(5);
-                SetActiveRHand(0);
+                SetActiveLHand(0);
+                SetActiveRHand(5);
                 StartCoroutine(HoldingAttack(RHandBase, 5, 1f));
                 break;
             case ScottPhase.phase2:
-                SetActiveLHand(5);
-                SetActiveRHand(0);
+                SetActiveLHand(0);
+                SetActiveRHand(5);
                 StartCoroutine(HoldingAttack(RHandBase, 3.75f, 1f));
                 break;
             case ScottPhase.phase3:
-                SetActiveLHand(5);
-                SetActiveRHand(0);
+                SetActiveLHand(0);
+                SetActiveRHand(5);
                 StartCoroutine(HoldingAttack(RHandBase, 2.5f, 1f));
                 break;
         }
@@ -634,7 +643,7 @@ public class ScottFightMainController : MonoBehaviour
             //then hover in the air for a bit while something covers the ground and causes damage if touched
         yield return new WaitForSeconds( 10 / attkTime); 
         GameObject.FindWithTag("Fence").transform.GetChild(0).gameObject.SetActive(true);
-            yield return new WaitForSeconds(attkTime * 2);
+            yield return new WaitForSeconds((1 / attkTime) * 50);
         GameObject.FindWithTag("Fence").transform.GetChild(0).gameObject.SetActive(false);
         
        

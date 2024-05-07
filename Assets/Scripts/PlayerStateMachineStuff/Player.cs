@@ -483,6 +483,10 @@ public class Player : MonoBehaviour
             {
                 FindObjectOfType<soundToggle>().MuteMusic();
             }
+            if(FindObjectOfType<BossMusic>())
+            {
+                FindObjectOfType<BossMusic>().StopAllMusic();
+            }
             GameObject.FindWithTag("Lose").GetComponent<TitleScreenDisplay>().CallTitleDisplay();
             StartCoroutine(wait(5));
         }

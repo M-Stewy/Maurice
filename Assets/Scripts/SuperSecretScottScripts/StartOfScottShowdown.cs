@@ -24,11 +24,17 @@ public class StartOfScottShowdown : MonoBehaviour
 
     bool hasBeenTriggered = false;
     bool hasStopped;
+
+    BossMusic music;
+    private void Start()
+    {
+        music = FindObjectOfType<BossMusic>().GetComponent<BossMusic>();
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player") && !hasBeenTriggered)
         {
-
+            music.currentTrack = 1;
             hasBeenTriggered = true;
             hasStopped = false;
             StartCoroutine(CutScene(12.5f) );
@@ -55,7 +61,10 @@ public class StartOfScottShowdown : MonoBehaviour
         ScottHimSelf.GetComponent<ScottFightMainController>().StartFight(false);
         StartCoroutine(ToPos(ScottHimSelf, CutScenePos.position, 0.05f, 0.15f) );
 
-        yield return new WaitForSeconds(time);
+        while (!music.fightCanStart)
+        {
+            yield return new WaitForEndOfFrame();
+        }
         hasStopped = true;
         ScottHimSelf.GetComponent<ScottFightMainController>().StartFight(true);
         cam.GetComponent<CamFollowPlayer>().enabled = true;
