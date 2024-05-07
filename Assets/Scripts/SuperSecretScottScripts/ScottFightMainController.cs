@@ -30,6 +30,17 @@ public class ScottFightMainController : MonoBehaviour
     AudioClip[] HappyScottNoises;
     [SerializeField]
     AudioClip[] SadScottNoises;
+    [Space]
+    [SerializeField]
+    AudioClip SlamNoise;
+    [SerializeField]
+    AudioClip ShootNoise;
+    [SerializeField]
+    AudioClip GrabNoise;
+    [SerializeField]
+    AudioClip HoldingNoise;
+    [SerializeField]
+    AudioClip RPSNoise;
 
 
     [Space(5)]
@@ -356,6 +367,8 @@ public class ScottFightMainController : MonoBehaviour
         // ----------------------------------------- Attck Setup -----------------------------------------------
     void SlamHandAttack(ScottPhase CurPhase)
     {
+        SetCurrentHead(4);
+        ass.PlayOneShot(SlamNoise,Random.Range(0.9f,1.1f));
         switch (CurPhase)
         {
             case ScottPhase.phase1:
@@ -380,6 +393,8 @@ public class ScottFightMainController : MonoBehaviour
 
     void ShootBulletsAttack(ScottPhase CurPhase)
     {
+        SetCurrentHead(4);
+        ass.PlayOneShot(ShootNoise, Random.Range(0.9f, 1.1f));
         switch (CurPhase)
         {
             case ScottPhase.phase1:
@@ -405,6 +420,8 @@ public class ScottFightMainController : MonoBehaviour
 
     void GrabPlayerAttack(ScottPhase CurPhase)
     {
+        ass.PlayOneShot(GrabNoise, Random.Range(0.9f, 1.1f));
+        SetCurrentHead(4);
         switch (CurPhase)
         {
             case ScottPhase.phase1:
@@ -429,6 +446,8 @@ public class ScottFightMainController : MonoBehaviour
 
     void HoldingItemAttack(ScottPhase CurPhase) //technically works, might need to adjust a bit
     {
+        ass.PlayOneShot(HoldingNoise, Random.Range(0.9f, 1.1f));
+        SetCurrentHead(6);
         switch (CurPhase)
         {
             case ScottPhase.phase1:
@@ -451,6 +470,7 @@ public class ScottFightMainController : MonoBehaviour
 
     void IdleAttack(ScottPhase CurPhase)
     {
+        SetCurrentHead(0);
         switch (CurPhase)
         {
             case ScottPhase.phase1:
@@ -474,6 +494,8 @@ public class ScottFightMainController : MonoBehaviour
     void RockPaperScissors(ScottPhase CurPhase)
     {
         //RHand 7 == Umbrella, 8 == Grapple, 9 == Gun
+        SetCurrentHead(3);
+        ass.PlayOneShot(RPSNoise, Random.Range(0.9f, 1.1f));
         int random = Random.Range(7, 10);
         float WaitTime = 4f;
         switch (CurPhase)
@@ -519,18 +541,22 @@ public class ScottFightMainController : MonoBehaviour
         if ((RPSPlayer.CurrentAbility == RPSPlayer.GrappleAbility) && (AttackNum == 8)) {
             Debug.Log("Completed Grapple");
             ass.PlayOneShot(HappyScottNoises[Random.Range(0,HappyScottNoises.Length)]);
+            SetCurrentHead(6);
         }
         else if ((RPSPlayer.CurrentAbility == RPSPlayer.GunAbility) && (AttackNum == 9)) {
             Debug.Log("Completed Gun");
             ass.PlayOneShot(HappyScottNoises[Random.Range(0, HappyScottNoises.Length)]);
+            SetCurrentHead(6);
         }
         else if ((RPSPlayer.CurrentAbility == RPSPlayer.SlowFallAbility) && (AttackNum == 7)) {
             Debug.Log("Completed Umbrella");
             ass.PlayOneShot(HappyScottNoises[Random.Range(0, HappyScottNoises.Length)]);
+            SetCurrentHead(6);
         }
         else {
             RPSPlayer.recieveDamage(); Debug.Log("Failed All");
             ass.PlayOneShot(SadScottNoises[Random.Range(0, SadScottNoises.Length)]); // should this one be happy and the others dissapointed?
+            SetCurrentHead(2);
         } 
         currentAttack = ScottAttack.DoNothing;
         yield return null;
