@@ -119,7 +119,10 @@ public class PlayerGrapplingState : PlayerState
         if (!isTouchingaGrapplePoint())
         {
             DestoryGrapPoints();
-            playerStateMachine.ChangeState(player.inAirState);
+            if (!player.inputHandler.HoldingJump)
+            {
+                playerStateMachine.ChangeState(player.inAirState);
+            }
             Object.Destroy(GameObject.FindWithTag("GraplePoint"));
         }
     }

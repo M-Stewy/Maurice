@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class StartExit : MonoBehaviour
 {
+
+    public GameObject SpeedRunTimer;
     public void ExitGame()
     {
         //This is for the app running in the unity editor
@@ -16,6 +18,12 @@ public class StartExit : MonoBehaviour
         //This one is for running as an exe outside of the unity editor
         Application.Quit();
 
+    }
+
+    public void SpeedRun()
+    {
+        SpeedRunTimer.SetActive(true);
+        SceneManager.LoadScene("hubWorld");
     }
 
     public void Restart()

@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4c76d136c291a448b3d6eecc561d63c, type: 3}
   m_Name: StewyPlayerData
   m_EditorClassIdentifier: 
-  isFacingRight: 1
+  isFacingRight: 0
   GroundLayer:
     serializedVersion: 2
     m_Bits: 8
-  health: 1
+  health: 3
   maxHealth: 1
   immuneFrameTime: 160
   baseMoveSpeed: 15
@@ -72,4 +72,4 @@ MonoBehaviour:
   CrouchSize: {x: 0.85, y: 0.65}
   NormalOffset: {x: -0.27, y: -0.35}
   NormalSize: {x: 0.85, y: 1.31}
-  ShowEnterStateInConsole: 0
+  ShowEnterStateInConsole: 1

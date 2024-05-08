@@ -5,12 +5,16 @@ using UnityEngine.SceneManagement;
 /// Made by Stewy
 /// 
 /// starts the end of level timer for my level
+/// also can count up for speed running
 /// </summary>
 public class EndofSpaceTimer : MonoBehaviour
 {
     [SerializeField]
     Vector3 PositionOffset;
-
+    [SerializeField] 
+    SpriteRenderer Hours;
+    [SerializeField] 
+    SpriteRenderer Mins10s;
     [SerializeField]
     SpriteRenderer Mins;
     [SerializeField]
@@ -26,16 +30,25 @@ public class EndofSpaceTimer : MonoBehaviour
     [SerializeField]
     AudioClip Boom;
 
+    private int hours;
     private int minutes;
     private int seconds;
 
     private int seconds10s;
     private int seconds1s;
 
+    private int minutes10s;
+    private int minutes1s;
+
+    
+
     private int secondsLeft;
 
     [SerializeField]  bool countingUp;
     [SerializeField] bool BOOOMonZero;
+    [HideInInspector]
+    public bool ShouldBeCounting;
+
     private Vector3 velocity = Vector3.zero;
     private void Start()
     {
@@ -51,8 +64,8 @@ public class EndofSpaceTimer : MonoBehaviour
     private void Update()
     {
         SetSprites();
-
-        transform.position = Vector3.SmoothDamp(transform.position, FindObjectOfType<Camera>().transform.position - PositionOffset, ref velocity,0.001f);
+        if(!countingUp)
+            transform.position = Vector3.SmoothDamp(transform.position, FindObjectOfType<Camera>().transform.position - PositionOffset, ref velocity,0.001f);
 
         if(secondsLeft <= 0 && BOOOMonZero)
         {
@@ -87,11 +100,15 @@ public class EndofSpaceTimer : MonoBehaviour
         {
             secondsLeft--;
 
+            hours = Mathf.FloorToInt((secondsLeft / 60) / 60);
             minutes = Mathf.FloorToInt(secondsLeft / 60);
             seconds = Mathf.FloorToInt(secondsLeft % 60);
 
             seconds10s = Mathf.FloorToInt(seconds / 10);
             seconds1s = Mathf.FloorToInt(seconds % 10);
+
+            minutes1s = Mathf.FloorToInt((secondsLeft / 60) % 10);
+            minutes10s = Mathf.FloorToInt((secondsLeft / 60) / 10);
             //Debug.Log(minutes + ":" + seconds);
             yield return new WaitForSeconds(1);
             
@@ -101,24 +118,33 @@ public class EndofSpaceTimer : MonoBehaviour
     {
         while(countingUp)
         {
-            secondsLeft++;
+            while (ShouldBeCounting)
+            {
+                secondsLeft++;
 
-            minutes = Mathf.FloorToInt(secondsLeft / 60);
-            seconds = Mathf.FloorToInt(secondsLeft % 60);
+                hours = Mathf.FloorToInt((secondsLeft / 60) / 60);
+                minutes = Mathf.FloorToInt(secondsLeft / 60);
+                seconds = Mathf.FloorToInt(secondsLeft % 60);
 
-            seconds10s = Mathf.FloorToInt(seconds / 10);
-            seconds1s = Mathf.FloorToInt(seconds % 10);
-            //Debug.Log(minutes + ":" + seconds);
+                seconds10s = Mathf.FloorToInt(seconds / 10);
+                seconds1s = Mathf.FloorToInt(seconds % 10);
+
+                minutes10s = Mathf.FloorToInt((secondsLeft / 60) / 10);
+                minutes1s = Mathf.FloorToInt((secondsLeft / 60) % 10);
+                //Debug.Log(minutes + ":" + seconds);
+                yield return new WaitForSeconds(1);
+            }
             yield return new WaitForSeconds(1);
-
         }
     }
 
     private void SetSprites()
     {
-        Mins.sprite = Numbers[minutes];
+        Hours.sprite = Numbers[hours];
+        Mins10s.sprite = Numbers[minutes10s];
+        Mins.sprite = Numbers[minutes1s];
         Sec10s.sprite = Numbers[seconds10s];
         Sec1s.sprite = Numbers[seconds1s];
     }
-
+    
 }
