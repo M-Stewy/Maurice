@@ -1,11 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
 
+
 namespace StewySecretStuff
 {
+    /// <summary>
+    /// Made by stewy
+    /// 
+    /// Secert stuff :)
+    /// </summary>
     public class secretStuffScript : MonoBehaviour
     {
         [SerializeField]

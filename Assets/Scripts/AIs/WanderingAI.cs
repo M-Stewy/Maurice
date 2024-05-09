@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using UnityEngine;
-
+// I think Kyle put this here... IDK
 public class WanderingAI : MonoBehaviour
 {
     public float speed = 10.0f;

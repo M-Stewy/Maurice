@@ -2,7 +2,17 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// Made by Stewy
+/// 
+/// can either be multiplay mode where,
+///     it plays multiple tracks at once and you can set tracks to be On/Off 
+///     with the ChangeCurrentTrack function with the number inputed being the the track that gets muted/unmuted (they all are contantly playing
+/// or in normal mode where, it simply toggles mute on or off with ChangeCurrentTrack (no used this mode)
+/// 
+/// P.S. I dont recommed using this as if you have many songs you want to switch through it can be a pain to know which is which numnber 
+///     + it is not very efficent having many full songs playing at once.
+/// </summary>
 public class MusicManager : MonoBehaviour
 {
     [SerializeField] bool MultiPlay;

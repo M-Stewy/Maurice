@@ -1,7 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// Made by Stewy
+/// 
+/// a class to store the different player abilities
+/// used to change the sprite/ check aviablity of the different abilities
+/// </summary>
 public class PlayerAbility
 {
     public bool isUnlocked { get; private set; }

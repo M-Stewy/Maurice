@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Video;
-
+/// <summary>
+/// Made by Stewy
+/// 
+/// Loads Title after credits finish, checks if speedrun timer is present if so, it displays your time for 7.5 seconds
+/// </summary>
 public class EndOfCredit : MonoBehaviour
 {
     public float Seconds;

@@ -1,4 +1,11 @@
 using UnityEngine;
+/// <summary>
+/// Made by Stewy
+/// 
+/// Scrolls the background in a direction with a specified speed
+/// It should loop, but I honestly dont know if it does, its hard to tell with this background.
+/// </summary>
+
 public class BossFightBackGround : MonoBehaviour
 {
     public float speedEffectX,speedEffectY;

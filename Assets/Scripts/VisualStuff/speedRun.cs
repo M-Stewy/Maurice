@@ -1,6 +1,10 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+/// <summary>
+/// Made by Stewy
+/// 
+/// logic for the speedRun timer to know when to be active or not
+/// </summary>
 public class speedRun : MonoBehaviour
 {
     [SerializeField]

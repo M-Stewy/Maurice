@@ -1,5 +1,9 @@
 using UnityEngine;
-
+/// <summary>
+/// Made by Stewy
+/// 
+/// Simply randomizes explosions on spawn to give variation.
+/// </summary>
 public class eploContro : MonoBehaviour
 {
     private void Awake()

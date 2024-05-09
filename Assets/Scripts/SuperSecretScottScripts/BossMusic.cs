@@ -1,5 +1,11 @@
 using UnityEngine;
-
+/// <summary>
+/// Made by Stewy
+/// 
+/// dynamicly switches the current track that plays
+/// simply uses a public int that determines which track should be playing next, when the current track stops it either
+///     loops the current if the num is same, or switches to the new track
+/// </summary>
 public class BossMusic : MonoBehaviour
 {
     [SerializeField] AudioSource musicMan;

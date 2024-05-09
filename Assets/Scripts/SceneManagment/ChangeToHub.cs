@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+// Made by Jeb
 public class EndOfCredits : MonoBehaviour
 {
     public float Seconds;

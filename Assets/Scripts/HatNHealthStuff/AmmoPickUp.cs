@@ -1,5 +1,9 @@
 using UnityEngine;
-
+/// <summary>
+/// Made by stewy
+/// 
+/// on trigger will set ammo count to max, if the ammo spawner is in the scene it tells it that the pickup has been picked up
+/// </summary>
 public class AmmoPickUp : MonoBehaviour
 {
    [ SerializeField ]

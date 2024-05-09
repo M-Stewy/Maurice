@@ -1,6 +1,8 @@
 using UnityEngine;
 /// <summary>
-/// yea
+/// Made by Stewy
+/// 
+/// plays noise for buttons
 /// </summary>
 public class MainMenuButtonAudio : MonoBehaviour
 {

@@ -1,6 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+/// <summary>
+/// Made by Stewy
+/// 
+/// Handles the cutscene at start of BossFight, depends on the BossMusic script to only finish the cutscene after the music has switched from track 1 to 2.
+/// </summary>
 
 public class StartOfScottShowdown : MonoBehaviour
 {

@@ -1,5 +1,10 @@
 using UnityEngine;
 using UnityEngine.Events;
+/// <summary>
+/// Made by Stewy
+/// 
+/// makes Scotts fists deal damage and play a noise on collision
+/// </summary>
 public class ScottsFistScript : MonoBehaviour
 {
     public UnityEvent takeDamage;
