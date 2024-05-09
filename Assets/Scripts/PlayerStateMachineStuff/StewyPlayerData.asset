@@ -16,7 +16,7 @@ MonoBehaviour:
   GroundLayer:
     serializedVersion: 2
     m_Bits: 8
-  health: 3
+  health: 2
   maxHealth: 1
   immuneFrameTime: 160
   baseMoveSpeed: 15
@@ -72,4 +72,4 @@ MonoBehaviour:
   CrouchSize: {x: 0.85, y: 0.65}
   NormalOffset: {x: -0.27, y: -0.35}
   NormalSize: {x: 0.85, y: 1.31}
-  ShowEnterStateInConsole: 1
+  ShowEnterStateInConsole: 0

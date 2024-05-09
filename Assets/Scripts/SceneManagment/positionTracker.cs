@@ -55,7 +55,7 @@ public class positionTracker : MonoBehaviour
             return;
         }
 
-        if (SceneManager.GetActiveScene().name == "Credits")
+        if (SceneManager.GetActiveScene().name == "Credits" || SceneManager.GetActiveScene().name == "Nothing")
         {
             return;
         }

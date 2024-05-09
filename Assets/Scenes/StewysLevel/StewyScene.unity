@@ -2128,6 +2128,7 @@ MonoBehaviour:
   StewyDone: 0
   NikoDone: 0
   JebDone: 0
+  BossReady: 0
 --- !u!4 &234512429
 Transform:
   m_ObjectHideFlags: 0
@@ -8452,7 +8453,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2134542457628425753, guid: d4f47b45b9cade94aa669c7146294145, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -192.84
+      value: -193.98
       objectReference: {fileID: 0}
     - target: {fileID: 2134542457628425753, guid: d4f47b45b9cade94aa669c7146294145, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15675,6 +15676,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1638403790}
   - component: {fileID: 1638403789}
+  - component: {fileID: 1638403791}
   m_Layer: 0
   m_Name: SecretThing1
   m_TagString: Untagged
@@ -15706,7 +15708,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 92.6, y: 20.88}
+  m_Size: {x: 297.92, y: 20.88}
   m_EdgeRadius: 0
 --- !u!4 &1638403790
 Transform:
@@ -15716,13 +15718,29 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1638403788}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 555.1, y: -214.5, z: 9.775549}
+  m_LocalPosition: {x: 555.1, y: -249.3, z: 9.775549}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1638403791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638403788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0800e6ba7c8ca1845b781dfe4737df21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadaScene: 1
+  revealLocation: 0
+  thingToreveal: {fileID: 0}
+  SceneToLoad: hubWorld
 --- !u!1 &1653470506
 GameObject:
   m_ObjectHideFlags: 0

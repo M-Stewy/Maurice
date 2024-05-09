@@ -1,0 +1,6891 @@
+fileFormatVersion: 2
+guid: 60abc5d9e65758449a311916277f8d2f
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 116fdf062bd649542846f31d7ddcecbf
+      internalID: -904018950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_1
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 640
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d0a36367d4fa5344b8ce71ddd6837ca
+      internalID: -128155180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_2
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 640
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41def9ef717668e4abc98a6dbdb3b654
+      internalID: 624357938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_3
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 640
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d60474a1b944b774496e2f1c644aa47f
+      internalID: 1862391456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_4
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 640
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61b78d2bce14ecf45854d0451670b8c4
+      internalID: -1724257182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_5
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 640
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7686b9a76f734a40a78a37e5ca3d51b
+      internalID: 1952624396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_6
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 640
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b7b3efc462629f4087c908e34a5fb46
+      internalID: -263870589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_7
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 640
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcb50ed8a5330ba4c87ef377bba286da
+      internalID: -2089654066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_8
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 640
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7abebbb3586c4a2439713495c07b5e6b
+      internalID: 925661181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_9
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 640
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64fd50dfe42fc7a4e85095d061142f5b
+      internalID: 1746494176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_10
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 640
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e73c05b684c44849a0ced6cb19b3320
+      internalID: 869902784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_11
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 640
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65b70aec375ff504cab41cd04343cef7
+      internalID: 778053013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_12
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 640
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c3b2fdb1f905124397aae50f66ab173
+      internalID: 133235705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_13
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 640
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2c27a251922796489aca1012e908050
+      internalID: -1690216287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_14
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 640
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 461c4837ea95d914b85b7bf496c5a637
+      internalID: 507237964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_15
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 640
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc15e297830eedf4dafd697dee4588d6
+      internalID: 1749787915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_16
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 640
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d39967b8e3cf354fbbd0bf608b2b136
+      internalID: 1939245942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_17
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 640
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 108635166d62f2b48ad6a3c39f3b3217
+      internalID: -224172238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 600
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df661ca18f808754b9f6eb6c5c6f0980
+      internalID: 848655739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_19
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 600
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a509af04fcfa04468ab62216cc62db6
+      internalID: -836972888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_20
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 600
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 993d409c216850b47bac96482e3c5bd3
+      internalID: 594596686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_21
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 600
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32381479a8e6b864daf3d3a9b52c8259
+      internalID: 1685101103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_22
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 600
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f5ff6faf0aeee24d959b059b97ab1ac
+      internalID: 831668004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_23
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 600
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cc88a45d8c0cf44e9879cdbc20da87c
+      internalID: 800297056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_24
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 600
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4647c8bba1cb03f4588c192a0bdab1c5
+      internalID: -835592537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_25
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 600
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 086ae4be9ca6c774b862073ad6b926f4
+      internalID: 96147659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_26
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 600
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd98b3a3de74ce445a275e8ff17b841f
+      internalID: 1316064828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_27
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 600
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86b219736c5b8e34095c1a27bffe18f8
+      internalID: -956811627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_28
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 600
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e2f4c7e42819e84dad57d61e0b85a15
+      internalID: -112665709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_29
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 600
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dcf1c8e0c42804469099256787d533d
+      internalID: -689200271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_30
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 600
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b19a75e00e10d54c876d17ea2110020
+      internalID: -583108708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_31
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 600
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe5b97536b2ca4841870a5911f646e2c
+      internalID: -118105055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_32
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 600
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42060e2de68d4db47a6e7e0bfe26cd98
+      internalID: 801548734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_33
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 600
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 504c0a5cd335ccc4bbbc41ea091aeaeb
+      internalID: -1824942053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_34
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 600
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 111f47ad7923e9346acbfd64b8bb1d8c
+      internalID: 1591194655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_35
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 600
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f50ce31896e9b644ac68ef2482be73d
+      internalID: 1110979997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 560
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aeb6d4c109de6c46bf861d6a2cef2dc
+      internalID: -1791681934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_37
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 560
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5985e0312e9b5c643bdecd3e3b142693
+      internalID: -984798297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_38
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 560
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0bc44dd9a98f4d41900f4e279f705bf
+      internalID: -225554163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_39
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 560
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cb61b0fd109de544b0f75f8e00b21fa
+      internalID: 1221061436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_40
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 560
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 254b7b33a1daa7244940b122e39495fb
+      internalID: 1929501866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_41
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 560
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c15a11d787ad0564c9f116cf979fd794
+      internalID: 1636670657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_42
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 560
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50260a8276954284c9a4650e4083b13f
+      internalID: -1685277106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_43
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 560
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a21ef091ea4731541be7892c4a4ec71f
+      internalID: 1331460589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_44
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 560
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4b2ec32b85f7374baa804be71732b0e
+      internalID: 1199820631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_45
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 560
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f51de295c1326845ba6e4d11eaf38e6
+      internalID: -1116921166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_46
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 560
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 284e68301d27046419cca0b508c508b1
+      internalID: 2051599302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_47
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 560
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fae2f95c25cd78a42b549e5007f7049d
+      internalID: 657429747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_48
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 560
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf71b4df74b30a94da535749c60137e5
+      internalID: 472359126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_49
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 560
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a065c733c070bb34fa6a584d5e7cd891
+      internalID: 973824672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_50
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 560
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f03a56f87e25f54b9c5b24db5290974
+      internalID: 1619124163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_51
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 560
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d12cf121b9c4dc44c9671ba4ddafe7f0
+      internalID: 804027379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_52
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 560
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0accda2b90a300b4e9845585e7b64b91
+      internalID: 50913649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_53
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 560
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc2c9dc6052feaa4dba28d875bcbfd3a
+      internalID: 683517389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 520
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fa8fcda2a400c04db52751ca2d1e6a1
+      internalID: 312036187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_55
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 520
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1274017c0e7f63a469d3ed8d71d31afe
+      internalID: -617616668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_56
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 520
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd36ccfdbf72d3f49bbb86319b6d03d9
+      internalID: 404642288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_57
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 520
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33fdacf5fe6f7494ebe575548d5bbb41
+      internalID: 1534409014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_58
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 520
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5c323d9080734943a68d7c1b4a68e77
+      internalID: 71007448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_59
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 520
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6b5f7d1ef5c1294cb250241e9138320
+      internalID: -1349813133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_60
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 520
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f5d945620e7ac84b9e5a40e70b07865
+      internalID: -58753354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_61
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 520
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fd8652d741788f4f998d885abdfbfe2
+      internalID: 1247122105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_62
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 520
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79260398b6eea0f4596a7f7866417774
+      internalID: 1658332471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_63
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 520
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f67b18c4900bd041b31115a552ba617
+      internalID: 151767681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_64
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 520
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8869df011e7e384789694787d2ab84c
+      internalID: 686672926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_65
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 520
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 759d45a148d12bd4bb96fb75f31caaaf
+      internalID: 102593415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_66
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 520
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 666a7d73636893e488e4b54fefdd24b9
+      internalID: 741488654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_67
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 520
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7531411fc51ca145a27d31899dd9e06
+      internalID: -1364405108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_68
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 520
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 949a26dd76c7c6843bfb730d471e536f
+      internalID: -216153551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_69
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 520
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d03bc2c6042281a41800bd884675a1f1
+      internalID: -1503954400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_70
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 520
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 403b45492fcb5494c9cfb3dbc142adae
+      internalID: 931916406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_71
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 520
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9e7c199a056f2d4984b82078f2eb68b
+      internalID: -173331325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19171def830b01a4189c88d9a6badcb5
+      internalID: 1079915082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_73
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 480
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a8c38b36c5c88845aeecabec91e52d5
+      internalID: 618773494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_74
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 480
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36c182d6c88cf3043ac09e129f0a2d10
+      internalID: 1552754757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_75
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 480
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c0544d493b974f4b96221c4e4835936
+      internalID: -1392510493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_76
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 480
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dd52a2e01c7ce54cb141c9d31629239
+      internalID: 189585509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_77
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 480
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 671358b5377f4ee4993d02ce6c1ff332
+      internalID: -600231242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_78
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 480
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73fa616b557da5840b4bc4fd2affe966
+      internalID: -71529700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_79
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 480
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44a1469ab6f1dc645b5b7d91a6a8e13b
+      internalID: -2083097596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_80
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 480
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7f66291f2ef3134c9dc17fae77e611f
+      internalID: -1159947359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_81
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 480
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd96d2d94fc7eeb41a78648403200231
+      internalID: 77479202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_82
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 480
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 786ec21269446f241aaacf389c5c87bc
+      internalID: -849786783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_83
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 480
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39ca40c3b7e5f3146966958898feeacc
+      internalID: -1334052469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_84
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 480
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3ca553d1a1f12b47b6d6d1dda6e00b2
+      internalID: -954604784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_85
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 480
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 192650ffcf4f97f4f9b6162966674248
+      internalID: 1745483884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_86
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 480
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ee3cf46a163a044a9ba78211030a1f3
+      internalID: 376919997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_87
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 480
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2779e9487b879e41add467c2c07267c
+      internalID: -156284380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_88
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 480
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d703dff6dd9b7834590e5c4e5e122910
+      internalID: 902860360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_89
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 480
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ff852523a7a43f4e884f7870be69161
+      internalID: 303733551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 440
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76576a663e780b64bb02aefbef8ac046
+      internalID: -2003464807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_91
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 440
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f4baf5772cb99d44bc2edae049dbcb5
+      internalID: -2127528460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_92
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 440
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e286bc0e74b3ece4b816b880a7e9ddf7
+      internalID: 2072969380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_93
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 440
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e147cc81d060834aafade5f2cde713a
+      internalID: 1631097581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_94
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 440
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c9c0867293f5544badd1c330b8c0344
+      internalID: 1523609623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_95
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 440
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b04cdfebbd4807c4ebdafaf5cf4aa4d4
+      internalID: -1996164658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_96
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 440
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7618c14c7cfb4844098f815189547525
+      internalID: -1053352524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_97
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 440
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 436fba601bfe6274c9ba10e08ab30e40
+      internalID: -1981220479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_98
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 440
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc35915caf52906479105ef9abf95fd6
+      internalID: -1785833569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_99
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 440
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 564274d3909dfee4eb38a44ad4780275
+      internalID: -44784909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_100
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 440
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad9066b9d1f02d3429f17549d27772b3
+      internalID: 803017520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_101
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 440
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b76f21dbc5434340bb7c65590d82236
+      internalID: -1535767489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_102
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 440
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c3a23084c91dea4c9a37b5a6e68e521
+      internalID: -1828975456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_103
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 440
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d12fae3157e37c498c2fe665358d3de
+      internalID: -487644790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_104
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 440
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 982c3197c450a2e4bb7327b654c9877f
+      internalID: -167521277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_105
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 440
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37fd6fdb50138c54d8582c73eff2747c
+      internalID: 1524358917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_106
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 440
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 142cf2f5574482648aca285d6c680cc2
+      internalID: 1269169654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_107
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 440
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 438259cb465ce154ab6749618d104fb7
+      internalID: 1358856426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_108
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 400
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b071595f0c117da42a339b7f31220bdb
+      internalID: -1529283394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_109
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 400
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd06bca2b453ff64c82f0e7344c0583f
+      internalID: -64843796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_110
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 400
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc0077736bf303a4bb3a1c31de782454
+      internalID: -512667793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_111
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 400
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bf7dc2cca58b32489ef1540fc228466
+      internalID: 452541617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_112
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 400
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 175c47e6f5ce0ac4f80ff6a2c8c776d9
+      internalID: 779923709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_113
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 400
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95de3f3f8a475b04eac39314121a3902
+      internalID: 2033058842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_114
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 400
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97b2ff9df5b73a8478b99ca58a361ce4
+      internalID: 966881945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_115
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 400
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38beea57791104948b03cca05f24dc01
+      internalID: -1040093091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_116
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 400
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 628946d1b4995e741a3810ee24206a48
+      internalID: 2070441474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_117
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 400
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9499579c37bad4848a3b3c96e5e6e6c3
+      internalID: -160860496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_118
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 400
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa5d352395370f54383dc88e00d00c13
+      internalID: 1229017996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_119
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 400
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2826d4ebf57bea4fa28bfbbfa747467
+      internalID: -1937942140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_120
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 400
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f857c57aa09f5524495f54073c22e1d6
+      internalID: -1873404690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_121
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 400
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ed3e2d8ee025ba4cb6ac6f728579911
+      internalID: 494780072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_122
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 400
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6464b36087f661d4eba8d29b2289337a
+      internalID: 1555088866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_123
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 400
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5e51b22916105a43890598907c324a7
+      internalID: 989255833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_124
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 400
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4be1756ff1cca344bbf1d495191f469
+      internalID: 2088886327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_125
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 400
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b2f34a4986e16244a50ca8aec2c5a1c
+      internalID: 980986695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_126
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 360
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b1e09f4b9ec9fe4d91343aa739a19f0
+      internalID: 1924617093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_127
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 360
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73dea02d7c4e21e45a8559ec9d909670
+      internalID: -98558916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_128
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 360
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d4e35f6be455704e9d8a2223405c496
+      internalID: -90892522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_129
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 360
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adf93a80259769d4590f7012f3f929ce
+      internalID: -1475288466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_130
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 360
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55d84b68ab8b47641bf477fdf5cf7cc9
+      internalID: -545307751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_131
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 360
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b6d6daf3f0932f44b75f12e8aa08ebd
+      internalID: -1885982158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_132
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 360
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db9eae9cd432d054cb3590279f502c83
+      internalID: -1697496735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_133
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 360
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fce2c58820e238b4ca23047617954a60
+      internalID: -1657164196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_134
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 360
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dc7e40e9bedbba408be574f7dada6d0
+      internalID: 1987805459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_135
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 360
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f22999e6fad94ce46bc01054c5cd93ef
+      internalID: 1193686078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_136
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 360
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c51d8530a891764fbdb09d2d3b85da2
+      internalID: -241403029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_137
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 360
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 741b1dcc8a34dcf4eb42ead779aeeb77
+      internalID: -628961790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_138
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 360
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6ac1e65577617d45a9de06dd2f2f293
+      internalID: -1448262245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_139
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 360
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1f013e1aebb06842a94dac4c59a6797
+      internalID: -552354066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_140
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 360
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fbe77b665db34d4f8282d51296099a2
+      internalID: 1190777033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_141
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 360
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 957b12f657d8a104caa7ad9a29333821
+      internalID: 403099134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_142
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 360
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f6020813bf775247b1da6ffec3f53ab
+      internalID: -1167832842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_143
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 360
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 798c500cb4ea6a0468718c38b5a8a71d
+      internalID: -1955241099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_144
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a567596f16c6b64a8965fd9b11f8615
+      internalID: 87911539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_145
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 320
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e33ed1e3588c05249951221cb5deb2b1
+      internalID: 600161949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_146
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 320
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e506d72ec0ef8bf4dbe50b73fcb8845a
+      internalID: 852512444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_147
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 320
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7368f430f69db40429b21300c489184e
+      internalID: -1817256254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_148
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 320
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfe2ea9a73695ba4c91d48f2b1448d03
+      internalID: -1033794945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_149
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 320
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42910808e0a63f64e840140f64eafc45
+      internalID: 1047919530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_150
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 320
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15046d3495b73a34390a06cb91f782c1
+      internalID: -884840542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_151
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 320
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08c2a21be58e8aa48933930a54df752d
+      internalID: 20623363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_152
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 320
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aa66f28788ae3a4c829d96d4db55568
+      internalID: 628607112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_153
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 320
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f3d902d64326724db95a7fc43a4483a
+      internalID: -1951211883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_154
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 320
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5947df1cebf1cf45894213a053419bd
+      internalID: 630896849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_155
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 320
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c1c9cd50ba504f40ac18fa5c8443f29
+      internalID: -1089637451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_156
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 320
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 570f20e66f7e23242bc8ce1329805b8a
+      internalID: 345844935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_157
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 320
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9658e1d09d258c147bab0b7a99738213
+      internalID: 2019574838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_158
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 320
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eba5aba74f7490747971269fad097fe5
+      internalID: 490723011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_159
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 320
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 120fca0a3e2a38a43a50dadd6c7891e5
+      internalID: -1368246121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_160
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 320
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9385aaeb963c7584aae82251d1ac6792
+      internalID: 1404691619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_161
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 320
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89f480ced5c5e974db29d5074e933320
+      internalID: -322642680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_162
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 280
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d0cb2f27dd43134a988debcb33da7d9
+      internalID: -1176686653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_163
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 280
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d88a2ca33b603aa4596b39187172dc67
+      internalID: -227143284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_164
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 280
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03ed0856e66a470409be885fe99470f4
+      internalID: 811775104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_165
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 280
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b60d440be4d1ec245b9cae28d7448fc3
+      internalID: 1863584069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_166
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 280
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c16b009c7798fa14bb9a13e20e7c49a8
+      internalID: -413139724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_167
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 280
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56d70f00977a63246a9e98acff886b13
+      internalID: 1191667257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_168
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 280
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e4ee93baf0a88241aadfb6116595c7c
+      internalID: -2082966474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_169
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 280
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81163b8d20ac8ae4393c274580ea3537
+      internalID: -951570843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_170
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 280
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96ab374427754c344b8c54167392a06d
+      internalID: -1497723212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_171
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 280
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e6d9393ded8bf34c947db8a3017fa14
+      internalID: -1239591441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_172
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 280
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 236598659c39e8f4292fdd05d1ec58db
+      internalID: -1553379220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_173
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 280
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7410417509d90504cbbec09b020c9e1f
+      internalID: -984308425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_174
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 280
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8204c628b1d5f0a49a12808301a2342b
+      internalID: -1499368618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_175
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 280
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 639080ae22c4e8349a2582f15989af10
+      internalID: -75927916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_176
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 280
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 294b6821b0d035f4893e71efb2260bf2
+      internalID: 2047831002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_177
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 280
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b083132653a97994fbe840b48c44a535
+      internalID: -2134845023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_178
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 280
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8a4be2cee284d844b9f153bc296ee4d
+      internalID: 1082734064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_179
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 280
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 738274fb00b73294da9993fa36828539
+      internalID: 915584281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_180
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 240
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdd66d187aefa05408f15a69a70fdc3b
+      internalID: -745411730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_181
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 240
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6f7edfda7433b74aa2efd78638d9d00
+      internalID: 570958498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_182
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 240
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c39ce0f4e18ae784c9bd1657b64bcec4
+      internalID: 1309646997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_183
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 240
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3beb73ea67ec89a479022c0eab4eaa45
+      internalID: 1722327688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_184
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 240
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8637f73a73bf874da0d18af61c1a230
+      internalID: -732302914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_185
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 240
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5c81589ad46eb14eb62f90ea1012153
+      internalID: 1955163093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_186
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 240
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f2127e7a8de8e94a81b331bd39e8624
+      internalID: 414728191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_187
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 240
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff485aa58d5ed3b458b4ff09f7a7515b
+      internalID: 1271033309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_188
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 240
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e56a9d7a407953b49aedea200a4eae6d
+      internalID: 349810935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_189
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 240
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8bf812a2146166438dc8cd6a9f7cb0d
+      internalID: 248168049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_190
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 240
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40e1de03a158a9f40aaf739d5f41d842
+      internalID: 471441291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_191
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 240
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b646e352d05fae24da9e3d31e1e4cf91
+      internalID: 1002818165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_192
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 240
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53ca3ad6e34fc024c9c13fb458ebd89b
+      internalID: -1867508650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_193
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 240
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 572966aa280fccf4bab4f1740050a9e0
+      internalID: -1919101620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_194
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 240
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0dc2f5e4d95b0f47ba1e2c491461b79
+      internalID: 588601873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_195
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 240
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e36cccad1c9c3794db7e4a50792afeb8
+      internalID: -816103591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_196
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 240
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c318e32ba275f34f8ce4670fa283602
+      internalID: 1476979074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_197
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 240
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70b72a9efb2dc48419cf36e574be27ac
+      internalID: 1777039110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_198
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76cbe4b00f53fc9448a9dfbc56c33bff
+      internalID: -394058070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_199
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 200
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdf30bf5661dd674486442ce6b356191
+      internalID: -403100025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_200
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 200
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 957f109382dfb664da6f5fa980a93529
+      internalID: 277331996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_201
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 200
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e118e93ba70042345a2514e953ab85a4
+      internalID: -1179306016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_202
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 200
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fe0d34ffcc93cb448c788476800555d
+      internalID: -856732484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_203
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 200
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 270bd4ba60408994f9cca1f2213834c7
+      internalID: 1347770741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_204
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 200
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60c8aa64363b321478b9ca4a718bd51f
+      internalID: -1135925023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_205
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 200
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03fe7f41b1550944fb95e12874e39918
+      internalID: -1445990825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_206
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 200
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 247e4e42a4635f7488c7b5513dbe15d6
+      internalID: -1708011349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_207
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 200
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f05003fe36424e14c8fb2892a2ded581
+      internalID: 1803842326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_208
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 200
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f325640197c853e48ad3ff67189ba5c1
+      internalID: -716880285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_209
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 200
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74e270d10d6afdb4daf1162a1308ed7e
+      internalID: 518309579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_210
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 200
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d25cc949f4380a743bd853c652da8575
+      internalID: 1867864060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_211
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 200
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 466a133706579f241a7231aceb436211
+      internalID: -697411649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_212
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 200
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7232bb2d5735e4a4598783742ca13699
+      internalID: -1747389051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_213
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 200
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2c7f4d10352cac4ebc0539cf624eafb
+      internalID: -930033616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_214
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 200
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5dfc7f8c2cc26245955683b86684749
+      internalID: 1965628402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_215
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 200
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bd19a06b272dfe418b2eca2a4b2c6ef
+      internalID: 209723491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_216
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61f29ca7496df5841a1458b0b3423cb0
+      internalID: -505021188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_217
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 160
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 868de96bf2576cc499039e83c80940e5
+      internalID: 86111030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_218
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 160
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6af25f60f34cab34e9b4c505b151d4d4
+      internalID: 769030076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_219
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 160
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8b7d2dc4adf28d4e909513cc66fae20
+      internalID: -899362035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_220
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 160
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 679ecc915048d3741a3cf092cf71b30f
+      internalID: 17732602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_221
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 160
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28880ccf1f9ec214b9e0695ea89de9e6
+      internalID: 836694894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_222
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 160
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bb0c15253bc56e40be024eb677c5176
+      internalID: 1642641617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_223
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 160
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b61f649badc7cd1438ee92a389fc9626
+      internalID: -587326062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_224
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 160
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3aa88c45ffd7c241aaf91b5a6d2a2c5
+      internalID: -1890095223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_225
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 160
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee679ec3964f1a541bf5be29cdf80efd
+      internalID: -2102510202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_226
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 160
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b0233c3134146f4bb48ab20c8f6021d
+      internalID: -1615186561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_227
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 160
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 285555583ff63be4e97cd8c6d66f4d0f
+      internalID: -1196863966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_228
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 160
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f070feb8d12b7124aa4911aaa361752f
+      internalID: -1962361274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_229
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 160
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 393742b25116eab47a42e961edbeab69
+      internalID: -1860259737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_230
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 160
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c52bb80bec48bb5468b8283c573b1b08
+      internalID: 238033721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_231
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 160
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f21cdf11c9f3ae74ebd831d7f8070c42
+      internalID: 433428198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_232
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 160
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 342fbc1dc760f1142934f647d1514149
+      internalID: -781991692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_233
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 160
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81a4bd09f74a0fe4a8d7564df3dd7a53
+      internalID: -1945553438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_234
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 120
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af0a243168996d94b98e8e243f685ed5
+      internalID: -272988864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_235
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 120
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 212f145ab47362644be4a5a9124fddfe
+      internalID: -1969955868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_236
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 120
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c5109b9069482e4c8e59f34ce1d3400
+      internalID: -872503496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_237
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 120
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 507b1c9d44c4c254d86bfc03282a31a0
+      internalID: -501967650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_238
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 120
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edf096b3d2a1b464380bb71895e40359
+      internalID: 375164709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_239
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 120
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cc0a8b8d06e7d64bbe030bf5476ed74
+      internalID: -1229651520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_240
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 120
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 119651a2ca6fbab468b9081d38b1cc76
+      internalID: 1209406460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_241
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 120
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 776abf1e2d26a1a42acd1d6acd35e46c
+      internalID: 141881127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_242
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 120
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a580ac18aa034a42b5d61484c551cec
+      internalID: -2137537962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_243
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 120
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c25cf19cafe28840b812cbf4d6f3a2a
+      internalID: -1743134811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_244
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 120
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1343b9a221d6e0c4e9b0c6bc23299af9
+      internalID: -1314477141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_245
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 120
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd20c7ac59e7d4f48831f83c48c40ff0
+      internalID: -1786306400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_246
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 120
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 825c04572b2ff9847ac4b9c83bfcead5
+      internalID: 309134562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_247
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 120
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c48e7c16b6d896e4fb12dd867d7a0f0c
+      internalID: 1420194355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_248
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 120
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24c81f69719427a41a030dc375318fa4
+      internalID: 2117281663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_249
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 120
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df31e9e3207da6b4d9a91da09fca6607
+      internalID: -94396317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_250
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 120
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fa59ecfc1b921042bb3200aa4c92897
+      internalID: -726363166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_251
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 120
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3f33924b7eccf146b7e6204d5ef55a3
+      internalID: 2058331739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_252
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e96f1d66318dd4e4f8b47dacee990573
+      internalID: 438762344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_253
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 80
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77d4c6c5fb91588439022a8d1c19405e
+      internalID: 1422797962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_254
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 80
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a711d59114b2a2243a60b966efceebd9
+      internalID: 891446170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_255
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 80
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcf2cd32bd3399241ae628695a7327be
+      internalID: 714703520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_256
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 80
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb243e834e29d5a4b8c998dc6a608e97
+      internalID: 153034945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_257
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 80
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 383586e16cd5dbd4199083bc91b56bd6
+      internalID: 1520498005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_258
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 80
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e023d3f30a5c29742a10a3080ab06deb
+      internalID: 1346166572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_259
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 80
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21cf09590dca0444296eae70059bae7c
+      internalID: 1039872944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_260
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 80
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 501c0b87f8a21704b9f7b4e02043ff19
+      internalID: 829383179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_261
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 80
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abb556e51c04bb44290e84c4f09b1cbb
+      internalID: 1983936206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_262
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 80
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 834139404bee96b438b5739f89ff6978
+      internalID: -1796266773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_263
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 80
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97cbc9a9b67d67c42b22ec52da7f1c50
+      internalID: 571248473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_264
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 80
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85da7d1edb768c6418f72bad5f4015aa
+      internalID: -726280971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_265
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 80
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d6acbdf55250c24687335bc85dc9795
+      internalID: -435242681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_266
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 80
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ee6eb896f649fb40a8cfd08341bcddd
+      internalID: 1772269157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_267
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 80
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6292c9e3623b96745b2150f0f473fc02
+      internalID: -1062636490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_268
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 80
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 959ea73ceba3fde4fbc03febf8830318
+      internalID: -15179313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_269
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 80
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10d29c3a597c54a41ad4ad1f6b5ce4fb
+      internalID: -1288678925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_270
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 40
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11d33533a422cb644bb2f50e131fb40e
+      internalID: 572272162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_271
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 40
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1cd6fd614de7084687f9e867dd9b4fb
+      internalID: -1970371477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_272
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 40
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e77c1585e196ef42941a4593f76886e
+      internalID: 78162762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_273
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 40
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dac61230c530700429f64626902cc9a7
+      internalID: -321517906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_274
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 40
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cc1f068c0d78a14da2f543215a7bd84
+      internalID: 910895627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_275
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 40
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e711988ef090734d96d5795ae4b5fbf
+      internalID: 25226051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_276
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 40
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17cf94e8f9a747b48aab5471bfbc9cc8
+      internalID: 1119397777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_277
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 40
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 523f0773529b1b249ba2cf0643eb8907
+      internalID: 1246052317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_278
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 40
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 491d5a21fca6ff74389545677c949d45
+      internalID: 636949659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_279
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 40
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1adee80fc84df0943a77495a7125dc6b
+      internalID: 1557583905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_280
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 40
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8935faac56b8a3d49a402f104dc5bc55
+      internalID: 1671292676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_281
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 40
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1b50cc27c5ca114784d0558a7c6d2fb
+      internalID: -2123234915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_282
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 40
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16aa0274aaf45a24eaf0af60aa27c751
+      internalID: -701157221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_283
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 40
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 782f3aa5427d99242a0cb426b03dd555
+      internalID: -2014966122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_284
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 40
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7197490b14f984e4e8cf57f11e7ae37a
+      internalID: -1844831331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_285
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 40
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89dac6db7e1cf404c8a3340b1ffc022a
+      internalID: 1476145186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_286
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 40
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8dd26a60a9b8f0478d8954ac708ca7b
+      internalID: 411886707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_287
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 40
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36f442b6b3d6a074f84e2d1fb814f21b
+      internalID: -1115883220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_288
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5333a92efe981d8458da83c536c36977
+      internalID: -1965849852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_289
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 0
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c16e10b1c586ff74d8dcfdf21f142ed9
+      internalID: -815903832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_290
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75a5ea75db8e4884ab6495c3b4d3889e
+      internalID: 2058421727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_291
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 0
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82bf53504b0b22147ac758bee2dab6e7
+      internalID: 1733320577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_292
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e611f7d909d3a748af103cc2b9d559e
+      internalID: 965759635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_293
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 723ea49ac97325444a58c1d7db71d536
+      internalID: -38015442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_294
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 0
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c52d68b0f15cf44f9160983e06960bc
+      internalID: -940258131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_295
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 0
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46c101d34f4499f4fa0cace25c80edde
+      internalID: -1638607930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_296
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2a485fa93528334eb6627be039d0df5
+      internalID: -1954608547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_297
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 0
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e8c9387707e88c43883a435ef788eb1
+      internalID: -1462292884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_298
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb8a01fb63301524983ca98ce77ad0b4
+      internalID: -823930047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_299
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 0
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f68aa077b6f00624f8f01f1b8db09c64
+      internalID: 1976640163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_300
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 0
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f49a2abb4acfbf498bdaccbb40c77be
+      internalID: -1796292032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_301
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 0
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8d0ede36f148b042a2c638a10b2f784
+      internalID: -1424591940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_302
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 0
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3093778c78b36249a942622983e1cea
+      internalID: 399069772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_303
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 0
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 069bab048f444ff479b3c9f8b7e8b47b
+      internalID: -1004675560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_304
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7042fcc8cbd617a48814214dfe90a4b2
+      internalID: 906613752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 300Frames(2HoursOfAgony)_305
+      rect:
+        serializedVersion: 2
+        x: 2040
+        y: 0
+        width: 120
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20193469fd1159e4d8aa2655c92e8526
+      internalID: 1679516672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      300Frames(2HoursOfAgony)_80: -1159947359
+      300Frames(2HoursOfAgony)_262: -1796266773
+      300Frames(2HoursOfAgony)_41: 1636670657
+      300Frames(2HoursOfAgony)_64: 686672926
+      300Frames(2HoursOfAgony)_55: -617616668
+      300Frames(2HoursOfAgony)_98: -1785833569
+      300Frames(2HoursOfAgony)_176: 2047831002
+      300Frames(2HoursOfAgony)_178: 1082734064
+      300Frames(2HoursOfAgony)_115: -1040093091
+      300Frames(2HoursOfAgony)_204: -1135925023
+      300Frames(2HoursOfAgony)_289: -815903832
+      300Frames(2HoursOfAgony)_43: 1331460589
+      300Frames(2HoursOfAgony)_47: 657429747
+      300Frames(2HoursOfAgony)_60: -58753354
+      300Frames(2HoursOfAgony)_285: 1476145186
+      300Frames(2HoursOfAgony)_292: 965759635
+      300Frames(2HoursOfAgony)_59: -1349813133
+      300Frames(2HoursOfAgony)_122: 1555088866
+      300Frames(2HoursOfAgony)_130: -545307751
+      300Frames(2HoursOfAgony)_231: 433428198
+      300Frames(2HoursOfAgony)_106: 1269169654
+      300Frames(2HoursOfAgony)_92: 2072969380
+      300Frames(2HoursOfAgony)_220: 17732602
+      300Frames(2HoursOfAgony)_149: 1047919530
+      300Frames(2HoursOfAgony)_215: 209723491
+      300Frames(2HoursOfAgony)_235: -1969955868
+      300Frames(2HoursOfAgony)_23: 800297056
+      300Frames(2HoursOfAgony)_154: 630896849
+      300Frames(2HoursOfAgony)_284: -1844831331
+      300Frames(2HoursOfAgony)_166: -413139724
+      300Frames(2HoursOfAgony)_131: -1885982158
+      300Frames(2HoursOfAgony)_34: 1591194655
+      300Frames(2HoursOfAgony)_32: 801548734
+      300Frames(2HoursOfAgony)_93: 1631097581
+      300Frames(2HoursOfAgony)_250: -726363166
+      300Frames(2HoursOfAgony)_119: -1937942140
+      300Frames(2HoursOfAgony)_136: -241403029
+      300Frames(2HoursOfAgony)_242: -2137537962
+      300Frames(2HoursOfAgony)_183: 1722327688
+      300Frames(2HoursOfAgony)_63: 151767681
+      300Frames(2HoursOfAgony)_288: -1965849852
+      300Frames(2HoursOfAgony)_101: -1535767489
+      300Frames(2HoursOfAgony)_78: -71529700
+      300Frames(2HoursOfAgony)_276: 1119397777
+      300Frames(2HoursOfAgony)_205: -1445990825
+      300Frames(2HoursOfAgony)_87: -156284380
+      300Frames(2HoursOfAgony)_206: -1708011349
+      300Frames(2HoursOfAgony)_133: -1657164196
+      300Frames(2HoursOfAgony)_263: 571248473
+      300Frames(2HoursOfAgony)_197: 1777039110
+      300Frames(2HoursOfAgony)_144: 87911539
+      300Frames(2HoursOfAgony)_121: 494780072
+      300Frames(2HoursOfAgony)_161: -322642680
+      300Frames(2HoursOfAgony)_198: -394058070
+      300Frames(2HoursOfAgony)_255: 714703520
+      300Frames(2HoursOfAgony)_167: 1191667257
+      300Frames(2HoursOfAgony)_221: 836694894
+      300Frames(2HoursOfAgony)_35: 1110979997
+      300Frames(2HoursOfAgony)_260: 829383179
+      300Frames(2HoursOfAgony)_27: -956811627
+      300Frames(2HoursOfAgony)_216: -505021188
+      300Frames(2HoursOfAgony)_304: 906613752
+      300Frames(2HoursOfAgony)_222: 1642641617
+      300Frames(2HoursOfAgony)_91: -2127528460
+      300Frames(2HoursOfAgony)_137: -628961790
+      300Frames(2HoursOfAgony)_157: 2019574838
+      300Frames(2HoursOfAgony)_118: 1229017996
+      300Frames(2HoursOfAgony)_46: 2051599302
+      300Frames(2HoursOfAgony)_146: 852512444
+      300Frames(2HoursOfAgony)_39: 1221061436
+      300Frames(2HoursOfAgony)_163: -227143284
+      300Frames(2HoursOfAgony)_175: -75927916
+      300Frames(2HoursOfAgony)_188: 349810935
+      300Frames(2HoursOfAgony)_19: -836972888
+      300Frames(2HoursOfAgony)_49: 973824672
+      300Frames(2HoursOfAgony)_94: 1523609623
+      300Frames(2HoursOfAgony)_229: -1860259737
+      300Frames(2HoursOfAgony)_287: -1115883220
+      300Frames(2HoursOfAgony)_76: 189585509
+      300Frames(2HoursOfAgony)_25: 96147659
+      300Frames(2HoursOfAgony)_177: -2134845023
+      300Frames(2HoursOfAgony)_56: 404642288
+      300Frames(2HoursOfAgony)_15: 1749787915
+      300Frames(2HoursOfAgony)_3: 1862391456
+      300Frames(2HoursOfAgony)_253: 1422797962
+      300Frames(2HoursOfAgony)_275: 25226051
+      300Frames(2HoursOfAgony)_6: -263870589
+      300Frames(2HoursOfAgony)_0: -904018950
+      300Frames(2HoursOfAgony)_291: 1733320577
+      300Frames(2HoursOfAgony)_54: 312036187
+      300Frames(2HoursOfAgony)_28: -112665709
+      300Frames(2HoursOfAgony)_147: -1817256254
+      300Frames(2HoursOfAgony)_125: 980986695
+      300Frames(2HoursOfAgony)_139: -552354066
+      300Frames(2HoursOfAgony)_160: 1404691619
+      300Frames(2HoursOfAgony)_182: 1309646997
+      300Frames(2HoursOfAgony)_270: 572272162
+      300Frames(2HoursOfAgony)_74: 1552754757
+      300Frames(2HoursOfAgony)_295: -1638607930
+      300Frames(2HoursOfAgony)_77: -600231242
+      300Frames(2HoursOfAgony)_53: 683517389
+      300Frames(2HoursOfAgony)_73: 618773494
+      300Frames(2HoursOfAgony)_81: 77479202
+      300Frames(2HoursOfAgony)_42: -1685277106
+      300Frames(2HoursOfAgony)_21: 1685101103
+      300Frames(2HoursOfAgony)_152: 628607112
+      300Frames(2HoursOfAgony)_189: 248168049
+      300Frames(2HoursOfAgony)_86: 376919997
+      300Frames(2HoursOfAgony)_246: 309134562
+      300Frames(2HoursOfAgony)_193: -1919101620
+      300Frames(2HoursOfAgony)_247: 1420194355
+      300Frames(2HoursOfAgony)_256: 153034945
+      300Frames(2HoursOfAgony)_214: 1965628402
+      300Frames(2HoursOfAgony)_293: -38015442
+      300Frames(2HoursOfAgony)_62: 1658332471
+      300Frames(2HoursOfAgony)_172: -1553379220
+      300Frames(2HoursOfAgony)_9: 1746494176
+      300Frames(2HoursOfAgony)_143: -1955241099
+      300Frames(2HoursOfAgony)_269: -1288678925
+      300Frames(2HoursOfAgony)_90: -2003464807
+      300Frames(2HoursOfAgony)_138: -1448262245
+      300Frames(2HoursOfAgony)_208: -716880285
+      300Frames(2HoursOfAgony)_301: -1424591940
+      300Frames(2HoursOfAgony)_168: -2082966474
+      300Frames(2HoursOfAgony)_252: 438762344
+      300Frames(2HoursOfAgony)_243: -1743134811
+      300Frames(2HoursOfAgony)_164: 811775104
+      300Frames(2HoursOfAgony)_218: 769030076
+      300Frames(2HoursOfAgony)_300: -1796292032
+      300Frames(2HoursOfAgony)_145: 600161949
+      300Frames(2HoursOfAgony)_156: 345844935
+      300Frames(2HoursOfAgony)_159: -1368246121
+      300Frames(2HoursOfAgony)_241: 141881127
+      300Frames(2HoursOfAgony)_48: 472359126
+      300Frames(2HoursOfAgony)_96: -1053352524
+      300Frames(2HoursOfAgony)_180: -745411730
+      300Frames(2HoursOfAgony)_199: -403100025
+      300Frames(2HoursOfAgony)_244: -1314477141
+      300Frames(2HoursOfAgony)_234: -272988864
+      300Frames(2HoursOfAgony)_71: -173331325
+      300Frames(2HoursOfAgony)_273: -321517906
+      300Frames(2HoursOfAgony)_82: -849786783
+      300Frames(2HoursOfAgony)_155: -1089637451
+      300Frames(2HoursOfAgony)_286: 411886707
+      300Frames(2HoursOfAgony)_225: -2102510202
+      300Frames(2HoursOfAgony)_158: 490723011
+      300Frames(2HoursOfAgony)_268: -15179313
+      300Frames(2HoursOfAgony)_113: 2033058842
+      300Frames(2HoursOfAgony)_123: 989255833
+      300Frames(2HoursOfAgony)_44: 1199820631
+      300Frames(2HoursOfAgony)_51: 804027379
+      300Frames(2HoursOfAgony)_72: 1079915082
+      300Frames(2HoursOfAgony)_153: -1951211883
+      300Frames(2HoursOfAgony)_305: 1679516672
+      300Frames(2HoursOfAgony)_226: -1615186561
+      300Frames(2HoursOfAgony)_240: 1209406460
+      300Frames(2HoursOfAgony)_257: 1520498005
+      300Frames(2HoursOfAgony)_50: 1619124163
+      300Frames(2HoursOfAgony)_12: 133235705
+      300Frames(2HoursOfAgony)_239: -1229651520
+      300Frames(2HoursOfAgony)_36: -1791681934
+      300Frames(2HoursOfAgony)_117: -160860496
+      300Frames(2HoursOfAgony)_179: 915584281
+      300Frames(2HoursOfAgony)_33: -1824942053
+      300Frames(2HoursOfAgony)_150: -884840542
+      300Frames(2HoursOfAgony)_109: -64843796
+      300Frames(2HoursOfAgony)_111: 452541617
+      300Frames(2HoursOfAgony)_272: 78162762
+      300Frames(2HoursOfAgony)_296: -1954608547
+      300Frames(2HoursOfAgony)_18: 848655739
+      300Frames(2HoursOfAgony)_89: 303733551
+      300Frames(2HoursOfAgony)_79: -2083097596
+      300Frames(2HoursOfAgony)_68: -216153551
+      300Frames(2HoursOfAgony)_30: -583108708
+      300Frames(2HoursOfAgony)_127: -98558916
+      300Frames(2HoursOfAgony)_236: -872503496
+      300Frames(2HoursOfAgony)_202: -856732484
+      300Frames(2HoursOfAgony)_75: -1392510493
+      300Frames(2HoursOfAgony)_194: 588601873
+      300Frames(2HoursOfAgony)_303: -1004675560
+      300Frames(2HoursOfAgony)_267: -1062636490
+      300Frames(2HoursOfAgony)_126: 1924617093
+      300Frames(2HoursOfAgony)_13: -1690216287
+      300Frames(2HoursOfAgony)_16: 1939245942
+      300Frames(2HoursOfAgony)_4: -1724257182
+      300Frames(2HoursOfAgony)_40: 1929501866
+      300Frames(2HoursOfAgony)_114: 966881945
+      300Frames(2HoursOfAgony)_45: -1116921166
+      300Frames(2HoursOfAgony)_20: 594596686
+      300Frames(2HoursOfAgony)_88: 902860360
+      300Frames(2HoursOfAgony)_212: -1747389051
+      300Frames(2HoursOfAgony)_10: 869902784
+      300Frames(2HoursOfAgony)_100: 803017520
+      300Frames(2HoursOfAgony)_210: 1867864060
+      300Frames(2HoursOfAgony)_11: 778053013
+      300Frames(2HoursOfAgony)_165: 1863584069
+      300Frames(2HoursOfAgony)_238: 375164709
+      300Frames(2HoursOfAgony)_37: -984798297
+      300Frames(2HoursOfAgony)_196: 1476979074
+      300Frames(2HoursOfAgony)_279: 1557583905
+      300Frames(2HoursOfAgony)_200: 277331996
+      300Frames(2HoursOfAgony)_83: -1334052469
+      300Frames(2HoursOfAgony)_265: -435242681
+      300Frames(2HoursOfAgony)_281: -2123234915
+      300Frames(2HoursOfAgony)_171: -1239591441
+      300Frames(2HoursOfAgony)_129: -1475288466
+      300Frames(2HoursOfAgony)_5: 1952624396
+      300Frames(2HoursOfAgony)_299: 1976640163
+      300Frames(2HoursOfAgony)_181: 570958498
+      300Frames(2HoursOfAgony)_213: -930033616
+      300Frames(2HoursOfAgony)_61: 1247122105
+      300Frames(2HoursOfAgony)_116: 2070441474
+      300Frames(2HoursOfAgony)_58: 71007448
+      300Frames(2HoursOfAgony)_217: 86111030
+      300Frames(2HoursOfAgony)_227: -1196863966
+      300Frames(2HoursOfAgony)_22: 831668004
+      300Frames(2HoursOfAgony)_38: -225554163
+      300Frames(2HoursOfAgony)_294: -940258131
+      300Frames(2HoursOfAgony)_7: -2089654066
+      300Frames(2HoursOfAgony)_271: -1970371477
+      300Frames(2HoursOfAgony)_84: -954604784
+      300Frames(2HoursOfAgony)_264: -726280971
+      300Frames(2HoursOfAgony)_142: -1167832842
+      300Frames(2HoursOfAgony)_274: 910895627
+      300Frames(2HoursOfAgony)_97: -1981220479
+      300Frames(2HoursOfAgony)_69: -1503954400
+      300Frames(2HoursOfAgony)_190: 471441291
+      300Frames(2HoursOfAgony)_209: 518309579
+      300Frames(2HoursOfAgony)_191: 1002818165
+      300Frames(2HoursOfAgony)_266: 1772269157
+      300Frames(2HoursOfAgony)_70: 931916406
+      300Frames(2HoursOfAgony)_52: 50913649
+      300Frames(2HoursOfAgony)_230: 238033721
+      300Frames(2HoursOfAgony)_278: 636949659
+      300Frames(2HoursOfAgony)_228: -1962361274
+      300Frames(2HoursOfAgony)_290: 2058421727
+      300Frames(2HoursOfAgony)_192: -1867508650
+      300Frames(2HoursOfAgony)_29: -689200271
+      300Frames(2HoursOfAgony)_203: 1347770741
+      300Frames(2HoursOfAgony)_280: 1671292676
+      300Frames(2HoursOfAgony)_57: 1534409014
+      300Frames(2HoursOfAgony)_258: 1346166572
+      300Frames(2HoursOfAgony)_169: -951570843
+      300Frames(2HoursOfAgony)_201: -1179306016
+      300Frames(2HoursOfAgony)_99: -44784909
+      300Frames(2HoursOfAgony)_254: 891446170
+      300Frames(2HoursOfAgony)_67: -1364405108
+      300Frames(2HoursOfAgony)_103: -487644790
+      300Frames(2HoursOfAgony)_283: -2014966122
+      300Frames(2HoursOfAgony)_185: 1955163093
+      300Frames(2HoursOfAgony)_298: -823930047
+      300Frames(2HoursOfAgony)_211: -697411649
+      300Frames(2HoursOfAgony)_232: -781991692
+      300Frames(2HoursOfAgony)_104: -167521277
+      300Frames(2HoursOfAgony)_297: -1462292884
+      300Frames(2HoursOfAgony)_102: -1828975456
+      300Frames(2HoursOfAgony)_187: 1271033309
+      300Frames(2HoursOfAgony)_219: -899362035
+      300Frames(2HoursOfAgony)_174: -1499368618
+      300Frames(2HoursOfAgony)_237: -501967650
+      300Frames(2HoursOfAgony)_141: 403099134
+      300Frames(2HoursOfAgony)_173: -984308425
+      300Frames(2HoursOfAgony)_207: 1803842326
+      300Frames(2HoursOfAgony)_108: -1529283394
+      300Frames(2HoursOfAgony)_233: -1945553438
+      300Frames(2HoursOfAgony)_95: -1996164658
+      300Frames(2HoursOfAgony)_105: 1524358917
+      300Frames(2HoursOfAgony)_120: -1873404690
+      300Frames(2HoursOfAgony)_277: 1246052317
+      300Frames(2HoursOfAgony)_245: -1786306400
+      300Frames(2HoursOfAgony)_248: 2117281663
+      300Frames(2HoursOfAgony)_24: -835592537
+      300Frames(2HoursOfAgony)_8: 925661181
+      300Frames(2HoursOfAgony)_31: -118105055
+      300Frames(2HoursOfAgony)_85: 1745483884
+      300Frames(2HoursOfAgony)_124: 2088886327
+      300Frames(2HoursOfAgony)_162: -1176686653
+      300Frames(2HoursOfAgony)_135: 1193686078
+      300Frames(2HoursOfAgony)_128: -90892522
+      300Frames(2HoursOfAgony)_170: -1497723212
+      300Frames(2HoursOfAgony)_224: -1890095223
+      300Frames(2HoursOfAgony)_223: -587326062
+      300Frames(2HoursOfAgony)_107: 1358856426
+      300Frames(2HoursOfAgony)_195: -816103591
+      300Frames(2HoursOfAgony)_112: 779923709
+      300Frames(2HoursOfAgony)_251: 2058331739
+      300Frames(2HoursOfAgony)_151: 20623363
+      300Frames(2HoursOfAgony)_14: 507237964
+      300Frames(2HoursOfAgony)_26: 1316064828
+      300Frames(2HoursOfAgony)_259: 1039872944
+      300Frames(2HoursOfAgony)_140: 1190777033
+      300Frames(2HoursOfAgony)_249: -94396317
+      300Frames(2HoursOfAgony)_132: -1697496735
+      300Frames(2HoursOfAgony)_302: 399069772
+      300Frames(2HoursOfAgony)_66: 741488654
+      300Frames(2HoursOfAgony)_2: 624357938
+      300Frames(2HoursOfAgony)_17: -224172238
+      300Frames(2HoursOfAgony)_184: -732302914
+      300Frames(2HoursOfAgony)_186: 414728191
+      300Frames(2HoursOfAgony)_282: -701157221
+      300Frames(2HoursOfAgony)_134: 1987805459
+      300Frames(2HoursOfAgony)_1: -128155180
+      300Frames(2HoursOfAgony)_65: 102593415
+      300Frames(2HoursOfAgony)_110: -512667793
+      300Frames(2HoursOfAgony)_261: 1983936206
+      300Frames(2HoursOfAgony)_148: -1033794945
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
