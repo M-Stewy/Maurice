@@ -146,5 +146,10 @@ public class EndofSpaceTimer : MonoBehaviour
         Sec10s.sprite = Numbers[seconds10s];
         Sec1s.sprite = Numbers[seconds1s];
     }
+
+    public void SetSecsToZero()
+    {
+        secondsLeft = 0;
+    }
     
 }

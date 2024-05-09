@@ -23,6 +23,7 @@ public class StartExit : MonoBehaviour
     public void SpeedRun()
     {
         SpeedRunTimer.SetActive(true);
+        SpeedRunTimer.GetComponentInParent<EndofSpaceTimer>().SetSecsToZero();
         SceneManager.LoadScene("hubWorld");
     }
 
@@ -33,6 +34,7 @@ public class StartExit : MonoBehaviour
 
     public void StartGame()
     {
+        Destroy(SpeedRunTimer.GetComponentInParent<EndofSpaceTimer>().gameObject);
         SceneManager.LoadScene("hubWorld");
     }
 }

@@ -16,6 +16,7 @@ public class positionTracker : MonoBehaviour
     public float checkpointX;
     public float checkpointY;
     public bool KyleDone = false, StewyDone = false, NikoDone = false, JebDone = false;
+    public bool BossReady = false;
     void Awake()
     {
         if (instance == null)
@@ -44,6 +45,16 @@ public class positionTracker : MonoBehaviour
 
     private void Update()
     {
+        if (SceneManager.GetActiveScene().name == "TitleScreen")
+        {
+            xpos = -0.45f;
+            ypos = -4.89f;
+            NikoDone = false;
+            JebDone = false;
+            StewyDone = false;
+            return;
+        }
+
         if (SceneManager.GetActiveScene().name == "Credits")
         {
             return;
@@ -53,6 +64,11 @@ public class positionTracker : MonoBehaviour
         {
             currentScene = SceneManager.GetActiveScene().name;
             GameObject.FindWithTag("Player").GetComponent<Player>().playerData.health = GameObject.FindWithTag("Player").GetComponent<Player>().playerData.maxHealth;
+        }
+
+        if(NikoDone && StewyDone && JebDone)
+        {
+            BossReady = true;
         }
     }
 }

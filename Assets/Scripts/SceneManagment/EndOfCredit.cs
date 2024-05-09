@@ -2,13 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Video;
 
 public class EndOfCredit : MonoBehaviour
 {
     public float Seconds;
+    [SerializeField] AudioClip speedRunNoise;
+    [SerializeField] GameObject TextForSpeedRun;
+    private GameObject speedTimer;
     void Start()
     {
-        StartCoroutine(Wait(Seconds));
+        if(FindObjectOfType<EndofSpaceTimer>() != null)
+        {
+            speedTimer = FindObjectOfType<EndofSpaceTimer>().transform.gameObject;
+            speedTimer.SetActive(false);
+            TextForSpeedRun.SetActive(false);
+            StartCoroutine(Wait(Seconds, true));
+        }
+        else
+        {
+            TextForSpeedRun.SetActive(false);
+            StartCoroutine(Wait(Seconds, false));
+        }
     }
 
     void Update()
@@ -19,9 +34,21 @@ public class EndOfCredit : MonoBehaviour
         }
     }
 
-    IEnumerator Wait(float time)
+    IEnumerator Wait(float time, bool speedRun)
     {
-        yield return new WaitForSeconds(time);
+        if (speedRun)
+        {
+            yield return new WaitForSeconds(time);
+            FindObjectOfType<Camera>().GetComponent<VideoPlayer>().enabled = false;
+            TextForSpeedRun.SetActive(true);
+            speedTimer.SetActive(true);
+            GetComponent<AudioSource>().PlayOneShot(speedRunNoise);
+            yield return new WaitForSeconds(7.5f);
+            Destroy(speedTimer);
+        }
+        else
+            yield return new WaitForSeconds(time);
+
         SceneManager.LoadScene("TitleScreen");
     }
 }

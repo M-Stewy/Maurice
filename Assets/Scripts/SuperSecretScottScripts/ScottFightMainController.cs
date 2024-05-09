@@ -131,6 +131,18 @@ public class ScottFightMainController : MonoBehaviour
             DeathCutSceneStart();
             return;
         }
+        
+            if(Input.GetKey(KeyCode.Keypad0)) // easy way to get health low for demonstrational purpose
+            {
+                if (Input.GetKey(KeyCode.KeypadMinus))
+                {
+                if (Input.GetKeyDown(KeyCode.Keypad5))
+                    {
+                    health = 1;
+                    }
+                }
+            }
+        
 
         if (!currentlyAttacking)
         {

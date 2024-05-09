@@ -9,7 +9,7 @@ using UnityEngine.XR;
 public class SceneChange : MonoBehaviour
 {
     private bool CanAcessesKyleScene = false;
-
+    private bool SkipToBoss = false;
 
     public float xpos = 0;
     public float ypos = 0;
@@ -33,7 +33,9 @@ public class SceneChange : MonoBehaviour
     private void OnTriggerStay2D(Collider2D other)
     {
         if (Input.GetKey(KeyCode.K) && Input.GetKey(KeyCode.Y) && Input.GetKey(KeyCode.L)) CanAcessesKyleScene = true;
-        
+        if(Input.GetKey(KeyCode.S) && Input.GetKey(KeyCode.C) && Input.GetKey(KeyCode.O) && Input.GetKey(KeyCode.T)) {
+            SkipToBoss = true;
+        }
 
 
         //Debug.Log("Triggered");
@@ -92,7 +94,7 @@ public class SceneChange : MonoBehaviour
             }
             else if (other.name == "SuperSecertScottShowdown")
             {
-                if (/*positionTracker.GetComponent<positionTracker>().KyleDone == true &&*/ positionTracker.GetComponent<positionTracker>().NikoDone == true && positionTracker.GetComponent<positionTracker>().StewyDone == true && positionTracker.GetComponent<positionTracker>().JebDone == true)
+                if (positionTracker.GetComponent<positionTracker>().BossReady || SkipToBoss)
                 {
                    SceneManager.LoadScene("SuperSecertScottShowdown");
                 }else
