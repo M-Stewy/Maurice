@@ -27,7 +27,6 @@ public class PlayerGrapplingState : PlayerState
     {
         base.Checks();
         xInput = player.inputHandler.moveDir.x;
-
         
     }
 
@@ -76,6 +75,8 @@ public class PlayerGrapplingState : PlayerState
     {
         base.Update();
 
+        player.rb.drag = playerData.AirDrag;
+        player.rb.gravityScale = playerData.AirGravity;
         if (graple)
         {
             player.dj.connectedAnchor = graple.transform.position;
