@@ -54,7 +54,7 @@ public class PauseMenu : MonoBehaviour
         }
             
 
-        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Joystick1Button9))
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Tab) || Input.GetKeyDown(KeyCode.Joystick1Button9))
         {
             if (inTurorial)
             {
